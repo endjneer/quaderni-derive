@@ -385,6 +385,64 @@ def fig_sincos_pi_e():
 # teoria.dfw
 # --------------------------------------------------------------------------
 
+def fig_teoria_modo_comune():
+    """teoria.dfw #1-#7: come si propaga un errore relativo comune.
+
+    Pannello di sinistra: il fattore di amplificazione per ciascuna
+    operazione. Pannello di destra: la verifica in doppia precisione, dove
+    si vede che il quoziente cade sul pavimento della macchina.
+    """
+    fig, (a1, a2) = nuova(6.8, 3.0, n=2)
+
+    nomi = ['$x+y$', '$x-y$', r'$x\cdot y$', '$x/y$', '$x^2$', '$x^{1/5}$']
+    fatt = [1.0, 1.0, 2.0, 0.0, 2.0, 0.2]
+    col = [GRIGIO, GRIGIO, ROSSO, VERDE, ROSSO, BLU]
+    barre = a1.bar(range(6), fatt, color=col, width=0.62)
+    for i, (b, v) in enumerate(zip(barre, fatt)):
+        a1.text(b.get_x() + b.get_width() / 2, v + 0.07,
+                ('%g' % v) if v else '0', ha='center', fontsize=8,
+                color=col[i])
+    a1.set_xticks(range(6))
+    a1.set_xticklabels(nomi)
+    a1.set_ylim(0, 2.95)
+    a1.set_ylabel(u'errore risultante / $\\varepsilon$')
+    a1.set_title(u'Amplificazione di un errore relativo comune')
+    a1.annotate(u'il quoziente lo cancella', xy=(3, 0.05), xytext=(3, 2.62),
+                arrowprops=dict(arrowstyle='->', color=VERDE, lw=0.9),
+                color=VERDE, fontsize=8, ha='center')
+
+    # Verifica in doppia precisione. Si traccia il rapporto fra l'errore
+    # del risultato ed epsilon: le curve diventano orizzontali e i fattori
+    # di amplificazione si leggono direttamente sull'asse.
+    x, y = 3.0, 7.0
+    eps = np.logspace(-13, -2, 45)
+    rap = lambda v, e: np.abs(v) / eps
+    com_prod = rap(((x * (1 + eps)) * (y * (1 + eps)) - x * y) / (x * y), eps)
+    com_somm = rap(((x * (1 + eps)) + (y * (1 + eps)) - (x + y)) / (x + y), eps)
+    com_quoz = rap(((x * (1 + eps)) / (y * (1 + eps)) - x / y) / (x / y), eps)
+    ind_quoz = rap(((x * (1 + eps)) / (y * (1 - eps)) - x / y) / (x / y), eps)
+
+    a2.loglog(eps, com_prod, 'o-', color=ROSSO, ms=2.8, lw=0.9,
+              label=r'$x\cdot y$, errore comune')
+    a2.loglog(eps, ind_quoz, '^-', color=AMBRA, ms=2.8, lw=0.9,
+              label=r'$x/y$, errori indipendenti')
+    a2.loglog(eps, com_somm, 's-', color=GRIGIO, ms=2.8, lw=0.9,
+              label=r'$x+y$, errore comune')
+    a2.loglog(eps, np.maximum(com_quoz, 1e-20), 'D-', color=VERDE, ms=2.8,
+              lw=0.9, label=r'$x/y$, errore comune')
+    a2.set_xlabel(r'$\varepsilon$')
+    a2.set_ylabel(u'errore del risultato / $\\varepsilon$')
+    a2.set_ylim(1e-7, 1e1)
+    a2.set_title(u'Verifica in doppia precisione')
+    a2.legend(frameon=False, fontsize=7, loc='center left')
+    a2.annotate(u'resta al livello\ndell’arrotondamento',
+                xy=(3e-12, 2e-4), xytext=(2e-9, 1e-6), color=VERDE,
+                fontsize=7.5, ha='center',
+                arrowprops=dict(arrowstyle='->', color=VERDE, lw=0.8))
+    a2.grid(True, which='both', alpha=0.35)
+    salva(fig, 'teoria_modo_comune')
+
+
 def fig_teoria_radice_doppia():
     """teoria.dfw #14-#19: la separazione delle radici va come la radice
     quadrata della perturbazione, non come la perturbazione."""
@@ -723,7 +781,7 @@ FIGURE = [
     fig_e_convergenza, fig_e_parabola,
     fig_atan_cerchio, fig_fresnel, fig_gauss_sign,
     fig_trasformata_t, fig_pigreco_identita, fig_sincos_pi_e,
-    fig_teoria_radice_doppia, fig_teoria2, fig_fxgx, fig_limit_disug,
+    fig_teoria_modo_comune, fig_teoria_radice_doppia, fig_teoria2, fig_fxgx, fig_limit_disug,
     fig_mate_onde, fig_mate_logcosh,
     fig_factor, fig_fattorazionale, fig_primoriale, fig_u0,
     fig_j_tan, fig_equazioni_reim, fig_notch_bode,

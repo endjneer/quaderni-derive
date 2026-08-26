@@ -10,8 +10,8 @@ cifrato — le espressioni sono memorizzate come testo, nella stessa sintassi
 lineare della riga di comando. Questo repository contiene il codice che le
 riporta alla luce e il documento che ne esce.
 
-**Risultato:** `tex/derive2010.pdf` — 229 pagine, 792 espressioni tradotte in
-notazione matematica, commentate una per una, con 26 figure e la verifica
+**Risultato:** `tex/derive2010.pdf` — 232 pagine, 792 espressioni tradotte in
+notazione matematica, commentate una per una, con 27 figure e la verifica
 numerica di ogni identità verificabile.
 
 ## Che cosa contiene il repository
@@ -23,7 +23,7 @@ numerica di ogni identità verificabile.
 | `commento/` | Il commento redazionale, un file JSON per quaderno |
 | `tex/` | Preambolo, capitoli scritti a mano, disegni TikZ, documento finale |
 | `tex/generato/` | I capitoli prodotti dal generatore (non modificare a mano) |
-| `figures/` | I 26 grafici, in PDF vettoriale |
+| `figures/` | I 27 grafici, in PDF vettoriale |
 | `extracted/` | L'estrazione in JSON e l'esito della verifica numerica |
 
 ## La pipeline
@@ -97,6 +97,16 @@ refusi, entrambi in righe battute a mano:
   corretta vale esattamente `35ε/n³`.
 - `factor.dfw` **#5**: `7³` al posto di `7²`, cioè un fattore sette di troppo.
   Tutte le fattorizzazioni prodotte da Derive, nello stesso file, sono esatte.
+
+Una terza cosa, emersa rileggendo `teoria.dfw`: il simbolo `ε` vi ha **due
+significati diversi**. Nelle prime sette righe è un errore relativo comune a
+tutti gli operandi, e sotto quella lettura tutte e sette sono esatte — compresa
+la #4, che dice che il quoziente lo cancella, il che è vero solo per errori di
+modo comune ed è il principio delle misure ratiometriche. Nelle righe #8–#13
+ε è invece il fattore di scala di una quantità algebrica: quello che vi si
+calcola non è l'errore su `x^m` ma lo scarto di `(1+x)^m` da `x^m + 1`. Le due
+letture coincidono solo per `m = 2`, che è probabilmente ciò che ha tenuto
+insieme le due metà del quaderno.
 
 E una trappola che vale la pena conoscere: in `mate.dfw` una trentina di
 espressioni inseguono la soluzione di un'equazione che è un'identità, e quindi

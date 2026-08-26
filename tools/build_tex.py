@@ -44,6 +44,14 @@ def escape_text(s):
             out.append(s[i:j + 2])
             i = j + 2
             continue
+        m = re.match(r'\\begin\{([A-Za-z*]+)\}', s[i:])
+        if m:                             # ambiente LaTeX: passa intatto,
+            fine = '\\end{%s}' % m.group(1)   # comprese le & di tabella
+            j = s.find(fine, i)
+            if j >= 0:
+                out.append(s[i:j + len(fine)])
+                i = j + len(fine)
+                continue
         if c == '\\':                     # comando LaTeX esplicito
             m = re.match(r'\\[A-Za-z]+', s[i:])
             if m:
