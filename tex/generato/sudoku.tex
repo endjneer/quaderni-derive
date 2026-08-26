@@ -1,0 +1,337 @@
+%% generato automaticamente da tools/build_tex.py --- non modificare
+\chapter{Determinanti di un sudoku}
+\label{cap:sudoku}
+\quaderno{Sudoku.dfw}{26 Apr 2009}{42}
+
+Aprile 2009, il quaderno più antico insieme a \dfw{teoria.dfw}. La domanda è semplice e un po' oziosa, del genere che viene in mente guardando una griglia riempita: che cosa succede se la si tratta come una matrice? Quarantadue espressioni dopo, la risposta è che non succede granché — ma il percorso per stabilirlo è ordinato, e un fatto interessante c'è.
+
+La griglia in esame è un sudoku valido: ogni riga, ogni colonna e ognuno dei nove blocchi contengono le cifre da $1$ a $9$ una volta sola. La verifica è stata rifatta durante il recupero e conferma.
+
+\section{Il determinante della griglia intera}
+
+Si comincia dalla domanda più diretta.
+
+\begin{espr}{1}{User}{}
+\[
+\begin{vmatrix} 9 & 1 & 3 & 7 & 8 & 6 & 5 & 4 & 2 \\ 4 & 8 & 7 & 5 & 2 & 3 & 1 & 9 & 6 \\ 2 & 6 & 5 & 4 & 1 & 9 & 3 & 8 & 7 \\ 8 & 5 & 6 & 3 & 7 & 4 & 2 & 1 & 9 \\ 7 & 9 & 2 & 1 & 6 & 5 & 4 & 3 & 8 \\ 3 & 4 & 1 & 2 & 9 & 8 & 7 & 6 & 5 \\ 6 & 3 & 4 & 9 & 5 & 7 & 8 & 2 & 1 \\ 5 & 2 & 9 & 8 & 4 & 1 & 6 & 7 & 3 \\ 1 & 7 & 8 & 6 & 3 & 2 & 9 & 5 & 4 \end{vmatrix}
+\]
+\end{espr}
+La griglia intera come matrice $9\times9$.
+
+\begin{espr}{2}{Simp(\#1)}{}
+\[
+-2975130
+\]
+\end{espr}
+Il suo determinante. È divisibile per $45$ — proprietà comune a tutti i sudoku — e in questo caso anche per $405$.
+
+
+Il valore è $-2\,975\,130$, e ha una proprietà che vale la pena di far notare perché il quaderno non la nota: è divisibile per $45$, e la dimostrazione è di una riga. Poiché ogni riga della griglia somma a $45$, sostituendo alla prima colonna la somma di tutte le colonne si ottiene una colonna con tutti gli elementi uguali a $45$, che si raccoglie a fattore comune. Il determinante di un sudoku è dunque sempre un multiplo di $45$. In questo caso lo è anche di $405$: $-2\,975\,130=405\cdot(-7346)$, e la fattorizzazione completa è $-2\cdot3^4\cdot5\cdot3673$.
+
+\section{I nove blocchi}
+
+Il passo successivo è prendere i nove blocchi $3\times3$ — quelli che nel gioco devono contenere tutte le cifre — e calcolarne i determinanti uno per uno.
+
+\begin{espr}{3}{User}{}
+\[
+\begin{vmatrix} 9 & 1 & 3 \\ 4 & 8 & 7 \\ 2 & 6 & 5 \end{vmatrix}
+\]
+\end{espr}
+Il primo blocco: righe $1$--$3$, colonne $1$--$3$.
+
+\begin{espr}{4}{User}{}
+\[
+0
+\]
+\end{espr}
+Il determinante è nullo: le tre righe del blocco sono linearmente dipendenti.
+
+\begin{espr}{5}{User}{}
+\[
+\begin{vmatrix} 7 & 8 & 6 \\ 5 & 2 & 3 \\ 4 & 1 & 9 \end{vmatrix}
+\]
+\end{espr}
+Il secondo blocco.
+
+\begin{espr}{6}{Simp(\#5)}{}
+\[
+-177
+\]
+\end{espr}
+$-177$.
+
+\begin{espr}{7}{User}{}
+\[
+\begin{vmatrix} 5 & 4 & 2 \\ 1 & 9 & 6 \\ 3 & 8 & 7 \end{vmatrix}
+\]
+\end{espr}
+Il terzo blocco.
+
+\begin{espr}{8}{Simp(\#7)}{}
+\[
+81
+\]
+\end{espr}
+$81$.
+
+\begin{espr}{9}{User}{}
+\[
+\begin{vmatrix} 8 & 5 & 6 \\ 7 & 9 & 2 \\ 3 & 4 & 1 \end{vmatrix}
+\]
+\end{espr}
+Il quarto blocco.
+
+\begin{espr}{10}{Simp(\#9)}{}
+\[
+9
+\]
+\end{espr}
+$9$.
+
+\begin{espr}{11}{User}{}
+\[
+\begin{vmatrix} 3 & 7 & 4 \\ 1 & 6 & 5 \\ 2 & 9 & 8 \end{vmatrix}
+\]
+\end{espr}
+Il quinto blocco, quello centrale.
+
+\begin{espr}{12}{User}{}
+\[
+11
+\]
+\end{espr}
+$11$.
+
+\begin{espr}{13}{User}{}
+\[
+\begin{vmatrix} 2 & 1 & 9 \\ 4 & 3 & 8 \\ 7 & 6 & 5 \end{vmatrix}
+\]
+\end{espr}
+Il sesto blocco.
+
+\begin{espr}{14}{Simp(\#13)}{}
+\[
+-3
+\]
+\end{espr}
+$-3$.
+
+\begin{espr}{15}{User}{}
+\[
+\begin{vmatrix} 6 & 3 & 4 \\ 5 & 2 & 9 \\ 1 & 7 & 8 \end{vmatrix}
+\]
+\end{espr}
+Il settimo blocco.
+
+\begin{espr}{16}{Simp(\#15)}{}
+\[
+-243
+\]
+\end{espr}
+$-243$.
+
+\begin{espr}{17}{User}{}
+\[
+\begin{vmatrix} 9 & 5 & 7 \\ 8 & 4 & 1 \\ 6 & 3 & 2 \end{vmatrix}
+\]
+\end{espr}
+L'ottavo blocco.
+
+\begin{espr}{18}{Simp(\#17)}{}
+\[
+-5
+\]
+\end{espr}
+$-5$.
+
+\begin{espr}{19}{User}{}
+\[
+\begin{vmatrix} 8 & 2 & 1 \\ 6 & 7 & 3 \\ 9 & 5 & 4 \end{vmatrix}
+\]
+\end{espr}
+Il nono blocco.
+
+\begin{espr}{20}{Simp(User)}{}
+\[
+77
+\]
+\end{espr}
+$77$.
+
+\begin{espr}{21}{User}{}
+\[
+0 + -177 + 81 + 9 + 11 + -3 + -243 + -5 + 77
+\]
+\end{espr}
+La somma dei nove valori, scritta per esteso.
+
+\begin{espr}{22}{Simp(\#21)}{}
+\[
+-250
+\]
+\end{espr}
+Vale $-250$.
+
+\begin{figure}[htbp]
+  \centering
+  \input{tikz/sudoku_griglia}
+  \caption{La griglia del quaderno. Accanto, in rosso, il determinante di ciascun blocco $3\times3$: quello in alto a sinistra è nullo, cioè il blocco è singolare.}
+  \label{fig:sudoku_griglia}
+\end{figure}
+
+I nove valori sono $0$, $-177$, $81$, $9$, $11$, $-3$, $-243$, $-5$, $77$, e la loro somma è $-250$. Tutti i valori sono stati ricalcolati durante il recupero e coincidono, compreso lo zero del primo blocco — che è l'unico caso interessante del gruppo, perché segnala che le tre righe di quel blocco sono linearmente dipendenti.
+
+La somma $-250$ non ha alcun rapporto con il determinante della griglia intera, e non c'è motivo perché ne abbia: il determinante di una matrice a blocchi non è una funzione dei determinanti dei blocchi, a meno che la matrice non sia triangolare a blocchi. Il quaderno lo verifica sperimentalmente, che è un modo legittimo di rispondersi.
+
+\section{Le nove righe rimodellate}
+
+Seconda idea, diversa dalla prima: invece dei blocchi, si prende ogni riga della griglia e la si ripiega in una matrice $3\times3$. Nove righe, nove matrici, nove determinanti.
+
+\begin{espr}{23}{User}{}
+\[
+\begin{vmatrix} 9 & 1 & 3 \\ 7 & 8 & 6 \\ 5 & 4 & 2 \end{vmatrix}
+\]
+\end{espr}
+La prima riga della griglia ripiegata in una matrice $3\times3$.
+
+\begin{espr}{24}{Simp(\#23)}{}
+\[
+-92
+\]
+\end{espr}
+$-92$.
+
+\begin{espr}{25}{User}{}
+\[
+\begin{vmatrix} 4 & 8 & 7 \\ 5 & 2 & 3 \\ 1 & 9 & 6 \end{vmatrix}
+\]
+\end{espr}
+La seconda riga.
+
+\begin{espr}{26}{Simp(\#25)}{}
+\[
+25
+\]
+\end{espr}
+$25$.
+
+\begin{espr}{27}{User}{}
+\[
+\begin{vmatrix} 2 & 6 & 5 \\ 4 & 1 & 9 \\ 3 & 8 & 7 \end{vmatrix}
+\]
+\end{espr}
+La terza riga. Il valore, $9$, è quello usato nella somma della riga $\#41$.
+
+\begin{espr}{28}{Simp(\#27)}{}
+\[
+9
+\]
+\end{espr}
+\begin{espr}{29}{User}{}
+\[
+\begin{vmatrix} 8 & 5 & 6 \\ 3 & 7 & 4 \\ 2 & 1 & 9 \end{vmatrix}
+\]
+\end{espr}
+La quarta riga.
+
+\begin{espr}{30}{Simp(\#29)}{}
+\[
+311
+\]
+\end{espr}
+$311$.
+
+\begin{espr}{31}{User}{}
+\[
+\begin{vmatrix} 7 & 9 & 2 \\ 1 & 6 & 5 \\ 4 & 3 & 8 \end{vmatrix}
+\]
+\end{espr}
+La quinta riga.
+
+\begin{espr}{32}{Simp(\#31)}{}
+\[
+297
+\]
+\end{espr}
+$297$.
+
+\begin{espr}{33}{User}{}
+\[
+\begin{vmatrix} 3 & 4 & 1 \\ 2 & 9 & 8 \\ 7 & 6 & 5 \end{vmatrix}
+\]
+\end{espr}
+La sesta riga.
+
+\begin{espr}{34}{Simp(\#33)}{}
+\[
+124
+\]
+\end{espr}
+$124$.
+
+\begin{espr}{35}{User}{}
+\[
+\begin{vmatrix} 6 & 3 & 4 \\ 9 & 5 & 7 \\ 8 & 2 & 1 \end{vmatrix}
+\]
+\end{espr}
+La settima riga.
+
+\begin{espr}{36}{Simp(\#35)}{}
+\[
+-1
+\]
+\end{espr}
+$-1$.
+
+\begin{espr}{37}{User}{}
+\[
+\begin{vmatrix} 5 & 2 & 9 \\ 8 & 4 & 1 \\ 6 & 7 & 3 \end{vmatrix}
+\]
+\end{espr}
+L'ottava riga.
+
+\begin{espr}{38}{Simp(\#37)}{}
+\[
+277
+\]
+\end{espr}
+$277$.
+
+\begin{espr}{39}{User}{}
+\[
+\begin{vmatrix} 1 & 7 & 8 \\ 6 & 3 & 2 \\ 9 & 5 & 4 \end{vmatrix}
+\]
+\end{espr}
+La nona riga.
+
+\begin{espr}{40}{Simp(\#39)}{}
+\[
+-16
+\]
+\end{espr}
+$-16$.
+
+\begin{espr}{41}{User}{}
+\[
+-92 + 25 + 9 + 311 + 297 + 124 - 1 + 277 - 16
+\]
+\end{espr}
+La somma dei nove valori.
+
+\begin{espr}{42}{Simp(\#41)}{}
+\[
+934
+\]
+\end{espr}
+Vale $934$.
+
+
+I nove valori sono $-92$, $25$, $9$, $311$, $297$, $124$, $-1$, $277$, $-16$, e sommano a $934$. Anche questi coincidono tutti con il ricalcolo.
+
+Né $-250$ né $934$ hanno un rapporto riconoscibile con $-2\,975\,130$, e nessuno dei due è multiplo di $45$: la proprietà di divisibilità vale per la griglia intera perché dipende dalle somme di righe e colonne, che nei sottoblocchi non sono $45$.
+
+\section*{In sintesi}
+\addcontentsline{toc}{section}{In sintesi}
+
+Il quaderno pone una domanda e ottiene una risposta negativa: i determinanti dei sottoblocchi di un sudoku non dicono nulla sul determinante della griglia, e le loro somme non sono invarianti significativi. È una risposta utile quanto una affermativa, e per ottenerla servivano diciannove determinanti calcolati a mano — che nel 2009, con Derive aperto sullo schermo, erano diciannove righe.
+

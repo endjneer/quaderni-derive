@@ -1,0 +1,71 @@
+{
+  "file": "teoria.dfw",
+  "titolo": "Il difetto $\\varepsilon$",
+  "intro": "Il quaderno più antico della raccolta — 6 maggio 2009 — e anche il più programmatico. Non contiene un calcolo ma un'idea: che ogni operazione aritmetica, applicata a quantità note in modo imperfetto, restituisca il risultato giusto più un difetto. Il difetto si chiama $\\varepsilon$ e le venticinque espressioni che seguono ne inseguono il comportamento: quali operazioni lo lasciano intatto, quali lo amplificano, e in che modo. La sezione finale rivela da dove viene: $\\varepsilon$ è la distanza fra $0{,}999\\ldots9$ e $1$, cioè il residuo di un troncamento decimale.",
+  "blocchi": [
+    {
+      "titolo": "Quali operazioni conservano il difetto",
+      "testo": "Le prime sette espressioni sono una tavola comparativa. Somma e differenza compaiono senza $\\varepsilon$: se i due addendi sono esatti, lo è anche il risultato. Prodotto e quoziente, invece, lo introducono con segni opposti, e le operazioni di ordine superiore lo introducono in forma moltiplicativa. È una classificazione informale ma corretta nella sostanza: le operazioni lineari trasportano l'errore, quelle non lineari lo deformano.",
+      "da": 1,
+      "a": 7
+    },
+    {
+      "titolo": "La propagazione nelle potenze",
+      "testo": "Qui il quaderno si fa preciso. Si prende $x=1/n$ e si calcolano le potenze successive, annotando ogni volta il difetto che le accompagna. Le sei righe sembrano sei casi slegati; in realtà seguono un'unica legge, che non è scritta da nessuna parte nel file ma si ricava confrontandole.",
+      "da": 8,
+      "a": 13,
+      "coda": "Mettendo $x=1/n$, i difetti annotati nelle espressioni da $\\#8$ a $\\#12$ sono esattamente $\\varepsilon\\left[(1+x)^m-1-x^m\\right]$, cioè $\\varepsilon$ moltiplicato per la parte centrale dello sviluppo binomiale di $(1+x)^m$: spariscono il primo e l'ultimo termine, restano tutti i termini misti. I coefficienti che compaiono nei numeratori sono i binomiali $\\binom{m}{1},\\binom{m}{2},\\dots,\\binom{m}{m-1}$, e infatti si leggono a occhio nelle righe $\\#10$ e $\\#12$: $4,6,4$ e $6,15,20,15,6$."
+    },
+    {
+      "titolo": "Una radice doppia è fragile quanto $\\sqrt{\\varepsilon}$",
+      "testo": "Le sei espressioni che seguono contengono l'osservazione più acuta del quaderno, ed è un risultato classico dell'analisi numerica riscoperto per conto proprio. Si parte da un'equazione con radice doppia e si guarda che cosa succede se il termine noto è sbagliato di poco.",
+      "da": 14,
+      "a": 19,
+      "coda": "Il punto è nell'ordine di grandezza. Se il polinomio $(x+1)^2$ viene perturbato di una quantità $2\\varepsilon$, le due radici non si spostano di $\\varepsilon$: si separano di $2\\sqrt{2\\varepsilon}$. Con $\\varepsilon=10^{-16}$, cioè la precisione di un numero in doppia precisione, la separazione è dell'ordine di $10^{-8}$: otto cifre perse di colpo. È la ragione per cui le radici multiple sono il caso peggiore per qualunque risolutore numerico, ed è notevole vederla isolata così, in quattro righe."
+    },
+    {
+      "titolo": "Da dove viene $\\varepsilon$",
+      "testo": "L'ultima sezione scopre le carte. Il difetto non è un'astrazione: è quello che resta quando si tronca uno sviluppo decimale. Le due espressioni $\\#20$ e $\\#21$ costruiscono i due protagonisti — un numero fatto di mille cifre $9$ e il prodotto delle potenze successive di $1/10$ — e le successive chiedono quando i due si corrispondano esattamente.",
+      "da": 20,
+      "a": 27,
+      "coda": "La risposta è il cuore del quaderno. L'equazione $\\#22$ si riscrive come $10^{x(x+1)/2}=10^{x+1}-1$: a sinistra una potenza di dieci, a destra una potenza di dieci meno uno. Per $x=2$ i due membri valgono $1000$ e $999$. Non sono uguali — ma lo sono a meno di una parte su mille, e la soluzione numerica $\\#25$ lo conferma: $x=1{,}999710\\ldots$ invece di $2$. Quel $-1$ che impedisce l'uguaglianza è $\\varepsilon$. Tutto il quaderno gira intorno a lui."
+    }
+  ],
+  "note": {
+    "1": "La somma non introduce difetto: se $x$ e $y$ sono noti esattamente, $k$ lo è.",
+    "2": "Lo stesso vale per la differenza. Sono le due operazioni lineari.",
+    "3": "Il prodotto perde $\\varepsilon$: il risultato è leggermente inferiore al valore ideale.",
+    "4": "Il quoziente lo guadagna, con segno opposto a quello del prodotto: le due operazioni inverse spostano il difetto nelle due direzioni.",
+    "5": "L'estrazione di radice non aggiunge un difetto, lo moltiplica: compare come fattore $p^{\\varepsilon}$, cioè come un errore relativo.",
+    "6": "Elevare al quadrato sottrae $\\varepsilon$, coerentemente con la riga $\\#3$: il quadrato è un prodotto.",
+    "7": "Il logaritmo è la via di ritorno: recupera $x$ da $y^x$ a patto di scontare il difetto.",
+    "8": "Primo caso della legge: il quadrato di $1/n$ porta un difetto $2\\varepsilon/n$. Si riconosce la derivata: $\\mathrm{d}(x^2)=2x\\,\\mathrm{d}x$.",
+    "9": "Al cubo il difetto diventa $3\\varepsilon(n+1)/n^2$. Il coefficiente $3$ è $\\binom{3}{1}$, il termine costante $1$ è $\\binom{3}{2}/3$.",
+    "10": "I coefficienti $1,\\ 3/2,\\ 1$ moltiplicati per $4$ danno $4,\\ 6,\\ 4$: la quarta riga del triangolo di Tartaglia privata degli estremi.",
+    "11": "Moltiplicati per $5$: $5,\\ 10,\\ 10,\\ 5$. La regola è ormai leggibile a occhio nudo.",
+    "12": "Moltiplicati per $6$: $6,\\ 15,\\ 20,\\ 15,\\ 6$. La simmetria del polinomio è quella del triangolo binomiale.",
+    "13": "Questa riga rompe la simmetria, e la rottura è rivelatrice. Moltiplicando per $7$ si ottiene $7,\\ 21,\\ 70,\\ 35,\\ 21,\\ 7$, mentre la legge — e la simmetria delle cinque righe precedenti — richiede $7,\\ 21,\\ 35,\\ 35,\\ 21,\\ 7$. Il termine in $n^3$ è il doppio di quello che dovrebbe essere: si tratta con ogni probabilità di un errore di battitura ($10$ al posto di $5$ nel numeratore), e lo scarto rispetto alla formula corretta vale esattamente $35\\varepsilon/n^3$.",
+    "14": "Un'equazione con radice doppia in $x=-1$: il caso peggiore per la stabilità.",
+    "15": "Perturbando il termine noto di $2\\varepsilon$, la radice doppia si sdoppia in due radici distanti $\\sqrt{2\\varepsilon}$ dal valore nominale.",
+    "16": "La distanza fra le due radici perturbate. La scrittura $x-x$ è volutamente paradossale: sono due valori che dovrebbero coincidere e non coincidono.",
+    "17": "Lo stesso esperimento sulla radice doppia in $x=+1$.",
+    "18": "Le due radici perturbate, simmetriche rispetto a $1$.",
+    "19": "La separazione è la stessa: dipende solo dall'entità della perturbazione, non da dove si trova la radice.",
+    "20": "Un numero di mille cifre, tutte $9$. La variabile ha un nome non alfabetico, conservato qui come compariva nel file.",
+    "21": "Il prodotto vale $10^{-499500}$: un numero minuscolo, il candidato naturale al ruolo di $\\varepsilon$.",
+    "22": "L'equazione centrale del quaderno. A sinistra $10^{-x(x+1)/2}$, a destra $1/(10^{x+1}-1)$.",
+    "23": "La risposta di Derive: una condizione algebrica più una famiglia di soluzioni all'infinito, generate dalla periodicità immaginaria dell'esponenziale complesso ($2\\pi\\mathrm{i}/\\ln 10$ è il periodo di $10^{z}$).",
+    "24": "La condizione algebrica isolata. Si ottiene elevando al quadrato $10^{x(x+1)/2}=10^{x+1}-1$; il termine $2^{x+2}5^{x+1}$ non è altro che $2\\cdot 10^{x+1}$.",
+    "25": "La soluzione numerica: $x$ manca il valore intero $2$ per tre parti su diecimila.",
+    "26": "La stessa domanda posta al risolutore numerico anziché a quello simbolico.",
+    "27": "Il valore restituito è $x=10$, che non soddisfa l'equazione: è un artefatto della ricerca numerica, che si è fermata su un punto in cui i due membri sono entrambi enormi e la loro differenza relativa è sotto la soglia di tolleranza. Vale la pena conservarlo come promemoria: un risolutore numerico risponde sempre, anche quando non dovrebbe."
+  },
+  "figure": [
+    {
+      "file": "teoria_radice_doppia",
+      "dopo": 19,
+      "didascalia": "Una perturbazione di ampiezza $2\\varepsilon$ sul termine noto separa le due radici di $(x+1)^2=0$ di una quantità proporzionale a $\\sqrt{\\varepsilon}$, non a $\\varepsilon$. In scala doppiamente logaritmica la pendenza $1/2$ è la firma della radice doppia."
+    }
+  ],
+  "chiusura": "Il quaderno non dimostra nulla in senso stretto e non ne ha l'intenzione. Fissa un'intuizione — l'errore come oggetto con leggi proprie — e la mette alla prova su tre fronti: la propagazione nelle potenze, dove trova per via sperimentale i coefficienti binomiali; la sensibilità delle radici multiple, dove ritrova il comportamento $\\sqrt{\\varepsilon}$ che rende quel caso patologico; e l'origine decimale del difetto, dove $\\varepsilon$ si rivela essere il $-1$ di $10^{k}-1$. Delle sei righe sulla propagazione, cinque combaciano con la legge generale e una contiene un refuso: anche questo, in un quaderno sull'errore, ha il suo posto."
+}

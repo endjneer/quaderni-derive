@@ -1,0 +1,60 @@
+{
+  "file": "cost^2.dfw",
+  "titolo": "Oscillazioni a frequenza crescente",
+  "intro": "Giugno 2010. Ventidue espressioni su $\\cos(t^2)$ e $\\sin(t^2)$: funzioni che oscillano sempre più rapidamente man mano che ci si allontana dall'origine, e i cui integrali non si esprimono con funzioni elementari. Sono gli integrali di Fresnel, e il quaderno li incontra senza chiamarli per nome. La sezione finale, però, arriva a un risultato esatto e notevole.",
+  "blocchi": [
+    {
+      "titolo": "Le funzioni e le loro derivate",
+      "testo": "Le prime dodici righe stabiliscono il comportamento sotto derivazione, che è ordinato e prevedibile.",
+      "da": 1,
+      "a": 12,
+      "coda": "Derivando una volta compare il fattore $2t$, derivando due volte compaiono un termine in $t^2$ e uno costante. Il punto rilevante è che le due funzioni si scambiano a ogni derivazione ma il fattore $2t$ cresce: è questo che rende l'oscillazione sempre più fitta e che impedisce alle primitive di essere elementari."
+    },
+    {
+      "titolo": "Le combinazioni e i loro integrali",
+      "testo": "Il quaderno costruisce la semisomma e la semidifferenza delle due funzioni e ne chiede le primitive.",
+      "da": 13,
+      "a": 17,
+      "coda": "Derive restituisce gli integrali senza valutarli, e fa bene: non esistono primitive elementari. Le funzioni $\\int_0^t\\cos u^2\\,\\mathrm{d}u$ e $\\int_0^t\\sin u^2\\,\\mathrm{d}u$ sono per definizione gli integrali di Fresnel, e la curva che si ottiene prendendole come coordinate di un punto è la spirale di Cornu — una delle curve più belle dell'analisi, e quella che descrive la diffrazione della luce da un bordo."
+    },
+    {
+      "titolo": "L'integrale improprio",
+      "testo": "L'ultima sezione introduce un parametro di frequenza e passa all'integrale su tutta la retta. Qui, dove la primitiva non esisteva, il valore esiste.",
+      "da": 18,
+      "a": 22,
+      "coda": "Il risultato della riga $\\#20$ è esatto e vale la pena di ricostruirlo. Gli integrali di Fresnel su tutta la semiretta valgono\n\\[\n  \\int_0^{+\\infty}\\cos\\!\\left(\\omega t^2\\right)\\mathrm{d}t\n  =\\int_0^{+\\infty}\\sin\\!\\left(\\omega t^2\\right)\\mathrm{d}t\n  =\\frac{1}{2}\\sqrt{\\frac{\\pi}{2\\omega}},\n\\]\ne su tutta la retta valgono il doppio. La semisomma delle due dà dunque $\\sqrt{\\pi/(2\\omega)}$, che è esattamente $\\dfrac{\\sqrt2\\,\\sqrt\\pi}{2\\sqrt\\omega}$ come scritto.\n\nÈ il fenomeno tipico degli integrali oscillanti: la funzione non tende a zero all'infinito e non è assolutamente integrabile, eppure l'integrale converge, perché le oscillazioni diventano così fitte che i contributi positivi e negativi si cancellano sempre meglio. La riga $\\#21$ prova a spingersi oltre inserendo un fattore $t^2$, e lì la cancellazione non basta più: l'integrale diverge, e Derive si limita a riscriverlo sfruttando la parità, senza valutarlo."
+    }
+  ],
+  "note": {
+    "1": "Il seno di un quadrato: oscilla sempre più rapidamente al crescere di $|t|$.",
+    "2": "Il coseno corrispondente.",
+    "3": "Il quadrato del primo.",
+    "4": "E del secondo. La loro somma vale identicamente uno.",
+    "5": "Si deriva il coseno.",
+    "6": "Il risultato: compare il fattore $2t$, responsabile dell'infittirsi delle oscillazioni.",
+    "7": "Si deriva il seno.",
+    "8": "Con il segno opposto, come atteso.",
+    "9": "Seconda derivata del coseno.",
+    "10": "Compaiono un termine in $t^2$ e uno costante.",
+    "11": "Seconda derivata del seno.",
+    "12": "La struttura è la stessa, con le funzioni scambiate.",
+    "13": "La semisomma delle due funzioni.",
+    "14": "Il suo integrale indefinito, che Derive lascia indicato.",
+    "15": "La semidifferenza, con lo stesso trattamento.",
+    "16": "L'integrale del solo coseno: è l'integrale di Fresnel $C$.",
+    "17": "E quello del solo seno: l'integrale di Fresnel $S$. Nessuno dei due è elementare.",
+    "18": "Si introduce una frequenza $\\omega$.",
+    "19": "L'integrale su tutta la retta.",
+    "20": "Il valore esatto, $\\sqrt{\\pi/(2\\omega)}$: l'integrale converge pur non essendo la funzione infinitesima all'infinito.",
+    "21": "Lo stesso integrale con un fattore $t^2$.",
+    "22": "Derive lo riscrive sfruttando la parità ma non lo valuta: con quel fattore la cancellazione delle oscillazioni non basta più e l'integrale diverge."
+  },
+  "figure": [
+    {
+      "file": "fresnel",
+      "dopo": 17,
+      "didascalia": "A sinistra le due funzioni: l'oscillazione si infittisce come $t$. A destra la curva che ha per coordinate i due integrali di Fresnel — la spirale di Cornu — i cui due punti limite sono le code convergenti dell'integrale improprio."
+    }
+  ],
+  "chiusura": "Ventidue righe che percorrono la distanza fra due situazioni opposte: una funzione le cui primitive non sono esprimibili con funzioni elementari, e il cui integrale su tutta la retta è invece una radice quadrata di $\\pi$ scritta in tre simboli. Fra le due cose sta la spirale di Cornu, che il quaderno non disegna ma che le sue righe descrivono per intero."
+}

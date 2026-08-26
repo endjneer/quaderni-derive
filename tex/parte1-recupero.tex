@@ -1,0 +1,328 @@
+% ---------------------------------------------------------------------------
+\chapter{Che cosa c'era dentro quei file}
+\label{cap:contesto}
+
+Ventitr\'e file con estensione \dfw{.dfw}, per complessivi 92\,kB, salvati
+fra l'aprile del 2009 e il gennaio del 2011. Sono le sessioni di lavoro di
+\emph{Derive for Windows}, il sistema di calcolo simbolico della Texas
+Instruments: ogni file \`e un foglio di lavoro, cio\`e una lista ordinata di
+espressioni, ciascuna o battuta a mano dall'autore o ottenuta applicando a
+una precedente un comando del programma --- semplifica, risolvi, deriva,
+integra, fattorizza.
+
+Derive \`e stato dismesso nel 2007 e l'ultima versione, la 6.10, \`e
+un'applicazione Win32 a 16/32 bit che sui sistemi attuali non parte pi\`u.
+Il formato \dfw{.dfw} non \`e documentato pubblicamente e nessun programma
+di calcolo moderno lo importa. Il contenuto, per\`o, non \`e cifrato n\'e
+compresso: le espressioni sono memorizzate come stringhe di testo ASCII,
+nella stessa sintassi lineare che l'utente batteva sulla riga di comando.
+Basta sapere dove guardare.
+
+\section{Che cosa \`e stato recuperato}
+
+L'estrazione ha restituito \textbf{792 espressioni} distribuite su
+23 quaderni. Il pi\`u corposo, \dfw{mate.dfw}, ne contiene 133; il pi\`u
+scarno, \dfw{limit.dfw}, una sola --- ma \`e una disuguaglianza che vale la
+pena di guardare (capitolo~\ref{cap:limit}).
+
+Sono sopravvissuti anche due metadati preziosi per ogni espressione:
+
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt]
+  \item il \textbf{numero d'ordine} nel foglio, quello che in Derive si
+        richiama scrivendo \der{\#12};
+  \item l'\textbf{origine}, ossia l'operazione che l'ha prodotta:
+        \der{User} se \`e stata battuta a mano, altrimenti la chiamata
+        responsabile, per esempio \der{Simp(Solve(\#11,z))}.
+\end{itemize}
+
+\noindent
+L'origine \`e ci\`o che permette di ricostruire il filo del ragionamento:
+distingue le ipotesi dell'autore dalle risposte della macchina. In questo
+volume compare in grigio, allineata a destra, sopra ogni formula.
+
+\section{Che cosa non \`e stato recuperato}
+
+Il formato memorizza anche le finestre grafiche 2D e 3D, con i loro
+intervalli e le loro impostazioni di vista. Questi oggetti non sono stati
+ricostruiti: i grafici che compaiono nel volume sono ridisegnati da zero a
+partire dalle formule, non recuperati dai file. Restano fuori anche le
+annotazioni di testo libero, che nei quaderni in esame erano comunque
+assenti o ridotte a poche parole.
+
+Va detto per onest\`a che gli indici delle espressioni presentano qualche
+lacuna: in \dfw{delta.dfw}, per esempio, si passa da \der{\#47} a
+\der{\#48}. Sono espressioni cancellate dall'autore durante la sessione,
+di cui il file conserva solo il buco nella numerazione. I numeri riportati
+qui sono quelli originali, buchi compresi, cos\`i che i riferimenti
+incrociati interni ai quaderni (\der{Simp(\#11)} e simili) restino leggibili.
+
+% ---------------------------------------------------------------------------
+\chapter{Anatomia di un file \texttt{.dfw}}
+\label{cap:formato}
+
+Il formato \`e stato ricostruito leggendo i byte dei file e confrontandoli
+con quello che ci si aspettava di trovare. \`E pi\`u semplice di quanto la
+parola ``binario'' lasci temere.
+
+\section{La struttura complessiva}
+
+Ogni file si apre con una riga di testo puro, terminata da un ritorno a
+capo, che dichiara versione e data:
+
+\begin{center}
+\der{Derive version 6.10 DfW file saved on 28 Jan 2010}
+\end{center}
+
+\noindent
+Subito dopo compare il byte \der{0x1A} --- il vecchio marcatore di fine
+file del DOS, usato qui come separatore --- e a seguire un blocco di
+impostazioni della sessione, sempre in chiaro, una per riga nella forma
+\der{Chiave:=Valore}:
+
+\begin{center}\small
+\begin{tabular}{@{}ll@{\hspace{2.2em}}ll@{}}
+\toprule
+\der{Precision} & \der{Exact} & \der{Angle} & \der{Radian}\\
+\der{PrecisionDigits} & \der{10} & \der{Branch} & \der{Principal}\\
+\der{Notation} & \der{Rational} & \der{CaseMode} & \der{Insensitive}\\
+\der{InputMode} & \der{Character} & \der{TimesOperator} & \der{Dot}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Queste impostazioni non sono decorative: \der{Branch:=Principal} dice che
+Derive sceglie la determinazione principale di logaritmi e radici, e
+\der{Angle:=Radian} che gli argomenti trigonometrici sono in radianti.
+Entrambe servono a leggere correttamente le formule dei capitoli seguenti.
+
+Dopo le impostazioni comincia la sequenza vera e propria degli oggetti.
+
+\section{Il record di una espressione}
+
+Ogni espressione occupa un record con questa forma:
+
+\begin{center}
+\begin{tikzpicture}[
+    box/.style={draw=grigiotratto,line width=0.7pt,rounded corners=1.5pt,
+                minimum height=1.05cm,align=center,font=\footnotesize\sffamily,
+                inner sep=4pt},
+    lab/.style={font=\scriptsize\sffamily\color{grigiotesto},align=center}
+  ]
+  \node[box,fill=grigiocarta,text width=2.5cm] (o) {origine\\ UTF-16LE};
+  \node[box,fill=grigiocarta,text width=1.9cm,right=2mm of o] (i)
+       {indice\\ 32 bit LE};
+  \node[box,fill=grigiocarta,text width=1.6cm,right=2mm of i] (c)
+       {\der{01 00}\\\der{00 00}};
+  \node[box,fill=blunotte!12,text width=1.5cm,right=2mm of c] (l)
+       {lungh.};
+  \node[box,fill=blunotte!12,text width=4.0cm,right=2mm of l] (t)
+       {testo dell'espressione\\ (ASCII)};
+
+  \node[lab,below=1.5mm of o] {\der{"User"} oppure\\ \der{"Simp(\#11)"}};
+  \node[lab,below=1.5mm of i] {\der{\#12}};
+  \node[lab,below=1.5mm of c] {costante};
+  \node[lab,below=1.5mm of l] {1 o 3 byte};
+  \node[lab,below=1.5mm of t] {\der{COS(x)\^{}2-COS(y)\^{}2}};
+\end{tikzpicture}
+\end{center}
+
+\noindent
+Il testo dell'espressione \`e memorizzato come \emph{stringa Pascal}: un
+byte di lunghezza seguito dai caratteri. Questa \`e la parte che ha
+richiesto due passaggi per essere azzeccata.
+
+\begin{osservazione}[Prima trappola]
+Un solo byte di lunghezza arriva fino a 254 caratteri. Le espressioni pi\`u
+lunghe usano una codifica estesa: il byte \der{0xFF} fa da segnale, e i due
+byte successivi contengono la lunghezza vera come intero a 16 bit
+little-endian. Senza questa regola, \dfw{numeri primi.dfw} risultava
+\emph{vuoto}: conteneva una sola espressione, lunga 573 caratteri.
+\end{osservazione}
+
+\begin{osservazione}[Seconda trappola]
+I caratteri non ASCII non sono memorizzati come tali. Il byte \der{0x7F}
+introduce una sequenza di quattro cifre esadecimali che d\`a il punto di
+codice Unicode: \der{0x7F 30 33 62 35} significa \der{03b5}, cio\`e
+$\varepsilon$. Finch\'e il filtro sui caratteri stampabili scartava
+\der{0x7F}, tutte le espressioni contenenti $\varepsilon$, $\omega$ o
+$\delta$ venivano perse in silenzio --- e sono 48, cio\`e il 6\% del
+totale. \`E il tipo di errore che non d\`a nessun segnale: il programma
+gira, produce un risultato plausibile, e semplicemente omette.
+\end{osservazione}
+
+\section{Il percorso completo}
+
+\begin{center}
+\begin{tikzpicture}[
+    node distance=6mm,
+    st/.style={draw=grigiotratto,line width=0.7pt,rounded corners=2pt,
+               fill=white,minimum height=0.95cm,text width=2.45cm,
+               align=center,font=\footnotesize\sffamily},
+    ac/.style={st,fill=blunotte!10},
+    fr/.style={-{Stealth[length=4pt]},grigiotesto,line width=0.6pt}
+  ]
+  \node[st] (a) {\texttt{.dfw}\\ binario};
+  \node[ac,right=of a] (b) {\texttt{dfw\_extract}\\ 792 stringhe};
+  \node[ac,right=of b] (c) {\texttt{derive2tex}\\ albero sintattico};
+  \node[st,right=of c] (d) {\LaTeX\\ impaginato};
+
+  \node[ac,below=9mm of c] (e) {\texttt{verify}\\ mpmath};
+  \node[ac,below=9mm of b] (f) {\texttt{make\_figures}\\ grafici};
+
+  \draw[fr] (a) -- (b);
+  \draw[fr] (b) -- (c);
+  \draw[fr] (c) -- (d);
+  \draw[fr] (c) -- (e);
+  \draw[fr] (e) -| (d);
+  \draw[fr] (b) -- (f);
+  \draw[fr] (f) -| (d);
+\end{tikzpicture}
+\end{center}
+
+\noindent
+L'estrattore produce un file JSON con testo, indice e origine di ogni
+espressione. Da l\`i partono tre strade indipendenti: la traduzione in
+\LaTeX{} (capitolo~\ref{cap:traduzione}), la verifica numerica
+(capitolo~\ref{cap:verifica}) e il disegno dei grafici. Nessuno dei tre
+passaggi tocca i file originali, che restano nel repository esattamente
+come erano.
+
+% ---------------------------------------------------------------------------
+\chapter{Dalla sintassi di Derive a \LaTeX}
+\label{cap:traduzione}
+
+Derive scrive le espressioni su una riga sola, con una sintassi vicina a
+quella dei linguaggi di programmazione. Tradurla in matematica composta
+significa scrivere un parser vero: non basta sostituire nomi di funzione,
+perch\'e le parentesi vanno ricalcolate.
+
+\section{La grammatica}
+
+Le regole di precedenza, dalla pi\`u debole alla pi\`u forte, sono le
+seguenti.
+
+\begin{center}\small
+\begin{tabular}{@{}rlp{7.4cm}@{}}
+\toprule
+\textbf{Liv.} & \textbf{Operatori} & \textbf{Note}\\
+\midrule
+1 & \der{OR} & alternativa fra soluzioni\\
+2 & \der{AND} & congiunzione di condizioni\\
+3 & \der{NOT} & \\
+4 & \der{=\ \ /=\ \ <\ \ <=\ \ >\ \ >=} & concatenabili:
+    \der{a=b=c} \`e una catena\\
+5 & \der{+\ \ -} & \\
+6 & \der{*\ \ /} & \\
+7 & \der{-} unario & \\
+8 & \der{\^{}} & associativo a destra\\
+9 & \der{!} & fattoriale postfisso\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Le costanti hanno una notazione propria: \der{\#e} e \der{\#i} per la base
+dei logaritmi naturali e l'unit\`a immaginaria, \der{pi} e \der{inf} per
+$\pi$ e $\infty$. Gli operatori del calcolo sono funzioni ordinarie:
+\der{INT(f,x,a,b)}, \der{DIF(f,x)}, \der{LIM(f,x,a,d)} con
+$d \in \{-1,0,1\}$ per il verso, \der{SUM} e \der{PRODUCT} con estremi.
+
+\section{Perch\'e le parentesi vanno ricalcolate}
+
+Il punto delicato \`e che le parentesi del sorgente Derive
+\emph{non} vanno riportate: molte spariscono grazie alla notazione
+bidimensionale, altre vanno aggiunte dove il sorgente non ne aveva bisogno.
+Il traduttore ignora del tutto le parentesi originali e le reinserisce in
+base alla struttura dell'albero. Due esempi presi dai quaderni:
+
+\begin{center}\small
+\begin{tabular}{@{}p{6.1cm}@{\hspace{1.2em}}p{6.1cm}@{}}
+\toprule
+\textbf{Sorgente Derive} & \textbf{Resa}\\
+\midrule
+\der{SUM((pi-\#e)\^{}n/n!,n,0,+inf)} &
+$\displaystyle\sum_{n=0}^{+\infty}\frac{(\pi-\mathrm{e})^{n}}{n!}$\\[14pt]
+\der{1/t*INT(SIN(x),x,0,t)/SIN(t/2)} &
+$\displaystyle\frac{\frac{1}{t}\int_{0}^{t}\sin(x)\,\mathrm{d}x}
+{\sin\!\left(\frac{t}{2}\right)}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent
+Nel primo caso le parentesi di \der{(pi-\#e)} vanno mantenute perch\'e
+reggono l'esponente; nel secondo quelle di \der{(t/2)} spariscono, perch\'e
+la frazione le rende superflue. Una traduzione a sostituzioni di testo
+sbaglia sistematicamente uno dei due casi.
+
+\section{Le espressioni lunghe}
+
+Alcune formule di \dfw{delta.dfw} superano i 350 caratteri di sorgente e
+non stanno su una riga a stampa. Il traduttore le spezza in due tempi:
+prima taglia la catena di uguaglianze mettendo un membro per riga, poi, se
+un singolo membro resta troppo lungo, lo scompone nei suoi addendi di primo
+livello e li distribuisce su pi\`u righe. Nessuna formula \`e stata ridotta
+di corpo o troncata.
+
+% ---------------------------------------------------------------------------
+\chapter{La verifica numerica}
+\label{cap:verifica}
+
+Le formule dei quaderni sono di tre specie diverse, e conviene tenerle
+distinte:
+
+\begin{itemize}[leftmargin=1.4em,itemsep=3pt]
+  \item \textbf{identit\`a}, che affermano un'uguaglianza vera per ogni
+        valore delle variabili;
+  \item \textbf{equazioni}, che pongono una condizione da risolvere ---
+        \der{\#e\^{}z=(1-x)/SQRT(1-x\^{}2)} non \`e vera per ogni $z$, \`e
+        la definizione implicita di $z$;
+  \item \textbf{scritture di lavoro}: appunti, valori numerici, espressioni
+        isolate senza segno di uguale.
+\end{itemize}
+
+\noindent
+Solo le prime si prestano a un controllo automatico. Il verificatore
+interpreta l'albero sintattico con \texttt{mpmath} a 20 cifre decimali,
+sceglie quattro punti pseudo-casuali del piano complesso, valuta ogni
+membro della catena e li confronta.
+
+\section{Che cosa significa il segno di spunta}
+
+Accanto al numero di un'espressione pu\`o comparire il segno
+\verificata. Significa una cosa sola e precisa: \emph{i membri
+dell'uguaglianza sono stati calcolati numericamente e coincidono in tutti i
+punti di prova}. Sono 145 le espressioni che lo portano.
+
+L'assenza del segno \textbf{non} significa che la formula sia sbagliata.
+Nella grande maggioranza dei casi significa che il controllo non era
+applicabile: integrale indefinito, \der{SOLVE} da risolvere, indice di
+somma simbolico, funzione non implementata nell'interprete, oppure ---
+molto spesso --- che l'espressione non era affatto un'identit\`a. Dove una
+formula merita un commento particolare, quel commento sta nel testo, non in
+un simbolo.
+
+\begin{osservazione}[Un limite dichiarato]
+I limiti sono valutati per campionamento, non simbolicamente: la funzione
+viene calcolata in una successione di punti che tende al valore limite e il
+risultato \`e accettato solo se gli ultimi due campioni concordano. \`E un
+metodo che riconosce i limiti regolari e si astiene su quelli delicati; non
+\`e una dimostrazione, e non pretende di esserlo.
+\end{osservazione}
+
+\section{Come leggere le schede dei quaderni}
+
+Ogni espressione \`e presentata cos\`i:
+
+\begin{espr}{15}{Simp(Solve(\#11,z))}{\verificata}
+\[
+  \frac{\cos^{2}(x)-\cos^{2}(y)}{\cos(2x)-\cos(2y)} = \frac{1}{2}
+\]
+\end{espr}
+
+\noindent
+A sinistra, in blu, il numero originale nel foglio Derive, seguito
+dall'eventuale segno di verifica. A destra, in grigio, l'origine: qui
+l'espressione \`e stata ottenuta risolvendo la numero 11 rispetto a $z$ e
+semplificando. Sotto, quando c'\`e qualcosa da dire, il commento.

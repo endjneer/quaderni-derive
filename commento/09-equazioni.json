@@ -1,0 +1,88 @@
+{
+  "file": "equazioni.dfw",
+  "titolo": "Equazioni algebriche spezzate in due",
+  "intro": "Gennaio 2010. Il quaderno applica una sola idea a quattro casi, di grado crescente dal primo al quarto. L'idea è questa: invece di risolvere un'equazione algebrica nel campo complesso, si scrive l'incognita come $z=x+\\mathrm{i}y$ con $x$ e $y$ reali, si separano parte reale e parte immaginaria, e si ottiene un sistema di due equazioni reali in due incognite. È il metodo che, in geometria, corrisponde a cercare le radici come intersezioni di due curve nel piano.",
+  "blocchi": [
+    {
+      "titolo": "Primo grado",
+      "testo": "Il caso più semplice serve a fissare la procedura. Il risultato è noto, ma il modo in cui si arriva merita di essere visto perché è quello che verrà ripetuto tre volte.",
+      "da": 1,
+      "a": 7,
+      "coda": "La parte immaginaria dà $ay=0$, cioè $y=0$: l'equazione di primo grado a coefficienti reali non ha radici fuori dall'asse reale. La parte reale dà allora $x=-b/a$. La riga $\\#7$ scrive la soluzione nella forma completa $z=-b/a+\\mathrm{i}\\cdot0$, che sembra pedante ma è il punto: il metodo restituisce sempre una coppia, ed è la coppia a dire dove si trova la radice."
+    },
+    {
+      "titolo": "Secondo grado",
+      "testo": "Qui il metodo comincia a dare qualcosa in cambio. Sostituendo $z=x+\\mathrm{i}y$ nella forma generale e separando, si ottengono due coniche.",
+      "da": 8,
+      "a": 15,
+      "coda": "La parte immaginaria è $y(2ax+b)=0$, e questa fattorizzazione è tutto. O si annulla $y$ — e allora la radice è reale — oppure si annulla il secondo fattore, e allora $x=-b/(2a)$: le radici complesse stanno necessariamente sulla verticale per il vertice della parabola.\n\nLa riga $\\#15$ elenca i quattro casi che ne derivano, e sono esattamente i due regimi della formula risolutiva. Se $4ac>b^2$ si hanno due radici coniugate con $x=-b/(2a)$ e $y=\\pm\\sqrt{4ac-b^2}/(2|a|)$; se $b^2>4ac$ si hanno due radici reali con $y=0$. Il discriminante non compare mai come tale: emerge da solo come condizione di realtà di una radice quadrata."
+    },
+    {
+      "titolo": "Terzo grado",
+      "testo": "Il grado tre è dove il metodo mostra la sua natura geometrica. La parte immaginaria continua a fattorizzarsi con $y$ in evidenza, ma il secondo fattore è ora una conica in $x$ e $y$.",
+      "da": 16,
+      "a": 33,
+      "coda": "La dicotomia è la stessa di prima: $y=0$ oppure $3ax^2+2bx-ay^2+c=0$. Quest'ultima è un'iperbole (per $a>0$), e la riga $\\#25$ ne ricava $y$ in funzione di $x$. Sostituendo nella parte reale si ottiene la riga $\\#28$, una cubica in $x$ sola, che individua l'ascissa comune alla coppia di radici coniugate. La riga $\\#31$ conferma il ramo reale: ponendo $y=0$ la parte reale ridiventa l'equazione di partenza.\n\nSi noti che l'equazione $\\#24$ contiene il polinomio $3ax^2+2bx+c$, cioè la derivata della cubica: le radici complesse di un polinomio di terzo grado si trovano sopra e sotto il punto in cui la derivata compensa il termine $ay^2$. È una relazione fra il polinomio e la sua derivata che il metodo produce senza che nessuno l'abbia cercata."
+    },
+    {
+      "titolo": "Quarto grado",
+      "testo": "L'ultimo caso ripete lo schema una volta di più, ed è quello che chiarisce che si tratta di un fenomeno generale.",
+      "da": 34,
+      "a": 44,
+      "coda": "Ancora una volta la parte immaginaria si fattorizza come $y\\cdot(\\ldots)$, e il fattore fra parentesi contiene $4ax^3+3bx^2+2cx+d$ — di nuovo la derivata del polinomio di partenza, corretta da termini in $y^2$. La ragione è semplice e vale per ogni grado: se $p$ ha coefficienti reali, allora\n\\[\n  \\operatorname{Im} p(x+\\mathrm{i}y)=y\\,\\big[p'(x)+O(y^2)\\big],\n\\]\nperché lo sviluppo di Taylor $p(x+\\mathrm{i}y)=p(x)+\\mathrm{i}yp'(x)-\\tfrac{y^2}{2}p''(x)-\\cdots$ ha parte immaginaria composta dai soli termini di grado dispari in $y$. Il fattore $y$ si raccoglie sempre, e il primo termine è sempre la derivata. Le quattro sezioni del quaderno sono quattro istanze di questa identità."
+    }
+  ],
+  "note": {
+    "1": "L'equazione di primo grado nel campo complesso.",
+    "2": "La sostituzione che genera tutto il resto.",
+    "3": "Sostituita.",
+    "4": "Sviluppata, con parte reale e immaginaria separate.",
+    "5": "La condizione sulla parte reale.",
+    "6": "E quella sulla parte immaginaria.",
+    "7": "La soluzione, scritta con la parte immaginaria esplicitamente nulla.",
+    "8": "L'equazione di secondo grado.",
+    "9": "La stessa sostituzione.",
+    "10": "Lo sviluppo. La parte immaginaria è già raccolta a fattor comune per $y$.",
+    "11": "La condizione sulla parte reale: un'iperbole equilatera nel piano $(x,y)$.",
+    "12": "La condizione sulla parte immaginaria.",
+    "13": "Semplificata.",
+    "14": "Semplificata: il prodotto $y(2ax+b)$ deve annullarsi.",
+    "15": "I quattro casi. I primi due sono la coppia coniugata quando $4ac>b^2$, gli altri due le radici reali quando $b^2>4ac$.",
+    "16": "Si passa al terzo grado.",
+    "17": "Sostituzione.",
+    "18": "Sostituita, senza sviluppare.",
+    "19": "Sviluppata: la parte immaginaria è ancora un multiplo di $y$.",
+    "20": "Condizione sulla parte reale.",
+    "21": "E sulla parte immaginaria.",
+    "22": "La cubica in $x$ con i termini in $y^2$.",
+    "23": "Il prodotto che deve annullarsi. Il secondo fattore contiene la derivata della cubica.",
+    "24": "Il secondo fattore isolato: una conica.",
+    "25": "Risolta rispetto a $y$: due rami simmetrici.",
+    "26": "L'altro ramo della dicotomia.",
+    "27": "Si sostituisce il valore di $y$ nella parte reale.",
+    "28": "Il risultato: una cubica nella sola $x$, che dà l'ascissa della coppia coniugata.",
+    "30": "I due rami, riscritti.",
+    "31": "Sostituendo invece $y=0$ si ritrova l'equazione di partenza: il ramo delle radici reali.",
+    "33": "Il ramo reale, esplicitato.",
+    "34": "Si passa al quarto grado.",
+    "35": "Sostituzione.",
+    "36": "Sostituita.",
+    "37": "Sviluppata.",
+    "38": "Condizione sulla parte reale.",
+    "39": "Semplificata: una quartica in $x$ con termini in $y^2$ e $y^4$.",
+    "40": "Condizione sulla parte immaginaria.",
+    "41": "Ancora il fattore $y$, e ancora la derivata del polinomio nel secondo fattore.",
+    "42": "Il ramo reale.",
+    "43": "Che restituisce la quartica di partenza.",
+    "44": "Il secondo fattore isolato: la cubica che individua le coppie coniugate."
+  },
+  "figure": [
+    {
+      "file": "equazioni_reim",
+      "dopo": 15,
+      "didascalia": "Il metodo in figura, per $z^2-z+2{,}5=0$. La curva blu è il luogo $\\operatorname{Re}=0$, la rossa il luogo $\\operatorname{Im}=0$; quest'ultima è l'unione dell'asse reale e della verticale $x=-b/(2a)$, come impone la fattorizzazione. Le radici sono le intersezioni.",
+      "larghezza": 0.62
+    }
+  ],
+  "chiusura": "Il metodo non è competitivo come strumento di calcolo — per risolvere un'equazione di secondo grado la formula è più rapida. Vale però come strumento di comprensione: rende visibile perché le radici complesse di un polinomio reale vengano a coppie, perché stiano su una verticale nel caso quadratico, e perché la derivata del polinomio compaia sempre nella condizione che le governa. Quattro gradi svolti per esteso sono più che sufficienti a mostrarlo."
+}

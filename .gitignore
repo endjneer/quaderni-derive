@@ -1,0 +1,17 @@
+# prodotti intermedi di LaTeX
+tex/*.aux
+tex/*.log
+tex/*.out
+tex/*.toc
+tex/*.lof
+tex/*.lot
+tex/*.synctex.gz
+tex/*.fdb_latexmk
+tex/*.fls
+
+# Python
+__pycache__/
+*.pyc
+
+# file di lavoro
+extracted/dump.txt

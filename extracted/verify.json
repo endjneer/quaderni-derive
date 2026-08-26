@@ -1,0 +1,3170 @@
+{
+ "Sudoku.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#19": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#20": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#21": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#22": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#23": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#24": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#25": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#26": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#27": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#28": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#29": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#30": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#31": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#32": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#33": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#34": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#35": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#36": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#37": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#38": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#39": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#40": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#41": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Sudoku.dfw#42": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "Trasformata T.dfw#1": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "Trasformata T.dfw#2": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#3": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#4": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#5": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#6": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#7": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#8": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#9": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#10": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#11": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#12": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#13": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "Trasformata T.dfw#14": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#1": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "atan.dfw#2": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#3": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "atan.dfw#4": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "atan.dfw#5": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#6": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#7": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#8": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#9": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#10": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "atan.dfw#11": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "atan.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "atan.dfw#13": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "atan.dfw#14": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "cosinc.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#15": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "cosinc.dfw#16": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "cosinc.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#19": {
+  "stato": "n/d",
+  "nota": "nessun punto valutabile"
+ },
+ "cosinc.dfw#20": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "cosinc.dfw#21": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#22": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "cosinc.dfw#23": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#24": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#25": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#26": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#27": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cosinc.dfw#28": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "cosinc.dfw#29": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "cost^2.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#19": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#20": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#21": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "cost^2.dfw#22": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#2": {
+  "stato": "n/d",
+  "nota": "limite non stabilizzato"
+ },
+ "delta.dfw#3": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#4": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "delta.dfw#5": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "delta.dfw#6": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "delta.dfw#7": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "delta.dfw#8": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#9": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#10": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#11": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#12": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "delta.dfw#13": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#14": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#15": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#16": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#17": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#18": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#19": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#20": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#21": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#22": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#23": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#24": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#25": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#26": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#27": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#28": {
+  "stato": "n/d",
+  "nota": "limite non stabilizzato"
+ },
+ "delta.dfw#29": {
+  "stato": "n/d",
+  "nota": "limite non stabilizzato"
+ },
+ "delta.dfw#30": {
+  "stato": "n/d",
+  "nota": "limite non stabilizzato"
+ },
+ "delta.dfw#31": {
+  "stato": "n/d",
+  "nota": "limite non campionabile"
+ },
+ "delta.dfw#32": {
+  "stato": "n/d",
+  "nota": "limite non campionabile"
+ },
+ "delta.dfw#33": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#34": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#35": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#36": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#37": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#38": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#39": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#40": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#41": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#42": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#43": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#44": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#45": {
+  "stato": "n/d",
+  "nota": "limite non stabilizzato"
+ },
+ "delta.dfw#46": {
+  "stato": "n/d",
+  "nota": "integrale indefinito"
+ },
+ "delta.dfw#47": {
+  "stato": "n/d",
+  "nota": "integrale indefinito"
+ },
+ "delta.dfw#48": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "delta.dfw#49": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "delta.dfw#50": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#51": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "delta.dfw#52": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#53": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#54": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "delta.dfw#55": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#19": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#20": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#21": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#22": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#23": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#24": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#25": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#26": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#27": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#28": {
+  "stato": "n/d",
+  "nota": "serie a convergenza lenta"
+ },
+ "e.dfw#29": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#30": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#31": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#32": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#33": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#34": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#35": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#36": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#37": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#38": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#39": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#40": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#41": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#42": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#43": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#44": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#45": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#46": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#47": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#48": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#49": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#50": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#51": {
+  "stato": "n/d",
+  "nota": "serie a convergenza lenta"
+ },
+ "e.dfw#52": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#53": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#54": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#55": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#56": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#57": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#58": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#59": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#60": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#61": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#62": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#63": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#64": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#65": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "e.dfw#66": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#67": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#68": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#69": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#70": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#71": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#72": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#73": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#74": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#75": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#76": {
+  "stato": "n/d",
+  "nota": "serie a convergenza lenta"
+ },
+ "e.dfw#77": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#78": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#79": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "e.dfw#80": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#81": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#82": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#83": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "e.dfw#84": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "e.dfw#85": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "e.dfw#86": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "e.dfw#87": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "e.dfw#88": {
+  "stato": "n/d",
+  "nota": "limite non stabilizzato"
+ },
+ "e.dfw#89": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#90": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "e.dfw#91": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "e.dfw#92": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "e.dfw#93": {
+  "stato": "n/d",
+  "nota": "limite non stabilizzato"
+ },
+ "equazioni.dfw#1": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#2": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#3": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#4": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#5": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#6": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#7": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#8": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#9": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#10": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#11": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#12": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#13": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#14": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "equazioni.dfw#16": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#17": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#18": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#19": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#20": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#21": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#22": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#23": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#24": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#25": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "equazioni.dfw#26": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#27": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#28": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#29": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "equazioni.dfw#30": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "equazioni.dfw#31": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#32": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "equazioni.dfw#33": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#34": {
+  "stato": "n/d",
+  "nota": "variabile e"
+ },
+ "equazioni.dfw#35": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#36": {
+  "stato": "n/d",
+  "nota": "variabile e"
+ },
+ "equazioni.dfw#37": {
+  "stato": "n/d",
+  "nota": "variabile e"
+ },
+ "equazioni.dfw#38": {
+  "stato": "n/d",
+  "nota": "variabile e"
+ },
+ "equazioni.dfw#39": {
+  "stato": "n/d",
+  "nota": "variabile e"
+ },
+ "equazioni.dfw#40": {
+  "stato": "n/d",
+  "nota": "variabile e"
+ },
+ "equazioni.dfw#41": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#42": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "equazioni.dfw#43": {
+  "stato": "n/d",
+  "nota": "variabile e"
+ },
+ "equazioni.dfw#44": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "factor.dfw#1": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#2": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#3": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#4": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#5": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "factor.dfw#6": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#7": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#8": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#9": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#10": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#17": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#18": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#19": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#20": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "factor.dfw#21": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#22": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#23": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#24": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#25": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#26": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#27": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#28": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#29": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#30": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#31": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#32": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#33": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#34": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#35": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "factor.dfw#36": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fattorazionale.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "fx^gx.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#1": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "gauss.dfw#2": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "gauss.dfw#3": {
+  "stato": "n/d",
+  "nota": "integrale indefinito"
+ },
+ "gauss.dfw#4": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "gauss.dfw#5": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "gauss.dfw#6": {
+  "stato": "n/d",
+  "nota": "integrale indefinito"
+ },
+ "gauss.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "gauss.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "j.dfw#1": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "j.dfw#2": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "j.dfw#3": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "j.dfw#4": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "j.dfw#5": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "j.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "j.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "limit.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#1": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#2": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#3": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#4": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#5": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#6": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#7": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#8": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#9": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#10": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#11": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#12": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#19": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#20": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#21": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#22": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#23": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#24": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#25": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#26": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#27": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#28": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#29": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#30": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#31": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#32": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#33": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#34": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#35": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#36": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#37": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#38": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#39": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#40": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#41": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#42": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#43": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#44": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#45": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#46": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#47": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#48": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#49": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#50": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#51": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#52": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#53": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#54": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#55": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#56": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#57": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#58": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#59": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#60": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#61": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#62": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#63": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#64": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#65": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#66": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#67": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "mate copia.dfw#68": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "mate copia.dfw#69": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#70": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#71": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#72": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#73": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#74": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#75": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#76": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#77": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#78": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#79": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#80": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#81": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#82": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#83": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#84": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#85": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#86": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#87": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#88": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#89": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#90": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#91": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#92": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#93": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#94": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#95": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#96": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#97": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#98": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#99": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#100": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#101": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#102": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#103": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#104": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#105": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#106": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#107": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#108": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#109": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#110": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#111": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#112": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#113": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#114": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#115": {
+  "stato": "n/d",
+  "nota": "funzione IF"
+ },
+ "mate copia.dfw#116": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#117": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#118": {
+  "stato": "n/d",
+  "nota": "funzione IF"
+ },
+ "mate copia.dfw#119": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#120": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#121": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#122": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate copia.dfw#123": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#124": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate copia.dfw#125": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#126": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate copia.dfw#127": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#1": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#2": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#3": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#4": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#5": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#6": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#7": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#8": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#9": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#10": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#11": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#12": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#19": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#20": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#21": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#22": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#23": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#24": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#25": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#26": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#27": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#28": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#29": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#30": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#31": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#32": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#33": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#34": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#35": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#36": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#37": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#38": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#39": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#40": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#41": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#42": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#43": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#44": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#45": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#46": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#47": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#48": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#49": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#50": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#51": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#52": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#53": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#54": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#55": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#56": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#57": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#58": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#59": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#60": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#61": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#62": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#63": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#64": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#65": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#66": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#67": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "mate.dfw#68": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "mate.dfw#69": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#70": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#71": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#72": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#73": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#74": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#75": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#76": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#77": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#78": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#79": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#80": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#81": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#82": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#83": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#84": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#85": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#86": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#87": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#88": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#89": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#90": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#91": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#92": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#93": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#94": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#95": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#96": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#97": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#98": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#99": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#100": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#101": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#102": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#103": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#104": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#105": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#106": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#107": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#108": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#109": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#110": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#111": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#112": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#113": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#114": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#115": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#116": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#117": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#118": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#119": {
+  "stato": "n/d",
+  "nota": "funzione IF"
+ },
+ "mate.dfw#120": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#121": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#122": {
+  "stato": "n/d",
+  "nota": "funzione IF"
+ },
+ "mate.dfw#123": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#124": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#125": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#126": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "mate.dfw#127": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#128": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#129": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#130": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#131": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "mate.dfw#132": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "mate.dfw#133": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "notch.dfw#17": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "notch.dfw#18": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "notch.dfw#19": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "notch.dfw#20": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "numeri primi.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#13": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#14": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#16": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#19": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#20": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#21": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#22": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "pigreco.dfw#23": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "pigreco.dfw#24": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "pigreco.dfw#25": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "pigreco.dfw#26": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "sin-cos.dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "sin-cos.dfw#9": {
+  "stato": "n/d",
+  "nota": "relazione annidata"
+ },
+ "sin-cos.dfw#10": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "sin-cos.dfw#11": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "sin-cos.dfw#12": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "sin-cos.dfw#13": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "sin-cos.dfw#14": {
+  "stato": "ok",
+  "nota": "4 punti"
+ },
+ "sin-cos.dfw#15": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "sin-cos.dfw#16": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "sin-cos.dfw#17": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "sin-cos.dfw#18": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "sin-cos.dfw#19": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "sin-cos.dfw#20": {
+  "stato": "ok",
+  "nota": "1 punti"
+ },
+ "teoria.dfw#1": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#2": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#3": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#4": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#5": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#6": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#7": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#8": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#9": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#10": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#11": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#12": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#13": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#14": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#15": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria.dfw#16": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#17": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#18": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria.dfw#19": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#20": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#21": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#22": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#23": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria.dfw#24": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#25": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria.dfw#26": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria.dfw#27": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#1": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#2": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria2.dfw#4": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#5": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#6": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#7": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#8": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#9": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria2.dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria2.dfw#12": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#13": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#14": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#15": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#16": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#17": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "teoria2.dfw#18": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#19": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#20": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#21": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#22": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#23": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#24": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#25": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#26": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#27": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#28": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#29": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#30": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "teoria2.dfw#31": {
+  "stato": "diff",
+  "nota": "membri diversi in un punto di prova"
+ },
+ "u(0)-sign(0).dfw#1": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#2": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#3": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#4": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#5": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#6": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#7": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#8": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#9": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#10": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#11": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ },
+ "u(0)-sign(0).dfw#12": {
+  "stato": "n/d",
+  "nota": "non e' una uguaglianza"
+ }
+}

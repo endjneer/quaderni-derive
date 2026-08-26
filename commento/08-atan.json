@@ -1,0 +1,60 @@
+{
+  "file": "atan.dfw",
+  "titolo": "L'arcotangente attraversa il taglio",
+  "intro": "Gennaio 2010. Quattordici espressioni che partono da un'identità nota e la seguono fuori dal territorio in cui è nata. L'identità è che $\\mathrm{e}^{\\mathrm{i}\\arctan x}$ è il numero complesso $1+\\mathrm{i}x$ normalizzato; la domanda del quaderno è che cosa ne resti quando all'argomento reale si sostituisce un argomento immaginario. La risposta passa per il punto di diramazione dell'arcotangente e per il logaritmo complesso.",
+  "blocchi": [
+    {
+      "titolo": "Il punto di partenza",
+      "testo": "La prima riga contiene tre scritture della stessa cosa, ed è l'osservazione su cui poggia tutto il resto: l'arcotangente di $x$ è l'argomento del numero complesso $1+\\mathrm{i}x$.",
+      "da": 1,
+      "a": 2,
+      "coda": "L'ultima delle tre scritture usa la funzione segno nel senso in cui Derive la estende ai complessi: $\\mathrm{sgn}(z)=z/|z|$, cioè la proiezione sul cerchio unitario. Dire che $\\mathrm{e}^{\\mathrm{i}\\arctan x}=\\mathrm{sgn}(1+\\mathrm{i}x)$ è dire che l'esponenziale immaginario è la fase, e nient'altro.\n\nLa riga $\\#2$ compie il passo decisivo sostituendo $x\\to\\mathrm{i}x$. Poiché $\\arctan(\\mathrm{i}x)=\\mathrm{i}\\,\\mathrm{artanh}(x)$, il primo membro diventa $\\mathrm{e}^{-\\mathrm{artanh}(x)}=\\sqrt{\\frac{1-x}{1+x}}$, che è esattamente il secondo membro riscritto. L'esponenziale immaginario è diventato un esponenziale reale: la rotazione si è trasformata in una dilatazione."
+    },
+    {
+      "titolo": "Il punto di diramazione",
+      "testo": "Che cosa succede esattamente in $x=1$, cioè quando l'argomento immaginario raggiunge $\\mathrm{i}$?",
+      "da": 3,
+      "a": 4,
+      "coda": "L'arcotangente ha due punti di diramazione, in $\\pm\\mathrm{i}$, e lì diverge. Derive lo dice nel modo più diretto possibile: $\\arctan(\\mathrm{i})=\\mathrm{i}\\infty$. L'esponenziale corrispondente, avendo esponente reale negativo infinito, vale zero. È il collasso del cerchio unitario in un punto."
+    },
+    {
+      "titolo": "La forma logaritmica e il ramo principale",
+      "testo": "Le sei espressioni seguenti sviluppano l'arcotangente immaginaria in forma logaritmica e ne seguono le conseguenze passo per passo. È la parte più delicata del quaderno, perché è dove i rami del logaritmo entrano in gioco.",
+      "da": 5,
+      "a": 10,
+      "coda": "La riga $\\#5$ merita un commento. La formula scolastica sarebbe $\\arctan(\\mathrm{i}x)=\\tfrac{\\mathrm{i}}{2}\\ln\\frac{1+x}{1-x}$, valida per $|x|<1$. Quella scritta qui usa invece $\\ln(x-1)$ al posto di $\\ln(1-x)$, e compensa con il termine costante $-\\pi/2$. Non è un errore: è la continuazione analitica oltre il punto di diramazione, cioè la forma valida per $x>1$, dove $\\ln(x-1)$ è reale e la scelta del ramo principale di Derive — dichiarata nell'intestazione del file con $\\mathtt{Branch{:}{=}Principal}$ — aggiunge quel $-\\pi/2$. Le righe successive riducono l'esponenziale a $\\sqrt{(x-1)/(x+1)}$ diviso per $\\mathrm{i}$, che è la controparte per $x>1$ della radice $\\sqrt{(1-x)/(1+x)}$ trovata alla riga $\\#2$ per $|x|<1$."
+    },
+    {
+      "titolo": "La verifica per via inversa",
+      "testo": "Le ultime quattro righe rifanno il conto al contrario: invece di sviluppare l'arcotangente, si pone l'esponenziale uguale al risultato e si risolve per l'esponente.",
+      "da": 11,
+      "a": 14,
+      "coda": "Fra le tre soluzioni che Derive restituisce alla riga $\\#12$, due differiscono dalla terza per multipli di $2\\pi\\mathrm{i}$: sono i rami del logaritmo complesso, che il programma elenca tutti perché nessuno è privilegiato dall'equazione. La riga $\\#13$ sceglie quello principale e la riga $\\#14$ conclude, chiudendo il cerchio con la riga $\\#2$."
+    }
+  ],
+  "note": {
+    "1": "Tre scritture equivalenti. L'identità è esatta per ogni $x$ reale; il verificatore automatico non le assegna il segno di spunta perché lo prova su punti complessi, dove l'arcotangente cambia ramo.",
+    "2": "La sostituzione $x\\to\\mathrm{i}x$. Il secondo membro è $\\sqrt{(1-x)/(1+x)}$ scritto senza radice al numeratore.",
+    "3": "Il punto di diramazione dell'arcotangente. La notazione $\\mathrm{i}\\infty$ indica una divergenza lungo l'asse immaginario.",
+    "4": "Di conseguenza l'esponenziale si annulla: $\\mathrm{e}^{-\\infty}=0$.",
+    "5": "Lo sviluppo logaritmico dell'arcotangente immaginaria, nella forma valida per $x>1$. Il termine $-\\pi/2$ è il contributo del ramo principale.",
+    "6": "Moltiplicata per $\\mathrm{i}$: la parte immaginaria e quella reale si scambiano di ruolo.",
+    "7": "L'esponenziale della riga precedente.",
+    "8": "Il fattore $\\mathrm{e}^{-\\mathrm{i}\\pi/2}$ vale $-\\mathrm{i}$ e viene portato fuori.",
+    "9": "Il fattore restante si semplifica in una radice: $\\mathrm{e}^{-\\frac12\\ln\\frac{x+1}{x-1}}=\\sqrt{\\frac{x-1}{x+1}}$.",
+    "10": "Mettendo insieme: l'esponenziale vale la radice divisa per $\\mathrm{i}$.",
+    "11": "Si riparte dal risultato della riga $\\#2$ e lo si pone uguale a $\\mathrm{e}^z$, per ricavare $z$.",
+    "12": "Le tre soluzioni di Derive differiscono per multipli di $2\\pi\\mathrm{i}$: sono rami distinti dello stesso logaritmo.",
+    "13": "Il ramo principale, quello senza termine immaginario aggiunto.",
+    "14": "La conclusione: $\\mathrm{i}\\arctan(\\mathrm{i}x)=\\ln(1-x)-\\tfrac12\\ln(1-x^2)$, che è $-\\mathrm{artanh}(x)$ scritto per esteso."
+  },
+  "figure": [
+    {
+      "file": "atan_cerchio",
+      "dopo": 1,
+      "didascalia": "L'identità $\\#1$ in figura: al variare di $x$ reale il punto $(1+\\mathrm{i}x)/\\sqrt{1+x^2}$ percorre il semicerchio destro, e il suo argomento è $\\arctan x$. Gli estremi $x\\to\\pm\\infty$ corrispondono ai due punti $\\pm\\mathrm{i}$, che non vengono mai raggiunti.",
+      "larghezza": 0.58
+    }
+  ],
+  "chiusura": "Il quaderno segue una funzione elementare fuori dal suo dominio naturale e registra con precisione che cosa le accade: l'esponenziale immaginario diventa reale, il cerchio unitario si apre in una semiretta, e in $x=1$ tutto collassa in un punto. Le righe da $\\#5$ a $\\#10$ sono un esercizio di contabilità dei rami del logaritmo condotto senza errori, il che con un sistema di calcolo simbolico non è mai scontato."
+}

@@ -1,0 +1,52 @@
+% Lo schema del partitore studiato in notch.dfw.
+% I componenti sono rettangoli con etichetta diritta: la rotazione dei nodi
+% ruoterebbe anche il testo.
+\begin{tikzpicture}[
+    filo/.style={draw=inchiostro,line width=0.8pt},
+    lab/.style={font=\footnotesize\sffamily,color=grigiotesto},
+    nome/.style={font=\small}
+  ]
+  % --- componenti orizzontali (larghezza 1.4, altezza 0.5) -----------
+  \newcommand{\comporizz}[3]{%
+    \fill[white] (#1-0.7,#2-0.28) rectangle (#1+0.7,#2+0.28);
+    \draw[filo] (#1-0.7,#2-0.28) rectangle (#1+0.7,#2+0.28);
+    \node[nome] at (#1,#2) {#3};}
+  % --- componenti verticali (larghezza 0.56, altezza 1.2) ------------
+  \newcommand{\compvert}[3]{%
+    \fill[white] (#1-0.28,#2-0.6) rectangle (#1+0.28,#2+0.6);
+    \draw[filo] (#1-0.28,#2-0.6) rectangle (#1+0.28,#2+0.6);
+    \node[nome] at (#1,#2) {#3};}
+
+  % --- rete ----------------------------------------------------------
+  \draw[filo] (0,3) -- (1.2,3);                    % ingresso
+  \draw[filo] (1.2,3) -- (4.6,3);                  % ramo con L
+  \draw[filo] (1.2,3) -- (1.2,4.3) -- (4.6,4.3) -- (4.6,3);   % ramo con C
+  \comporizz{2.9}{3}{$L$}
+  \comporizz{2.9}{4.3}{$C$}
+
+  \draw[filo] (4.6,3) -- (8.2,3);                  % verso l'uscita
+  \draw[filo] (5.6,3) -- (5.6,0);                  % ramo di R
+  \compvert{5.6}{1.5}{$R$}
+  \draw[filo] (7.2,3) -- (7.2,0);                  % ramo F--G
+  \compvert{7.2}{2.0}{$F$}
+  \compvert{7.2}{0.7}{$G$}
+
+  \draw[filo] (0,3) -- (0,0) -- (8.2,0);           % massa
+  \draw[filo] (8.2,3) -- (8.2,3);
+
+  % --- morsetti e etichette ------------------------------------------
+  \foreach \p in {(0,3),(0,0),(8.2,3),(8.2,0)}{\fill[inchiostro] \p circle (1.5pt);}
+  \node[lab,anchor=east] at (-0.15,3) {ingresso};
+  \node[lab,anchor=east] at (-0.15,0) {massa};
+  \node[lab,anchor=west] at (8.35,3) {uscita};
+
+  \draw[grigiotratto,line width=0.6pt] (1.2,4.75) -- (1.2,5.05)
+        -- (4.6,5.05) -- (4.6,4.75);
+  \node[lab,anchor=south] at (2.9,5.1)
+    {trappola $LC$: impedenza infinita a $\omega_n=1/\sqrt{LC}$};
+
+  \draw[grigiotratto,line width=0.6pt] (5.0,-0.35) -- (5.0,-0.6)
+        -- (7.8,-0.6) -- (7.8,-0.35);
+  \node[lab,anchor=north] at (6.4,-0.7)
+    {carico: $R$ in parallelo alla serie $F$--$G$};
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+{
+  "file": "u(0)-sign(0).dfw",
+  "titolo": "Quanto vale un gradino nel punto in cui salta",
+  "intro": "Gennaio 2011. Il nome del file pone la domanda: quanto valgono, nell'origine, il gradino unitario $u$ e la funzione segno? La risposta convenzionale è $u(0)=1/2$ e $\\mathrm{sgn}(0)=0$, scelta per simmetria. Il quaderno però arriva da un'altra strada — quella delle costruzioni di \\dfw{mate.dfw} (capitolo~\\ref{cap:mate}), dove il gradino nasceva come rapporto $\\ln\\!\\left(\\ldots\\right)/x$ che nell'origine è una forma indeterminata — e le dodici righe che seguono confrontano quattro candidati.\n\nIl quaderno non registra da quale funzione ciascun candidato provenga: si limita ai numeri e alle loro differenze. Le forme chiuse qui sotto sono ricostruite dai valori.",
+  "blocchi": [
+    {
+      "titolo": "I quattro candidati",
+      "testo": "Le prime otto righe calcolano i quattro valori. Espressi in forma chiusa sono $\\ln(\\mathrm{e}-1)$, $\\ln\\sinh 1$, la media fra quest'ultimo e $1$, e il doppio del primo diminuito di uno.",
+      "da": 1,
+      "a": 8,
+      "coda": "I quattro numeri sono $0{,}5413$, $0{,}1614$, $0{,}5807$ e $0{,}0826$. Il secondo si riconosce subito: $\\dfrac{\\mathrm{e}^2-1}{2\\mathrm{e}}=\\dfrac{\\mathrm{e}-\\mathrm{e}^{-1}}{2}=\\sinh 1$, dunque la riga $\\#3$ è $\\ln\\sinh 1$. Il primo è $\\ln(\\mathrm{e}-1)$ e vale poco più di un mezzo, il che lo rende il candidato più vicino alla convenzione usuale per $u(0)$.\n\nLe righe $\\#5$ e $\\#7$ sono due modi diversi di normalizzare: la prima fa la media fra $\\ln\\sinh1$ e $1$, la seconda raddoppia $\\ln(\\mathrm{e}-1)$ e sottrae $1$. Sono le stesse due operazioni che in \\dfw{mate.dfw} portavano dal gradino alla funzione segno e viceversa."
+    },
+    {
+      "titolo": "Le due differenze",
+      "testo": "Le ultime quattro righe confrontano i candidati a coppie, e qui c'è una relazione esatta.",
+      "da": 9,
+      "a": 12,
+      "coda": "I due scarti stanno in rapporto esattamente $1$ a $2$: la riga $\\#12$ vale il doppio della riga $\\#10$, cifra per cifra. Non è una coincidenza numerica ma un'identità, e si vede sviluppando. Poiché $\\sinh1=\\dfrac{(\\mathrm{e}-1)(\\mathrm{e}+1)}{2\\mathrm{e}}$, si ha $\\ln\\sinh1=\\ln(\\mathrm{e}-1)+\\ln(\\mathrm{e}+1)-\\ln2-1$, e sostituendo:\n\\[\n  \\frac{\\ln\\sinh 1+1}{2}-\\ln(\\mathrm{e}-1)\n  =\\frac{1}{2}\\ln\\frac{\\mathrm{e}+1}{2(\\mathrm{e}-1)}\n  =\\frac{1}{2}\\ln\\frac{\\coth\\tfrac12}{2},\n\\]\nmentre la riga $\\#12$ dà lo stesso logaritmo senza il fattore un mezzo. Il valore comune è $\\ln\\coth\\tfrac12-\\ln2=0{,}0787896523\\ldots$\n\nQuesto dice che i quattro candidati non sono indipendenti: due sono la stessa cosa a meno del riscalamento gradino-segno, e la loro distanza è la stessa quantità misurata su due scale diverse. Nessuno dei quattro vale $1/2$, e il più vicino, $\\ln(\\mathrm{e}-1)=0{,}5413$, se ne discosta di quattro centesimi."
+    }
+  ],
+  "note": {
+    "1": "Il primo candidato: $\\ln(\\mathrm{e}-1)$.",
+    "2": "Vale $0{,}5413248546$: poco più di un mezzo.",
+    "3": "Il secondo candidato. L'argomento del logaritmo è $\\sinh 1$.",
+    "4": "Vale $0{,}1614393615$.",
+    "5": "La media fra il secondo candidato e l'unità.",
+    "6": "Vale $0{,}5807196807$.",
+    "7": "Il doppio del primo candidato, meno uno: è la trasformazione che porta dal gradino al segno.",
+    "8": "Vale $0{,}0826497092$.",
+    "9": "La differenza fra il terzo e il primo candidato.",
+    "10": "Vale $0{,}0393948262$, cioè $\\tfrac12\\ln\\!\\left[\\coth(1/2)/2\\right]$.",
+    "11": "La differenza fra il secondo e il quarto.",
+    "12": "Vale $0{,}0787896523$, esattamente il doppio della riga $\\#10$: i due scarti sono la stessa quantità misurata sulla scala del gradino e su quella del segno."
+  },
+  "figure": [
+    {
+      "file": "u0",
+      "dopo": 8,
+      "didascalia": "I quattro candidati a confronto. La convenzione usuale porrebbe il gradino a $0{,}5$; il candidato più vicino, $\\ln(\\mathrm{e}-1)$, la supera di quattro centesimi."
+    }
+  ],
+  "chiusura": "Il quaderno non conclude, e forse non poteva. La domanda «quanto vale un gradino nel punto in cui salta» non ha una risposta unica: dipende da quale famiglia di funzioni continue lo si consideri limite. La convenzione $1/2$ nasce dalla simmetria e dalla serie di Fourier; i valori raccolti qui nascono invece dalle costruzioni logaritmiche di \\dfw{mate.dfw}, e sono diversi perché diverso è il limite. L'unica cosa che le dodici righe stabiliscono con certezza è la relazione esatta fra i due scarti — e quella, almeno, è un'identità."
+}

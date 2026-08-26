@@ -1,0 +1,40 @@
+{
+  "file": "mate copia.dfw",
+  "titolo": "La versione di febbraio",
+  "intro": "Il nome del file dice \\dfw{copia}, ma le date raccontano un'altra storia: questo quaderno è del 9 febbraio 2010, mentre \\dfw{mate.dfw} è del 18 agosto successivo. Non è una copia, è lo stato precedente dello stesso lavoro — sei mesi prima, e sei espressioni più corto.\n\nDelle 127 espressioni qui contenute, 117 compaiono identiche nel quaderno di agosto (capitolo~\\ref{cap:mate}), dove sono commentate una per una. Questo capitolo le riporta comunque tutte, per completezza del recupero, ma concentra il commento sulle tre che nella versione successiva sono state tolte. Sono le più interessanti, perché una scomparsa è sempre una scelta.",
+  "blocchi": [
+    {
+      "titolo": "L'identità con due pesi",
+      "testo": "La prima espressione che verrà eliminata è anche la più generale del quaderno, e sta subito all'inizio.",
+      "da": 1,
+      "a": 2,
+      "coda": "La riga $\\#2$ è la forma generale dell'identità che regge tutto il lavoro. Al denominatore compaiono due pesi, uno per la differenza di quadrati di coseni e uno per quella di seni, e il valore del rapporto è $1/(k+l)$. Si verifica in una riga: poiché $\\cos^2x-\\cos^2y$ e $\\sin^2x-\\sin^2y$ sono uno l'opposto dell'altro, il denominatore vale $(k+l)\\left(\\cos^2x-\\cos^2y\\right)$ e il rapporto si semplifica.\n\nDa questa forma discendono tutti i casi particolari usati nel resto del lavoro: $k=1,\\ l=1$ dà $1/2$, ed è l'identità di apertura; $k=0,\\ l=-1$ dà $-1$; e così via. Nella versione di agosto questa riga non c'è più, sostituita dai casi particolari scritti uno per uno. È una scelta curiosa — il caso generale era già stato trovato e poi è stato lasciato indietro."
+    },
+    {
+      "titolo": "Il corpo del quaderno",
+      "testo": "Le espressioni che seguono corrispondono, con lo scarto di qualche numero d'ordine, a quelle del capitolo~\\ref{cap:mate}: l'identità del mezzo e le sue varianti, la caccia al parametro, i due parametri, la macchina per $\\pi$, il gradino costruito con logaritmi e valori assoluti, le onde triangolari e a dente di sega, il confronto fra funzioni circolari e iperboliche. Per il commento si rimanda a quel capitolo.",
+      "da": 3,
+      "a": 87
+    },
+    {
+      "titolo": "Il logaritmo del coseno iperbolico",
+      "testo": "Le altre due espressioni destinate a scomparire stanno qui, e vanno lette insieme.",
+      "da": 88,
+      "a": 89,
+      "coda": "La riga $\\#89$ afferma che $\\ln\\cosh x=|x|$. Non è vero: la funzione $\\ln\\cosh x$ è liscia ovunque, vale $0$ in $x=0$ e si avvicina a $|x|-\\ln2$ per $|x|$ grande. La differenza fra le due non tende a zero, tende a $\\ln 2\\approx0{,}693$.\n\nÈ però una buona approssimazione nello spirito, e ha una proprietà che $|x|$ non ha: è derivabile nell'origine, dove la sua derivata $\\tanh x$ vale zero. Non a caso $\\ln\\cosh$ è oggi una delle funzioni di costo standard nell'ottimizzazione, usata proprio come sostituto liscio del valore assoluto.\n\nNella versione di agosto queste due righe spariscono, e al loro posto il quaderno sviluppa la costruzione $\\ln\\!\\left(\\left|\\mathrm{e}^x-1\\right|+\\left|\\mathrm{e}^x+1\\right|\\right)/2$, che invece dà $\\max(x,0)$ in modo esatto. La sostituzione ha senso: un'approssimazione è stata scartata a favore di un'identità."
+    },
+    {
+      "titolo": "La parte finale",
+      "testo": "Le ultime espressioni coincidono di nuovo con quelle del quaderno di agosto: il dente di sega nel piano complesso, il confronto fra funzioni iperboliche e circolari, l'arcoseno di argomento complesso.",
+      "da": 90,
+      "a": 127
+    }
+  ],
+  "note": {
+    "2": "La forma generale dell'identità, con due pesi liberi al denominatore. Da qui discendono tutti i casi particolari usati nel resto della raccolta.",
+    "88": "Il logaritmo del coseno iperbolico, introdotto da solo.",
+    "89": "L'affermazione che coincida con il valore assoluto. Non è un'identità: la differenza tende a $\\ln2$ per $|x|\\to\\infty$ e vale $0$ soltanto nell'origine. È però il sostituto derivabile del valore assoluto oggi più usato in pratica."
+  },
+  "figure": [],
+  "chiusura": "Il confronto fra le due versioni dice qualcosa sul modo di lavorare che questi file documentano. Fra febbraio e agosto il quaderno ha perso l'identità generale a due pesi e l'approssimazione $\\ln\\cosh x\\approx|x|$, e ha guadagnato la costruzione esatta del gradino, la versione iperbolica dell'identità di apertura e le onde quadre ottenute per composizione. Il bilancio è netto: meno generalità dichiarata, più identità verificate."
+}

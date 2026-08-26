@@ -1,0 +1,78 @@
+{
+  "file": "pigreco.dfw",
+  "titolo": "Cinque modi di fabbricare $\\pi$",
+  "intro": "Agosto 2010, lo stesso giorno di \\dfw{numeri primi.dfw}. Ventisei espressioni divise in cinque episodi indipendenti, accomunati da un obiettivo: costruire $\\pi$ a partire da oggetti in cui $\\pi$ non sembra esserci. Il quarto episodio contiene un'identità esatta e molto elegante, e vale da solo il capitolo.",
+  "blocchi": [
+    {
+      "titolo": "Un operatore differenziale applicato due volte",
+      "testo": "Si parte da una funzione di due variabili e le si applica l'operatore $D=\\partial_x+\\partial_y$, cioè la derivata direzionale lungo la bisettrice. Il quaderno calcola le due derivate parziali, le somma, e poi ripete l'operazione sul risultato.",
+      "da": 1,
+      "a": 13,
+      "coda": "Il risultato dei due passaggi è che il fattore $(x-y)$ sopravvive a entrambe le applicazioni dell'operatore, mentre la dipendenza da $y$ si semplifica progressivamente: da $(1-y^2)/y^2$ si passa a $2/y^3$. La funzione di partenza è costruita in modo che $\\pi$ compaia solo come costante moltiplicativa, e infatti attraversa indenne tutte le derivazioni. Sulla retta $y=1$ la derivata prima si annulla identicamente, e la funzione vi si riduce a $(1-x^2)/\\pi$."
+    },
+    {
+      "titolo": "Due prodotti che diventano fattoriali",
+      "testo": "Un intermezzo di combinatoria. Due prodotti finiti con estremi legati alla variabile, e le forme chiuse che Derive ne ricava.",
+      "da": 14,
+      "a": 17,
+      "coda": "Il secondo risultato merita attenzione. Il prodotto $x(x-1)\\cdots1$ vale $x!$ per $x$ intero, ma l'espressione ha senso anche fuori dagli interi, e Derive restituisce $x!\\cos^2(\\pi x)$. Il fattore $\\cos^2(\\pi x)$ vale $1$ su tutti gli interi e si annulla sui semi-interi: è il modo del programma di dire che la forma chiusa è valida sugli interi e non altrove. È un'informazione, non un errore di semplificazione."
+    },
+    {
+      "titolo": "$\\pi$ da un fattoriale",
+      "testo": "Tre righe, il modo più corto del quaderno per ottenere $\\pi$.",
+      "da": 18,
+      "a": 21,
+      "coda": "Il fattoriale di un mezzo è $\\Gamma(3/2)=\\sqrt{\\pi}/2$, e quadrando e moltiplicando per quattro si ottiene $\\pi$ esatto. È l'unico posto in tutta la raccolta in cui la funzione Gamma compare in modo essenziale, e vi compare senza essere nominata."
+    },
+    {
+      "titolo": "L'identità del rapporto",
+      "testo": "Questo è il risultato principale del quaderno: un rapporto fra funzioni trigonometriche e arcotangenti che vale $\\pi$ per ogni $x$ reale non nullo, cambiando segno con $x$.",
+      "da": 22,
+      "a": 23,
+      "coda": "L'identità è esatta e si dimostra in due mosse. La formula di duplicazione $\\cos 2\\theta=2\\cos^2\\theta-1$ trasforma il numeratore: $\\cos 2x-\\cos\\tfrac2x=2\\left(\\cos^2 x-\\cos^2\\tfrac1x\\right)$, e il rapporto con il denominatore vale dunque esattamente $2$, per ogni $x$ per cui il denominatore non si annulla. Resta il secondo fattore, $\\arctan x+\\arctan\\tfrac1x$, che vale $\\pi/2$ per $x>0$ e $-\\pi/2$ per $x<0$: è l'identità classica dell'arcotangente del reciproco. Il prodotto è $2\\cdot\\mathrm{sgn}(x)\\tfrac{\\pi}{2}=\\mathrm{sgn}(x)\\,\\pi$.\n\nDetto altrimenti: il primo fattore è una costante travestita da funzione, il secondo è un gradino travestito da somma di arcotangenti, e il prodotto è un gradino di altezza $2\\pi$. La riga $\\#23$ riscrive la stessa cosa con gli sviluppi in serie di tutte le funzioni coinvolte, presumibilmente per verificare che l'identità non dipenda da proprietà nascoste delle funzioni chiuse."
+    },
+    {
+      "titolo": "$\\pi$ ed $\\mathrm{e}$ come estremi di una stessa funzione",
+      "testo": "L'ultimo episodio è il più breve e forse il più elegante.",
+      "da": 24,
+      "a": 26,
+      "coda": "La funzione $\\left(\\pi^x+\\mathrm{e}^x\\right)^{1/x}$ è la media di potenza di ordine $x$ dei due numeri. Per $x\\to+\\infty$ il termine con la base maggiore domina e la media tende al massimo, cioè $\\pi$; per $x\\to-\\infty$ domina il termine con la base minore e si ottiene $\\mathrm{e}$. Una sola espressione contiene entrambe le costanti, ciascuna come limite da una parte. È lo stesso meccanismo per cui la norma $\\ell^p$ di un vettore tende al massimo delle componenti quando $p$ diverge."
+    }
+  ],
+  "note": {
+    "1": "La funzione di partenza, con $\\pi$ presente solo come fattore costante.",
+    "2": "Si chiede la derivata rispetto a $x$.",
+    "3": "Il risultato, riordinato da Derive.",
+    "4": "Ora rispetto a $y$.",
+    "5": "Il risultato.",
+    "6": "La somma delle due derivate parziali: è la derivata direzionale lungo la bisettrice.",
+    "7": "Semplificata. Il fattore $(x-y)$ è sopravvissuto alla derivazione.",
+    "8": "Si ricomincia: derivata rispetto a $x$ del risultato.",
+    "9": "Il risultato non dipende più da $x$.",
+    "10": "Derivata rispetto a $y$.",
+    "11": "Il risultato.",
+    "12": "La loro somma: la seconda applicazione dell'operatore.",
+    "13": "Semplificata. Il fattore $(y-x)$ è ancora lì, e la potenza di $y$ al denominatore è salita a tre.",
+    "14": "Un prodotto di $x+1$ fattori consecutivi a partire da $x$.",
+    "15": "La sua forma chiusa: rapporto di due fattoriali.",
+    "16": "Il prodotto discendente da $x$ a $1$.",
+    "17": "Derive scrive $x!\\cos^2(\\pi x)$: il fattore trigonometrico vale $1$ sugli interi, dove la formula è valida, e si annulla sui semi-interi.",
+    "18": "Il fattoriale di un mezzo, cioè $\\Gamma(3/2)$.",
+    "19": "Che vale $\\sqrt{\\pi}/2$.",
+    "20": "Si quadra e si moltiplica per quattro.",
+    "21": "Il risultato è $\\pi$ esatto.",
+    "22": "L'identità centrale del quaderno. Vale per ogni $x\\neq0$ in cui il denominatore non si annulla.",
+    "23": "La stessa identità con tutte le funzioni sostituite dai loro sviluppi in serie: una verifica della robustezza del risultato.",
+    "24": "La media di potenza di ordine $x$ fra $\\pi$ ed $\\mathrm{e}$.",
+    "25": "Per $x\\to+\\infty$ prevale la base maggiore.",
+    "26": "Per $x\\to-\\infty$ prevale la minore. Una funzione, due costanti."
+  },
+  "figure": [
+    {
+      "file": "pigreco_identita",
+      "dopo": 23,
+      "didascalia": "Verifica numerica dell'identità $\\#22$: il rapporto vale $\\pi$ per $x>0$ e $-\\pi$ per $x<0$, con le sole interruzioni nei punti in cui il denominatore si annulla."
+    }
+  ],
+  "chiusura": "Il quaderno raccoglie cinque strade indipendenti verso lo stesso numero: una derivazione ripetuta che lo lascia intatto, un prodotto che lo fa comparire in un fattore correttivo, un fattoriale semi-intero che lo produce esattamente, un rapporto trigonometrico che vale $\\pi$ ovunque, e una media di potenze che lo raggiunge all'infinito. Solo la quarta è un'identità nel senso stretto — ed è anche l'unica che si dimostra in due righe."
+}

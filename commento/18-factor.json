@@ -1,0 +1,81 @@
+{
+  "file": "factor.dfw",
+  "titolo": "Una regolarità che dura quattro passi",
+  "intro": "Agosto 2010. Il quaderno insegue un'uguaglianza fra due prodotti di fattoriali, la trova vera nei primi quattro casi, e poi la vede rompersi. Invece di abbandonarla, misura di quanto si rompe: le espressioni successive sono le fattorizzazioni complete delle differenze, numeri di trenta e più cifre scomposti nei loro fattori primi. È l'esempio migliore, in tutta la raccolta, di che cosa un sistema di calcolo simbolico permetta di fare che a mano sarebbe impensabile.",
+  "blocchi": [
+    {
+      "titolo": "Dove l'uguaglianza vale",
+      "testo": "L'affermazione da mettere alla prova è che il prodotto dei fattoriali dei primi numeri dispari sia il fattoriale di un numero triangolare:\n\\[\n  \\prod_{n=0}^{p}(2n+1)!\\;\\overset{?}{=}\\;\\left(\\frac{(p+1)(p+2)}{2}\\right)!\n\\]\nLe prime righe scrivono le differenze e le trovano nulle.",
+      "da": 1,
+      "a": 4,
+      "coda": "Quattro casi consecutivi, e tutti tornano: $1!=1!$, poi $1!\\cdot3!=6=3!$, poi $1!\\cdot3!\\cdot5!=720=6!$, e infine $1!\\cdot3!\\cdot5!\\cdot7!=3\\,628\\,800=10!$. I numeri $1,3,6,10$ sono i primi quattro numeri triangolari, e a questo punto una congettura è del tutto ragionevole."
+    },
+    {
+      "titolo": "Dove si rompe, e di quanto",
+      "testo": "Al quinto passo l'uguaglianza cede. Le righe seguenti non si limitano a constatarlo: fattorizzano la differenza, un caso dopo l'altro, per sei passi.",
+      "da": 5,
+      "a": 15,
+      "coda": "La rottura è netta ma non catastrofica. Al primo caso in cui fallisce, $p=4$, la differenza vale poco più di nove miliardi contro un valore comune di circa $1{,}3\\cdot10^{12}$: uno scarto dello $0{,}7\\%$. Ai passi successivi la differenza cresce molto più in fretta dei due prodotti, e già a $p=9$ nella sua fattorizzazione compaiono primi enormi — $3\\,116\\,563$ e $333\\,915\\,299$ — che non hanno nulla a che vedere con i piccoli fattori dei fattoriali.\n\nÈ questo il segnale che la congettura non era vicina al vero ma solo fortunata all'inizio. Se la differenza fosse un errore sistematico piccolo, i suoi fattori resterebbero fra i primi che compongono i fattoriali; il fatto che compaiano fattori primi grandi e apparentemente casuali dice che i due numeri non hanno alcuna relazione aritmetica al di là della coincidenza iniziale."
+    },
+    {
+      "titolo": "L'enunciato generale e i casi verificati",
+      "testo": "Una riga sola scrive la differenza in forma generale, e le quattro seguenti riverificano i casi che funzionano mostrando anche le fattorizzazioni dei due membri.",
+      "da": 16,
+      "a": 20,
+      "coda": "Le righe $\\#17$--$\\#20$ sono la stessa verifica dei primi quattro casi, ma questa volta con i due membri scritti nella loro forma fattorizzata: $2^4\\cdot3^2\\cdot5=720=6!$ e $2^8\\cdot3^4\\cdot5^2\\cdot7=3\\,628\\,800=10!$. Serve a vedere che gli esponenti combaciano — che è il modo naturale di controllare un'uguaglianza fra prodotti di fattoriali."
+    },
+    {
+      "titolo": "Le fattorizzazioni dei fattoriali triangolari",
+      "testo": "L'ultima sezione fattorizza il secondo membro per i valori successivi, cioè i fattoriali $15!$, $21!$, $28!$, $36!$, $45!$, $55!$, $66!$, $78!$.",
+      "da": 21,
+      "a": 36,
+      "coda": "Il confronto con le fattorizzazioni delle differenze della prima sezione è istruttivo. I fattoriali contengono tutti i primi fino al loro argomento, con esponenti che seguono la formula di Legendre; le differenze contengono invece pochi primi piccoli con esponenti alti e poi qualche primo grande isolato. Le due strutture non si assomigliano, e questo è, in sostanza, la risposta alla domanda che il quaderno si era posto."
+    }
+  ],
+  "note": {
+    "1": "Il caso $p=0$: entrambi i membri valgono $1$.",
+    "2": "Il caso $p=1$: $1!\\cdot3!=6=3!$.",
+    "3": "Il caso $p=2$: $720=6!$.",
+    "4": "Il caso $p=3$: $3\\,628\\,800=10!$. Quattro coincidenze consecutive.",
+    "5": "Il primo caso in cui l'uguaglianza fallisce. Qui però c'è un refuso: la differenza vale $2^{11}\\cdot3^{6}\\cdot5^{3}\\cdot7^{2}=9\\,144\\,576\\,000$, mentre la riga scrive $7^{3}$. Il valore scritto è dunque sette volte quello vero. Tutte le fattorizzazioni successive, che sono uscite da Derive e non battute a mano, sono invece esatte.",
+    "6": "Il caso $p=5$: la differenza contiene $11^3$.",
+    "7": "Il caso $p=6$: compare il primo fattore primo estraneo ai fattoriali, $7103$.",
+    "8": "Il caso $p=7$: due fattori primi a quattro cifre, $4013$ e $4261$.",
+    "9": "Il caso $p=8$: compare $22\\,969\\,787$.",
+    "10": "Il caso $p=9$: compaiono $3\\,116\\,563$ e $333\\,915\\,299$. Nessuno di questi ha rapporto con i fattoriali di partenza.",
+    "11": "Il caso $p=10$, dato solo nella forma fattorizzata.",
+    "12": "Il caso $p=11$: l'ultimo fattore ha venticinque cifre.",
+    "13": "Il caso $p=12$: la parte non piccola è un unico numero di trentasette cifre.",
+    "14": "Il caso $p=13$.",
+    "15": "Il caso $p=14$: la differenza contiene un fattore primo di trentadue cifre.",
+    "16": "L'enunciato generale della differenza, che è ciò che tutte le righe precedenti hanno valutato.",
+    "17": "La verifica del caso $p=0$, con entrambi i membri.",
+    "18": "Il caso $p=1$, con la fattorizzazione $2\\cdot3$.",
+    "19": "Il caso $p=2$: $2^4\\cdot3^2\\cdot5=6!$.",
+    "20": "Il caso $p=3$: $2^8\\cdot3^4\\cdot5^2\\cdot7=10!$. È l'ultimo che funziona.",
+    "21": "Il primo fattoriale triangolare per cui l'uguaglianza fallisce.",
+    "22": "La sua fattorizzazione. Da confrontare con la riga $\\#5$: gli esponenti di $2$, $3$ e $5$ coincidono, quello di $7$ no, e in più compaiono $11$ e $13$.",
+    "23": "Il fattoriale successivo.",
+    "24": "La sua fattorizzazione.",
+    "25": "E il successivo.",
+    "26": "La sua fattorizzazione.",
+    "27": "Lo stesso numero scritto con la formula del numero triangolare.",
+    "28": "La sua fattorizzazione: compaiono tutti i primi fino a $31$.",
+    "29": "Il passo successivo.",
+    "30": "La fattorizzazione arriva a $43$.",
+    "31": "E ancora.",
+    "32": "Fino a $53$.",
+    "33": "Il numero triangolare di indice dieci.",
+    "34": "La fattorizzazione arriva a $61$.",
+    "35": "Quello di indice undici.",
+    "36": "L'ultima fattorizzazione del quaderno: tutti i primi fino a $73$, con gli esponenti dati dalla formula di Legendre."
+  },
+  "figure": [
+    {
+      "file": "factor",
+      "dopo": 16,
+      "didascalia": "I due membri dell'uguaglianza, misurati in numero di cifre decimali. Coincidono fino a $p=3$ e poi si separano; la curva tratteggiata sull'asse destro è la loro differenza, che cresce senza limite."
+    }
+  ],
+  "chiusura": "Un'uguaglianza vera quattro volte di seguito e poi falsa per sempre è un buon promemoria sul valore delle verifiche numeriche. Il quaderno lo raccoglie nel modo giusto: non si limita a constatare il fallimento ma lo quantifica, e la struttura dei fattori primi delle differenze dice, meglio di qualunque argomento, che la coincidenza iniziale non nascondeva nulla.\n\nDa segnalare che l'unica riga battuta a mano di tutta la sezione — la $\\#5$ — contiene un errore di trascrizione nell'esponente di $7$, mentre tutte le fattorizzazioni prodotte da Derive sono esatte. È il secondo refuso della raccolta, dopo quello di \\dfw{teoria.dfw} (capitolo~\\ref{cap:teoria}), e come quello sta in una riga scritta dall'autore."
+}

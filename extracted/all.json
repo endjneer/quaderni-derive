@@ -1,0 +1,5392 @@
+[
+ {
+  "file": "Sudoku.dfw",
+  "header": "Derive version 6.00 DfW file saved on 26 Apr 2009",
+  "settings": {
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 473,
+    "text": "DET([[9,1,3,7,8,6,5,4,2],[4,8,7,5,2,3,1,9,6],[2,6,5,4,1,9,3,8,7],[8,5,6,3,7,4,2,1,9],[7,9,2,1,6,5,4,3,8],[3,4,1,2,9,8,7,6,5],[6,3,4,9,5,7,8,2,1],[5,2,9,8,4,1,6,7,3],[1,7,8,6,3,2,9,5,4]])",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 715,
+    "text": "-2975130",
+    "origin": "Simp(#1)"
+   },
+   {
+    "idx": 3,
+    "pos": 771,
+    "text": "DET([[9,1,3],[4,8,7],[2,6,5]])",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 849,
+    "text": "0",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 898,
+    "text": "DET([[7,8,6],[5,2,3],[4,1,9]])",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 984,
+    "text": "-177",
+    "origin": "Simp(#5)"
+   },
+   {
+    "idx": 7,
+    "pos": 1036,
+    "text": "DET([[5,4,2],[1,9,6],[3,8,7]])",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1122,
+    "text": "81",
+    "origin": "Simp(#7)"
+   },
+   {
+    "idx": 9,
+    "pos": 1172,
+    "text": "DET([[8,5,6],[7,9,2],[3,4,1]])",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1258,
+    "text": "9",
+    "origin": "Simp(#9)"
+   },
+   {
+    "idx": 11,
+    "pos": 1307,
+    "text": "DET([[3,7,4],[1,6,5],[2,9,8]])",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1385,
+    "text": "11",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1435,
+    "text": "DET([[2,1,9],[4,3,8],[7,6,5]])",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1523,
+    "text": "-3",
+    "origin": "Simp(#13)"
+   },
+   {
+    "idx": 15,
+    "pos": 1573,
+    "text": "DET([[6,3,4],[5,2,9],[1,7,8]])",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 1661,
+    "text": "-243",
+    "origin": "Simp(#15)"
+   },
+   {
+    "idx": 17,
+    "pos": 1713,
+    "text": "DET([[9,5,7],[8,4,1],[6,3,2]])",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 1801,
+    "text": "-5",
+    "origin": "Simp(#17)"
+   },
+   {
+    "idx": 19,
+    "pos": 1851,
+    "text": "DET([[8,2,1],[6,7,3],[9,5,4]])",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 1941,
+    "text": "77",
+    "origin": "Simp(User)"
+   },
+   {
+    "idx": 21,
+    "pos": 1991,
+    "text": "0+(-177)+81+9+11+(-3)+(-243)+(-5)+77",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 2085,
+    "text": "-250",
+    "origin": "Simp(#21)"
+   },
+   {
+    "idx": 23,
+    "pos": 2137,
+    "text": "DET([[9,1,3],[7,8,6],[5,4,2]])",
+    "origin": "User"
+   },
+   {
+    "idx": 24,
+    "pos": 2225,
+    "text": "-92",
+    "origin": "Simp(#23)"
+   },
+   {
+    "idx": 25,
+    "pos": 2276,
+    "text": "DET([[4,8,7],[5,2,3],[1,9,6]])",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 2364,
+    "text": "25",
+    "origin": "Simp(#25)"
+   },
+   {
+    "idx": 27,
+    "pos": 2414,
+    "text": "DET([[2,6,5],[4,1,9],[3,8,7]])",
+    "origin": "User"
+   },
+   {
+    "idx": 28,
+    "pos": 2502,
+    "text": "9",
+    "origin": "Simp(#27)"
+   },
+   {
+    "idx": 29,
+    "pos": 2551,
+    "text": "DET([[8,5,6],[3,7,4],[2,1,9]])",
+    "origin": "User"
+   },
+   {
+    "idx": 30,
+    "pos": 2639,
+    "text": "311",
+    "origin": "Simp(#29)"
+   },
+   {
+    "idx": 31,
+    "pos": 2690,
+    "text": "DET([[7,9,2],[1,6,5],[4,3,8]])",
+    "origin": "User"
+   },
+   {
+    "idx": 32,
+    "pos": 2778,
+    "text": "297",
+    "origin": "Simp(#31)"
+   },
+   {
+    "idx": 33,
+    "pos": 2829,
+    "text": "DET([[3,4,1],[2,9,8],[7,6,5]])",
+    "origin": "User"
+   },
+   {
+    "idx": 34,
+    "pos": 2917,
+    "text": "124",
+    "origin": "Simp(#33)"
+   },
+   {
+    "idx": 35,
+    "pos": 2968,
+    "text": "DET([[6,3,4],[9,5,7],[8,2,1]])",
+    "origin": "User"
+   },
+   {
+    "idx": 36,
+    "pos": 3056,
+    "text": "-1",
+    "origin": "Simp(#35)"
+   },
+   {
+    "idx": 37,
+    "pos": 3106,
+    "text": "DET([[5,2,9],[8,4,1],[6,7,3]])",
+    "origin": "User"
+   },
+   {
+    "idx": 38,
+    "pos": 3194,
+    "text": "277",
+    "origin": "Simp(#37)"
+   },
+   {
+    "idx": 39,
+    "pos": 3245,
+    "text": "DET([[1,7,8],[6,3,2],[9,5,4]])",
+    "origin": "User"
+   },
+   {
+    "idx": 40,
+    "pos": 3333,
+    "text": "-16",
+    "origin": "Simp(#39)"
+   },
+   {
+    "idx": 41,
+    "pos": 3384,
+    "text": "-92+25+9+311+297+124-1+277-16",
+    "origin": "User"
+   },
+   {
+    "idx": 42,
+    "pos": 3471,
+    "text": "934",
+    "origin": "Simp(#41)"
+   }
+  ]
+ },
+ {
+  "file": "Trasformata T.dfw",
+  "header": "Derive version 6.10 DfW file saved on 17 Jan 2011",
+  "settings": {
+   "hCross": "APPROX(0)",
+   "vCross": "APPROX(11765000000000001/10000000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 545,
+    "text": "1/t*INT(LN(x+1),x,0,t)/LN(t/2+1)=(LN(t+1)^((t+1)/t)-1)/LN(t/2+1)",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 657,
+    "text": "1/t*INT(LN(x),x,0,t)/LN(t/2)=(LN(t)-1)/LN(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 751,
+    "text": "1/t*INT(#e^x,x,0,t)/#e^(t/2)=SINH(t/2)/(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 843,
+    "text": "1/t*INT(SIN(x),x,0,t)/SIN(t/2)=SIN(t/2)/(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 936,
+    "text": "1/t*INT(COS(x),x,0,t)/COS(t/2)=SIN(t/2)/(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 1029,
+    "text": "1/t*INT(#e^(#i*x),x,0,t)/#e^(#i*t/2)=SIN(t/2)/(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1128,
+    "text": "1/t*INT(#e^(2*pi*#i*x),x,0,t)/#e^(pi*#i*t)=SIN(pi*t)/(pi*t)",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1235,
+    "text": "1/t*INT(x^n,x,0,t)/(t/2)^n=2^n/(n+1)",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1319,
+    "text": "1/t*INT(#e^(-x^2),x,0,t)/#e^(-(t/2)^2)=SQRT(pi)*#e^(t^2/4)*ERF(t)/(2*t)",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1438,
+    "text": "1/t*INT(SIN(x)/x,x,0,t)/(SIN(t/2)/(t/2))=INT(SIN(x)/x,x,0,t)/(2*SIN(t/2))",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1559,
+    "text": "1/t*INT(ATAN(x),x,0,t)/ATAN(t/2)=(ATAN(t)-LN(t^2+1)/(2*t))/ATAN(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1675,
+    "text": "1/t*INT(ASIN(x),x,0,t)/ASIN(t/2)=(ASIN(t)+(SQRT(1-t^2)-1)/t)/ASIN(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1793,
+    "text": "1/t*INT(ACOS(x),x,0,t)/ACOS(t/2)=-(2*t*ASIN(t)+2*SQRT(1-t^2)-pi*t-2)/(2*t*ACOS(t/2))",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1925,
+    "text": "1/t*INT(TAN(x),x,0,t)/TAN(t/2)=-LN(COS(t))*COT(t/2)/t",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "atan.dfw",
+  "header": "Derive version 6.10 DfW file saved on 28 Jan 2010",
+  "settings": {
+   "hCross": "APPROX(10126582278481013/10000000000000000)",
+   "vCross": "APPROX(5147058823529411/5000000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 577,
+    "text": "#e^(#i*ATAN(x))=(1+#i*x)/SQRT(x^2+1)=SIGN(1+#i*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 674,
+    "text": "#e^(#i*ATAN(#i*x))=(1-x)/SQRT(1-x^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 758,
+    "text": "ATAN(#i)=#i*inf",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 821,
+    "text": "#e^(#i*ATAN(#i))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 887,
+    "text": "ATAN(#i*x)=-pi/2+#i/2*(LN(x+1)-LN(x-1))",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 974,
+    "text": "#i*ATAN(#i*x)=-1/2*(LN(x+1)-LN(x-1))-#i*pi/2",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1066,
+    "text": "#e^(#i*ATAN(#i*x))=#e^(-1/2*(LN(x+1)-LN(x-1))-#i*pi/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1168,
+    "text": "#e^(-1/2*(LN(x+1)-LN(x-1)))*#e^(-#i*pi/2)=-#i*#e^(-1/2*(LN(x+1)-LN(x-1)))",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1289,
+    "text": "#e^(-1/2*(LN(x+1)-LN(x-1)))=SQRT(x-1)/SQRT(x+1)",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1384,
+    "text": "#e^(#i*ATAN(#i*x))=1/#i*(SQRT(x-1)/SQRT(x+1))",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1477,
+    "text": "#e^z=(1-x)/SQRT(1-x^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1575,
+    "text": "z=-LN(1-x^2)/2+LN(1-x)-2*pi*#i OR z=-LN(1-x^2)/2+LN(1-x)+2*pi*#i OR z=LN(1-x)-LN(1-x^2)/2",
+    "origin": "Simp(Solve(#11,z))"
+   },
+   {
+    "idx": 13,
+    "pos": 1712,
+    "text": "z=LN(1-x)-LN(1-x^2)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1781,
+    "text": "#i*ATAN(#i*x)=LN(1-x)-LN(1-x^2)/2",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "cosinc.dfw",
+  "header": "Derive version 6.10 DfW file saved on 14 Nov 2010",
+  "settings": {
+   "hCross": "APPROX(- 75949367088607589/100000000000000000)",
+   "vCross": "APPROX(- 5514705882352941/6250000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 582,
+    "text": "(1+#i*TAN(t))^2/(1+TAN(t)^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 658,
+    "text": "SIGN(1+#i*TAN(t))^2",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 725,
+    "text": "1+#i*TAN(t)",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 784,
+    "text": "1+TAN(pi*t)^2",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 845,
+    "text": "1^x",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 896,
+    "text": "DIF((-1)^x,x)/(pi*(-1)^x)",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 969,
+    "text": "DIF((-1)^(2*x),x)/(2*pi*(-1)^(2*x))",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1052,
+    "text": "DIF((-1)^(3*x),x)/(3*pi*(-1)^(3*x))",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1135,
+    "text": "DIF((-1)^(k*x),x)/(k*pi*(-1)^(k*x))",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1218,
+    "text": "1/x*LN(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1275,
+    "text": "LIM(((-1)^h-1)/(pi*h),h,0,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1351,
+    "text": "(((-1)^h-1)/(pi*h))^2",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1420,
+    "text": "((-1)^h-1)/(pi*h)",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1485,
+    "text": "#i^(n+1)*(pi*x)^n/(n+1)!",
+    "origin": "User"
+   },
+   {
+    "idx": 15,
+    "pos": 1557,
+    "text": "IM(SUM(#i^(n+1)*(pi*x)^n/(n+1)!,n,0,+inf))=SIN(pi*x)/(pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 1664,
+    "text": "RE(SUM(#i^(n+1)*(pi*x)^n/(n+1)!,n,0,+inf))=(COS(pi*x)-1)/(pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 1775,
+    "text": "(1-COS(pi*x))/(pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 1843,
+    "text": "2*INT((1-COS(pi*x))/(pi*x),x,0,+inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 1927,
+    "text": "INT(SIN(pi*x)/(pi*x),x,-(+inf),+inf)=1",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 2013,
+    "text": "2*INT((1-COS(pi*x))/(pi*x),x,0,+inf)=11.53414128",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 2109,
+    "text": "11.53414128/2",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 2170,
+    "text": "11.53414128/2=5.76707064",
+    "origin": "User"
+   },
+   {
+    "idx": 23,
+    "pos": 2242,
+    "text": "(COS(pi*x)-1)/(pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 24,
+    "pos": 2310,
+    "text": "INT((1-COS(pi*x))/(pi*x),x)",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 2399,
+    "text": "INT(SIN(pi*x)/(pi*x),x)",
+    "origin": "Int(User,x)"
+   },
+   {
+    "idx": 26,
+    "pos": 2470,
+    "text": "DIF((1-COS(pi*x))/(pi*x),x)",
+    "origin": "User"
+   },
+   {
+    "idx": 27,
+    "pos": 2555,
+    "text": "COS(pi*x)/(pi*x^2)+SIN(pi*x)/x-1/(pi*x^2)",
+    "origin": "Simp(#26)"
+   },
+   {
+    "idx": 28,
+    "pos": 2644,
+    "text": "LIM(((-1)^h-1)/(pi*h),h,0,1)=#i",
+    "origin": "User"
+   },
+   {
+    "idx": 29,
+    "pos": 2723,
+    "text": "((-1)^x-1)/(pi*x)=(COS(pi*x)-1+#i*SIN(pi*x))/(pi*x)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "cost^2.dfw",
+  "header": "Derive version 6.10 DfW file saved on 24 Jun 2010",
+  "settings": {
+   "hCross": "APPROX(0)",
+   "vCross": "APPROX(0)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 511,
+    "text": "SIN(t^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 567,
+    "text": "COS(t^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 623,
+    "text": "SIN(t^2)^2",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 681,
+    "text": "COS(t^2)^2",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 749,
+    "text": "DIF(COS(t^2),t)",
+    "origin": "Dif(#2,t)"
+   },
+   {
+    "idx": 6,
+    "pos": 834,
+    "text": "-2*t*SIN(t^2)",
+    "origin": "Simp(Dif(#2,t))"
+   },
+   {
+    "idx": 7,
+    "pos": 905,
+    "text": "DIF(SIN(t^2),t)",
+    "origin": "Dif(#1,t)"
+   },
+   {
+    "idx": 8,
+    "pos": 990,
+    "text": "2*t*COS(t^2)",
+    "origin": "Simp(Dif(#1,t))"
+   },
+   {
+    "idx": 9,
+    "pos": 1060,
+    "text": "DIF(-2*t*SIN(t^2),t)",
+    "origin": "Dif(#6,t)"
+   },
+   {
+    "idx": 10,
+    "pos": 1150,
+    "text": "-4*t^2*COS(t^2)-2*SIN(t^2)",
+    "origin": "Simp(Dif(#6,t))"
+   },
+   {
+    "idx": 11,
+    "pos": 1234,
+    "text": "DIF(2*t*COS(t^2),t)",
+    "origin": "Dif(#8,t)"
+   },
+   {
+    "idx": 12,
+    "pos": 1323,
+    "text": "2*COS(t^2)-4*t^2*SIN(t^2)",
+    "origin": "Simp(Dif(#8,t))"
+   },
+   {
+    "idx": 13,
+    "pos": 1396,
+    "text": "(COS(t^2)+SIN(t^2))/2",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1477,
+    "text": "INT((COS(t^2)+SIN(t^2))/2,t)",
+    "origin": "Int(#13,t)"
+   },
+   {
+    "idx": 15,
+    "pos": 1553,
+    "text": "INT((COS(t^2)-SIN(t^2))/2,t)",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 1639,
+    "text": "INT(COS(t^2),t)",
+    "origin": "Int(#2,t)"
+   },
+   {
+    "idx": 17,
+    "pos": 1712,
+    "text": "INT(SIN(t^2),t)",
+    "origin": "Int(#1,t)"
+   },
+   {
+    "idx": 18,
+    "pos": 1775,
+    "text": "(COS(ω*t^2)+SIN(ω*t^2))/2",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 1856,
+    "text": "INT((COS(ω*t^2)+SIN(ω*t^2))/2,t,-inf,+inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 1964,
+    "text": "SQRT(2)*SQRT(pi)/(2*SQRT(ω))",
+    "origin": "Simp(#19)"
+   },
+   {
+    "idx": 21,
+    "pos": 2044,
+    "text": "INT(t^2*(COS(ω*t^2)+SIN(ω*t^2))/2,t,-inf,+inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 2156,
+    "text": "2*INT(t^2*COS(t^2*ω)/2+t^2*SIN(t^2*ω)/2,t,0,inf)",
+    "origin": "Simp(#21)"
+   }
+  ]
+ },
+ {
+  "file": "delta.dfw",
+  "header": "Derive version 6.10 DfW file saved on 13 Jul 2010",
+  "settings": {
+   "hCross": "APPROX(0)",
+   "vCross": "APPROX(0)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 525,
+    "text": "LIM(1/4*((1+2*n*x)/ABS(x+1/(2*n))+(1-2*n*x)/ABS(x-1/(2*n))),n,+inf,0)",
+    "origin": "Lim(User,n)"
+   },
+   {
+    "idx": 2,
+    "pos": 642,
+    "text": "LIM(INT(1/4*((1+2*n*x)/ABS(x+1/(2*n))+(1-2*n*x)/ABS(x-1/(2*n))),x,-inf,+inf),n,+inf,0)=1",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 778,
+    "text": "LIM(INT(1/4*((1+2*n*(x-k))/ABS((x-k)+1/(2*n))+(1-2*n*(x-k))/ABS((x-k)-1/(2*n))),x,-inf,+inf),n,+inf,0)=1",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 930,
+    "text": "LIM(1/4*((1+2*n*z)/ABS(z+1/(2*n))+(1-2*n*z)/ABS(z-1/(2*n))),n,+inf,0)=z/(2*#i*ABS(z)^3)*IM(z)",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 1071,
+    "text": "LIM(1/4*((1+2*n*(#i*z))/ABS(#i*z+1/(2*n))+(1-2*n*(#i*z))/ABS(#i*z-1/(2*n))),n,+inf,0)=z/(2*ABS(z)^3)*RE(z)",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 1225,
+    "text": "LIM(1/4*((1+2*n*(#i*z))/ABS(#i*z+1/(2*n))+(1-2*n*(#i*z))/ABS(#i*z-1/(2*n))),n,+inf,0)+LIM(1/4*((1+2*n*z)/ABS(z+1/(2*n))+(1-2*n*z)/ABS(z-1/(2*n))),n,+inf,0)=1/(2*ABS(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1441,
+    "text": "LIM(1/4*((1+2*n*(#i*z))/ABS(#i*z+1/(2*n))+(1-2*n*(#i*z))/ABS(#i*z-1/(2*n))),n,+inf,0)-LIM(1/4*((1+2*n*z)/ABS(z+1/(2*n))+(1-2*n*z)/ABS(z-1/(2*n))),n,+inf,0)=z^2/(2*ABS(z)^3)",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1661,
+    "text": "LIM(1/4*((1+2*n*(z*COS(ω)))/ABS(z*COS(ω)+1/(2*n))+(1-2*n*(z*COS(ω)))/ABS(z*COS(ω)-1/(2*n))),n,+inf,0)=IM(z)*z/((2*#i*ABS(z)^3)*ABS(COS(ω)))",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1868,
+    "text": "LIM(1/4*((1+2*n*(z*SIN(ω)))/ABS(z*SIN(ω)+1/(2*n))+(1-2*n*(z*SIN(ω)))/ABS(z*SIN(ω)-1/(2*n))),n,+inf,0)=IM(z)*z/((2*#i*ABS(z)^3)*ABS(SIN(ω)))",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 2075,
+    "text": "LIM(1/4*((1+2*n*(z*COS(#i*ω)))/ABS(z*COS(#i*ω)+1/(2*n))+(1-2*n*(z*COS(#i*ω)))/ABS(z*COS(#i*ω)-1/(2*n))),n,+inf,0)=IM(z)*#e^ω*z/(#i*ABS(z)^3*(#e^(2*ω)+1))",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 2300,
+    "text": "LIM(1/4*((1+2*n*(z*SIN(#i*ω)))/ABS(z*SIN(#i*ω)+1/(2*n))+(1-2*n*(z*SIN(#i*ω)))/ABS(z*SIN(#i*ω)-1/(2*n))),n,+inf,0)=RE(z)*#e^ω*z/(ABS(z)^3*ABS(#e^(2*ω)-1))",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 2525,
+    "text": "LIM(1/4*((1+2*n*#e^(#i*z))/ABS(#e^(#i*z)+1/(2*n))+(1-2*n*#e^(#i*z))/ABS(#e^(#i*z)-1/(2*n))),n,+inf,0)=1/(2*#i)*#e^(#i*(RE(z)-#i*IM(z)))*SIN(RE(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 2719,
+    "text": "LIM(1/4*((1+2*n*(#i*a*#e^(#i*z)))/ABS(#i*a*#e^(#i*z)+1/(2*n))+(1-2*n*(#i*a*#e^(#i*z)))/ABS(#i*a*#e^(#i*z)-1/(2*n))),n,+inf,0)=#e^(#i*(RE(z)-#i*IM(z)))*COS(RE(z))/(2*ABS(a))",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 2939,
+    "text": "LIM(1/4*((1+2*n*(#i*a*#e^(#i*z)))/ABS(#i*a*#e^(#i*z)+1/(2*n))+(1-2*n*(#i*a*#e^(#i*z)))/ABS(#i*a*#e^(#i*z)-1/(2*n))),n,+inf,0)+LIM(1/4*((1+2*n*(a*#e^(#i*z)))/ABS(a*#e^(#i*z)+1/(2*n))+(1-2*n*(a*#e^(#i*z)))/ABS(a*#e^(#i*z)-1/(2*n))),n,+inf,0)=1/(2*ABS(a))*#e^(-#i*IM(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 15,
+    "pos": 3256,
+    "text": "LIM(1/4*((1+2*n*(#i*a*#e^(#i*z)))/ABS(#i*a*#e^(#i*z)+1/(2*n))+(1-2*n*(#i*a*#e^(#i*z)))/ABS(#i*a*#e^(#i*z)-1/(2*n))),n,+inf,0)-LIM(1/4*((1+2*n*(a*#e^(#i*z)))/ABS(a*#e^(#i*z)+1/(2*n))+(1-2*n*(a*#e^(#i*z)))/ABS(a*#e^(#i*z)-1/(2*n))),n,+inf,0)=1/(2*ABS(a))*#e^(#i*2*RE(z)+IM(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 3580,
+    "text": "LIM(1/4*((1+2*n*(#i*#e^(#i*x)))/ABS(#i*#e^(#i*x)+1/(2*n))+(1-2*n*(#i*#e^(#i*x)))/ABS(#i*#e^(#i*x)-1/(2*n))),n,+inf,0)+LIM(1/4*((1+2*n*#e^(#i*x))/ABS(#e^(#i*x)+1/(2*n))+(1-2*n*#e^(#i*x))/ABS(#e^(#i*x)-1/(2*n))),n,+inf,0)=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 3851,
+    "text": "LIM(1/4*((1+2*n*(#i*#e^(#i*(x/2))))/ABS(#i*#e^(#i*(x/2))+1/(2*n))+(1-2*n*(#i*#e^(#i*(x/2))))/ABS(#i*#e^(#i*(x/2))-1/(2*n))),n,+inf,0)-LIM(1/4*((1+2*n*#e^(#i*(x/2)))/ABS(#e^(#i*(x/2))+1/(2*n))+(1-2*n*#e^(#i*(x/2)))/ABS(#e^(#i*(x/2))-1/(2*n))),n,+inf,0)=1/2*#e^(#i*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 4166,
+    "text": "LIM(1/4*((1+2*n*#e^(#i*z))/ABS(#e^(#i*z)+1/(2*n))+(1-2*n*#e^(#i*z))/ABS(#e^(#i*z)-1/(2*n))),n,+inf,0)+LIM(1/4*((1+2*n*#e^(-#i*z))/ABS(#e^(-#i*z)+1/(2*n))+(1-2*n*#e^(-#i*z))/ABS(#e^(-#i*z)-1/(2*n))),n,+inf,0)=SIN(z)^2",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 4430,
+    "text": "LIM(1/4*((1+2*n*#e^(#i*z))/ABS(#e^(#i*z)+1/(2*n))+(1-2*n*#e^(#i*z))/ABS(#e^(#i*z)-1/(2*n))),n,+inf,0)-LIM(1/4*((1+2*n*#e^(-#i*z))/ABS(#e^(-#i*z)+1/(2*n))+(1-2*n*#e^(-#i*z))/ABS(#e^(-#i*z)-1/(2*n))),n,+inf,0)=-#i*SIN(z)*COS(z)",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 4703,
+    "text": "LIM(1/4*((1+2*n*#i*#e^(#i*z))/ABS(#i*#e^(#i*z)+1/(2*n))+(1-2*n*#i*#e^(#i*z))/ABS(#i*#e^(#i*z)-1/(2*n))),n,+inf,0)-LIM(1/4*((1+2*n*#i*#e^(-#i*z))/ABS(#i*#e^(-#i*z)+1/(2*n))+(1-2*n*#i*#e^(-#i*z))/ABS(#i*#e^(-#i*z)-1/(2*n))),n,+inf,0)=#i*SIN(z)*COS(z)",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 4999,
+    "text": "LIM(1/4*((1+2*n*#i*#e^(#i*z))/ABS(#i*#e^(#i*z)+1/(2*n))+(1-2*n*#i*#e^(#i*z))/ABS(#i*#e^(#i*z)-1/(2*n))),n,+inf,0)+LIM(1/4*((1+2*n*#i*#e^(-#i*z))/ABS(#i*#e^(-#i*z)+1/(2*n))+(1-2*n*#i*#e^(-#i*z))/ABS(#i*#e^(-#i*z)-1/(2*n))),n,+inf,0)=COS(z)^2",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 5476,
+    "text": "f*#e^(k*t)=δ*(ω+#i*k)=(k^2-#i*k*ω)/(2*#i*(k^2+ω^2)^(3/2))",
+    "origin": "User"
+   },
+   {
+    "idx": 23,
+    "pos": 5597,
+    "text": "f*#e^(-k*t)=δ*(ω-#i*k)=(k^2+#i*k*ω)/(2*#i*(k^2+ω^2)^(3/2))",
+    "origin": "User"
+   },
+   {
+    "idx": 24,
+    "pos": 5719,
+    "text": "ABS(f*#e^(k*t))=ABS(f*#e^(-k*t))=1/(2*(ω^2+1))",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 5817,
+    "text": "f*SINH(k*t)=k^2/(2*(k^2+ω^2)^(3/2))",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 5904,
+    "text": "f*COSH(k*t)=-#i*k*ω/(2*(k^2+ω^2)^(3/2))",
+    "origin": "User"
+   },
+   {
+    "idx": 27,
+    "pos": 5999,
+    "text": "f*SINH(k*t)=-#i*ω/k*f*COSH(k*t)",
+    "origin": "User"
+   },
+   {
+    "idx": 28,
+    "pos": 6082,
+    "text": "LIM(INT(#e^(x+1)/4*((1+2*n*x)/ABS(x+1/(2*n))+(1-2*n*x)/ABS(x-1/(2*n))),x,-inf,+inf),n,+inf,0)=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 29,
+    "pos": 6226,
+    "text": "LIM(INT(#e^x/4*((1+2*n*(x-1))/ABS((x-1)+1/(2*n))+(1-2*n*(x-1))/ABS((x-1)-1/(2*n))),x,-inf,+inf),n,+inf,0)=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 30,
+    "pos": 6382,
+    "text": "LIM(INT(#e^x/4*((1+2*n*(x/3-4))/ABS((x/3-4)+1/(2*n))+(1-2*n*(x/3-4))/ABS((x/3-4)-1/(2*n))),x,-inf,+inf),n,+inf,0)=3*#e^12",
+    "origin": "User"
+   },
+   {
+    "idx": 31,
+    "pos": 6551,
+    "text": "LIM(LIM(INT(4*((1+2*n*x)/ABS(x+1/(2*n))+(1-2*n*x)/ABS(x-1/(2*n)))^(-1),x,-e,+e),n,+inf,0),e,0,0)=0",
+    "origin": "User"
+   },
+   {
+    "idx": 32,
+    "pos": 6697,
+    "text": "LIM(LIM(INT(4*((1+2*n*x)/ABS(x+1/(2*n))+(1-2*n*x)/ABS(x-1/(2*n)))^(-1),x,-inf,+inf),n,+inf,0),e,0,0)=\"+-\"inf",
+    "origin": "User"
+   },
+   {
+    "idx": 33,
+    "pos": 6853,
+    "text": "LIM(1/4*((1+2*n*x)/ABS(x+1/(2*n))+(1-2*n*x)/ABS(x-1/(2*n))),n,+inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 34,
+    "pos": 6970,
+    "text": "#i/ABS(z)^3*IM(z)",
+    "origin": "User"
+   },
+   {
+    "idx": 35,
+    "pos": 7035,
+    "text": "3*ABS(z)*IM(z)/(#i*z^5)",
+    "origin": "User"
+   },
+   {
+    "idx": 36,
+    "pos": 7106,
+    "text": "12*#i*IM(z)/ABS(z)^5",
+    "origin": "User"
+   },
+   {
+    "idx": 37,
+    "pos": 7174,
+    "text": "60*z*IM(z)/(#i*z^7)",
+    "origin": "User"
+   },
+   {
+    "idx": 38,
+    "pos": 7241,
+    "text": "360*#i*IM(z)/z^7",
+    "origin": "User"
+   },
+   {
+    "idx": 39,
+    "pos": 7319,
+    "text": "SUM(SIN(COS(n*x)),x,-5,5)",
+    "origin": "Sum(User,x)"
+   },
+   {
+    "idx": 40,
+    "pos": 7402,
+    "text": "2*SIN(COS(5*n))+2*SIN(COS(4*n))+2*SIN(COS(3*n))+2*SIN(COS(2*n))+2*SIN(COS(n))+SIN(1)",
+    "origin": "Simp(#39)"
+   },
+   {
+    "idx": 41,
+    "pos": 7534,
+    "text": "#e^(2*#i*x)=SIGN(1+#i*TAN(x))^2=((1+#i*TAN(x))/ABS(1+#i*TAN(x)))^2=(1+#i*TAN(x))^2/(1+TAN(x)^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 42,
+    "pos": 7677,
+    "text": "LIM(1/4*((1+2*n*(1+#i*TAN(x)))/ABS((1+#i*TAN(x))+1/(2*n))+(1-2*n*(1+#i*TAN(x)))/ABS((1+#i*TAN(x))-1/(2*n))),n,+inf,0)=#e^(#i*x)*SIN(x)*ABS(COS(x))/(2*#i)",
+    "origin": "User"
+   },
+   {
+    "idx": 43,
+    "pos": 7878,
+    "text": "#e^(#i*x)=-SIN(x)*ABS(COS(x))*(1+#i*TAN(x))/(COS(x)^2*ABS(1+TAN(x)))",
+    "origin": "User"
+   },
+   {
+    "idx": 44,
+    "pos": 7994,
+    "text": "(1+#i*TAN(x/2))^2/(1+TAN(x/2)^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 45,
+    "pos": 8074,
+    "text": "LIM(TAN(x),x,pi/2,0)=#i",
+    "origin": "User"
+   },
+   {
+    "idx": 46,
+    "pos": 8145,
+    "text": "INT(1/(2*(ω^2+1)^(3/2)),ω)=ω/(2*SQRT(ω^2+1))",
+    "origin": "User"
+   },
+   {
+    "idx": 47,
+    "pos": 8253,
+    "text": "INT(-#i*ω/(2*(ω^2+1)^(3/2)),ω)=#i/(2*SQRT(ω^2+1))",
+    "origin": "User"
+   },
+   {
+    "idx": 48,
+    "pos": 8366,
+    "text": "COSH(t)^2+SINH(t)^2=COSH(2*t)",
+    "origin": "User"
+   },
+   {
+    "idx": 49,
+    "pos": 8443,
+    "text": "COSH(t)^2-SINH(t)^2=1",
+    "origin": "User"
+   },
+   {
+    "idx": 50,
+    "pos": 8512,
+    "text": "f*COSH(t)^2=ω/(2*#i*(4+ω^2)^(3/2))+pi*δ",
+    "origin": "User"
+   },
+   {
+    "idx": 51,
+    "pos": 8611,
+    "text": "f*SINH(t)^2=ω/(2*#i*(4+ω^2)^(3/2))-pi*δ",
+    "origin": "User"
+   },
+   {
+    "idx": 52,
+    "pos": 8868,
+    "text": "INT((COS(ω*t)+ω*SIN(ω*t))/(ω^2+1)^(3/2),ω,0,+inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 53,
+    "pos": 8985,
+    "text": "INT((COS(ω*t)+ω*SIN(ω*t))/(ω^2+1)^(3/2),ω,0,99999999)",
+    "origin": "User"
+   },
+   {
+    "idx": 54,
+    "pos": 9106,
+    "text": "INT((COS(ω*t)+ω*SIN(ω*t))/(ω^2+1)^(3/2),ω,0,999)",
+    "origin": "User"
+   },
+   {
+    "idx": 55,
+    "pos": 9222,
+    "text": "(COS(ω*t)+ω*SIN(ω*t))/(ω^2+1)^(3/2)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "e.dfw",
+  "header": "Derive version 6.10 DfW file saved on 27 Aug 2010",
+  "settings": {
+   "hCross": "APPROX(- 37974999999999999/10000000000000000)",
+   "vCross": "APPROX(29411999999999999/1000000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 594,
+    "text": "LIM((1+1/x-ε)^x,x,inf,0)",
+    "origin": "Lim(User,x)"
+   },
+   {
+    "idx": 2,
+    "pos": 696,
+    "text": "inf^LN(1-ε)",
+    "origin": "Simp(Lim(User,x))"
+   },
+   {
+    "idx": 3,
+    "pos": 759,
+    "text": "LIM((1+1/x-1/(99999999999*x))^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 855,
+    "text": "#e^(99999999998/99999999999)",
+    "origin": "Simp(#3)"
+   },
+   {
+    "idx": 5,
+    "pos": 931,
+    "text": "LIM((1+1/x-1/(k*x))^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 1017,
+    "text": "#e^(1-1/k)",
+    "origin": "Simp(#5)"
+   },
+   {
+    "idx": 7,
+    "pos": 1089,
+    "text": "LIM((1+1/(k*ε)-ε)^(1/(k*ε)),ε,0,0)",
+    "origin": "Lim(User,"
+   },
+   {
+    "idx": 8,
+    "pos": 1195,
+    "text": "?",
+    "origin": "Simp(#7)"
+   },
+   {
+    "idx": 9,
+    "pos": 1244,
+    "text": "LIM((1+1/ε-ε)^(1/ε),ε,0,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1342,
+    "text": "?",
+    "origin": "Simp(#9)"
+   },
+   {
+    "idx": 11,
+    "pos": 1391,
+    "text": "LIM((1/ε)^LN(1-ε),ε,0,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1485,
+    "text": "1",
+    "origin": "Simp(#11)"
+   },
+   {
+    "idx": 13,
+    "pos": 1534,
+    "text": "LIM((ε*x+1/x-ε)^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1626,
+    "text": "unit_circle*inf",
+    "origin": "Simp(#13)"
+   },
+   {
+    "idx": 15,
+    "pos": 1689,
+    "text": "LIM((1+1/x+1/x^2)^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 1775,
+    "text": "#e",
+    "origin": "Simp(#15)"
+   },
+   {
+    "idx": 17,
+    "pos": 1825,
+    "text": "LIM((1+1/x+1/x^2+1/x^3+1/x^4)^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 1923,
+    "text": "#e",
+    "origin": "Simp(#17)"
+   },
+   {
+    "idx": 19,
+    "pos": 1987,
+    "text": "LIM(SUM(1/x^n,n,0,inf)^x,x,inf,0)",
+    "origin": "Lim(User,x)"
+   },
+   {
+    "idx": 20,
+    "pos": 2068,
+    "text": "LIM(SUM(1/x^n,n,0,9)^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 2147,
+    "text": "LIM(SUM(1/x^n,n,0,99)^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 2237,
+    "text": "#e",
+    "origin": "Simp(#21)"
+   },
+   {
+    "idx": 23,
+    "pos": 2287,
+    "text": "(1+1/100-100)^(1/100)",
+    "origin": "User"
+   },
+   {
+    "idx": 24,
+    "pos": 2366,
+    "text": "(9899/100)^(1/100)*(-1)^(1/100)",
+    "origin": "Simp(#23)"
+   },
+   {
+    "idx": 25,
+    "pos": 2445,
+    "text": "(1+1/999-999)^(1/999)",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 2524,
+    "text": "(997001/999)^(1/999)*(-1)^(1/999)",
+    "origin": "Simp(#25)"
+   },
+   {
+    "idx": 27,
+    "pos": 2619,
+    "text": "1.006931633+0.003166545996*#i",
+    "origin": "Approx(#26)"
+   },
+   {
+    "idx": 28,
+    "pos": 2696,
+    "text": "SUM(1/x^n,n,0,inf)^x=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 29,
+    "pos": 2767,
+    "text": "LIM(SUM(1/x^n,n,0,x)^x,x,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 30,
+    "pos": 2858,
+    "text": "1",
+    "origin": "Simp(User)"
+   },
+   {
+    "idx": 31,
+    "pos": 2907,
+    "text": "SUM(1/x^n,n,0,x)^x",
+    "origin": "User"
+   },
+   {
+    "idx": 32,
+    "pos": 2983,
+    "text": "(x^(-x)*(x^(x+1)-1)/(x-1))^x",
+    "origin": "Simp(#31)"
+   },
+   {
+    "idx": 33,
+    "pos": 3071,
+    "text": "LIM((x^(-x)*(x^(x+1)-1)/(x-1))^x,x,#e,0)",
+    "origin": "Lim(#32,x)"
+   },
+   {
+    "idx": 34,
+    "pos": 3173,
+    "text": "3.254394129",
+    "origin": "Approx(#33)"
+   },
+   {
+    "idx": 35,
+    "pos": 3244,
+    "text": "LIM((x^(-x)*(x^(x+1)-1)/(x-1))^x,x,pi,0)",
+    "origin": "Lim(#32,x)"
+   },
+   {
+    "idx": 36,
+    "pos": 3348,
+    "text": "3.24219215",
+    "origin": "Approx(User)"
+   },
+   {
+    "idx": 37,
+    "pos": 3406,
+    "text": "y=x^2-(pi+#e)*x+pi*#e",
+    "origin": "User"
+   },
+   {
+    "idx": 38,
+    "pos": 3475,
+    "text": "x^2-(pi+#e)*x+pi*#e=0",
+    "origin": "User"
+   },
+   {
+    "idx": 39,
+    "pos": 3572,
+    "text": "x=#e OR x=pi",
+    "origin": "Simp(Solve(#38,x))"
+   },
+   {
+    "idx": 40,
+    "pos": 3644,
+    "text": "DIF(y=x^2-(pi+#e)*x+pi*#e,x)",
+    "origin": "Dif(#37,x)"
+   },
+   {
+    "idx": 41,
+    "pos": 3750,
+    "text": "x=(#e+pi)/2",
+    "origin": "Simp(Solve(User,x))"
+   },
+   {
+    "idx": 42,
+    "pos": 3809,
+    "text": "y=-(#e-pi)^2/4",
+    "origin": "User"
+   },
+   {
+    "idx": 43,
+    "pos": 3871,
+    "text": "INT(x^2-(pi+#e)*x+pi*#e,x,pi,#e)",
+    "origin": "User"
+   },
+   {
+    "idx": 44,
+    "pos": 3951,
+    "text": "(pi-#e)^3/3!",
+    "origin": "User"
+   },
+   {
+    "idx": 45,
+    "pos": 4027,
+    "text": "0.01264232275",
+    "origin": "Approx(User)"
+   },
+   {
+    "idx": 46,
+    "pos": 4088,
+    "text": "(pi-#e)^n/n!",
+    "origin": "User"
+   },
+   {
+    "idx": 47,
+    "pos": 4160,
+    "text": "SUM((pi-#e)^n/n!,n,0,+inf)",
+    "origin": "Sum(#46,n)"
+   },
+   {
+    "idx": 48,
+    "pos": 4244,
+    "text": "#e^(pi-#e)",
+    "origin": "Simp(#47)"
+   },
+   {
+    "idx": 49,
+    "pos": 4316,
+    "text": "1.527008854",
+    "origin": "Approx(#48)"
+   },
+   {
+    "idx": 50,
+    "pos": 4375,
+    "text": "LIM((1+1/n)^n,n,inf,0)=SUM(1/n!,n,0,inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 51,
+    "pos": 4463,
+    "text": "(x+1/SUM(n!,n,0,inf))^SUM(n!,n,0,inf)=SUM(1/n!,n,0,inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 52,
+    "pos": 4566,
+    "text": "(x+1/pi)^pi=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 53,
+    "pos": 4656,
+    "text": "x=#e^(1/pi)-1/pi",
+    "origin": "Simp(Solve(#52,x))"
+   },
+   {
+    "idx": 54,
+    "pos": 4720,
+    "text": "(1+1/x)^pi=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 55,
+    "pos": 4809,
+    "text": "x=1/(#e^(1/pi)-1)",
+    "origin": "Simp(Solve(#54,x))"
+   },
+   {
+    "idx": 56,
+    "pos": 4874,
+    "text": "#e^pi-#e^3",
+    "origin": "User"
+   },
+   {
+    "idx": 57,
+    "pos": 4946,
+    "text": "3.055155709",
+    "origin": "Approx(#56)"
+   },
+   {
+    "idx": 58,
+    "pos": 5005,
+    "text": "#e^pi-pi^#e",
+    "origin": "User"
+   },
+   {
+    "idx": 59,
+    "pos": 5080,
+    "text": "0.6815349142",
+    "origin": "Approx(User)"
+   },
+   {
+    "idx": 60,
+    "pos": 5170,
+    "text": "x=pi^#e*#e^(-pi)",
+    "origin": "Simp(Solve(User,x))"
+   },
+   {
+    "idx": 61,
+    "pos": 5234,
+    "text": "x*#e^pi-pi^#e=0",
+    "origin": "User"
+   },
+   {
+    "idx": 62,
+    "pos": 5311,
+    "text": "x=0.9705482059",
+    "origin": "Approx(#60)"
+   },
+   {
+    "idx": 63,
+    "pos": 5373,
+    "text": "#e^pi-x*pi^#e=0",
+    "origin": "User"
+   },
+   {
+    "idx": 64,
+    "pos": 5464,
+    "text": "x=pi^(-#e)*#e^pi",
+    "origin": "Simp(Solve(#63,x))"
+   },
+   {
+    "idx": 65,
+    "pos": 5542,
+    "text": "x=1.030345524",
+    "origin": "Approx(#64)"
+   },
+   {
+    "idx": 66,
+    "pos": 5603,
+    "text": "(pi^#e*#e^(-pi)+pi^(-#e)*#e^pi)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 67,
+    "pos": 5700,
+    "text": "1.000446865",
+    "origin": "Approx(User)"
+   },
+   {
+    "idx": 68,
+    "pos": 5759,
+    "text": "(-pi^#e*#e^(-pi)+pi^(-#e)*#e^pi)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 69,
+    "pos": 5855,
+    "text": "0.02989865915",
+    "origin": "Approx(#68)"
+   },
+   {
+    "idx": 70,
+    "pos": 5916,
+    "text": "LIM(SUM(1/n^k,k,0,n)^n,n,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 71,
+    "pos": 6007,
+    "text": "1",
+    "origin": "Simp(User)"
+   },
+   {
+    "idx": 72,
+    "pos": 6056,
+    "text": "LIM(SUM(1/n^k,k,0,n)^n,n,9999999,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 73,
+    "pos": 6153,
+    "text": "2.718281964",
+    "origin": "Approx(#72)"
+   },
+   {
+    "idx": 74,
+    "pos": 6212,
+    "text": "LIM(SUM(1/n^k,k,0,n)^n,n,9999999,0)-#e",
+    "origin": "User"
+   },
+   {
+    "idx": 75,
+    "pos": 6312,
+    "text": "1.359141174*10^(-7)",
+    "origin": "Approx(#74)"
+   },
+   {
+    "idx": 76,
+    "pos": 6379,
+    "text": "SUM((1/x)^n,n,0,inf)=x/(x-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 77,
+    "pos": 6455,
+    "text": "LIM((x/(x-1))^x,x,+inf,0)=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 78,
+    "pos": 6531,
+    "text": "LIM((x/(x-1))^x,x,-inf,0)=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 79,
+    "pos": 6607,
+    "text": "(1+1/x)^x",
+    "origin": "User"
+   },
+   {
+    "idx": 80,
+    "pos": 6664,
+    "text": "LIM((1+1/x)^x,x,-inf,0)=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 81,
+    "pos": 6738,
+    "text": "LIM(SUM((1/x)^n,n,0,inf)^x,x,+inf,0)=#e",
+    "origin": "User"
+   },
+   {
+    "idx": 82,
+    "pos": 6825,
+    "text": "LIM(SUM((1/x)^n,n,0,inf)^x,x,+inf,0)=SUM(1/n!,n,0,+inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 83,
+    "pos": 6928,
+    "text": "SUM((x/k)^n,n,0,inf)=k/(k-x)",
+    "origin": "User"
+   },
+   {
+    "idx": 84,
+    "pos": 7004,
+    "text": "LIM((1+x/k)^k,k,-inf,0)=#e^x",
+    "origin": "User"
+   },
+   {
+    "idx": 85,
+    "pos": 7080,
+    "text": "LIM((1+x/k)^k,k,+inf,0)=#e^x",
+    "origin": "User"
+   },
+   {
+    "idx": 86,
+    "pos": 7156,
+    "text": "LIM(SUM((x/k)^n,n,0,inf)^k,k,+inf,0)=#e^x",
+    "origin": "User"
+   },
+   {
+    "idx": 87,
+    "pos": 7245,
+    "text": "LIM(SUM(x^n/k^n,n,0,+inf)^k,k,+inf,0)=SUM(x^n/n!,n,0,+inf)=#e^x",
+    "origin": "User"
+   },
+   {
+    "idx": 88,
+    "pos": 7356,
+    "text": "LIM((1+2*#i*pi/x)^x,x,+inf,0)=1",
+    "origin": "User"
+   },
+   {
+    "idx": 89,
+    "pos": 7435,
+    "text": "LIM((1+#i*pi/x)^x,x,+inf,0)=-1",
+    "origin": "User"
+   },
+   {
+    "idx": 90,
+    "pos": 7513,
+    "text": "LIM((1+#i*pi/2/x)^x,x,+inf,0)=#i",
+    "origin": "User"
+   },
+   {
+    "idx": 91,
+    "pos": 7593,
+    "text": "LIM((1+#i*x/k)^k,k,+inf,0)=#e^(#i*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 92,
+    "pos": 7677,
+    "text": "LIM((1+#i*x/k)^k,k,+inf,0)=COS(x)+#i*SIN(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 93,
+    "pos": 7768,
+    "text": "LIM((1+#i*pi/x)^x+(1+2*#i*pi/x)^x,x,+inf,0)=0",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "equazioni.dfw",
+  "header": "Derive version 6.10 DfW file saved on 27 Jan 2010",
+  "settings": {
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 648,
+    "text": "a*z+b=0",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 703,
+    "text": "z=x+#i*y",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 765,
+    "text": "a*(x+#i*y)+b=0",
+    "origin": "Sub(#1)"
+   },
+   {
+    "idx": 4,
+    "pos": 827,
+    "text": "a*x+b+#i*a*y=0",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 889,
+    "text": "RE(a*x+b+#i*a*y)=0",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 955,
+    "text": "IM(a*x+b+#i*a*y)=0",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1021,
+    "text": "z=-b/a+#i*0",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1243,
+    "text": "a*z^2+b*z+c=0",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1304,
+    "text": "z=x+#i*y",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1360,
+    "text": "a*x^2+b*x-a*y^2+c+#i*(2*a*x*y+b*y)=0",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1444,
+    "text": "RE(a*x^2+b*x-a*y^2+c+#i*(2*a*x*y+b*y))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1532,
+    "text": "IM(a*x^2+b*x-a*y^2+c+#i*(2*a*x*y+b*y))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1630,
+    "text": "a*x^2+b*x-a*y^2+c=0",
+    "origin": "Simp(#11)"
+   },
+   {
+    "idx": 14,
+    "pos": 1707,
+    "text": "2*a*x*y+b*y=0",
+    "origin": "Simp(#12)"
+   },
+   {
+    "idx": 15,
+    "pos": 1780,
+    "text": "[x=-b/(2*a) AND y=SQRT(4*a*c-b^2)/(2*ABS(a)),x=-b/(2*a) AND y=-SQRT(4*a*c-b^2)/(2*ABS(a)),x=-(SQRT(b^2-4*a*c)+b)/(2*a) AND y=0,x=(SQRT(b^2-4*a*c)-b)/(2*a) AND y=0]",
+    "origin": "Simp(User)"
+   },
+   {
+    "idx": 16,
+    "pos": 2154,
+    "text": "a*z^3+b*z^2+c*z+d=0",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 2221,
+    "text": "z=x+#i*y",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 2285,
+    "text": "a*(x+#i*y)^3+b*(x+#i*y)^2+c*(x+#i*y)+d=0",
+    "origin": "Sub(#16)"
+   },
+   {
+    "idx": 19,
+    "pos": 2373,
+    "text": "a*x^3+b*x^2+x*(c-3*a*y^2)-b*y^2+d+#i*y*(3*a*x^2+2*b*x-a*y^2+c)=0",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 2485,
+    "text": "RE(a*x^3+b*x^2+x*(c-3*a*y^2)-b*y^2+d+#i*y*(3*a*x^2+2*b*x-a*y^2+c))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 2601,
+    "text": "IM(a*x^3+b*x^2+x*(c-3*a*y^2)-b*y^2+d+#i*y*(3*a*x^2+2*b*x-a*y^2+c))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 2727,
+    "text": "a*x^3+b*x^2+x*(c-3*a*y^2)-b*y^2+d=0",
+    "origin": "Simp(#20)"
+   },
+   {
+    "idx": 23,
+    "pos": 2820,
+    "text": "y*(3*a*x^2+2*b*x-a*y^2+c)=0",
+    "origin": "Simp(#21)"
+   },
+   {
+    "idx": 24,
+    "pos": 2895,
+    "text": "3*a*x^2+2*b*x-a*y^2+c=0",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 2994,
+    "text": "y=-SQRT((3*a*x^2+2*b*x+c)/a) OR y=SQRT((3*a*x^2+2*b*x+c)/a)",
+    "origin": "Simp(Solve(#24,y))"
+   },
+   {
+    "idx": 26,
+    "pos": 3101,
+    "text": "y=0",
+    "origin": "User"
+   },
+   {
+    "idx": 27,
+    "pos": 3160,
+    "text": "a*x^3+b*x^2+x*(c-3*a*(-SQRT((3*a*x^2+2*b*x+c)/a))^2)-b*(-SQRT((3*a*x^2+2*b*x+c)/a))^2+d=0",
+    "origin": "Sub(#22)"
+   },
+   {
+    "idx": 28,
+    "pos": 3307,
+    "text": "-(8*a^2*x^3+8*a*b*x^2+2*x*(a*c+b^2)-a*d+b*c)/a=0",
+    "origin": "Simp(#27)"
+   },
+   {
+    "idx": 29,
+    "pos": 3431,
+    "text": "x=-SQRT(b^2-3*a*c)*COS(ACOS(-(27*a^2*d-9*a*b*c+2*b^3)*SIGN(a)/(2*(b^2-3*a*c)^(3/2)))/3)/(3*ABS(a))-b/(3*a) OR x=SQRT(b^2-3*a*c)*SIN(ASIN((27*a^2*d-9*a*b*c+2*b^3)*SIGN(a)/(2*(b^2-3*a*c)^(3/2)))/3+pi/3)/(3*ABS(a))-b/(3*a) OR x=-SQRT(b^2-3*a*c)*SIN(ASIN((27*a^2*d-9*a*b*c+2*b^3)*SIGN(a)/(2*(b^2-3*a*c)^(3/2)))/3)/(3*ABS(a))-b/(3*a)",
+    "origin": "Simp(Solve(#28,x))"
+   },
+   {
+    "idx": 30,
+    "pos": 3809,
+    "text": "y=-SQRT((3*a*x^2+2*b*x+c)/a) OR y=SQRT((3*a*x^2+2*b*x+c)/a)",
+    "origin": "User"
+   },
+   {
+    "idx": 31,
+    "pos": 3936,
+    "text": "a*x^3+b*x^2+c*x+d=0",
+    "origin": "Simp(Sub(#22))"
+   },
+   {
+    "idx": 32,
+    "pos": 4031,
+    "text": "x=2*SQRT(b^2-3*a*c)*COS(ACOS(-(27*a^2*d-9*a*b*c+2*b^3)*SIGN(a)/(2*(b^2-3*a*c)^(3/2)))/3)/(3*ABS(a))-b/(3*a) OR x=-2*SQRT(b^2-3*a*c)*SIN(ASIN((27*a^2*d-9*a*b*c+2*b^3)*SIGN(a)/(2*(b^2-3*a*c)^(3/2)))/3+pi/3)/(3*ABS(a))-b/(3*a) OR x=2*SQRT(b^2-3*a*c)*SIN(ASIN((27*a^2*d-9*a*b*c+2*b^3)*SIGN(a)/(2*(b^2-3*a*c)^(3/2)))/3)/(3*ABS(a))-b/(3*a)",
+    "origin": "Simp(Solve(#31,x))"
+   },
+   {
+    "idx": 33,
+    "pos": 4414,
+    "text": "y=0",
+    "origin": "User"
+   },
+   {
+    "idx": 34,
+    "pos": 4628,
+    "text": "a*x^4+b*x^3+c*x^2+d*x+e=0",
+    "origin": "User"
+   },
+   {
+    "idx": 35,
+    "pos": 4701,
+    "text": "z=x+#i*y",
+    "origin": "User"
+   },
+   {
+    "idx": 36,
+    "pos": 4765,
+    "text": "a*(x+#i*y)^4+b*(x+#i*y)^3+c*(x+#i*y)^2+d*(x+#i*y)+e=0",
+    "origin": "Sub(#34)"
+   },
+   {
+    "idx": 37,
+    "pos": 4866,
+    "text": "a*x^4+b*x^3+x^2*(c-6*a*y^2)+x*(d-3*b*y^2)+a*y^4-c*y^2+e+#i*y*(4*a*x^3+3*b*x^2+2*x*(c-2*a*y^2)-b*y^2+d)=0",
+    "origin": "User"
+   },
+   {
+    "idx": 38,
+    "pos": 5018,
+    "text": "RE(a*x^4+b*x^3+x^2*(c-6*a*y^2)+x*(d-3*b*y^2)+a*y^4-c*y^2+e+#i*y*(4*a*x^3+3*b*x^2+2*x*(c-2*a*y^2)-b*y^2+d))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 39,
+    "pos": 5184,
+    "text": "a*x^4+b*x^3+x^2*(c-6*a*y^2)+x*(d-3*b*y^2)+a*y^4-c*y^2+e=0",
+    "origin": "Simp(#38)"
+   },
+   {
+    "idx": 40,
+    "pos": 5289,
+    "text": "IM(a*x^4+b*x^3+x^2*(c-6*a*y^2)+x*(d-3*b*y^2)+a*y^4-c*y^2+e+#i*y*(4*a*x^3+3*b*x^2+2*x*(c-2*a*y^2)-b*y^2+d))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 41,
+    "pos": 5455,
+    "text": "y*(4*a*x^3+3*b*x^2+2*x*(c-2*a*y^2)-b*y^2+d)=0",
+    "origin": "Simp(#40)"
+   },
+   {
+    "idx": 42,
+    "pos": 5548,
+    "text": "y=0",
+    "origin": "User"
+   },
+   {
+    "idx": 43,
+    "pos": 5619,
+    "text": "a*x^4+b*x^3+c*x^2+d*x+e=0",
+    "origin": "Simp(Sub(#39))"
+   },
+   {
+    "idx": 44,
+    "pos": 5692,
+    "text": "4*a*x^3+3*b*x^2+2*x*(c-2*a*y^2)-b*y^2+d=0",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "factor.dfw",
+  "header": "Derive version 6.10 DfW file saved on 18 Aug 2010",
+  "settings": {
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 473,
+    "text": "1!-1!=0",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 528,
+    "text": "1!*3!-3!=0",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 586,
+    "text": "1!*3!*5!-6!=0",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 647,
+    "text": "1!*3!*5!*7!-10!=0",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 712,
+    "text": "1!*3!*5!*7!*9!-15!=2^11*3^6*5^3*7^3",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 795,
+    "text": "1!*3!*5!*7!*9!*11!-21!=2^18*3^9*5^4*7^3*11^3",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 887,
+    "text": "1!*3!*5!*7!*9!*11!*13!-28!=2^25*3^13*5^6*7^4*11^2*13*7103",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 992,
+    "text": "1!*3!*5!*7!*9!*11!*13!*15!-36!=2^34*3^17*5^8*7^5*11^3*13^2*4013*4261",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1108,
+    "text": "1!*3!*5!*7!*9!*11!*13!*15!*17!-45!=2^41*3^21*5^10*7^6*11^5*13^3*17*8933*22969787",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1236,
+    "text": "1!*3!*5!*7!*9!*11!*13!*15!*17!*19!-55!=2^50*3^26*5^13*7^8*11^6*13^4*17^2*19*3116563*333915299",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1389,
+    "text": "2^64*3^31*5^15*7^10*11^6*13^7*17^3*19^2*251*6184811*13366363319",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 12,
+    "pos": 1512,
+    "text": "2^74*3^36*5^18*7^12*11^7*13^7*17^4*19^3*23*1543*3529737954001890223489333",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 13,
+    "pos": 1645,
+    "text": "2^86*3^44*5^21*7^14*11^8*13^7*17^5*19^4*23^2*7527420903061154660844431547708509201",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 14,
+    "pos": 1787,
+    "text": "2^101*3^50*5^25*7^17*11^9*13^8*17^6*19^5*23^3*267661*669113*96487944706595864404794370019938759",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 15,
+    "pos": 1942,
+    "text": "2^116*3^58*5^28*7^19*11^10*13^9*17^7*19^6*23^4*29*967*106487*459130657*3283850683*26841959932382587431547457373253",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 16,
+    "pos": 2104,
+    "text": "PRODUCT((2*n+1)!,n,0,p)-((p+1)*(p+2)/2)!",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 2192,
+    "text": "1!=1=1!",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 2247,
+    "text": "1!*3!=2*3=3!",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 2307,
+    "text": "1!*3!*5!=2^4*3^2*5=6!",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 2376,
+    "text": "1!*3!*5!*7!=2^8*3^4*5^2*7=10!",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 2453,
+    "text": "15!",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 2514,
+    "text": "2^11*3^6*5^3*7^2*11*13",
+    "origin": "Fctr(#21)"
+   },
+   {
+    "idx": 23,
+    "pos": 2584,
+    "text": "21!",
+    "origin": "User"
+   },
+   {
+    "idx": 24,
+    "pos": 2645,
+    "text": "2^18*3^9*5^4*7^3*11*13*17*19",
+    "origin": "Fctr(#23)"
+   },
+   {
+    "idx": 25,
+    "pos": 2721,
+    "text": "28!",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 2782,
+    "text": "2^25*3^13*5^6*7^4*11^2*13^2*17*19*23",
+    "origin": "Fctr(#25)"
+   },
+   {
+    "idx": 27,
+    "pos": 2866,
+    "text": "((7+1)*(7+2)/2)!",
+    "origin": "User"
+   },
+   {
+    "idx": 28,
+    "pos": 2940,
+    "text": "2^34*3^17*5^8*7^5*11^3*13^2*17^2*19*23*29*31",
+    "origin": "Fctr(#27)"
+   },
+   {
+    "idx": 29,
+    "pos": 3042,
+    "text": "((8+1)*(8+2)/2)!",
+    "origin": "Sub(User)"
+   },
+   {
+    "idx": 30,
+    "pos": 3116,
+    "text": "2^41*3^21*5^10*7^6*11^4*13^3*17^2*19^2*23*29*31*37*41*43",
+    "origin": "Fctr(#29)"
+   },
+   {
+    "idx": 31,
+    "pos": 3230,
+    "text": "((9+1)*(9+2)/2)!",
+    "origin": "Sub(#16')"
+   },
+   {
+    "idx": 32,
+    "pos": 3304,
+    "text": "2^50*3^26*5^13*7^8*11^5*13^4*17^3*19^2*23^2*29*31*37*41*43*47*53",
+    "origin": "Fctr(#31)"
+   },
+   {
+    "idx": 33,
+    "pos": 3426,
+    "text": "((10+1)*(10+2)/2)!",
+    "origin": "Sub(#16')"
+   },
+   {
+    "idx": 34,
+    "pos": 3502,
+    "text": "2^64*3^31*5^15*7^10*11^6*13^5*17^3*19^3*23^2*29^2*31^2*37*41*43*47*53*59*61",
+    "origin": "Fctr(#33)"
+   },
+   {
+    "idx": 35,
+    "pos": 3635,
+    "text": "((11+1)*(11+2)/2)!",
+    "origin": "Sub(#16')"
+   },
+   {
+    "idx": 36,
+    "pos": 3711,
+    "text": "2^74*3^36*5^18*7^12*11^7*13^6*17^4*19^4*23^3*29^2*31^2*37^2*41*43*47*53*59*61*67*71*73",
+    "origin": "Fctr(#35)"
+   }
+  ]
+ },
+ {
+  "file": "fattorazionale.dfw",
+  "header": "Derive version 6.10 DfW file saved on 07 Jan 2011",
+  "settings": {
+   "hCross": "APPROX(5000000000000001/250000000000000)",
+   "vCross": "APPROX(49999976798038409/50000000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 576,
+    "text": "PRODUCT(1/n-1/k,n,1,k-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 666,
+    "text": "1/2",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 3,
+    "pos": 735,
+    "text": "1/9",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 4,
+    "pos": 804,
+    "text": "1/64",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 5,
+    "pos": 874,
+    "text": "1/625",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 6,
+    "pos": 945,
+    "text": "1/7776",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 7,
+    "pos": 1017,
+    "text": "1/117649",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 8,
+    "pos": 1091,
+    "text": "1/2097152",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 9,
+    "pos": 1166,
+    "text": "1/43046721",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 10,
+    "pos": 1242,
+    "text": "1/1000000000",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 11,
+    "pos": 1320,
+    "text": "1/25937424601",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 12,
+    "pos": 1399,
+    "text": "1/743008370688",
+    "origin": "Simp(Sub(#1))"
+   },
+   {
+    "idx": 13,
+    "pos": 1461,
+    "text": "i!*PRODUCT(1/n-1/k,n,1,k-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1536,
+    "text": "PRODUCT(1/i-n/k,i,1,k-n)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "fx^gx.dfw",
+  "header": "Derive version 6.10 DfW file saved on 17 Nov 2010",
+  "settings": {
+   "hCross": "APPROX(- 63291139240506333/100000000000000000)",
+   "vCross": "APPROX(0)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 548,
+    "text": "x/(LN(x)*LN(LN(x)))",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 615,
+    "text": "1/(TAN(x)*LN(1/SIN(x)))",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 696,
+    "text": "INT(1/(TAN(x)*LN(1/SIN(x))),x)",
+    "origin": "Int(#2,x)"
+   },
+   {
+    "idx": 4,
+    "pos": 796,
+    "text": "-LN(LN(1/SIN(x)))",
+    "origin": "Simp(Int(#2,x))"
+   },
+   {
+    "idx": 5,
+    "pos": 861,
+    "text": "#e^(-LN(LN(1/SIN(x))))",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 939,
+    "text": "1/LN(1/SIN(x))",
+    "origin": "Simp(#5)"
+   },
+   {
+    "idx": 7,
+    "pos": 1001,
+    "text": "SIN(x)^(1/LN(1/SIN(x)))",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1072,
+    "text": "COS(x)^(1/LN(1/COS(x)))",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1143,
+    "text": "-LN(COS(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1202,
+    "text": "-LN(SIN(x))",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "gauss.dfw",
+  "header": "Derive version 6.10 DfW file saved on 15 Sep 2010",
+  "settings": {
+   "hCross": "APPROX(- 15822750000000001/2500000000000000)",
+   "vCross": "APPROX(29411999999999999/1000000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 579,
+    "text": "#e^(#i*t)=(1+#i*TAN(t/2))^2/(1+TAN(t/2)^2)=(1+#i*TAN(t/2))^2/ABS(1+#i*TAN(t/2))^2=SIGN(1+#i*TAN(t/2))^2=(COS(t)+1)/2*(1+#i*TAN(t/2))^2",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 761,
+    "text": "1+TAN(t/2)^2=2/(COS(t)+1)",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 834,
+    "text": "INT(1+TAN(t/2)^2,t)=2*TAN(t/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 912,
+    "text": "#e^(#i*t)=(1+#i*TAN(t/2))^2/DIF(2*TAN(t/2),t)",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 1015,
+    "text": "#e^(#i*(#i*x^2))=(1+#i*TAN(#i*x^2/2))^2/(1+TAN(#i*x^2/2)^2)=(COS(#i*x^2)+1)/2*(1+#i*TAN(#i*x^2/2))^2",
+    "origin": "Sub(User)"
+   },
+   {
+    "idx": 6,
+    "pos": 1163,
+    "text": "INT(SIGN(x),x)=ABS(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1232,
+    "text": "SIGN(1+#i*TAN(t/2))",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1309,
+    "text": "INT(SIGN(1+#i*TAN(t/2)),t)",
+    "origin": "Int(#7,t)"
+   },
+   {
+    "idx": 9,
+    "pos": 1405,
+    "text": "-4*FLOOR(1/2-t/(2*pi))+SQRT(2)*SIN(t)/SQRT(COS(t)+1)-SQRT(2)*#i*SQRT(COS(t)+1)",
+    "origin": "Simp(Int(#7,t))"
+   },
+   {
+    "idx": 10,
+    "pos": 1531,
+    "text": "-4*FLOOR(1/2-t/(2*pi))+SQRT(2)*SIN(t)/SQRT(COS(t)+1)",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1631,
+    "text": "ERF(t)",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1685,
+    "text": "INT(SIGN(1+#i*TAN(t^2/2)),t)",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1773,
+    "text": "SQRT(2)*INT(SQRT(COS(t^2)+1),t)/2+SQRT(2)*#i*INT(SIN(t^2)/SQRT(COS(t^2)+1),t)/2",
+    "origin": "Simp(User)"
+   },
+   {
+    "idx": 14,
+    "pos": 1900,
+    "text": "INT(SIGN(1+#i*TAN(#i*t^2/2)),t)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "j.dfw",
+  "header": "Derive version 6.00 DfW file saved on 07 Jul 2009",
+  "settings": {
+   "hCross": "APPROX(0)",
+   "vCross": "APPROX(0)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 511,
+    "text": "COS(0)+#i*SIN(0)=1",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 577,
+    "text": "COS(pi)+#i*SIN(pi)=-1",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 646,
+    "text": "#i=LIM((1-COS(x))/SIN(x),x,0,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 725,
+    "text": "-#i=LIM((1+COS(x))/SIN(x),x,pi,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 806,
+    "text": "COS(x)+#i*SIN(x)=#e^(#i*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 880,
+    "text": "LIM(LIM((1-COS(x))/SIN(x),x,0,0)^n,n,+inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 972,
+    "text": "((1-COS(10^(-x)))/SIN(10^(-x)))^x",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "limit.dfw",
+  "header": "Derive version 6.10 DfW file saved on 19 Dec 2009",
+  "settings": {
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 473,
+    "text": "ABS(x)<=SQRT(2)/2*(1/2+x^2)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "mate copia.dfw",
+  "header": "Derive version 6.10 DfW file saved on 09 Feb 2010",
+  "settings": {
+   "hCross": "APPROX(- 1/1000000000000000000b779285714285714279)",
+   "vCross": "APPROX(- 1/2000000000000000000b713862941014866319)",
+   "xCross": "APPROX(0)",
+   "yCross": "APPROX(5/2)",
+   "zCross": "APPROX(1/500000000000000000b77853981633974483)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 692,
+    "text": "(COS(x)-COS(y))/(COS(x)-COS(y))=1",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 773,
+    "text": "(COS(x)^2-COS(y)^2)/(k*(COS(x)^2-COS(y)^2)-l*(SIN(x)^2-SIN(y)^2))=1/(k+l)",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 894,
+    "text": "(COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 985,
+    "text": "(SIN(x)^2-SIN(y)^2)/(COS(2*x)-COS(2*y))=-1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 1077,
+    "text": "(COS(x)^3*COS(y)-COS(y)^3*COS(x))/(COS(3*x)*COS(y)-COS(3*y)*COS(x))=COS(x)*COS(y)*(COS(x)^2-COS(y)^2)/(COS(y)*COS(3*x)-COS(x)*COS(3*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 1264,
+    "text": "(#e^(2*#i*x)-#e^(2*#i*y)+SIN(y)^2-SIN(x)^2+2*#i*(#e^(#i*y)*SIN(y)-#e^(#i*x)*SIN(x)))/(#e^(2*#i*x)-#e^(2*#i*y)+#i*(SIN(2*y)-SIN(2*x)))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1449,
+    "text": "RE(#e^(2*#i*x)-#e^(2*#i*y)+#i*(SIN(2*y)-SIN(2*x)))=COS(2*x)-COS(2*y)",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1565,
+    "text": "IM(#e^(2*#i*x)-#e^(2*#i*y)+#i*(SIN(2*y)-SIN(2*x)))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1665,
+    "text": "RE(#e^(2*#i*x)-#e^(2*#i*y)+SIN(y)^2-SIN(x)^2+2*#i*(#e^(#i*y)*SIN(y)-#e^(#i*x)*SIN(x)))=COS(2*x)/2-COS(2*y)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1821,
+    "text": "IM(#e^(2*#i*x)-#e^(2*#i*y)+SIN(y)^2-SIN(x)^2+2*#i*(#e^(#i*y)*SIN(y)-#e^(#i*x)*SIN(x)))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1957,
+    "text": "COS(5*x)=(COS(x)*COS(2*x)-SIN(x)*SIN(2*x))*COS(2*x)-SIN(2*x)*(SIN(x)*COS(2*x)+SIN(2*x)*COS(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 2099,
+    "text": "COS(5*x)=COS(x)*COS(4*x)-SIN(x)*SIN(4*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 2217,
+    "text": "SOLVE([f^2+m^2=0,f*m=1,s=1/2*(f+m)],[f,m,s])",
+    "origin": "Solve(User,[f,m,s])"
+   },
+   {
+    "idx": 14,
+    "pos": 2351,
+    "text": "[f=SQRT(2)/2+SQRT(2)*#i/2 AND m=SQRT(2)/2-SQRT(2)*#i/2 AND s=SQRT(2)/2,f=SQRT(2)/2-SQRT(2)*#i/2 AND m=SQRT(2)/2+SQRT(2)*#i/2 AND s=SQRT(2)/2,f=-SQRT(2)/2+SQRT(2)*#i/2 AND m=-SQRT(2)/2-SQRT(2)*#i/2 AND s=-SQRT(2)/2,f=-SQRT(2)/2-SQRT(2)*#i/2 AND m=-SQRT(2)/2+SQRT(2)*#i/2 AND s=-SQRT(2)/2]",
+    "origin": "Simp(Solve(User,[f,m,s]))"
+   },
+   {
+    "idx": 15,
+    "pos": 2688,
+    "text": "n*SIN(π*x)^x/(π*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 2762,
+    "text": "SIN(#e*x)/(#e*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 2826,
+    "text": "n*SIN(#e*x)/(#e*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 2892,
+    "text": "LIM(n*SIN(#e*x)/(#e*x),n,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 2971,
+    "text": "(COS(x+#i*y)^2-COS(x-#i*y)^2)/(COS(2*x+2*#i*y)-COS(2*x-2*#i*y))",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 3092,
+    "text": "1/2",
+    "origin": "Simp(#19)"
+   },
+   {
+    "idx": 21,
+    "pos": 3143,
+    "text": "(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(2*x+2*k*y)-COS(2*x-2*k*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 3270,
+    "text": "APPROX(SOLVE((COS(x+k*y)^2-COS(x-k*y)^2)/(COS(2*x+2*k*y)-COS(2*x-2*k*y))=1/2,k))",
+    "origin": "Solve(#21,k)"
+   },
+   {
+    "idx": 23,
+    "pos": 3426,
+    "text": "k=-4.999999701",
+    "origin": "Simp(Solve(#21,k))"
+   },
+   {
+    "idx": 24,
+    "pos": 3488,
+    "text": "(COS(x+#i*y)^2-COS(x-#i*y)^2)/(COS(2*x+2*#i*y)-COS(2*x-2*#i*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 3603,
+    "text": "(COS(x+k*y)^2-COS(k*y)^2)/(COS(2*x+2*k*y)-COS(2*k*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 3724,
+    "text": "APPROX(SOLVE((COS(x+k*y)^2-COS(k*y)^2)/(COS(2*x+2*k*y)-COS(2*k*y))=1/2,k))",
+    "origin": "Solve(#25,k)"
+   },
+   {
+    "idx": 27,
+    "pos": 3874,
+    "text": "k=-4.999999701",
+    "origin": "Simp(Solve(#25,k))"
+   },
+   {
+    "idx": 28,
+    "pos": 3936,
+    "text": "(COS(3*x+k*y)^2-COS(x)^2)/(COS(6*x+2*k*y)-COS(2*x))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 29,
+    "pos": 4055,
+    "text": "APPROX(SOLVE((COS(3*x+k*y)^2-COS(x)^2)/(COS(6*x+2*k*y)-COS(2*x))=1/2,k))",
+    "origin": "Solve(#28,k)"
+   },
+   {
+    "idx": 30,
+    "pos": 4185,
+    "text": "k=-4.999999701",
+    "origin": "Simp(#29)"
+   },
+   {
+    "idx": 31,
+    "pos": 4247,
+    "text": "(COS(x+k)^2-COS(x-k)^2)/(COS(2*x+2*k)-COS(2*x-2*k))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 32,
+    "pos": 4366,
+    "text": "APPROX(SOLVE((COS(x+k)^2-COS(x-k)^2)/(COS(2*x+2*k)-COS(2*x-2*k))=1/2,k,Real))",
+    "origin": "Solve(#31,k)"
+   },
+   {
+    "idx": 33,
+    "pos": 4519,
+    "text": "k=-4.999999701",
+    "origin": "Simp(Solve(#31,k))"
+   },
+   {
+    "idx": 34,
+    "pos": 4581,
+    "text": "(COS(x)^3*COS(y)-COS(y)^3*COS(x))/(COS(3*x)*COS(y)-COS(3*y)*COS(x))=COS(x)*COS(y)*(COS(x)^2-COS(y)^2)/(COS(y)*COS(3*x)-COS(x)*COS(3*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 35,
+    "pos": 4768,
+    "text": "COS(x+k*y)*COS(x-k*y)*(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(x-k*y)*COS(3*x+3*k*y)-COS(x+k*y)*COS(3*x-3*k*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 36,
+    "pos": 4939,
+    "text": "APPROX(SOLVE(COS(x+k*y)*COS(x-k*y)*(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(x-k*y)*COS(3*x+3*k*y)-COS(x+k*y)*COS(3*x-3*k*y))=1/4,k))",
+    "origin": "Solve(#35,k)"
+   },
+   {
+    "idx": 37,
+    "pos": 5139,
+    "text": "k=0",
+    "origin": "Simp(Solve(#35,k))"
+   },
+   {
+    "idx": 38,
+    "pos": 5190,
+    "text": "COS(x)*COS(y)*(COS(x)^2-COS(y)^2)/(COS(y)*COS(3*x)-COS(x)*COS(3*y))",
+    "origin": "User"
+   },
+   {
+    "idx": 39,
+    "pos": 5305,
+    "text": "(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(2*x+2*k*y)-COS(2*x-2*k*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 40,
+    "pos": 5416,
+    "text": "(COS(x-4.999999701*y)^2-COS(x+4.999999701*y)^2)/(COS(2*x-2*(4.999999701)*y)-COS(2*x+2*(4.999999701)*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 41,
+    "pos": 5571,
+    "text": "(COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 42,
+    "pos": 5662,
+    "text": "(COS(x+y)^2-COS(x-y)^2)/(COS(2*x+2*y)-COS(2*x-2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 43,
+    "pos": 5795,
+    "text": "y=-4.999999701",
+    "origin": "Simp(Solve(User,y))"
+   },
+   {
+    "idx": 44,
+    "pos": 5857,
+    "text": "COS(x+y)*COS(x-y)*(COS(x+y)^2-COS(x-y)^2)/(COS(x-y)*COS(3*x+3*y)-COS(x+y)*COS(3*x-3*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 45,
+    "pos": 5996,
+    "text": "y=-2.499998615",
+    "origin": "User"
+   },
+   {
+    "idx": 46,
+    "pos": 6058,
+    "text": "k*(3.141592654)=-4.999999701",
+    "origin": "User"
+   },
+   {
+    "idx": 47,
+    "pos": 6150,
+    "text": "APPROX(SOLVE(k*(3.141592654)=-4.999999701,k,Real))",
+    "origin": "Solve(#46,k)"
+   },
+   {
+    "idx": 48,
+    "pos": 6276,
+    "text": "k=-1.591549335",
+    "origin": "Simp(Solve(#46,k))"
+   },
+   {
+    "idx": 49,
+    "pos": 6338,
+    "text": "(COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 50,
+    "pos": 6429,
+    "text": "COS(x)^2-COS(y)^2=1",
+    "origin": "User"
+   },
+   {
+    "idx": 51,
+    "pos": 6496,
+    "text": "COS(2*x)-COS(2*y)=2",
+    "origin": "User"
+   },
+   {
+    "idx": 52,
+    "pos": 6589,
+    "text": "SOLVE([COS(k)^2-COS(j)^2=1,COS(2*k)-COS(2*j)=2],[j,k])",
+    "origin": "Solve(User,[j,k])"
+   },
+   {
+    "idx": 53,
+    "pos": 6691,
+    "text": "(COS(x)^2-k*COS(y)^2)/(COS(2*x)-l*COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 54,
+    "pos": 6814,
+    "text": "k=(l*COS(2*y)+1)/(2*COS(y)^2)",
+    "origin": "Simp(Solve(#53,k))"
+   },
+   {
+    "idx": 55,
+    "pos": 6919,
+    "text": "l=(2*k*COS(y)^2-1)/COS(2*y)",
+    "origin": "Simp(Solve(#53,l))"
+   },
+   {
+    "idx": 56,
+    "pos": 6994,
+    "text": "SOLVE([k=(l*COS(2*y)+1)/(2*COS(y)^2),l=(2*k*COS(y)^2-1)/COS(2*y)],[k,l])",
+    "origin": "User"
+   },
+   {
+    "idx": 57,
+    "pos": 7152,
+    "text": "[((k-l)*COS(2*y)+k)/(COS(2*y)+1)=1/(COS(2*y)+1)]",
+    "origin": "Simp(Solve(User,[k,l]))"
+   },
+   {
+    "idx": 58,
+    "pos": 7264,
+    "text": "SOLVE([((k-l)*COS(2*y)+k)/(COS(2*y)+1)=1/(COS(2*y)+1)],k)",
+    "origin": "Solve(#57,k)"
+   },
+   {
+    "idx": 59,
+    "pos": 7397,
+    "text": "[k=(l*COS(2*y)+1)/(COS(2*y)+1)]",
+    "origin": "Simp(Solve(#57,k))"
+   },
+   {
+    "idx": 60,
+    "pos": 7476,
+    "text": "COS(2*y)=(1-k)/(k-l)",
+    "origin": "User"
+   },
+   {
+    "idx": 61,
+    "pos": 7544,
+    "text": "(COS(x)^2-x*(1+k)*COS(y)^2)/(COS(2*x)-y*(1+k)*COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 62,
+    "pos": 7679,
+    "text": "k=-((x-y)*COS(2*y)+x-1)/((x-y)*COS(2*y)+x)",
+    "origin": "Simp(Solve(#61,k))"
+   },
+   {
+    "idx": 63,
+    "pos": 7769,
+    "text": "(COS(x)^2-(1+k)*COS(y)^2)/(COS(2*x)-(1+k)*COS(2*y))=k/2",
+    "origin": "User"
+   },
+   {
+    "idx": 64,
+    "pos": 7888,
+    "text": "SOLVE((COS(x)^2-(1+k)*COS(y)^2)/(COS(2*x)-(1+k)*COS(2*y))=k/2,k)",
+    "origin": "Solve(#63,k)"
+   },
+   {
+    "idx": 65,
+    "pos": 8028,
+    "text": "k=-SQRT(COS(2*x)^2+2*COS(2*x)*(1-2*COS(2*y))+4*COS(2*y)^2+1)/(2*COS(2*y))+COS(2*x)/(2*COS(2*y))+1/(2*COS(2*y)) OR k=SQRT(COS(2*x)^2+2*COS(2*x)*(1-2*COS(2*y))+4*COS(2*y)^2+1)/(2*COS(2*y))+COS(2*x)/(2*COS(2*y))+1/(2*COS(2*y))",
+    "origin": "Simp(Solve(#63,k))"
+   },
+   {
+    "idx": 66,
+    "pos": 8299,
+    "text": "1/pi*(y-x)*(x+1/y)",
+    "origin": "User"
+   },
+   {
+    "idx": 67,
+    "pos": 8365,
+    "text": "(1/2)!=SQRT(pi)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 68,
+    "pos": 8430,
+    "text": "4*(1/2)!^2=pi",
+    "origin": "User"
+   },
+   {
+    "idx": 69,
+    "pos": 8491,
+    "text": "COS(x)!",
+    "origin": "User"
+   },
+   {
+    "idx": 70,
+    "pos": 8546,
+    "text": "((COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y)))!=SQRT(pi)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 71,
+    "pos": 8647,
+    "text": "4*((COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y)))!^2=pi",
+    "origin": "User"
+   },
+   {
+    "idx": 72,
+    "pos": 8744,
+    "text": "ACOS(x/pi)+ASIN(x/pi)=pi/2",
+    "origin": "User"
+   },
+   {
+    "idx": 73,
+    "pos": 8818,
+    "text": "SIN(ACOS(x))=COS(ASIN(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 74,
+    "pos": 8891,
+    "text": "ACOS(SIN(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 75,
+    "pos": 8951,
+    "text": "ASIN(COS(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 76,
+    "pos": 9184,
+    "text": "SIGN(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 77,
+    "pos": 9239,
+    "text": "LN((ABS(#e^(2*x)-1)+ABS(#e^(2*x)+1))/2)/x-1",
+    "origin": "User"
+   },
+   {
+    "idx": 78,
+    "pos": 9330,
+    "text": "2*LN((ABS(#e^x-1)+ABS(#e^x+1))/2)/x-1",
+    "origin": "User"
+   },
+   {
+    "idx": 79,
+    "pos": 9586,
+    "text": "TRIANGULAR(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 80,
+    "pos": 9647,
+    "text": "1/pi*ACOS(SIN(pi*(x-1/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 81,
+    "pos": 9721,
+    "text": "ABS(2/pi*ASIN(COS(pi*x/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 82,
+    "pos": 9796,
+    "text": "ABS(2/pi*ATAN(COT(pi*x/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 83,
+    "pos": 9871,
+    "text": "4*ASIN(COS(pi*x/2))^2/(pi*ASIN(COS(pi*x))+pi^2/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 84,
+    "pos": 10143,
+    "text": "MOD(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 85,
+    "pos": 10197,
+    "text": "1+SUM(#i*#e^(#i*k*pi*t)/(k*pi),k,-inf,+inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 86,
+    "pos": 10288,
+    "text": "1/pi*ACOT(TAN(-pi*(x+1/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 87,
+    "pos": 10363,
+    "text": "1/pi*ACOT(TAN(-pi*(x-1/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 88,
+    "pos": 10614,
+    "text": "LOG(COSH(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 89,
+    "pos": 10674,
+    "text": "LOG(COSH(x))=ABS(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 90,
+    "pos": 10912,
+    "text": "-LOG(1/pi*ACOT(TAN(pi*(x+1/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 91,
+    "pos": 10992,
+    "text": "-LOG(1/pi*ACOS(SIN(pi*(x-1/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 92,
+    "pos": 11072,
+    "text": "ACOS(SIN(-LOG(1/pi*ACOS(SIN(pi*(x-1/2))))))",
+    "origin": "User"
+   },
+   {
+    "idx": 93,
+    "pos": 11163,
+    "text": "SIN(x)/x*(1/pi*ACOT(TAN(-pi*(x+1/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 94,
+    "pos": 11249,
+    "text": "SIN(ACOS(ASIN(COS(x+pi/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 95,
+    "pos": 11325,
+    "text": "SIN(x)/x*(1/pi*ACOT(TAN(-pi*(x+1/2))^2))",
+    "origin": "User"
+   },
+   {
+    "idx": 96,
+    "pos": 11413,
+    "text": "4*ASIN(COS(x))^2/pi*(ASIN(COS(2*x))+pi/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 97,
+    "pos": 11502,
+    "text": "2*ASIN(COS(pi*x/2)^2)/(ASIN(COS(pi*x))+pi/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 98,
+    "pos": 11606,
+    "text": "DIF(-LOG(1/pi*ACOT(TAN(pi*(x+1/2)))),x)",
+    "origin": "Dif(#90,x)"
+   },
+   {
+    "idx": 99,
+    "pos": 11717,
+    "text": "1/(1-MOD(x))",
+    "origin": "Simp(Dif(#90,x))"
+   },
+   {
+    "idx": 100,
+    "pos": 11777,
+    "text": "2/pi*ACOTH(TAN(-pi*(x+1/2)))=-2*#i*ACOT(-#i*COT(pi*x))/pi",
+    "origin": "User"
+   },
+   {
+    "idx": 101,
+    "pos": 11882,
+    "text": "RE(-2*#i*ACOT(-#i*COT(pi*x))/pi)",
+    "origin": "User"
+   },
+   {
+    "idx": 102,
+    "pos": 11962,
+    "text": "-LN((1-2*SIN(pi*x)*COS(pi*x))/(2*SIN(pi*x)*COS(pi*x)+1))/(2*pi)=-LN((1-SIN(2*pi*x))/(1+SIN(2*pi*x)))/(2*pi)",
+    "origin": "User"
+   },
+   {
+    "idx": 103,
+    "pos": 12117,
+    "text": "-IM(-2*#i*ACOT(-#i*COT(pi*x))/pi)",
+    "origin": "User"
+   },
+   {
+    "idx": 104,
+    "pos": 12198,
+    "text": "-SIGN(SIN(pi*x)*(COS(pi*x)+SIN(pi*x)))/2-SIGN(SIN(pi*x)*(COS(pi*x)-SIN(pi*x)))/2+1",
+    "origin": "User"
+   },
+   {
+    "idx": 105,
+    "pos": 12328,
+    "text": "+SIN(pi*x)*(SIN(pi*x)+COS(pi*x))/2+SIN(pi*x)*(SIN(pi*x)-COS(pi*x))/2-1/2=SIN(pi*x)^2-1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 106,
+    "pos": 12464,
+    "text": "+SIN(pi*x)*(SIN(pi*x)+COS(pi*x))+SIN(pi*x)*(SIN(pi*x)-COS(pi*x))-1=2*SIN(pi*x)^2-1=-COS(2*pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 107,
+    "pos": 12607,
+    "text": "SINH(x)=SIN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 108,
+    "pos": 12671,
+    "text": "k=ASIN(#e^x/2-#e^(-x)/2)/x",
+    "origin": "User"
+   },
+   {
+    "idx": 109,
+    "pos": 12745,
+    "text": "COSH(x)=COS(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 110,
+    "pos": 12839,
+    "text": "k=2*pi/x+#i*(1-LN(ABS(#e^(2*x)-1)/2+#e^(2*x)/2+1/2)/x) OR k=#i*(1-LN(ABS(#e^(2*x)-1)/2+#e^(2*x)/2+1/2)/x) OR k=#i*(LN(ABS(#e^(2*x)-1)/2+#e^(2*x)/2+1/2)/x-1)",
+    "origin": "Simp(Solve(#109,k))"
+   },
+   {
+    "idx": 111,
+    "pos": 13043,
+    "text": "TANH(x)=TAN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 112,
+    "pos": 13137,
+    "text": "k=ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x-pi/x OR k=ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x+pi/x OR k=ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x",
+    "origin": "Simp(Solve(#111,k))"
+   },
+   {
+    "idx": 113,
+    "pos": 13308,
+    "text": "ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x",
+    "origin": "User"
+   },
+   {
+    "idx": 114,
+    "pos": 13389,
+    "text": "ASINH(x)=ASIN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 115,
+    "pos": 13485,
+    "text": "k=IF(-pi/2<LN(SQRT(x^2+1)+x)<pi/2,SIN(LN(SQRT(x^2+1)+x))/x)",
+    "origin": "Simp(Solve(#114,k))"
+   },
+   {
+    "idx": 116,
+    "pos": 13592,
+    "text": "SIN(LN(SQRT(x^2+1)+x))/x",
+    "origin": "User"
+   },
+   {
+    "idx": 117,
+    "pos": 13664,
+    "text": "ATANH(x)=ATAN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 118,
+    "pos": 13760,
+    "text": "k=IF(-2*pi<LN((x-1)^2/(x+1)^2)<2*pi,-TAN(#i*ATAN(#i*x))/x)",
+    "origin": "Simp(Solve(#117,k))"
+   },
+   {
+    "idx": 119,
+    "pos": 13866,
+    "text": "LN((x-1)^2/(x+1)^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 120,
+    "pos": 13933,
+    "text": "ASIN(z)+#i*ACOS(z)=x+#i*y",
+    "origin": "User"
+   },
+   {
+    "idx": 121,
+    "pos": 14006,
+    "text": "z+SIN(#i*ACOS(z))=SIN(x+#i*y)",
+    "origin": "User"
+   },
+   {
+    "idx": 122,
+    "pos": 14083,
+    "text": "COS(ASIN(z))+COS(#i*ACOS(z))=COS(x+#i*y)",
+    "origin": "User"
+   },
+   {
+    "idx": 123,
+    "pos": 14171,
+    "text": "COS(#i*ACOS(z))=COSH(-ACOS(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 124,
+    "pos": 14249,
+    "text": "SIN(#i*ACOS(z))=1/#i*SINH(-ACOS(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 125,
+    "pos": 14332,
+    "text": "#e^x+#i*#e^y",
+    "origin": "User"
+   },
+   {
+    "idx": 126,
+    "pos": 14402,
+    "text": "pi*#e^(#i*(x+#i*y))+#i*#e^(pi*(x+#i*y))",
+    "origin": "Sub(User)"
+   },
+   {
+    "idx": 127,
+    "pos": 14489,
+    "text": "pi*#e^(-y+#i*(2*x+pi)/2)+pi*#e^(pi*x)*(-1)^((2*y+1)/2)=-#i*(-pi*#e^(-y+#i*x)-pi*#e^(pi*x)*(-1)^y)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "mate.dfw",
+  "header": "Derive version 6.10 DfW file saved on 18 Aug 2010",
+  "settings": {
+   "hCross": "APPROX(- 37974999999999999/10000000000000000)",
+   "vCross": "APPROX(29411999999999999/1000000000000000)",
+   "xCross": "APPROX(0)",
+   "yCross": "APPROX(5/2)",
+   "zCross": "APPROX(1/500000000000000000b77853981633974483)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 677,
+    "text": "(COS(x)-COS(y))/(COS(x)-COS(y))=1",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 758,
+    "text": "(COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 849,
+    "text": "(COSH(x)^2-COSH(y)^2)/(COSH(2*x)-COSH(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 944,
+    "text": "(SIN(x)^2-SIN(y)^2)/(COS(2*x)-COS(2*y))=-1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 1036,
+    "text": "(COS(x)^3*COS(y)-COS(y)^3*COS(x))/(COS(3*x)*COS(y)-COS(3*y)*COS(x))=COS(x)*COS(y)*(COS(x)^2-COS(y)^2)/(COS(y)*COS(3*x)-COS(x)*COS(3*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 1223,
+    "text": "(#e^(2*#i*x)-#e^(2*#i*y)+SIN(y)^2-SIN(x)^2+2*#i*(#e^(#i*y)*SIN(y)-#e^(#i*x)*SIN(x)))/(#e^(2*#i*x)-#e^(2*#i*y)+#i*(SIN(2*y)-SIN(2*x)))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1408,
+    "text": "RE(#e^(2*#i*x)-#e^(2*#i*y)+#i*(SIN(2*y)-SIN(2*x)))=COS(2*x)-COS(2*y)",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1524,
+    "text": "IM(#e^(2*#i*x)-#e^(2*#i*y)+#i*(SIN(2*y)-SIN(2*x)))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1624,
+    "text": "RE(#e^(2*#i*x)-#e^(2*#i*y)+SIN(y)^2-SIN(x)^2+2*#i*(#e^(#i*y)*SIN(y)-#e^(#i*x)*SIN(x)))=COS(2*x)/2-COS(2*y)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1780,
+    "text": "IM(#e^(2*#i*x)-#e^(2*#i*y)+SIN(y)^2-SIN(x)^2+2*#i*(#e^(#i*y)*SIN(y)-#e^(#i*x)*SIN(x)))=0",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1916,
+    "text": "COS(5*x)=(COS(x)*COS(2*x)-SIN(x)*SIN(2*x))*COS(2*x)-SIN(2*x)*(SIN(x)*COS(2*x)+SIN(2*x)*COS(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 2058,
+    "text": "COS(5*x)=COS(x)*COS(4*x)-SIN(x)*SIN(4*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 2176,
+    "text": "SOLVE([f^2+m^2=0,f*m=1,s=1/2*(f+m)],[f,m,s])",
+    "origin": "Solve(User,[f,m,s])"
+   },
+   {
+    "idx": 14,
+    "pos": 2310,
+    "text": "[f=SQRT(2)/2+SQRT(2)*#i/2 AND m=SQRT(2)/2-SQRT(2)*#i/2 AND s=SQRT(2)/2,f=SQRT(2)/2-SQRT(2)*#i/2 AND m=SQRT(2)/2+SQRT(2)*#i/2 AND s=SQRT(2)/2,f=-SQRT(2)/2+SQRT(2)*#i/2 AND m=-SQRT(2)/2-SQRT(2)*#i/2 AND s=-SQRT(2)/2,f=-SQRT(2)/2-SQRT(2)*#i/2 AND m=-SQRT(2)/2+SQRT(2)*#i/2 AND s=-SQRT(2)/2]",
+    "origin": "Simp(Solve(User,[f,m,s]))"
+   },
+   {
+    "idx": 15,
+    "pos": 2647,
+    "text": "n*SIN(π*x)^x/(π*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 2721,
+    "text": "SIN(#e*x)/(#e*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 2785,
+    "text": "n*SIN(#e*x)/(#e*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 2851,
+    "text": "LIM(n*SIN(#e*x)/(#e*x),n,inf,0)",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 2930,
+    "text": "(COS(x+#i*y)^2-COS(x-#i*y)^2)/(COS(2*x+2*#i*y)-COS(2*x-2*#i*y))",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 3051,
+    "text": "1/2",
+    "origin": "Simp(#19)"
+   },
+   {
+    "idx": 21,
+    "pos": 3102,
+    "text": "(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(2*x+2*k*y)-COS(2*x-2*k*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 3229,
+    "text": "APPROX(SOLVE((COS(x+k*y)^2-COS(x-k*y)^2)/(COS(2*x+2*k*y)-COS(2*x-2*k*y))=1/2,k))",
+    "origin": "Solve(#21,k)"
+   },
+   {
+    "idx": 23,
+    "pos": 3385,
+    "text": "k=-4.999999701",
+    "origin": "Simp(Solve(#21,k))"
+   },
+   {
+    "idx": 24,
+    "pos": 3447,
+    "text": "(COS(x+#i*y)^2-COS(x-#i*y)^2)/(COS(2*x+2*#i*y)-COS(2*x-2*#i*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 3562,
+    "text": "(COS(x+k*y)^2-COS(k*y)^2)/(COS(2*x+2*k*y)-COS(2*k*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 3683,
+    "text": "APPROX(SOLVE((COS(x+k*y)^2-COS(k*y)^2)/(COS(2*x+2*k*y)-COS(2*k*y))=1/2,k))",
+    "origin": "Solve(#25,k)"
+   },
+   {
+    "idx": 27,
+    "pos": 3833,
+    "text": "k=-4.999999701",
+    "origin": "Simp(Solve(#25,k))"
+   },
+   {
+    "idx": 28,
+    "pos": 3895,
+    "text": "(COS(3*x+k*y)^2-COS(x)^2)/(COS(6*x+2*k*y)-COS(2*x))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 29,
+    "pos": 4014,
+    "text": "APPROX(SOLVE((COS(3*x+k*y)^2-COS(x)^2)/(COS(6*x+2*k*y)-COS(2*x))=1/2,k))",
+    "origin": "Solve(#28,k)"
+   },
+   {
+    "idx": 30,
+    "pos": 4144,
+    "text": "k=-4.999999701",
+    "origin": "Simp(#29)"
+   },
+   {
+    "idx": 31,
+    "pos": 4206,
+    "text": "(COS(x+k)^2-COS(x-k)^2)/(COS(2*x+2*k)-COS(2*x-2*k))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 32,
+    "pos": 4325,
+    "text": "APPROX(SOLVE((COS(x+k)^2-COS(x-k)^2)/(COS(2*x+2*k)-COS(2*x-2*k))=1/2,k,Real))",
+    "origin": "Solve(#31,k)"
+   },
+   {
+    "idx": 33,
+    "pos": 4478,
+    "text": "k=-4.999999701",
+    "origin": "Simp(Solve(#31,k))"
+   },
+   {
+    "idx": 34,
+    "pos": 4540,
+    "text": "(COS(x)^3*COS(y)-COS(y)^3*COS(x))/(COS(3*x)*COS(y)-COS(3*y)*COS(x))=COS(x)*COS(y)*(COS(x)^2-COS(y)^2)/(COS(y)*COS(3*x)-COS(x)*COS(3*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 35,
+    "pos": 4727,
+    "text": "COS(x+k*y)*COS(x-k*y)*(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(x-k*y)*COS(3*x+3*k*y)-COS(x+k*y)*COS(3*x-3*k*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 36,
+    "pos": 4898,
+    "text": "APPROX(SOLVE(COS(x+k*y)*COS(x-k*y)*(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(x-k*y)*COS(3*x+3*k*y)-COS(x+k*y)*COS(3*x-3*k*y))=1/4,k))",
+    "origin": "Solve(#35,k)"
+   },
+   {
+    "idx": 37,
+    "pos": 5098,
+    "text": "k=0",
+    "origin": "Simp(Solve(#35,k))"
+   },
+   {
+    "idx": 38,
+    "pos": 5149,
+    "text": "COS(x)*COS(y)*(COS(x)^2-COS(y)^2)/(COS(y)*COS(3*x)-COS(x)*COS(3*y))",
+    "origin": "User"
+   },
+   {
+    "idx": 39,
+    "pos": 5264,
+    "text": "(COS(x+k*y)^2-COS(x-k*y)^2)/(COS(2*x+2*k*y)-COS(2*x-2*k*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 40,
+    "pos": 5375,
+    "text": "(COS(x-4.999999701*y)^2-COS(x+4.999999701*y)^2)/(COS(2*x-2*(4.999999701)*y)-COS(2*x+2*(4.999999701)*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 41,
+    "pos": 5530,
+    "text": "(COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 42,
+    "pos": 5621,
+    "text": "(COS(x+y)^2-COS(x-y)^2)/(COS(2*x+2*y)-COS(2*x-2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 43,
+    "pos": 5754,
+    "text": "y=-4.999999701",
+    "origin": "Simp(Solve(User,y))"
+   },
+   {
+    "idx": 44,
+    "pos": 5816,
+    "text": "COS(x+y)*COS(x-y)*(COS(x+y)^2-COS(x-y)^2)/(COS(x-y)*COS(3*x+3*y)-COS(x+y)*COS(3*x-3*y))=1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 45,
+    "pos": 5955,
+    "text": "y=-2.499998615",
+    "origin": "User"
+   },
+   {
+    "idx": 46,
+    "pos": 6017,
+    "text": "k*(3.141592654)=-4.999999701",
+    "origin": "User"
+   },
+   {
+    "idx": 47,
+    "pos": 6109,
+    "text": "APPROX(SOLVE(k*(3.141592654)=-4.999999701,k,Real))",
+    "origin": "Solve(#46,k)"
+   },
+   {
+    "idx": 48,
+    "pos": 6235,
+    "text": "k=-1.591549335",
+    "origin": "Simp(Solve(#46,k))"
+   },
+   {
+    "idx": 49,
+    "pos": 6297,
+    "text": "(COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 50,
+    "pos": 6388,
+    "text": "COS(x)^2-COS(y)^2=1",
+    "origin": "User"
+   },
+   {
+    "idx": 51,
+    "pos": 6455,
+    "text": "COS(2*x)-COS(2*y)=2",
+    "origin": "User"
+   },
+   {
+    "idx": 52,
+    "pos": 6548,
+    "text": "SOLVE([COS(k)^2-COS(j)^2=1,COS(2*k)-COS(2*j)=2],[j,k])",
+    "origin": "Solve(User,[j,k])"
+   },
+   {
+    "idx": 53,
+    "pos": 6650,
+    "text": "(COS(x)^2-k*COS(y)^2)/(COS(2*x)-l*COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 54,
+    "pos": 6773,
+    "text": "k=(l*COS(2*y)+1)/(2*COS(y)^2)",
+    "origin": "Simp(Solve(#53,k))"
+   },
+   {
+    "idx": 55,
+    "pos": 6878,
+    "text": "l=(2*k*COS(y)^2-1)/COS(2*y)",
+    "origin": "Simp(Solve(#53,l))"
+   },
+   {
+    "idx": 56,
+    "pos": 6953,
+    "text": "SOLVE([k=(l*COS(2*y)+1)/(2*COS(y)^2),l=(2*k*COS(y)^2-1)/COS(2*y)],[k,l])",
+    "origin": "User"
+   },
+   {
+    "idx": 57,
+    "pos": 7111,
+    "text": "[((k-l)*COS(2*y)+k)/(COS(2*y)+1)=1/(COS(2*y)+1)]",
+    "origin": "Simp(Solve(User,[k,l]))"
+   },
+   {
+    "idx": 58,
+    "pos": 7223,
+    "text": "SOLVE([((k-l)*COS(2*y)+k)/(COS(2*y)+1)=1/(COS(2*y)+1)],k)",
+    "origin": "Solve(#57,k)"
+   },
+   {
+    "idx": 59,
+    "pos": 7356,
+    "text": "[k=(l*COS(2*y)+1)/(COS(2*y)+1)]",
+    "origin": "Simp(Solve(#57,k))"
+   },
+   {
+    "idx": 60,
+    "pos": 7435,
+    "text": "COS(2*y)=(1-k)/(k-l)",
+    "origin": "User"
+   },
+   {
+    "idx": 61,
+    "pos": 7503,
+    "text": "(COS(x)^2-x*(1+k)*COS(y)^2)/(COS(2*x)-y*(1+k)*COS(2*y))=1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 62,
+    "pos": 7638,
+    "text": "k=-((x-y)*COS(2*y)+x-1)/((x-y)*COS(2*y)+x)",
+    "origin": "Simp(Solve(#61,k))"
+   },
+   {
+    "idx": 63,
+    "pos": 7728,
+    "text": "(COS(x)^2-(1+k)*COS(y)^2)/(COS(2*x)-(1+k)*COS(2*y))=k/2",
+    "origin": "User"
+   },
+   {
+    "idx": 64,
+    "pos": 7847,
+    "text": "SOLVE((COS(x)^2-(1+k)*COS(y)^2)/(COS(2*x)-(1+k)*COS(2*y))=k/2,k)",
+    "origin": "Solve(#63,k)"
+   },
+   {
+    "idx": 65,
+    "pos": 7987,
+    "text": "k=-SQRT(COS(2*x)^2+2*COS(2*x)*(1-2*COS(2*y))+4*COS(2*y)^2+1)/(2*COS(2*y))+COS(2*x)/(2*COS(2*y))+1/(2*COS(2*y)) OR k=SQRT(COS(2*x)^2+2*COS(2*x)*(1-2*COS(2*y))+4*COS(2*y)^2+1)/(2*COS(2*y))+COS(2*x)/(2*COS(2*y))+1/(2*COS(2*y))",
+    "origin": "Simp(Solve(#63,k))"
+   },
+   {
+    "idx": 66,
+    "pos": 8258,
+    "text": "1/pi*(y-x)*(x+1/y)",
+    "origin": "User"
+   },
+   {
+    "idx": 67,
+    "pos": 8324,
+    "text": "(1/2)!=SQRT(pi)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 68,
+    "pos": 8389,
+    "text": "4*(1/2)!^2=pi",
+    "origin": "User"
+   },
+   {
+    "idx": 69,
+    "pos": 8450,
+    "text": "COS(x)!",
+    "origin": "User"
+   },
+   {
+    "idx": 70,
+    "pos": 8505,
+    "text": "((COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y)))!=SQRT(pi)/2",
+    "origin": "User"
+   },
+   {
+    "idx": 71,
+    "pos": 8606,
+    "text": "4*((COS(x)^2-COS(y)^2)/(COS(2*x)-COS(2*y)))!^2=pi",
+    "origin": "User"
+   },
+   {
+    "idx": 72,
+    "pos": 8703,
+    "text": "ACOS(x/pi)+ASIN(x/pi)=pi/2",
+    "origin": "User"
+   },
+   {
+    "idx": 73,
+    "pos": 8777,
+    "text": "LN((ABS(#e^COS(x*#i)-1)+ABS(#e^COS(x*#i)+1))/2)/COS(x*#i)=1",
+    "origin": "User"
+   },
+   {
+    "idx": 74,
+    "pos": 8884,
+    "text": "SIN(ACOS(x))=COS(ASIN(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 75,
+    "pos": 8957,
+    "text": "ACOS(SIN(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 76,
+    "pos": 9017,
+    "text": "ASIN(COS(x))",
+    "origin": "User"
+   },
+   {
+    "idx": 77,
+    "pos": 9251,
+    "text": "LN((ABS(#e^x-1)+ABS(#e^x+1))/2)/x",
+    "origin": "User"
+   },
+   {
+    "idx": 78,
+    "pos": 9332,
+    "text": "LN((ABS(x)+ABS(x+2))/2)/LN(x+1)",
+    "origin": "User"
+   },
+   {
+    "idx": 79,
+    "pos": 9572,
+    "text": "SIGN(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 80,
+    "pos": 9627,
+    "text": "LN((ABS(#e^(2*x)-1)+ABS(#e^(2*x)+1))/2)/x-1",
+    "origin": "User"
+   },
+   {
+    "idx": 81,
+    "pos": 9718,
+    "text": "2*LN((ABS(#e^x-1)+ABS(#e^x+1))/2)/x-1",
+    "origin": "User"
+   },
+   {
+    "idx": 82,
+    "pos": 9969,
+    "text": "1/2*(1-SIGN(SIN(pi*(x-1))))",
+    "origin": "User"
+   },
+   {
+    "idx": 83,
+    "pos": 10044,
+    "text": "LN((ABS(#e^SIN(pi*x)-1)+ABS(#e^SIN(pi*x)+1))/2)/SIN(pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 84,
+    "pos": 10149,
+    "text": "LN((ABS(#e^COS(pi*x)-1)+ABS(#e^COS(pi*x)+1))/2)/COS(pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 85,
+    "pos": 10425,
+    "text": "TRIANGULAR(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 86,
+    "pos": 10486,
+    "text": "1/pi*ACOS(SIN(pi*(x-1/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 87,
+    "pos": 10560,
+    "text": "ABS(2/pi*ASIN(COS(pi*x/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 88,
+    "pos": 10635,
+    "text": "ABS(2/pi*ATAN(COT(pi*x/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 89,
+    "pos": 10710,
+    "text": "4*ASIN(COS(pi*x/2))^2/(pi*ASIN(COS(pi*x))+pi^2/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 90,
+    "pos": 10982,
+    "text": "MOD(x)",
+    "origin": "User"
+   },
+   {
+    "idx": 91,
+    "pos": 11036,
+    "text": "1+SUM(#i*#e^(#i*k*pi*t)/(k*pi),k,-inf,+inf)",
+    "origin": "User"
+   },
+   {
+    "idx": 92,
+    "pos": 11127,
+    "text": "1/pi*ACOT(TAN(-pi*(x+1/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 93,
+    "pos": 11202,
+    "text": "1/pi*ACOT(TAN(-pi*(x-1/2)))",
+    "origin": "User"
+   },
+   {
+    "idx": 94,
+    "pos": 11448,
+    "text": "-LOG(1/pi*ACOT(TAN(pi*(x+1/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 95,
+    "pos": 11528,
+    "text": "-LOG(1/pi*ACOS(SIN(pi*(x-1/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 96,
+    "pos": 11608,
+    "text": "ACOS(SIN(-LOG(1/pi*ACOS(SIN(pi*(x-1/2))))))",
+    "origin": "User"
+   },
+   {
+    "idx": 97,
+    "pos": 11699,
+    "text": "SIN(x)/x*(1/pi*ACOT(TAN(-pi*(x+1/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 98,
+    "pos": 11785,
+    "text": "SIN(ACOS(ASIN(COS(x+pi/2))))",
+    "origin": "User"
+   },
+   {
+    "idx": 99,
+    "pos": 11861,
+    "text": "SIN(x)/x*(1/pi*ACOT(TAN(-pi*(x+1/2))^2))",
+    "origin": "User"
+   },
+   {
+    "idx": 100,
+    "pos": 11949,
+    "text": "4*ASIN(COS(x))^2/pi*(ASIN(COS(2*x))+pi/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 101,
+    "pos": 12038,
+    "text": "2*ASIN(COS(pi*x/2)^2)/(ASIN(COS(pi*x))+pi/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 102,
+    "pos": 12142,
+    "text": "DIF(-LOG(1/pi*ACOT(TAN(pi*(x+1/2)))),x)",
+    "origin": "Dif(#94,x)"
+   },
+   {
+    "idx": 103,
+    "pos": 12253,
+    "text": "1/(1-MOD(x))",
+    "origin": "Simp(Dif(#94,x))"
+   },
+   {
+    "idx": 104,
+    "pos": 12313,
+    "text": "2/pi*ACOTH(TAN(-pi*(x+1/2)))=-2*#i*ACOT(-#i*COT(pi*x))/pi",
+    "origin": "User"
+   },
+   {
+    "idx": 105,
+    "pos": 12418,
+    "text": "RE(-2*#i*ACOT(-#i*COT(pi*x))/pi)",
+    "origin": "User"
+   },
+   {
+    "idx": 106,
+    "pos": 12498,
+    "text": "-LN((1-2*SIN(pi*x)*COS(pi*x))/(2*SIN(pi*x)*COS(pi*x)+1))/(2*pi)=-LN((1-SIN(2*pi*x))/(1+SIN(2*pi*x)))/(2*pi)",
+    "origin": "User"
+   },
+   {
+    "idx": 107,
+    "pos": 12653,
+    "text": "-IM(-2*#i*ACOT(-#i*COT(pi*x))/pi)",
+    "origin": "User"
+   },
+   {
+    "idx": 108,
+    "pos": 12734,
+    "text": "-SIGN(SIN(pi*x)*(COS(pi*x)+SIN(pi*x)))/2-SIGN(SIN(pi*x)*(COS(pi*x)-SIN(pi*x)))/2+1",
+    "origin": "User"
+   },
+   {
+    "idx": 109,
+    "pos": 12864,
+    "text": "+SIN(pi*x)*(SIN(pi*x)+COS(pi*x))/2+SIN(pi*x)*(SIN(pi*x)-COS(pi*x))/2-1/2=SIN(pi*x)^2-1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 110,
+    "pos": 13000,
+    "text": "+SIN(pi*x)*(SIN(pi*x)+COS(pi*x))+SIN(pi*x)*(SIN(pi*x)-COS(pi*x))-1=2*SIN(pi*x)^2-1=-COS(2*pi*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 111,
+    "pos": 13143,
+    "text": "SINH(x)=SIN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 112,
+    "pos": 13207,
+    "text": "k=ASIN(#e^x/2-#e^(-x)/2)/x",
+    "origin": "User"
+   },
+   {
+    "idx": 113,
+    "pos": 13281,
+    "text": "COSH(x)=COS(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 114,
+    "pos": 13375,
+    "text": "k=2*pi/x+#i*(1-LN(ABS(#e^(2*x)-1)/2+#e^(2*x)/2+1/2)/x) OR k=#i*(1-LN(ABS(#e^(2*x)-1)/2+#e^(2*x)/2+1/2)/x) OR k=#i*(LN(ABS(#e^(2*x)-1)/2+#e^(2*x)/2+1/2)/x-1)",
+    "origin": "Simp(Solve(#113,k))"
+   },
+   {
+    "idx": 115,
+    "pos": 13579,
+    "text": "TANH(x)=TAN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 116,
+    "pos": 13673,
+    "text": "k=ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x-pi/x OR k=ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x+pi/x OR k=ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x",
+    "origin": "Simp(Solve(#115,k))"
+   },
+   {
+    "idx": 117,
+    "pos": 13844,
+    "text": "ATAN((#e^(2*x)-1)/(#e^(2*x)+1))/x",
+    "origin": "User"
+   },
+   {
+    "idx": 118,
+    "pos": 13925,
+    "text": "ASINH(x)=ASIN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 119,
+    "pos": 14021,
+    "text": "k=IF(-pi/2<LN(SQRT(x^2+1)+x)<pi/2,SIN(LN(SQRT(x^2+1)+x))/x)",
+    "origin": "Simp(Solve(#118,k))"
+   },
+   {
+    "idx": 120,
+    "pos": 14128,
+    "text": "SIN(LN(SQRT(x^2+1)+x))/x",
+    "origin": "User"
+   },
+   {
+    "idx": 121,
+    "pos": 14200,
+    "text": "ATANH(x)=ATAN(k*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 122,
+    "pos": 14296,
+    "text": "k=IF(-2*pi<LN((x-1)^2/(x+1)^2)<2*pi,-TAN(#i*ATAN(#i*x))/x)",
+    "origin": "Simp(Solve(#121,k))"
+   },
+   {
+    "idx": 123,
+    "pos": 14402,
+    "text": "LN((x-1)^2/(x+1)^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 124,
+    "pos": 14469,
+    "text": "ASIN(z)+#i*ACOS(z)=x+#i*y",
+    "origin": "User"
+   },
+   {
+    "idx": 125,
+    "pos": 14542,
+    "text": "z+SIN(#i*ACOS(z))=SIN(x+#i*y)",
+    "origin": "User"
+   },
+   {
+    "idx": 126,
+    "pos": 14619,
+    "text": "COS(ASIN(z))+COS(#i*ACOS(z))=COS(x+#i*y)",
+    "origin": "User"
+   },
+   {
+    "idx": 127,
+    "pos": 14707,
+    "text": "COS(#i*ACOS(z))=COSH(-ACOS(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 128,
+    "pos": 14785,
+    "text": "SIN(#i*ACOS(z))=1/#i*SINH(-ACOS(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 129,
+    "pos": 14868,
+    "text": "SIN(#i*ACOS(z))=#i*SINH(ACOS(z))",
+    "origin": "User"
+   },
+   {
+    "idx": 130,
+    "pos": 14948,
+    "text": "#e^x+#i*#e^y",
+    "origin": "User"
+   },
+   {
+    "idx": 131,
+    "pos": 15018,
+    "text": "pi*#e^(#i*(x+#i*y))+#i*#e^(pi*(x+#i*y))",
+    "origin": "Sub(User)"
+   },
+   {
+    "idx": 132,
+    "pos": 15105,
+    "text": "pi*#e^(-y+#i*(2*x+pi)/2)+pi*#e^(pi*x)*(-1)^((2*y+1)/2)=-#i*(-pi*#e^(-y+#i*x)-pi*#e^(pi*x)*(-1)^y)",
+    "origin": "User"
+   },
+   {
+    "idx": 133,
+    "pos": 15250,
+    "text": "LN((ABS(#e^x-1)+ABS(#e^x+1))/2)/x",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "notch.dfw",
+  "header": "Derive version 6.10 DfW file saved on 21 Jan 2010",
+  "settings": {
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 473,
+    "text": "(s*l)*(1/(s*c))/(s*l+1/(s*c))",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 560,
+    "text": "(s*f)*(1/(s*g))*r/((s*f)*(1/(s*g)+r)+1/(s*g)*r)",
+    "origin": "Sub(User)"
+   },
+   {
+    "idx": 3,
+    "pos": 655,
+    "text": "(s*f)*(1/(s*g))*r/((s*f)*(1/(s*g)+r)+1/(s*g)*r)/((s*l)*(1/(s*c))/(s*l+1/(s*c))+(s*f)*(1/(s*g))*r/((s*f)*(1/(s*g)+r)+1/(s*g)*r))",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 842,
+    "text": "f*r*(c*l*s^2+1)/(f*l*r*s^2*(c+g)+f*l*s+r*(f+l))",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 5,
+    "pos": 937,
+    "text": "r/(r+(s*l)*(1/(s*c))/(s*l+1/(s*c)))",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 1028,
+    "text": "r*(c*l*s^2+1)/(c*l*r*s^2+l*s+r)",
+    "origin": "Simp(#5)"
+   },
+   {
+    "idx": 7,
+    "pos": 1107,
+    "text": "r/(s*g)/(1/(s*g)+r)/((s*l)*(1/(s*c))/(s*l+1/(s*c))+r/(s*g)/(1/(s*g)+r))",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1238,
+    "text": "r*(c*l*s^2+1)/(l*r*s^2*(c+g)+l*s+r)",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 9,
+    "pos": 1321,
+    "text": "(s*f)*r/(s*f+r)/((s*l)*(1/(s*c))/(s*l+1/(s*c))+s*f*r/(s*f+r))",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1442,
+    "text": "f*r*(c*l*s^2+1)/(c*f*l*r*s^2+f*l*s+r*(f+l))",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 11,
+    "pos": 1547,
+    "text": "LIM(f*r*(c*l*s^2+1)/(f*l*r*s^2*(c+g)+f*l*s+r*(f+l)),f,inf,0)",
+    "origin": "Lim(User,f)"
+   },
+   {
+    "idx": 12,
+    "pos": 1667,
+    "text": "r*(c*l*s^2+1)/(l*r*s^2*(c+g)+l*s+r)",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 13,
+    "pos": 1764,
+    "text": "LIM(f*r*(c*l*s^2+1)/(f*l*r*s^2*(c+g)+f*l*s+r*(f+l)),g,0,0)",
+    "origin": "Lim(User,g)"
+   },
+   {
+    "idx": 14,
+    "pos": 1882,
+    "text": "f*r*(c*l*s^2+1)/(c*f*l*r*s^2+f*l*s+r*(f+l))",
+    "origin": "Fctr(User)"
+   },
+   {
+    "idx": 15,
+    "pos": 1973,
+    "text": "c/(g+c)*(s^2+1/(l*c))/(s^2+s/(r*(c+g))+r*((l+f)/(l*f))*(1/(c+g)))",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 2086,
+    "text": "c/(g+c)*(s^2+1/(l*c))/(s^2+s/(r*(c+g))+(l+f)/(l*f)*(1/(c+g)))",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 2195,
+    "text": "a=c/(g+c)",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 2252,
+    "text": "w*n=SQRT(1/(l*c))",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 2317,
+    "text": "w*0=SQRT(1/(l*f/(l+f)*(c+g)))",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 2394,
+    "text": "q=r*(c+g)*w*0",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "numeri primi.dfw",
+  "header": "Derive version 6.10 DfW file saved on 27 Aug 2010",
+  "settings": {
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 473,
+    "text": "1/2+1/(2*3)+1/(2*3*5)+1/(2*3*5*7)+1/(2*3*5*7*11)+1/(2*3*5*7*11*13)+1/(2*3*5*7*11*13*17)+1/(2*3*5*7*11*13*17*19)+1/(2*3*5*7*11*13*17*19*23)+1/(2*3*5*7*11*13*17*19*23*29)+1/(2*3*5*7*11*13*17*19*23*29*31)+1/(2*3*5*7*11*13*17*19*23*29*31*37)+1/(2*3*5*7*11*13*17*19*23*29*31*37*41)+1/(2*3*5*7*11*13*17*19*23*29*31*37*41*43)+1/(2*3*5*7*11*13*17*19*23*29*31*37*41*43*47)+1/(2*3*5*7*11*13*17*19*23*29*31*37*41*43*47*53)+1/(2*3*5*7*11*13*17*19*23*29*31*37*41*43*47*53*59)+1/(2*3*5*7*11*13*17*19*23*29*31*37*41*43*47*53*59*61)+1/(2*3*5*7*11*13*17*19*23*29*31*37*41*43*47*53*59*61*67)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "pigreco.dfw",
+  "header": "Derive version 6.10 DfW file saved on 27 Aug 2010",
+  "settings": {
+   "hCross": "APPROX(- 25316455696202533/100000000000000000)",
+   "vCross": "APPROX(5)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 548,
+    "text": "1/pi*(y-x)*(x+1/y)",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 624,
+    "text": "DIF(1/pi*(y-x)*(x+1/y),x)",
+    "origin": "Dif(#1,x)"
+   },
+   {
+    "idx": 3,
+    "pos": 719,
+    "text": "-(2*x*y-y^2+1)/(pi*y)",
+    "origin": "Simp(Dif(#1,x))"
+   },
+   {
+    "idx": 4,
+    "pos": 798,
+    "text": "DIF(1/pi*(y-x)*(x+1/y),y)",
+    "origin": "Dif(#1,y)"
+   },
+   {
+    "idx": 5,
+    "pos": 893,
+    "text": "x*(y^2+1)/(pi*y^2)",
+    "origin": "Simp(Dif(#1,y))"
+   },
+   {
+    "idx": 6,
+    "pos": 959,
+    "text": "x*(y^2+1)/(pi*y^2)+(-(2*x*y-y^2+1)/(pi*y))",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 1057,
+    "text": "(1-y^2)*(x-y)/(pi*y^2)",
+    "origin": "Simp(#6)"
+   },
+   {
+    "idx": 8,
+    "pos": 1137,
+    "text": "DIF((1-y^2)*(x-y)/(pi*y^2),x)",
+    "origin": "Dif(#7,x)"
+   },
+   {
+    "idx": 9,
+    "pos": 1236,
+    "text": "(1-y^2)/(pi*y^2)",
+    "origin": "Simp(Dif(#7,x))"
+   },
+   {
+    "idx": 10,
+    "pos": 1310,
+    "text": "DIF((1-y^2)*(x-y)/(pi*y^2),y)",
+    "origin": "Dif(#7,y)"
+   },
+   {
+    "idx": 11,
+    "pos": 1409,
+    "text": "(y*(y^2+1)-2*x)/(pi*y^3)",
+    "origin": "Simp(Dif(#7,y))"
+   },
+   {
+    "idx": 12,
+    "pos": 1481,
+    "text": "(1-y^2)/(pi*y^2)+(y*(y^2+1)-2*x)/(pi*y^3)",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1580,
+    "text": "2*(y-x)/(pi*y^3)",
+    "origin": "Simp(#12)"
+   },
+   {
+    "idx": 14,
+    "pos": 1644,
+    "text": "PRODUCT(x+n,n,0,x)",
+    "origin": "User"
+   },
+   {
+    "idx": 15,
+    "pos": 1720,
+    "text": "(2*x)!/(x-1)!",
+    "origin": "Simp(#14)"
+   },
+   {
+    "idx": 16,
+    "pos": 1781,
+    "text": "PRODUCT(x-n,n,0,x-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 1861,
+    "text": "x!*COS(pi*x)^2",
+    "origin": "Simp(User)"
+   },
+   {
+    "idx": 18,
+    "pos": 1923,
+    "text": "(1/2)!",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 1987,
+    "text": "SQRT(pi)/2",
+    "origin": "Simp(#18)"
+   },
+   {
+    "idx": 20,
+    "pos": 2045,
+    "text": "4*(1/2)!^2",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 2113,
+    "text": "pi",
+    "origin": "Simp(#20)"
+   },
+   {
+    "idx": 22,
+    "pos": 2163,
+    "text": "(COS(2*x)-COS(2/x))*(ATAN(x)+ATAN(1/x))/(COS(x)^2-COS(1/x)^2)=SIGN(x)*pi",
+    "origin": "User"
+   },
+   {
+    "idx": 23,
+    "pos": 2283,
+    "text": "SUM(((2*x)^(2*n)-(2/x)^(2*n))/(2*n)!,n,0,inf)*SUM((-1)^n/(2*n+1)!*(x^(2*n+1)+x^(-2*n-1)),n,0,inf)/(SUM(x^(2*n)/(2*n)!,n,0,inf)^2+SUM(x^(-2*n)/(2*n)!,n,0,inf)^2)=SIGN(x)*pi",
+    "origin": "User"
+   },
+   {
+    "idx": 24,
+    "pos": 2502,
+    "text": "(pi^x+#e^x)^(1/x)",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 2567,
+    "text": "LIM((pi^x+#e^x)^(1/x),x,+inf,0)=pi",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 2649,
+    "text": "LIM((pi^x+#e^x)^(1/x),x,-inf,0)=#e",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "sin-cos.dfw",
+  "header": "Derive version 6.10 DfW file saved on 04 Jan 2010",
+  "settings": {
+   "hCross": "APPROX(15823/10000)",
+   "vCross": "APPROX(11765000000000001/10000000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 727,
+    "text": "(#e^(pi*x)/pi^(#e*x)+pi^(#e*x)/#e^(pi*x))/2",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 978,
+    "text": "(#e^(pi*x)/pi^(#e*x)-pi^(#e*x)/#e^(pi*x))/2",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 1229,
+    "text": "(#e^(2*pi*x)-pi^(2*#e*x))/(pi^(2*#e*x)+#e^(2*pi*x))",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 1490,
+    "text": "(pi^(2*#e*x)+#e^(2*pi*x))/(#e^(2*pi*x)-pi^(2*#e*x))",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 1795,
+    "text": "(pi-#e*LN(pi))*((#e^(pi*x)/pi^(#e*x)-pi^(#e*x)/#e^(pi*x))/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 2109,
+    "text": "(pi-#e*LN(pi))*((#e^(pi*x)/pi^(#e*x)+pi^(#e*x)/#e^(pi*x))/2)",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 2380,
+    "text": "4*pi^(2*#e*x)*#e^(2*pi*x)*(pi-#e*LN(pi))/(#e^(2*pi*x)+pi^(2*#e*x))^2",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 2661,
+    "text": "4*pi^(2*#e*x)*#e^(2*pi*x)*(#e*LN(pi)-pi)/(#e^(2*pi*x)-pi^(2*#e*x))^2",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 2988,
+    "text": "(#e^(pi*(#i*x))/pi^(#e*(#i*x))+pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2=(COS(pi*x)*COS(#e*x*LN(pi))+SIN(pi*x)*SIN(#e*x*LN(pi))=COS((pi-#e*LN(pi))*x))",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 3390,
+    "text": "(#e^(pi*(#i*x))/pi^(#e*(#i*x))-pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2=#i*(SIN(pi*x)*COS(#e*x*LN(pi))-COS(pi*x)*SIN(#e*x*LN(pi)))=#i*SIN((pi-#e*LN(pi))*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 3807,
+    "text": "(#e^(pi*(#i*x))/pi^(#e*(#i*x))+pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2+(#e^(pi*(#i*x))/pi^(#e*(#i*x))-pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2=#e^(#i*x*(pi-#e*LN(pi)))",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 4230,
+    "text": "(#e^(pi*(#i*x))/pi^(#e*(#i*x))+pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2-(#e^(pi*(#i*x))/pi^(#e*(#i*x))-pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2=#e^(-#i*x*(pi-#e*LN(pi)))",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 4710,
+    "text": "(#e^(pi*(#i*x))/pi^(#e*(#i*x))+pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2+#i*(#e^(pi*(#i*x))/pi^(#e*(#i*x))-pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2=COS((pi-#e*LN(pi))*x)-SIN((pi-#e*LN(pi))*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 5197,
+    "text": "(#e^(pi*(#i*x))/pi^(#e*(#i*x))+pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2-#i*(#e^(pi*(#i*x))/pi^(#e*(#i*x))-pi^(#e*(#i*x))/#e^(pi*(#i*x)))/2=COS((pi-#e*LN(pi))*x)+SIN((pi-#e*LN(pi))*x)",
+    "origin": "User"
+   },
+   {
+    "idx": 15,
+    "pos": 5419,
+    "text": "pi-#e*LN(pi)=0.02989420638",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 5493,
+    "text": "pi^(-#e)*#e^pi/2-pi^#e*#e^(-pi)/2=0.02989865914",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 5588,
+    "text": "pi-#e*LN(pi)=(#e^(pi*x)/pi^(#e*x)-pi^(#e*x)/#e^(pi*x))/2",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 5692,
+    "text": "x=LN(SQRT(#e^2*LN(pi)^2-2*pi*#e*LN(pi)+pi^2+1)-#e*LN(pi)+pi)/(pi-#e*LN(pi))=0.9998511159",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 5828,
+    "text": "pi^#e*#e^(-pi)/2+pi^(-#e)*#e^pi/2=1.000446865",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 5921,
+    "text": "pi^(-#e)*#e^pi/2-pi^#e*#e^(-pi)/2-pi+#e*LN(pi)=4.452759521*10^(-6)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "teoria.dfw",
+  "header": "Derive version 6.00 DfW file saved on 06 May 2009",
+  "settings": {
+   "hCross": "APPROX(1)",
+   "vCross": "APPROX(1)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 511,
+    "text": "x+y=k",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 564,
+    "text": "x-y=k",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 617,
+    "text": "x*y=k-ε",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 676,
+    "text": "x/y=k+ε",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 735,
+    "text": "x^(1/n)=x^(1/n)*p^ε",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 806,
+    "text": "x^2=x^2-ε",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 867,
+    "text": "x=LOG(y^x-ε,y)",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 933,
+    "text": "(1/n)^2=(1/n)^2+(2*ε)*(1/n)",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1012,
+    "text": "(1/n)^3=(1/n)^3+(3*ε)*((n+1)/n^2)",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1097,
+    "text": "(1/n)^4=(1/n)^4+(4*ε)*((n^2+3*n/2+1)/n^3)",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1190,
+    "text": "(1/n)^5=(1/n)^5+(5*ε)*((n^3+2*n^2+2*n+1)/n^4)",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1287,
+    "text": "(1/n)^6=(1/n)^6+(6*ε)*((n^4+15*n^3/6+10*n^2/3+15*n/6+1)/n^5)",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1399,
+    "text": "(1/n)^7=(1/n)^7+(7*ε)*((n^5+3*n^4+10*n^3+5*n^2+3*n+1)/n^6)",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1509,
+    "text": "(x+1)^2=x^2+2*x+1=0",
+    "origin": "User"
+   },
+   {
+    "idx": 15,
+    "pos": 1576,
+    "text": "x=-1-SQRT(2*ε) OR x=-1+SQRT(2*ε)",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 1664,
+    "text": "x-x=2*SQRT(2*ε)",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 1731,
+    "text": "(x-1)^2=x^2-2*x+1=0",
+    "origin": "User"
+   },
+   {
+    "idx": 18,
+    "pos": 1798,
+    "text": "x=1-SQRT(2*ε) OR x=SQRT(2*ε)+1",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 1884,
+    "text": "x-x=2*SQRT(2*ε)",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 1951,
+    "text": "ù=SUM(9*10^n,n,0,999)",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 2024,
+    "text": "ε=PRODUCT((1/10)^n,n,1,999)",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 2103,
+    "text": "PRODUCT((1/10)^n,n,1,x)=1/SUM(9*10^n,n,0,x)",
+    "origin": "User"
+   },
+   {
+    "idx": 23,
+    "pos": 2222,
+    "text": "10^(x*(x+1))-10^(2*(x+1))+2^(x+2)*5^(x+1)=1 OR x=inf+3*pi*#i/LN(10) OR x=inf-2*pi*#i/LN(10) OR x=inf+2*pi*#i/LN(10) OR x=inf-pi*#i/LN(10) OR x=inf+pi*#i/LN(10) OR x=inf",
+    "origin": "Simp(Solve(#22,x))"
+   },
+   {
+    "idx": 24,
+    "pos": 2438,
+    "text": "10^(x*(x+1))-10^(2*(x+1))+2^(x+2)*5^(x+1)=1",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 2557,
+    "text": "x=1.999710103",
+    "origin": "Simp(Solve(#24,x))"
+   },
+   {
+    "idx": 26,
+    "pos": 2634,
+    "text": "NSOLVE(PRODUCT((1/10)^n,n,1,x)=1/SUM(9*10^n,n,0,x),x)",
+    "origin": "Solve(#22,x)"
+   },
+   {
+    "idx": 27,
+    "pos": 2763,
+    "text": "x=10",
+    "origin": "Simp(Solve(#22,x))"
+   }
+  ]
+ },
+ {
+  "file": "teoria2.dfw",
+  "header": "Derive version 6.00 DfW file saved on 02 Nov 2009",
+  "settings": {
+   "hCross": "APPROX(25079365079365079/100000000000000000)",
+   "vCross": "APPROX(6018518518518519/25000000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 579,
+    "text": "y=x",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 630,
+    "text": "y=-x+k",
+    "origin": "User"
+   },
+   {
+    "idx": 3,
+    "pos": 722,
+    "text": "[x=k/2 AND y=k/2]",
+    "origin": "Simp(Solve(User,[x,y]))"
+   },
+   {
+    "idx": 4,
+    "pos": 787,
+    "text": "d=k/SQRT(2)",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 846,
+    "text": "y=a*x^2",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 901,
+    "text": "k/2=a*(k/2)^2",
+    "origin": "User"
+   },
+   {
+    "idx": 7,
+    "pos": 962,
+    "text": "a=2/k",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1015,
+    "text": "y=2/k*x^2",
+    "origin": "User"
+   },
+   {
+    "idx": 9,
+    "pos": 1072,
+    "text": "y=-x+k/2",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1128,
+    "text": "x=k*(SQRT(5)/4-1/4) AND y=k*(3/4-SQRT(5)/4)",
+    "origin": "User"
+   },
+   {
+    "idx": 11,
+    "pos": 1219,
+    "text": "[x=k/4 AND y=k/4]",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1284,
+    "text": "y=a*x^3",
+    "origin": "User"
+   },
+   {
+    "idx": 13,
+    "pos": 1339,
+    "text": "k/4=a*(k/4)^3",
+    "origin": "User"
+   },
+   {
+    "idx": 14,
+    "pos": 1400,
+    "text": "a=16/k^2",
+    "origin": "User"
+   },
+   {
+    "idx": 15,
+    "pos": 1456,
+    "text": "y=16/k^2*x^3",
+    "origin": "User"
+   },
+   {
+    "idx": 16,
+    "pos": 1516,
+    "text": "y=-x+k/4",
+    "origin": "User"
+   },
+   {
+    "idx": 17,
+    "pos": 1584,
+    "text": "x=k*((SQRT(93)/1152+1/128)^(1/3)-(SQRT(93)/1152-1/128)^(1/3)) AND y=k*((SQRT(93)/1152-1/128)^(1/3)-(SQRT(93)/1152+1/128)^(1/3)+1/4)",
+    "origin": "Simp(User)"
+   },
+   {
+    "idx": 18,
+    "pos": 1763,
+    "text": "y=16*x^3",
+    "origin": "User"
+   },
+   {
+    "idx": 19,
+    "pos": 1819,
+    "text": "y=-x+1/4",
+    "origin": "User"
+   },
+   {
+    "idx": 20,
+    "pos": 1875,
+    "text": "y=2*x^2",
+    "origin": "User"
+   },
+   {
+    "idx": 21,
+    "pos": 1930,
+    "text": "y=-x+1/2",
+    "origin": "User"
+   },
+   {
+    "idx": 22,
+    "pos": 1986,
+    "text": "y=x",
+    "origin": "User"
+   },
+   {
+    "idx": 23,
+    "pos": 2037,
+    "text": "y=-x+1",
+    "origin": "User"
+   },
+   {
+    "idx": 24,
+    "pos": 2091,
+    "text": "y=a*x^4",
+    "origin": "User"
+   },
+   {
+    "idx": 25,
+    "pos": 2146,
+    "text": "k/8=a*(k/8)^4",
+    "origin": "User"
+   },
+   {
+    "idx": 26,
+    "pos": 2207,
+    "text": "a=512/k^3",
+    "origin": "User"
+   },
+   {
+    "idx": 27,
+    "pos": 2264,
+    "text": "y=512/k^3*x^4",
+    "origin": "User"
+   },
+   {
+    "idx": 28,
+    "pos": 2325,
+    "text": "y=-x+1/8",
+    "origin": "User"
+   },
+   {
+    "idx": 29,
+    "pos": 2381,
+    "text": "a=2^((n-1)^2)/k^(n-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 30,
+    "pos": 2450,
+    "text": "y=2^((n-1)^2)/k^(n-1)*x^n",
+    "origin": "User"
+   },
+   {
+    "idx": 31,
+    "pos": 2523,
+    "text": "y=-x+2^(1-n)",
+    "origin": "User"
+   }
+  ]
+ },
+ {
+  "file": "u(0)-sign(0).dfw",
+  "header": "Derive version 6.10 DfW file saved on 04 Jan 2011",
+  "settings": {
+   "hCross": "APPROX(10126582278481013/10000000000000000)",
+   "vCross": "APPROX(411764705882353/400000000000000)",
+   "Precision": "Exact",
+   "PrecisionDigits": "10",
+   "Notation": "Rational",
+   "NotationDigits": "10",
+   "Branch": "Principal",
+   "Exponential": "Auto",
+   "Logarithm": "Auto",
+   "Trigonometry": "Auto",
+   "Trigpower": "Auto",
+   "Angle": "Radian",
+   "CaseMode": "Insensitive",
+   "VariableOrder": "[x,y,z]",
+   "OutputBase": "Decimal",
+   "InputBase": "Decimal",
+   "InputMode": "Character",
+   "DisplayFormat": "Normal",
+   "TimesOperator": "Dot",
+   "DisplaySteps": "false"
+  },
+  "items": [
+   {
+    "idx": 1,
+    "pos": 575,
+    "text": "LN(#e-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 2,
+    "pos": 643,
+    "text": "0.5413248546",
+    "origin": "Approx(#1)"
+   },
+   {
+    "idx": 3,
+    "pos": 703,
+    "text": "LN((#e^2-1)/(2*#e))",
+    "origin": "User"
+   },
+   {
+    "idx": 4,
+    "pos": 770,
+    "text": "0.1614393615",
+    "origin": "User"
+   },
+   {
+    "idx": 5,
+    "pos": 830,
+    "text": "0.5*(LN((#e^2-1)/(2*#e))+1)",
+    "origin": "User"
+   },
+   {
+    "idx": 6,
+    "pos": 917,
+    "text": "0.5807196807",
+    "origin": "Approx(#5)"
+   },
+   {
+    "idx": 7,
+    "pos": 977,
+    "text": "2*LN(#e-1)-1",
+    "origin": "User"
+   },
+   {
+    "idx": 8,
+    "pos": 1049,
+    "text": "0.08264970922",
+    "origin": "Approx(#7)"
+   },
+   {
+    "idx": 9,
+    "pos": 1110,
+    "text": "0.5*(LN((#e^2-1)/(2*#e))+1)-LN(#e-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 10,
+    "pos": 1206,
+    "text": "0.03939482617",
+    "origin": "Approx(#9)"
+   },
+   {
+    "idx": 11,
+    "pos": 1267,
+    "text": "LN((#e^2-1)/(2*#e))-(2*LN(#e-1)-1)",
+    "origin": "User"
+   },
+   {
+    "idx": 12,
+    "pos": 1363,
+    "text": "0.07878965234",
+    "origin": "Approx(#11)"
+   }
+  ]
+ }
+]

@@ -1,0 +1,132 @@
+{
+  "file": "delta.dfw",
+  "titolo": "Una delta di Dirac che vive nel piano complesso",
+  "intro": "Luglio 2010, cinquantacinque espressioni. È il quaderno più ambizioso della raccolta e quello con l'idea più originale. Si parte da una famiglia di funzioni elementari che approssima la delta di Dirac; si osserva che la formula, scritta com'è, ha senso anche per argomento complesso; e si studia la funzione che ne risulta. Il finale è inatteso: quella funzione permette di dare un significato concreto alla trasformata di Fourier di un esponenziale crescente, che nel senso ordinario non esiste.",
+  "blocchi": [
+    {
+      "titolo": "La famiglia approssimante",
+      "testo": "Tutto il quaderno si regge su questa espressione, ripetuta decine di volte con argomenti sempre diversi. Conviene capirla subito, perché è molto più semplice di quanto sembri.",
+      "da": 1,
+      "a": 3,
+      "coda": "Per $x$ reale il calcolo si fa a mano. Se $|x|>1/(2n)$ i due valori assoluti si aprono con lo stesso segno e i due addendi valgono $+2n$ e $-2n$: la somma è nulla. Se invece $|x|<1/(2n)$ il secondo valore assoluto cambia segno e i due addendi valgono entrambi $2n$: la somma è $4n$, che diviso quattro dà $n$. Dunque\n\\[\n  \\delta_n(x)=\\begin{cases} n & |x|<\\dfrac{1}{2n}\\\\[6pt] 0 & \\text{altrove,}\\end{cases}\n\\]\ncioè un rettangolo alto $n$ e largo $1/n$, di area unitaria per costruzione. È l'approssimante più semplice possibile della delta di Dirac, scritta però senza usare né la funzione segno né una definizione a tratti: solo valori assoluti e quozienti. La riga $\\#2$ verifica l'area e la riga $\\#3$ la trasla nel punto $k$."
+    },
+    {
+      "titolo": "Che cosa succede con argomento complesso",
+      "testo": "Qui comincia la parte originale. La formula della riga $\\#1$ non contiene nulla che richieda un argomento reale: i valori assoluti si leggono come moduli, e tutto il resto è aritmetica. Che funzione si ottiene?",
+      "da": 4,
+      "a": 7,
+      "coda": "La risposta della riga $\\#4$ è la formula chiave di tutto il quaderno:\n\\[\n  \\delta(z)=\\lim_{n\\to\\infty}\\delta_n(z)=\\frac{z\\,\\operatorname{Im}z}{2\\mathrm{i}\\,|z|^{3}}.\n\\]\nNon è più un rettangolo: è una funzione definita su tutto il piano, che si annulla su tutto l'asse reale tranne che nell'origine — dove $\\operatorname{Im}z=0$ — e che diverge come $1/|z|$ avvicinandosi all'origine dall'alto o dal basso. Il grafico del modulo ha la forma di un dipolo, con due lobi sopra e sotto lo zero e una linea di annullamento lungo i reali.\n\nLe righe $\\#5$--$\\#7$ sono la parte che rende il tutto solido, e sono identità esatte. Ruotando l'argomento di un quarto di giro si ottiene la stessa formula con $\\operatorname{Re}$ al posto di $\\operatorname{Im}$ e senza il fattore $\\mathrm{i}$; sommando le due si ottiene\n\\[\n  \\delta(\\mathrm{i}z)+\\delta(z)=\\frac{z\\left(\\operatorname{Re}z-\\mathrm{i}\\operatorname{Im}z\\right)}{2|z|^{3}}=\\frac{z\\bar z}{2|z|^{3}}=\\frac{1}{2|z|},\n\\]\ne sottraendole $\\dfrac{z^2}{2|z|^{3}}$. Due righe, e la somma di due oggetti singolari diventa una funzione elementare del solo modulo."
+    },
+    {
+      "titolo": "Come si comporta sotto riscalamento",
+      "testo": "Le quattordici espressioni seguenti provano la formula su argomenti riscalati: per un fattore trigonometrico, per un fattore iperbolico, per un esponenziale immaginario. Tutte, lette con $\\omega$ reale, sono esatte.",
+      "da": 8,
+      "a": 21,
+      "coda": "Il meccanismo è sempre lo stesso, e si ricava dalla formula della riga $\\#4$ in due passaggi. Se $c$ è una costante reale, allora $\\operatorname{Im}(cz)=c\\operatorname{Im}z$ e $|cz|=|c||z|$, per cui\n\\[\n  \\delta(cz)=\\frac{cz\\cdot c\\operatorname{Im}z}{2\\mathrm{i}\\,|c|^3|z|^3}=\\frac{1}{|c|}\\,\\delta(z).\n\\]\nÈ la stessa regola di riscalamento della delta ordinaria, $\\delta(cx)=\\delta(x)/|c|$, e le righe $\\#8$ e $\\#9$ non fanno che scriverla con $c=\\cos\\omega$ e $c=\\sin\\omega$. Le righe $\\#10$ e $\\#11$ usano invece $\\cos(\\mathrm{i}\\omega)=\\cosh\\omega$ e $\\sin(\\mathrm{i}\\omega)=\\mathrm{i}\\sinh\\omega$, e le forme che vi compaiono sono le stesse identità scritte con gli esponenziali: $1/\\cosh\\omega=2\\mathrm{e}^{\\omega}/\\left(\\mathrm{e}^{2\\omega}+1\\right)$ e $1/|\\sinh\\omega|=2\\mathrm{e}^{\\omega}/\\left|\\mathrm{e}^{2\\omega}-1\\right|$."
+    },
+    {
+      "titolo": "La trasformata di un esponenziale crescente",
+      "testo": "Questa è la sezione che giustifica tutto il lavoro precedente, ed è anche quella in cui la notazione del quaderno diventa più densa. La lettera $f$ indica un operatore di trasformazione applicato alla funzione che la segue, $\\omega$ è la variabile trasformata, e $\\delta$ è la funzione costruita nelle sezioni precedenti.",
+      "da": 22,
+      "a": 27,
+      "coda": "Il problema che questa sezione affronta è noto e serio. La trasformata di Fourier di $\\mathrm{e}^{kt}$ non esiste: la funzione cresce e l'integrale diverge per ogni $\\omega$ reale. Formalmente si scriverebbe $\\delta(\\omega+\\mathrm{i}k)$ — una delta valutata in un punto complesso — ma nella teoria delle distribuzioni quella scrittura non ha significato, perché la delta è definita solo sui reali.\n\nQui invece un significato c'è, perché la funzione $\\delta(z)$ della riga $\\#4$ è definita su tutto il piano. Sostituendovi $z=\\omega+\\mathrm{i}k$ si trova $\\operatorname{Im}z=k$ e $|z|=\\sqrt{k^2+\\omega^2}$, da cui\n\\[\n  \\delta(\\omega+\\mathrm{i}k)=\\frac{(\\omega+\\mathrm{i}k)\\,k}{2\\mathrm{i}\\left(k^2+\\omega^2\\right)^{3/2}},\n\\]\nche a meno del fattore $-\\mathrm{i}$ è esattamente il secondo membro della riga $\\#22$. La riga $\\#24$ ne calcola il modulo e trova $1/\\left(2(\\omega^2+1)\\right)$ per $k=1$: una lorentziana, cioè lo spettro che ci si aspetta. Le righe $\\#25$ e $\\#26$ combinano i due segni per ottenere le trasformate del seno e del coseno iperbolico."
+    },
+    {
+      "titolo": "La proprietà di campionamento",
+      "testo": "Tre integrali che verificano la proprietà per cui la delta esiste: setacciare il valore di una funzione in un punto.",
+      "da": 28,
+      "a": 32,
+      "coda": "Le tre righe sono corrette e la terza è la più istruttiva. L'argomento $x/3-4$ si annulla in $x=12$, ma con derivata $1/3$: la regola $\\delta(ax+b)=\\delta\\!\\left(x+b/a\\right)/|a|$ dà quindi un fattore $3$, e il risultato è $3\\,\\mathrm{e}^{12}$ come scritto. È la proprietà di riscalamento della sezione precedente, applicata sotto integrale.\n\nLe righe $\\#31$ e $\\#32$ fanno la prova opposta: integrano il \\emph{reciproco} della famiglia approssimante. Su un intervallo che si stringe attorno all'origine il risultato è zero, perché lì la funzione vale $1/n$; su tutta la retta diverge, perché fuori dal rettangolo il reciproco è infinito."
+    },
+    {
+      "titolo": "Le derivate della delta complessa",
+      "testo": "Cinque righe che elencano le derivate successive della funzione della riga $\\#4$. Il quaderno le scrive senza commento; conviene guardare i coefficienti.",
+      "da": 33,
+      "a": 38,
+      "coda": "I coefficienti sono $1,\\ 3,\\ 12,\\ 60,\\ 360$, e ciascuno è il precedente moltiplicato per $3,4,5,6$: si tratta di $(n+2)!/2$. È la stessa struttura fattoriale che hanno le derivate della delta ordinaria nella teoria delle distribuzioni, dove $\\delta^{(n)}$ agisce estraendo la derivata $n$-esima della funzione di prova con un fattore $(-1)^n n!$."
+    },
+    {
+      "titolo": "Il ritorno alla parametrizzazione del cerchio",
+      "testo": "Le ultime righe cambiano registro. C'è un calcolo isolato che non c'entra con il resto, e poi il quaderno torna sulla sostituzione di Weierstrass, la stessa che due mesi dopo sarà il tema di \\dfw{gauss.dfw}.",
+      "da": 39,
+      "a": 55,
+      "coda": "Due osservazioni finali. La riga $\\#45$ scrive che il limite della tangente in $\\pi/2$ vale $\\mathrm{i}$: nel senso ordinario quel limite non esiste, perché la tangente diverge con segni opposti dai due lati. Nel contesto delle righe che la circondano, però, la scrittura è comprensibile: quello che tende a $\\mathrm{i}$ è $\\mathrm{sgn}\\!\\left(1+\\mathrm{i}\\tan x\\right)$, il cui argomento tende a $\\pi/2$. È la stessa abbreviazione già incontrata in \\dfw{j.dfw} (capitolo~\\ref{cap:j}).\n\nLe righe $\\#48$--$\\#51$ chiudono invece con una verifica di coerenza che funziona perfettamente. Poiché $\\cosh^2t-\\sinh^2t=1$ e la trasformata della costante $1$ è $2\\pi\\delta$, la differenza fra le trasformate delle righe $\\#50$ e $\\#51$ deve valere $2\\pi\\delta$ — e infatti i termini in $\\omega$ si cancellano e restano esattamente $\\pi\\delta+\\pi\\delta$. Analogamente, $\\cosh^2t+\\sinh^2t=\\cosh2t$, e la somma delle due trasformate dà una funzione di $\\omega$ in cui compare $4=2^2$: la frequenza è raddoppiata, come deve essere."
+    }
+  ],
+  "note": {
+    "1": "La famiglia approssimante: per ogni $n$ è un rettangolo alto $n$ e largo $1/n$, scritto senza usare definizioni a tratti.",
+    "2": "L'area vale uno per ogni $n$, e quindi anche al limite.",
+    "3": "La stessa famiglia traslata nel punto $k$: l'area non cambia.",
+    "4": "La formula centrale del quaderno. Con argomento complesso il limite non è una distribuzione ma una funzione ordinaria, definita ovunque tranne che nell'origine.",
+    "5": "Ruotando l'argomento di un quarto di giro, $\\operatorname{Im}$ diventa $\\operatorname{Re}$ e sparisce il fattore $\\mathrm{i}$.",
+    "6": "La somma delle due vale $1/(2|z|)$: si riconosce $z\\bar z=|z|^2$.",
+    "7": "La differenza vale $z^2/\\left(2|z|^3\\right)$.",
+    "8": "Riscalamento per $\\cos\\omega$: compare il fattore $1/|\\cos\\omega|$, esattamente come per la delta ordinaria.",
+    "9": "Riscalamento per $\\sin\\omega$.",
+    "10": "Riscalamento per $\\cos(\\mathrm{i}\\omega)=\\cosh\\omega$, scritto in forma esponenziale.",
+    "11": "Riscalamento per $\\sin(\\mathrm{i}\\omega)=\\mathrm{i}\\sinh\\omega$; il fattore $\\mathrm{i}$ scambia $\\operatorname{Im}$ con $\\operatorname{Re}$.",
+    "12": "Argomento sul cerchio unitario complesso.",
+    "13": "Con un fattore $\\mathrm{i}a$ davanti: compare $\\cos$ al posto di $\\sin$ e il modulo $|a|$ al denominatore.",
+    "14": "La somma delle due versioni con e senza il fattore $\\mathrm{i}$.",
+    "15": "E la loro differenza.",
+    "16": "Il caso particolare $a=1$ con argomento reale: la somma vale $1/2$.",
+    "17": "Con argomento dimezzato: la differenza ricostruisce $\\mathrm{e}^{\\mathrm{i}x}/2$.",
+    "18": "Somma delle versioni con esponenti coniugati: dà $\\sin^2 z$.",
+    "19": "La differenza dà $-\\mathrm{i}\\sin z\\cos z$, cioè metà del seno dell'angolo doppio.",
+    "20": "Le stesse combinazioni con il fattore $\\mathrm{i}$: la differenza cambia segno.",
+    "21": "E la somma dà $\\cos^2 z$. Con la riga $\\#18$ si ottiene l'identità fondamentale.",
+    "22": "La trasformata di $\\mathrm{e}^{kt}$, scritta come delta valutata nel punto complesso $\\omega+\\mathrm{i}k$ e poi esplicitata con la formula della riga $\\#4$.",
+    "23": "Con l'esponente di segno opposto: la delta si sposta in $\\omega-\\mathrm{i}k$.",
+    "24": "Il modulo comune delle due: per $k=1$ è la lorentziana $1/\\left(2(\\omega^2+1)\\right)$.",
+    "25": "La trasformata del seno iperbolico, cioè la semidifferenza delle due precedenti.",
+    "26": "Quella del coseno iperbolico, cioè la semisomma.",
+    "27": "La relazione fra le due: differiscono per il fattore $-\\mathrm{i}\\omega/k$.",
+    "28": "La proprietà di campionamento: l'integrale estrae il valore di $\\mathrm{e}^{x+1}$ nell'origine.",
+    "29": "Con la delta traslata in $1$: si estrae $\\mathrm{e}^1$.",
+    "30": "Con argomento riscalato e traslato: lo zero è in $x=12$ e il fattore di scala $1/3$ produce il $3$ davanti.",
+    "31": "L'integrale del reciproco su un intervallo che si stringe: tende a zero.",
+    "32": "Sull'intera retta invece diverge, con segno indeterminato.",
+    "33": "La funzione limite, ripetuta come punto di partenza per le derivate.",
+    "34": "Derivata prima.",
+    "35": "Derivata seconda.",
+    "36": "Derivata terza: il coefficiente è $12$.",
+    "37": "Derivata quarta: $60$.",
+    "38": "Derivata quinta: $360$. La successione $1,3,12,60,360$ è $(n+2)!/2$.",
+    "39": "Un calcolo isolato, senza rapporto con il resto del quaderno.",
+    "40": "Il risultato: la somma è simmetrica e i termini si raddoppiano tranne quello centrale.",
+    "41": "La sostituzione di Weierstrass, in quattro scritture equivalenti.",
+    "42": "La famiglia approssimante applicata al numero che parametrizza il cerchio.",
+    "43": "Una riscrittura dell'esponenziale immaginario che ne discende.",
+    "44": "La parametrizzazione con argomento dimezzato.",
+    "45": "Nel senso ordinario il limite non esiste: la tangente diverge con segni opposti dai due lati. La scrittura va letta come limite dell'argomento di $1+\\mathrm{i}\\tan x$, che tende a $\\pi/2$.",
+    "46": "Un integrale elementare corretto, che serve alla sezione sulle trasformate.",
+    "47": "Il suo compagno con il fattore immaginario.",
+    "48": "L'identità di duplicazione iperbolica.",
+    "49": "E quella fondamentale.",
+    "50": "La trasformata del coseno iperbolico al quadrato: compare un termine $\\pi\\delta$, che è la componente continua.",
+    "51": "Quella del seno iperbolico al quadrato, con il termine $\\pi\\delta$ di segno opposto.",
+    "52": "L'integrale di inversione, su tutta la semiretta.",
+    "53": "Troncato a $10^8$.",
+    "54": "Troncato a $999$: le due righe misurano quanto lentamente converge.",
+    "55": "L'integrando isolato."
+  },
+  "figure": [
+    {
+      "file": "delta_famiglia",
+      "dopo": 1,
+      "didascalia": "La famiglia della riga $\\#1$ per quattro valori di $n$. La formula, che non contiene definizioni a tratti, produce esattamente un rettangolo alto $n$ e largo $1/n$."
+    },
+    {
+      "file": "delta_area",
+      "dopo": 2,
+      "didascalia": "Verifica numerica della riga $\\#2$: l'area resta uno al crescere di $n$, come deve essere per una famiglia che approssima la delta."
+    },
+    {
+      "file": "delta_complesso",
+      "dopo": 4,
+      "didascalia": "Il modulo della funzione della riga $\\#4$ nel piano complesso. La linea scura lungo l'asse reale è il luogo $\\operatorname{Im}z=0$, dove la funzione si annulla; i due lobi chiari sopra e sotto l'origine sono la singolarità $1/|z|$.",
+      "larghezza": 0.62
+    }
+  ],
+  "chiusura": "Il quaderno prende una formula elementare per la delta di Dirac, la valuta in un punto complesso, e scopre che il risultato non è una distribuzione ma una funzione ordinaria: $\\delta(z)=z\\operatorname{Im}(z)/\\left(2\\mathrm{i}|z|^3\\right)$. Questa funzione si annulla sull'asse reale, obbedisce alla stessa regola di riscalamento della delta ordinaria, ha derivate con coefficienti fattoriali, e — soprattutto — dà un valore numerico concreto a $\\delta(\\omega+\\mathrm{i}k)$, cioè a quella trasformata di Fourier dell'esponenziale crescente che nel senso ordinario non esiste.\n\nNon è una teoria: nessuna delle proprietà viene dimostrata in generale, e la verifica che le trasformate così ottenute siano coerenti si ferma ai due casi delle righe $\\#50$ e $\\#51$ — che però tornano perfettamente. È l'inizio di qualcosa, appuntato in un pomeriggio di luglio."
+}

@@ -1,0 +1,80 @@
+{
+  "file": "Sudoku.dfw",
+  "titolo": "Determinanti di un sudoku",
+  "intro": "Aprile 2009, il quaderno più antico insieme a \\dfw{teoria.dfw}. La domanda è semplice e un po' oziosa, del genere che viene in mente guardando una griglia riempita: che cosa succede se la si tratta come una matrice? Quarantadue espressioni dopo, la risposta è che non succede granché — ma il percorso per stabilirlo è ordinato, e un fatto interessante c'è.\n\nLa griglia in esame è un sudoku valido: ogni riga, ogni colonna e ognuno dei nove blocchi contengono le cifre da $1$ a $9$ una volta sola. La verifica è stata rifatta durante il recupero e conferma.",
+  "blocchi": [
+    {
+      "titolo": "Il determinante della griglia intera",
+      "testo": "Si comincia dalla domanda più diretta.",
+      "da": 1,
+      "a": 2,
+      "coda": "Il valore è $-2\\,975\\,130$, e ha una proprietà che vale la pena di far notare perché il quaderno non la nota: è divisibile per $45$, e la dimostrazione è di una riga. Poiché ogni riga della griglia somma a $45$, sostituendo alla prima colonna la somma di tutte le colonne si ottiene una colonna con tutti gli elementi uguali a $45$, che si raccoglie a fattore comune. Il determinante di un sudoku è dunque sempre un multiplo di $45$. In questo caso lo è anche di $405$: $-2\\,975\\,130=405\\cdot(-7346)$, e la fattorizzazione completa è $-2\\cdot3^4\\cdot5\\cdot3673$."
+    },
+    {
+      "titolo": "I nove blocchi",
+      "testo": "Il passo successivo è prendere i nove blocchi $3\\times3$ — quelli che nel gioco devono contenere tutte le cifre — e calcolarne i determinanti uno per uno.",
+      "da": 3,
+      "a": 22,
+      "coda": "I nove valori sono $0$, $-177$, $81$, $9$, $11$, $-3$, $-243$, $-5$, $77$, e la loro somma è $-250$. Tutti i valori sono stati ricalcolati durante il recupero e coincidono, compreso lo zero del primo blocco — che è l'unico caso interessante del gruppo, perché segnala che le tre righe di quel blocco sono linearmente dipendenti.\n\nLa somma $-250$ non ha alcun rapporto con il determinante della griglia intera, e non c'è motivo perché ne abbia: il determinante di una matrice a blocchi non è una funzione dei determinanti dei blocchi, a meno che la matrice non sia triangolare a blocchi. Il quaderno lo verifica sperimentalmente, che è un modo legittimo di rispondersi."
+    },
+    {
+      "titolo": "Le nove righe rimodellate",
+      "testo": "Seconda idea, diversa dalla prima: invece dei blocchi, si prende ogni riga della griglia e la si ripiega in una matrice $3\\times3$. Nove righe, nove matrici, nove determinanti.",
+      "da": 23,
+      "a": 42,
+      "coda": "I nove valori sono $-92$, $25$, $9$, $311$, $297$, $124$, $-1$, $277$, $-16$, e sommano a $934$. Anche questi coincidono tutti con il ricalcolo.\n\nNé $-250$ né $934$ hanno un rapporto riconoscibile con $-2\\,975\\,130$, e nessuno dei due è multiplo di $45$: la proprietà di divisibilità vale per la griglia intera perché dipende dalle somme di righe e colonne, che nei sottoblocchi non sono $45$."
+    }
+  ],
+  "note": {
+    "1": "La griglia intera come matrice $9\\times9$.",
+    "2": "Il suo determinante. È divisibile per $45$ — proprietà comune a tutti i sudoku — e in questo caso anche per $405$.",
+    "3": "Il primo blocco: righe $1$--$3$, colonne $1$--$3$.",
+    "4": "Il determinante è nullo: le tre righe del blocco sono linearmente dipendenti.",
+    "5": "Il secondo blocco.",
+    "6": "$-177$.",
+    "7": "Il terzo blocco.",
+    "8": "$81$.",
+    "9": "Il quarto blocco.",
+    "10": "$9$.",
+    "11": "Il quinto blocco, quello centrale.",
+    "12": "$11$.",
+    "13": "Il sesto blocco.",
+    "14": "$-3$.",
+    "15": "Il settimo blocco.",
+    "16": "$-243$.",
+    "17": "L'ottavo blocco.",
+    "18": "$-5$.",
+    "19": "Il nono blocco.",
+    "20": "$77$.",
+    "21": "La somma dei nove valori, scritta per esteso.",
+    "22": "Vale $-250$.",
+    "23": "La prima riga della griglia ripiegata in una matrice $3\\times3$.",
+    "24": "$-92$.",
+    "25": "La seconda riga.",
+    "26": "$25$.",
+    "27": "La terza riga. Il valore, $9$, è quello usato nella somma della riga $\\#41$.",
+    "29": "La quarta riga.",
+    "30": "$311$.",
+    "31": "La quinta riga.",
+    "32": "$297$.",
+    "33": "La sesta riga.",
+    "34": "$124$.",
+    "35": "La settima riga.",
+    "36": "$-1$.",
+    "37": "L'ottava riga.",
+    "38": "$277$.",
+    "39": "La nona riga.",
+    "40": "$-16$.",
+    "41": "La somma dei nove valori.",
+    "42": "Vale $934$."
+  },
+  "figure": [
+    {
+      "file": "sudoku_griglia",
+      "tikz": true,
+      "dopo": 22,
+      "didascalia": "La griglia del quaderno. Accanto, in rosso, il determinante di ciascun blocco $3\\times3$: quello in alto a sinistra è nullo, cioè il blocco è singolare."
+    }
+  ],
+  "chiusura": "Il quaderno pone una domanda e ottiene una risposta negativa: i determinanti dei sottoblocchi di un sudoku non dicono nulla sul determinante della griglia, e le loro somme non sono invarianti significativi. È una risposta utile quanto una affermativa, e per ottenerla servivano diciannove determinanti calcolati a mano — che nel 2009, con Derive aperto sullo schermo, erano diciannove righe."
+}

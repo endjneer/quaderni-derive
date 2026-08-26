@@ -1,0 +1,35 @@
+% ---------------------------------------------------------------------------
+\chapter{Prospetto dei quaderni}
+\label{app:prospetto}
+
+La tabella elenca i ventitr\'e file nell'ordine in cui compaiono nel volume.
+La colonna \emph{Espr.} d\`a il numero di espressioni recuperate, la colonna
+\emph{Verif.} quante di esse hanno superato il controllo numerico descritto
+nel capitolo~\ref{cap:verifica}. Si ricordi che un valore basso in
+quest'ultima colonna dice soprattutto che il quaderno contiene equazioni da
+risolvere o calcoli di lavoro, non identit\`a da controllare.
+
+\input{generato/prospetto}
+
+% ---------------------------------------------------------------------------
+\chapter{I sorgenti del recupero}
+\label{app:sorgenti}
+
+Quello che segue \`e il codice che ha prodotto tutto il resto del volume.
+\`E scritto in Python 3 e non dipende da nulla al di fuori di
+\texttt{numpy}, \texttt{matplotlib} e \texttt{mpmath}.
+
+\section{Estrazione dal formato binario}
+\lstinputlisting[language=Python]{../tools/dfw_extract.py}
+
+\section{Traduzione in \LaTeX}
+\lstinputlisting[language=Python]{../tools/derive2tex.py}
+
+\section{Verifica numerica}
+\lstinputlisting[language=Python]{../tools/verify.py}
+
+\section{Generazione delle figure}
+\lstinputlisting[language=Python]{../tools/make_figures.py}
+
+\section{Composizione dei capitoli}
+\lstinputlisting[language=Python]{../tools/build_tex.py}

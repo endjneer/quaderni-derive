@@ -1,0 +1,79 @@
+{
+  "file": "cosinc.dfw",
+  "titolo": "Il seno cardinale e il suo gemello",
+  "intro": "Novembre 2010. Il quaderno studia una sola funzione, $\\dfrac{(-1)^x-1}{\\pi x}$, e la ragione per cui è interessante sta tutta nella scrittura $(-1)^x$. Con la determinazione principale — quella dichiarata nell'intestazione del file — si ha $(-1)^x=\\mathrm{e}^{\\mathrm{i}\\pi x}$, e la funzione diventa $\\dfrac{\\mathrm{e}^{\\mathrm{i}\\pi x}-1}{\\pi x}$: un oggetto complesso la cui parte immaginaria è il seno cardinale e la cui parte reale è una funzione molto simile ma con proprietà opposte. Il titolo del file mette insieme le due parole.",
+  "blocchi": [
+    {
+      "titolo": "L'unità immaginaria come rapporto di derivate",
+      "testo": "Le prime tredici righe girano attorno a un modo di far comparire $\\mathrm{i}$: derivare $(-1)^{kx}$ e dividere per il risultato atteso.",
+      "da": 1,
+      "a": 13,
+      "coda": "Il meccanismo delle righe $\\#6$--$\\#9$ è questo: se $(-1)^{kx}=\\mathrm{e}^{\\mathrm{i}k\\pi x}$, la sua derivata vale $\\mathrm{i}k\\pi\\,\\mathrm{e}^{\\mathrm{i}k\\pi x}$, e dividendo per $k\\pi\\,(-1)^{kx}$ resta esattamente $\\mathrm{i}$, per ogni $k$. Quattro righe per il caso $k=1,2,3$ e poi il caso generale: è il modo in cui questi quaderni verificano una regolarità prima di enunciarla.\n\nLa riga $\\#11$ ottiene lo stesso risultato per un'altra strada, come rapporto incrementale: $\\lim_{h\\to0}\\frac{\\mathrm{e}^{\\mathrm{i}\\pi h}-1}{\\pi h}=\\mathrm{i}$, che è la derivata in zero della stessa funzione. Questa volta il limite è genuinamente $\\mathrm{i}$ e non una convenzione di scrittura — a differenza di quanto accadeva in \\dfw{j.dfw} (capitolo~\\ref{cap:j}), dove la stessa domanda era stata posta a un rapporto che tende a zero. Fra i due quaderni passano sedici mesi."
+    },
+    {
+      "titolo": "La serie e le sue due parti",
+      "testo": "Il cuore del quaderno. Si sviluppa in serie la funzione e si separano parte reale e parte immaginaria.",
+      "da": 14,
+      "a": 17,
+      "coda": "Lo sviluppo è immediato una volta riconosciuto l'esponenziale:\n\\[\n  \\frac{\\mathrm{e}^{\\mathrm{i}\\pi x}-1}{\\pi x}\n  =\\frac{1}{\\pi x}\\sum_{m\\ge1}\\frac{(\\mathrm{i}\\pi x)^m}{m!}\n  =\\sum_{n\\ge0}\\frac{\\mathrm{i}^{\\,n+1}(\\pi x)^n}{(n+1)!},\n\\]\nche è esattamente il termine generale della riga $\\#14$. La parte immaginaria della somma è $\\sin(\\pi x)/(\\pi x)$, cioè il seno cardinale normalizzato; la parte reale è $\\left(\\cos(\\pi x)-1\\right)/(\\pi x)$. Le righe $\\#15$ e $\\#16$ affermano proprio questo, e la verifica numerica le conferma."
+    },
+    {
+      "titolo": "Due integrali che si comportano in modo opposto",
+      "testo": "Qui il quaderno confronta le due componenti sotto integrale su tutta la retta, e trova una differenza radicale. Su una delle due, però, Derive dà una risposta che va guardata con attenzione.",
+      "da": 18,
+      "a": 25,
+      "coda": "Il seno cardinale è integrabile in senso improprio e la riga $\\#19$ dà il valore corretto: $\\int_{-\\infty}^{+\\infty}\\frac{\\sin\\pi x}{\\pi x}\\,\\mathrm{d}x=1$. È l'integrale di Dirichlet, e vale esattamente uno grazie alla normalizzazione con $\\pi$.\n\nL'altra componente non è integrabile. Per $x$ grande $\\left(1-\\cos\\pi x\\right)/(\\pi x)$ oscilla attorno a $1/(\\pi x)$, la cui coda diverge logaritmicamente: l'integrale cresce come $\\frac{1}{\\pi}\\ln R$ e non ha limite. Il valore $11{,}53414128$ della riga $\\#20$ non è dunque il valore dell'integrale, ma il risultato di una quadratura numerica troncata. Rifacendo il conto si trova che il troncamento corrisponde a un estremo superiore di circa $10^7$: portandolo a $10^9$ il risultato sale a $14{,}4$, e continua a crescere. È il caso in cui un sistema di calcolo restituisce un numero dove non ce n'è uno, e le righe $\\#21$ e $\\#22$, che ne prendono la metà, ereditano lo stesso problema.\n\nLa differenza fra le due componenti non è un dettaglio tecnico: è la ragione per cui il seno cardinale è il nucleo del campionamento e la sua parte reale no."
+    },
+    {
+      "titolo": "Derivate e riscritture",
+      "testo": "Le ultime righe calcolano la derivata della componente reale e chiudono riscrivendo la funzione di partenza nella forma che ne rende evidente la struttura.",
+      "da": 26,
+      "a": 29,
+      "coda": "La riga $\\#29$ è la conclusione del quaderno ed è la sua unica affermazione veramente riassuntiva: $\\dfrac{(-1)^x-1}{\\pi x}=\\dfrac{\\cos\\pi x-1+\\mathrm{i}\\sin\\pi x}{\\pi x}$. Tutto il resto è la lettura, componente per componente, di questa uguaglianza."
+    }
+  ],
+  "note": {
+    "1": "Il quadrato del numero $1+\\mathrm{i}\\tan t$ normalizzato: è $\\mathrm{e}^{2\\mathrm{i}t}$, per la parametrizzazione razionale del cerchio.",
+    "2": "La stessa cosa scritta con la funzione segno complessa.",
+    "3": "Il numero non normalizzato.",
+    "4": "Il denominatore della normalizzazione, con argomento $\\pi t$.",
+    "5": "L'unità elevata a qualunque esponente: la riga che introduce il tema delle potenze a base costante.",
+    "6": "La derivata di $(-1)^x$ divisa per $\\pi(-1)^x$: vale $\\mathrm{i}$.",
+    "7": "Con esponente doppio, e il fattore $2\\pi$ al denominatore: ancora $\\mathrm{i}$.",
+    "8": "Con esponente triplo.",
+    "9": "Il caso generale: il rapporto vale $\\mathrm{i}$ per ogni $k$.",
+    "10": "Il logaritmo diviso per l'argomento, annotato di passaggio.",
+    "11": "Lo stesso risultato come rapporto incrementale in zero.",
+    "12": "Il suo quadrato, che vale $-1$.",
+    "13": "Il rapporto incrementale prima del passaggio al limite: è la funzione che il quaderno studierà per il resto delle pagine.",
+    "14": "Il termine generale dello sviluppo in serie.",
+    "15": "La parte immaginaria della somma è il seno cardinale.",
+    "16": "La parte reale è il suo gemello, con il coseno al posto del seno.",
+    "17": "La stessa funzione con il segno cambiato, nella forma che verrà integrata.",
+    "18": "L'integrale su tutta la semiretta positiva, raddoppiato per simmetria.",
+    "19": "L'integrale del seno cardinale: vale esattamente uno. È l'integrale di Dirichlet.",
+    "20": "Il valore restituito per l'altra componente. L'integrale però diverge logaritmicamente: il numero è l'effetto di un troncamento della quadratura numerica intorno a $x\\approx10^7$.",
+    "21": "La metà del valore precedente.",
+    "22": "Che eredita lo stesso problema.",
+    "23": "La componente reale scritta con il segno opposto.",
+    "24": "Il suo integrale indefinito.",
+    "25": "E quello del seno cardinale, che è il seno integrale.",
+    "26": "Si deriva la componente reale.",
+    "27": "Il risultato, con i tre termini che si compensano nell'origine.",
+    "28": "Il limite destro del rapporto incrementale: $\\mathrm{i}$, questa volta correttamente.",
+    "29": "La conclusione: la funzione di partenza scomposta nelle sue due componenti reali."
+  },
+  "figure": [
+    {
+      "file": "cosinc_serie",
+      "dopo": 16,
+      "didascalia": "La somma parziale della serie della riga $\\#14$ (tratto spesso) confrontata con le due forme chiuse delle righe $\\#15$ e $\\#16$. Quaranta termini bastano a coprire l'intervallo mostrato."
+    },
+    {
+      "file": "sinc_cosinc",
+      "dopo": 17,
+      "didascalia": "Le due componenti. Entrambe decrescono come $1/x$, ma il seno cardinale cambia segno a ogni intero e le sue aree si compensano, mentre l'altra resta positiva e la sua coda diverge."
+    }
+  ],
+  "chiusura": "Il quaderno isola una funzione complessa elementare e ne separa le due parti, scoprendo che si assomigliano in tutto tranne che nella cosa che conta: una ha area finita, l'altra no. È anche il posto in cui la domanda posta sedici mesi prima in \\dfw{j.dfw} — si può ottenere $\\mathrm{i}$ come limite di un rapporto? — riceve finalmente una risposta affermativa e corretta."
+}

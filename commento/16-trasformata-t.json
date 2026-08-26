@@ -1,0 +1,59 @@
+{
+  "file": "Trasformata T.dfw",
+  "titolo": "Un operatore che confonde seno e coseno",
+  "intro": "Gennaio 2011, il quaderno più recente della raccolta. Quattordici righe, tutte della stessa forma, che applicano a quattordici funzioni diverse un unico operatore:\n\\[\n  T[f](t)=\\frac{\\dfrac{1}{t}\\displaystyle\\int_0^t f(x)\\,\\mathrm{d}x}{f\\!\\left(\\dfrac{t}{2}\\right)}\n\\]\ncioè il rapporto fra il valor medio di $f$ sull'intervallo $[0,t]$ e il valore che $f$ assume nel punto di mezzo. Se $f$ fosse una retta i due numeri coinciderebbero e il rapporto varrebbe uno; per tutte le altre funzioni il rapporto misura di quanto la funzione si scosta dalla propria corda.",
+  "blocchi": [
+    {
+      "titolo": "Le funzioni logaritmiche",
+      "testo": "Le prime due righe applicano l'operatore ai logaritmi. Sono anche le uniche in cui il risultato resta ingombrante.",
+      "da": 1,
+      "a": 2,
+      "coda": "Il calcolo è diretto: $\\int_0^t\\ln(x+1)\\,\\mathrm{d}x=(t+1)\\ln(t+1)-t$, e dividendo per $t$ si ottiene $\\ln\\!\\left[(t+1)^{(t+1)/t}\\right]-1$, che è esattamente il numeratore della riga $\\#1$. Analogamente per il logaritmo semplice."
+    },
+    {
+      "titolo": "Le funzioni circolari danno tutte lo stesso nucleo",
+      "testo": "Qui sta il risultato del quaderno. Si applica l'operatore all'esponenziale, al seno, al coseno e all'esponenziale immaginario, e le risposte convergono.",
+      "da": 3,
+      "a": 7,
+      "coda": "Per il seno: $\\int_0^t\\sin x\\,\\mathrm{d}x=1-\\cos t=2\\sin^2\\tfrac t2$, e dividendo per $t$ e per $\\sin\\tfrac t2$ resta $\\dfrac{\\sin(t/2)}{t/2}$. Per il coseno: $\\int_0^t\\cos x\\,\\mathrm{d}x=\\sin t=2\\sin\\tfrac t2\\cos\\tfrac t2$, e dividendo per $t$ e per $\\cos\\tfrac t2$ resta di nuovo $\\dfrac{\\sin(t/2)}{t/2}$. L'operatore non distingue il seno dal coseno, e nemmeno dall'esponenziale immaginario che li contiene entrambi: tutti e tre danno il seno cardinale.\n\nPer l'esponenziale reale il conto è lo stesso con le funzioni iperboliche e dà $\\dfrac{\\sinh(t/2)}{t/2}$: la stessa forma, con il seno sostituito dal suo analogo. Le due risposte sono l'una il prolungamento analitico dell'altra."
+    },
+    {
+      "titolo": "Le potenze danno una costante",
+      "testo": "Una riga sola, e con il risultato più sorprendente del gruppo.",
+      "da": 8,
+      "a": 8,
+      "coda": "Il rapporto non dipende da $t$: vale $2^n/(n+1)$ per ogni intervallo. Il motivo è l'omogeneità — sia il valor medio sia il valore nel punto di mezzo sono proporzionali a $t^n$, e il rapporto si semplifica.\n\nQuesta riga permette anche di riconoscere che cosa stia misurando l'operatore. Lo sviluppo di $T[f]$ per $t$ piccolo è\n\\[\n  T[f](t)=1+\\frac{t^2}{24}\\,\\frac{f''}{f}+O\\!\\left(t^4\\right),\n\\]\nche è l'errore relativo della formula di quadratura del punto medio. Per il seno $f''/f=-1$ e si ottiene $1-t^2/24$, che è lo sviluppo di $\\mathrm{sinc}(t/2)$; per l'esponenziale $f''/f=+1$ e si ottiene $1+t^2/24$, cioè $\\sinh(t/2)/(t/2)$; per $x^n$ valutato nel punto medio si ottiene $1+n(n-1)/6$, che coincide con $2^n/(n+1)$ per $n\\le3$. L'operatore $T$, in altre parole, è l'errore della regola del punto medio scritto come funzione dell'ampiezza dell'intervallo."
+    },
+    {
+      "titolo": "Le funzioni non elementari",
+      "testo": "Le ultime sei righe applicano l'operatore a funzioni le cui primitive richiedono funzioni speciali o forme meno maneggevoli.",
+      "da": 9,
+      "a": 14,
+      "coda": "La riga $\\#9$ è l'unica in cui compare una funzione speciale: il valor medio della gaussiana su $[0,t]$ è $\\sqrt\\pi\\,\\operatorname{erf}(t)/(2t)$, e dividendo per il valore nel punto medio $\\mathrm{e}^{-t^2/4}$ si ottiene la forma scritta. La riga $\\#10$ applica l'operatore al seno cardinale stesso, e il risultato si semplifica in modo notevole: il denominatore $\\sin(t/2)/(t/2)$ cancella il fattore $1/t$ e resta il seno integrale diviso per $2\\sin(t/2)$."
+    }
+  ],
+  "note": {
+    "1": "Il logaritmo traslato. La potenza $(t+1)^{(t+1)/t}$ nasce dal raccogliere $\\ln$ nel valor medio.",
+    "2": "Il logaritmo semplice: il valor medio vale $\\ln t-1$.",
+    "3": "L'esponenziale reale dà il seno iperbolico cardinale.",
+    "4": "Il seno dà il seno cardinale.",
+    "5": "Il coseno dà lo stesso risultato del seno: l'operatore non li distingue.",
+    "6": "E nemmeno l'esponenziale immaginario, che li contiene entrambi.",
+    "7": "Con pulsazione $2\\pi$ il nucleo diventa $\\sin(\\pi t)/(\\pi t)$: la forma normalizzata del seno cardinale.",
+    "8": "Per le potenze il rapporto è costante: non dipende dall'ampiezza dell'intervallo ma solo dal grado.",
+    "9": "La gaussiana introduce la funzione degli errori.",
+    "10": "L'operatore applicato al seno cardinale: il denominatore cancella il fattore $1/t$ e resta il seno integrale.",
+    "11": "L'arcotangente: il valor medio è $\\arctan t-\\ln(1+t^2)/(2t)$.",
+    "12": "L'arcoseno.",
+    "13": "L'arcocoseno, con la forma riordinata da Derive.",
+    "14": "La tangente: il valor medio è $-\\ln\\cos t$ diviso $t$, e il risultato contiene la cotangente dell'angolo metà."
+  },
+  "figure": [
+    {
+      "file": "trasformata_t",
+      "dopo": 8,
+      "didascalia": "A sinistra il nucleo comune alle funzioni circolari, in due normalizzazioni. A destra il nucleo dell'esponenziale reale, in scala logaritmica: stessa formula, funzione iperbolica al posto di quella circolare, e crescita illimitata."
+    }
+  ],
+  "chiusura": "Quattordici righe che dicono una cosa sola, ma la dicono bene: il rapporto fra la media di una funzione e il suo valore nel punto medio è una quantità che dipende quasi solo dalla curvatura. Per tutte le funzioni con $f''=-f$ dà il seno cardinale, per tutte quelle con $f''=+f$ il suo analogo iperbolico, per le potenze una costante. È l'ultimo quaderno della raccolta, ed è anche il più ordinato."
+}

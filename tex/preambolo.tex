@@ -1,0 +1,145 @@
+% ---------------------------------------------------------------------------
+%  Preambolo comune del documento
+% ---------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{microtype}
+
+\usepackage[a4paper,top=2.6cm,bottom=2.7cm,inner=2.7cm,outer=2.2cm,
+            headsep=14pt]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+
+% --- tavolozza --------------------------------------------------------------
+\definecolor{inchiostro}{HTML}{1B1F23}
+\definecolor{blunotte}{HTML}{1F4E79}
+\definecolor{rossoterra}{HTML}{B3352B}
+\definecolor{verdesalvia}{HTML}{2A7F62}
+\definecolor{grigiocarta}{HTML}{F4F5F7}
+\definecolor{grigiotratto}{HTML}{C8CCD2}
+\definecolor{grigiotesto}{HTML}{6B7280}
+
+\color{inchiostro}
+
+% --- titolazione ------------------------------------------------------------
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\huge\bfseries\color{blunotte}}
+  {\normalsize\sffamily\mdseries\color{grigiotesto}%
+   \MakeUppercase{\chaptertitlename}\ \thechapter}
+  {8pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-10pt}{26pt}
+
+\titleformat{\section}
+  {\normalfont\sffamily\large\bfseries\color{blunotte}}{\thesection}{0.7em}{}
+\titleformat{\subsection}
+  {\normalfont\sffamily\normalsize\bfseries\color{inchiostro}}
+  {\thesubsection}{0.6em}{}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+
+% --- testatine --------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{grigiotratto}%
+  \leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[LE]{\small\sffamily\color{grigiotesto}\leftmark}
+\fancyhead[RO]{\small\sffamily\color{grigiotesto}\rightmark}
+\fancyfoot[LE,RO]{\small\sffamily\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
+\fancypagestyle{plain}{\fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[LE,RO]{\small\sffamily\thepage}}
+
+% --- didascalie -------------------------------------------------------------
+\captionsetup{font=small,labelfont={sf,bf,color=blunotte},
+              labelsep=period,width=0.92\linewidth}
+
+% --- ambiente per le espressioni --------------------------------------------
+\newcommand{\verificata}{%
+  \textcolor{verdesalvia}{\ensuremath{\checkmark}}}
+
+\newcommand{\esprheader}[3]{%
+  \par\addvspace{7pt}\noindent
+  {\footnotesize\sffamily
+   \textcolor{blunotte}{\textbf{\##1}}\,#3\hfill
+   \textcolor{grigiotesto}{#2}}%
+  \par\nobreak\vspace{-6pt}}
+
+\newenvironment{espr}[3]
+  {\esprheader{#1}{#2}{#3}\abovedisplayskip=6pt\belowdisplayskip=6pt}
+  {\par\addvspace{2pt}}
+
+% le catene di uguaglianze possono essere lunghe: si consente la rottura
+\allowdisplaybreaks[3]
+
+% --- intestazione di ogni quaderno ------------------------------------------
+\newcommand{\quaderno}[3]{%
+  \begingroup
+  \setlength{\fboxsep}{9pt}%
+  \noindent\colorbox{grigiocarta}{%
+    \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+      \footnotesize\sffamily\color{grigiotesto}
+      \textbf{Sorgente} \texttt{#1}\hfill
+      \textbf{Salvato il} #2\hfill
+      \textbf{Espressioni} #3
+    \end{minipage}}%
+  \endgroup
+  \par\addvspace{14pt}}
+
+% --- riquadro per le osservazioni -------------------------------------------
+\newenvironment{osservazione}[1][Osservazione]
+  {\par\addvspace{8pt}\begingroup
+   \setlength{\leftskip}{1.2em}%
+   \noindent{\sffamily\bfseries\color{rossoterra}#1.}\ \ignorespaces}
+  {\par\endgroup\addvspace{8pt}}
+
+% --- codice sorgente --------------------------------------------------------
+\lstdefinestyle{pitone}{
+  language=Python,
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{blunotte}\bfseries,
+  commentstyle=\color{verdesalvia}\itshape,
+  stringstyle=\color{rossoterra},
+  numbers=left, numberstyle=\tiny\color{grigiotesto}, numbersep=8pt,
+  showstringspaces=false,
+  breaklines=true, breakatwhitespace=true,
+  frame=leftline, framerule=0.6pt, rulecolor=\color{grigiotratto},
+  xleftmargin=16pt, framexleftmargin=16pt,
+  extendedchars=true, inputencoding=utf8,
+  literate={à}{{\`a}}1 {è}{{\`e}}1 {é}{{\'e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1
+           {ù}{{\`u}}1 {'}{{\textquotesingle}}1
+}
+\lstset{style=pitone}
+
+% --- varie ------------------------------------------------------------------
+\newcommand{\dfw}[1]{\texttt{#1}}
+\newcommand{\der}[1]{\texttt{\small #1}}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\hbadness=10000
+\vbadness=10000

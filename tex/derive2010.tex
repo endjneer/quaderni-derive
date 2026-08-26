@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper,openright]{book}
+\input{preambolo}
+
+\title{I quaderni Derive}
+\author{Francesco Messina}
+\date{}
+
+\begin{document}
+
+% ===========================================================================
+\frontmatter
+\pagestyle{empty}
+
+\begin{titlepage}
+\centering
+\vspace*{3.2cm}
+
+{\sffamily\color{grigiotesto}\large
+ QUADERNI DI CALCOLO SIMBOLICO\par
+ 2009\,--\,2011\par}
+
+\vspace{1.4cm}
+{\sffamily\bfseries\color{blunotte}\fontsize{40}{46}\selectfont
+ I quaderni Derive\par}
+
+\vspace{0.7cm}
+{\sffamily\large\color{inchiostro}
+ Ventitr\'e sessioni di lavoro recuperate,\\
+ tradotte, commentate e verificate\par}
+
+\vspace{2.2cm}
+\begin{tikzpicture}
+  \draw[grigiotratto,line width=0.6pt] (-5.2,0) -- (5.2,0);
+  \fill[blunotte] (0,0) circle (2pt);
+\end{tikzpicture}
+
+\vspace{2.2cm}
+{\sffamily\color{grigiotesto}
+ 792 espressioni estratte da 23 file \texttt{.dfw}\\
+ Derive for Windows 6.00 e 6.10\par}
+
+\vfill
+{\sffamily\color{grigiotesto}\small
+ Francesco Messina\par}
+\end{titlepage}
+
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{0.78\linewidth}
+\small\sffamily\color{grigiotesto}
+Questo volume nasce da un problema pratico: i file prodotti fra il 2009
+e il 2011 con \emph{Derive for Windows} non sono pi\`u apribili, perch\'e
+il programma \`e stato ritirato dal commercio nel 2007 e non gira sui
+sistemi operativi attuali. Il contenuto matematico, per\`o, non \`e andato
+perduto: i file lo conservano in chiaro, e da l\`i \`e stato riportato alla
+luce.
+
+\vspace{10pt}
+Tutto ci\`o che segue --- l'estrattore del formato binario, il traduttore
+verso \LaTeX, il verificatore numerico, i grafici e questo stesso
+documento --- \`e generato da codice sorgente incluso nell'appendice
+\ref{app:sorgenti} e nel repository che accompagna il volume.
+\end{minipage}
+\end{center}
+\vspace*{\fill}
+
+\cleardoublepage
+\pagestyle{fancy}
+\tableofcontents
+
+% ===========================================================================
+\mainmatter
+
+\part{Il recupero}
+\input{parte1-recupero}
+
+\part{I quaderni}
+\input{generato/indice}
+
+% ===========================================================================
+\appendix
+\part{Appendici}
+\input{appendici}
+
+\end{document}

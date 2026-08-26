@@ -1,0 +1,719 @@
+%% generato automaticamente da tools/build_tex.py --- non modificare
+\chapter{La versione di febbraio}
+\label{cap:mate-copia}
+\quaderno{mate copia.dfw}{09 Feb 2010}{127}
+
+Il nome del file dice \dfw{copia}, ma le date raccontano un'altra storia: questo quaderno è del 9 febbraio 2010, mentre \dfw{mate.dfw} è del 18 agosto successivo. Non è una copia, è lo stato precedente dello stesso lavoro — sei mesi prima, e sei espressioni più corto.
+
+Delle 127 espressioni qui contenute, 117 compaiono identiche nel quaderno di agosto (capitolo~\ref{cap:mate}), dove sono commentate una per una. Questo capitolo le riporta comunque tutte, per completezza del recupero, ma concentra il commento sulle tre che nella versione successiva sono state tolte. Sono le più interessanti, perché una scomparsa è sempre una scelta.
+
+\section{L'identità con due pesi}
+
+La prima espressione che verrà eliminata è anche la più generale del quaderno, e sta subito all'inizio.
+
+\begin{espr}{1}{User}{\verificata}
+\[
+\frac{\cos\!\left(x\right) - \cos\!\left(y\right)}{\cos\!\left(x\right) - \cos\!\left(y\right)} = 1
+\]
+\end{espr}
+\begin{espr}{2}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)}{k\, \left(\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)\right) - l\, \left(\sin^{2}\!\left(x\right) - \sin^{2}\!\left(y\right)\right)} \\
+=\;& \frac{1}{k + l}
+\end{align*}
+\end{espr}
+La forma generale dell'identità, con due pesi liberi al denominatore. Da qui discendono tutti i casi particolari usati nel resto della raccolta.
+
+
+La riga $\#2$ è la forma generale dell'identità che regge tutto il lavoro. Al denominatore compaiono due pesi, uno per la differenza di quadrati di coseni e uno per quella di seni, e il valore del rapporto è $1/(k+l)$. Si verifica in una riga: poiché $\cos^2x-\cos^2y$ e $\sin^2x-\sin^2y$ sono uno l'opposto dell'altro, il denominatore vale $(k+l)\left(\cos^2x-\cos^2y\right)$ e il rapporto si semplifica.
+
+Da questa forma discendono tutti i casi particolari usati nel resto del lavoro: $k=1,\ l=1$ dà $1/2$, ed è l'identità di apertura; $k=0,\ l=-1$ dà $-1$; e così via. Nella versione di agosto questa riga non c'è più, sostituita dai casi particolari scritti uno per uno. È una scelta curiosa — il caso generale era già stato trovato e poi è stato lasciato indietro.
+
+\section{Il corpo del quaderno}
+
+Le espressioni che seguono corrispondono, con lo scarto di qualche numero d'ordine, a quelle del capitolo~\ref{cap:mate}: l'identità del mezzo e le sue varianti, la caccia al parametro, i due parametri, la macchina per $\pi$, il gradino costruito con logaritmi e valori assoluti, le onde triangolari e a dente di sega, il confronto fra funzioni circolari e iperboliche. Per il commento si rimanda a quel capitolo.
+
+\begin{espr}{3}{User}{\verificata}
+\[
+\frac{\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \cos\!\left(2\, y\right)} = \frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{4}{User}{\verificata}
+\[
+\frac{\sin^{2}\!\left(x\right) - \sin^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \cos\!\left(2\, y\right)} = -\frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{5}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{3}\!\left(x\right)\, \cos\!\left(y\right) - \cos^{3}\!\left(y\right)\, \cos\!\left(x\right)}{\cos\!\left(3\, x\right)\, \cos\!\left(y\right) - \cos\!\left(3\, y\right)\, \cos\!\left(x\right)} \\
+=\;& \frac{\cos\!\left(x\right)\, \cos\!\left(y\right)\, \left(\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)\right)}{\cos\!\left(y\right)\, \cos\!\left(3\, x\right) - \cos\!\left(x\right)\, \cos\!\left(3\, y\right)} \\
+=\;& \frac{1}{4}
+\end{align*}
+\end{espr}
+\begin{espr}{6}{User}{\verificata}
+\begin{align*}
+& \frac{\mathrm{e}^{2\, \mathrm{i}\, x} - \mathrm{e}^{2\, \mathrm{i}\, y} + \sin^{2}\!\left(y\right) - \sin^{2}\!\left(x\right) + 2\, \mathrm{i}\, \left(\mathrm{e}^{\mathrm{i}\, y}\, \sin\!\left(y\right) - \mathrm{e}^{\mathrm{i}\, x}\, \sin\!\left(x\right)\right)}{\mathrm{e}^{2\, \mathrm{i}\, x} - \mathrm{e}^{2\, \mathrm{i}\, y} + \mathrm{i}\, \left(\sin\!\left(2\, y\right) - \sin\!\left(2\, x\right)\right)} \\
+=\;& \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{7}{User}{}
+\begin{align*}
+& \operatorname{Re}\!\left(\mathrm{e}^{2\, \mathrm{i}\, x} - \mathrm{e}^{2\, \mathrm{i}\, y} + \mathrm{i}\, \left(\sin\!\left(2\, y\right) - \sin\!\left(2\, x\right)\right)\right) \\
+=\;& \cos\!\left(2\, x\right) - \cos\!\left(2\, y\right)
+\end{align*}
+\end{espr}
+\begin{espr}{8}{User}{}
+\begin{align*}
+& \operatorname{Im}\!\left(\mathrm{e}^{2\, \mathrm{i}\, x} - \mathrm{e}^{2\, \mathrm{i}\, y} + \mathrm{i}\, \left(\sin\!\left(2\, y\right) - \sin\!\left(2\, x\right)\right)\right) \\
+=\;& 0
+\end{align*}
+\end{espr}
+\begin{espr}{9}{User}{}
+\begin{align*}
+& \operatorname{Re}\!\left(\mathrm{e}^{2\, \mathrm{i}\, x} - \mathrm{e}^{2\, \mathrm{i}\, y} + \sin^{2}\!\left(y\right) - \sin^{2}\!\left(x\right) + 2\, \mathrm{i}\, \left(\mathrm{e}^{\mathrm{i}\, y}\, \sin\!\left(y\right) - \mathrm{e}^{\mathrm{i}\, x}\, \sin\!\left(x\right)\right)\right) \\
+=\;& \frac{\cos\!\left(2\, x\right)}{2} - \frac{\cos\!\left(2\, y\right)}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{10}{User}{}
+\begin{align*}
+& \operatorname{Im}\!\left(\mathrm{e}^{2\, \mathrm{i}\, x} - \mathrm{e}^{2\, \mathrm{i}\, y} + \sin^{2}\!\left(y\right) - \sin^{2}\!\left(x\right) + 2\, \mathrm{i}\, \left(\mathrm{e}^{\mathrm{i}\, y}\, \sin\!\left(y\right) - \mathrm{e}^{\mathrm{i}\, x}\, \sin\!\left(x\right)\right)\right) \\
+=\;& 0
+\end{align*}
+\end{espr}
+\begin{espr}{11}{User}{\verificata}
+\begin{align*}
+& \cos\!\left(5\, x\right) \\
+=\;& \left(\cos\!\left(x\right)\, \cos\!\left(2\, x\right) - \sin\!\left(x\right)\, \sin\!\left(2\, x\right)\right)\, \cos\!\left(2\, x\right) - \sin\!\left(2\, x\right)\, \left(\sin\!\left(x\right)\, \cos\!\left(2\, x\right) + \sin\!\left(2\, x\right)\, \cos\!\left(x\right)\right)
+\end{align*}
+\end{espr}
+\begin{espr}{12}{User}{\verificata}
+\[
+\cos\!\left(5\, x\right) = \cos\!\left(x\right)\, \cos\!\left(4\, x\right) - \sin\!\left(x\right)\, \sin\!\left(4\, x\right)
+\]
+\end{espr}
+\begin{espr}{13}{Solve(User,[f,m,s])}{}
+\[
+\operatorname{Solve}\!\left(\left[\, f^{2} + m^{2} = 0,\; f\, m = 1,\; s = \frac{1}{2}\, \left(f + m\right) \,\right],\; \left[\, f,\; m,\; s \,\right]\right)
+\]
+\end{espr}
+\begin{espr}{14}{Simp(Solve(User,[f,m,s]))}{}
+\[
+\left[\, f = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; m = \frac{\sqrt{2}}{2} - \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; s = \frac{\sqrt{2}}{2},\; f = \frac{\sqrt{2}}{2} - \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; m = \frac{\sqrt{2}}{2} + \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; s = \frac{\sqrt{2}}{2},\; f = -\frac{\sqrt{2}}{2} + \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; m = -\frac{\sqrt{2}}{2} - \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; s = -\frac{\sqrt{2}}{2},\; f = -\frac{\sqrt{2}}{2} - \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; m = -\frac{\sqrt{2}}{2} + \frac{\sqrt{2}\, \mathrm{i}}{2} \;\land\; s = -\frac{\sqrt{2}}{2} \,\right]
+\]
+\end{espr}
+\begin{espr}{15}{User}{}
+\[
+\frac{n\, \sin^{x}\!\left(\pi\, x\right)}{\pi\, x}
+\]
+\end{espr}
+\begin{espr}{16}{User}{}
+\[
+\frac{\sin\!\left(\mathrm{e}\, x\right)}{\mathrm{e}\, x}
+\]
+\end{espr}
+\begin{espr}{17}{User}{}
+\[
+\frac{n\, \sin\!\left(\mathrm{e}\, x\right)}{\mathrm{e}\, x}
+\]
+\end{espr}
+\begin{espr}{18}{User}{}
+\[
+\lim_{n \to \infty} \frac{n\, \sin\!\left(\mathrm{e}\, x\right)}{\mathrm{e}\, x}
+\]
+\end{espr}
+\begin{espr}{19}{User}{}
+\[
+\frac{\cos^{2}\!\left(x + \mathrm{i}\, y\right) - \cos^{2}\!\left(x - \mathrm{i}\, y\right)}{\cos\!\left(2\, x + 2\, \mathrm{i}\, y\right) - \cos\!\left(2\, x - 2\, \mathrm{i}\, y\right)}
+\]
+\end{espr}
+\begin{espr}{20}{Simp(\#19)}{}
+\[
+\frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{21}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x + k\, y\right) - \cos^{2}\!\left(x - k\, y\right)}{\cos\!\left(2\, x + 2\, k\, y\right) - \cos\!\left(2\, x - 2\, k\, y\right)} \\
+=\;& \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{22}{Solve(\#21,k)}{}
+\[
+\operatorname{Approx}\!\left(\operatorname{Solve}\!\left(\frac{\cos^{2}\!\left(x + k\, y\right) - \cos^{2}\!\left(x - k\, y\right)}{\cos\!\left(2\, x + 2\, k\, y\right) - \cos\!\left(2\, x - 2\, k\, y\right)} = \frac{1}{2},\; k\right)\right)
+\]
+\end{espr}
+\begin{espr}{23}{Simp(Solve(\#21,k))}{}
+\[
+k = -4.999999701
+\]
+\end{espr}
+\begin{espr}{24}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x + \mathrm{i}\, y\right) - \cos^{2}\!\left(x - \mathrm{i}\, y\right)}{\cos\!\left(2\, x + 2\, \mathrm{i}\, y\right) - \cos\!\left(2\, x - 2\, \mathrm{i}\, y\right)} \\
+=\;& \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{25}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x + k\, y\right) - \cos^{2}\!\left(k\, y\right)}{\cos\!\left(2\, x + 2\, k\, y\right) - \cos\!\left(2\, k\, y\right)} \\
+=\;& \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{26}{Solve(\#25,k)}{}
+\[
+\operatorname{Approx}\!\left(\operatorname{Solve}\!\left(\frac{\cos^{2}\!\left(x + k\, y\right) - \cos^{2}\!\left(k\, y\right)}{\cos\!\left(2\, x + 2\, k\, y\right) - \cos\!\left(2\, k\, y\right)} = \frac{1}{2},\; k\right)\right)
+\]
+\end{espr}
+\begin{espr}{27}{Simp(Solve(\#25,k))}{}
+\[
+k = -4.999999701
+\]
+\end{espr}
+\begin{espr}{28}{User}{\verificata}
+\[
+\frac{\cos^{2}\!\left(3\, x + k\, y\right) - \cos^{2}\!\left(x\right)}{\cos\!\left(6\, x + 2\, k\, y\right) - \cos\!\left(2\, x\right)} = \frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{29}{Solve(\#28,k)}{}
+\[
+\operatorname{Approx}\!\left(\operatorname{Solve}\!\left(\frac{\cos^{2}\!\left(3\, x + k\, y\right) - \cos^{2}\!\left(x\right)}{\cos\!\left(6\, x + 2\, k\, y\right) - \cos\!\left(2\, x\right)} = \frac{1}{2},\; k\right)\right)
+\]
+\end{espr}
+\begin{espr}{30}{Simp(\#29)}{}
+\[
+k = -4.999999701
+\]
+\end{espr}
+\begin{espr}{31}{User}{\verificata}
+\[
+\frac{\cos^{2}\!\left(x + k\right) - \cos^{2}\!\left(x - k\right)}{\cos\!\left(2\, x + 2\, k\right) - \cos\!\left(2\, x - 2\, k\right)} = \frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{32}{Solve(\#31,k)}{}
+\[
+\operatorname{Approx}\!\left(\operatorname{Solve}\!\left(\frac{\cos^{2}\!\left(x + k\right) - \cos^{2}\!\left(x - k\right)}{\cos\!\left(2\, x + 2\, k\right) - \cos\!\left(2\, x - 2\, k\right)} = \frac{1}{2},\; k,\; \mathrm{Real}\right)\right)
+\]
+\end{espr}
+\begin{espr}{33}{Simp(Solve(\#31,k))}{}
+\[
+k = -4.999999701
+\]
+\end{espr}
+\begin{espr}{34}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{3}\!\left(x\right)\, \cos\!\left(y\right) - \cos^{3}\!\left(y\right)\, \cos\!\left(x\right)}{\cos\!\left(3\, x\right)\, \cos\!\left(y\right) - \cos\!\left(3\, y\right)\, \cos\!\left(x\right)} \\
+=\;& \frac{\cos\!\left(x\right)\, \cos\!\left(y\right)\, \left(\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)\right)}{\cos\!\left(y\right)\, \cos\!\left(3\, x\right) - \cos\!\left(x\right)\, \cos\!\left(3\, y\right)} \\
+=\;& \frac{1}{4}
+\end{align*}
+\end{espr}
+\begin{espr}{35}{User}{\verificata}
+\begin{align*}
+& \frac{\cos\!\left(x + k\, y\right)\, \cos\!\left(x - k\, y\right)\, \left(\cos^{2}\!\left(x + k\, y\right) - \cos^{2}\!\left(x - k\, y\right)\right)}{\cos\!\left(x - k\, y\right)\, \cos\!\left(3\, x + 3\, k\, y\right) - \cos\!\left(x + k\, y\right)\, \cos\!\left(3\, x - 3\, k\, y\right)} \\
+=\;& \frac{1}{4}
+\end{align*}
+\end{espr}
+\begin{espr}{36}{Solve(\#35,k)}{}
+\[
+\operatorname{Approx}\!\left(\operatorname{Solve}\!\left(\frac{\cos\!\left(x + k\, y\right)\, \cos\!\left(x - k\, y\right)\, \left(\cos^{2}\!\left(x + k\, y\right) - \cos^{2}\!\left(x - k\, y\right)\right)}{\cos\!\left(x - k\, y\right)\, \cos\!\left(3\, x + 3\, k\, y\right) - \cos\!\left(x + k\, y\right)\, \cos\!\left(3\, x - 3\, k\, y\right)} = \frac{1}{4},\; k\right)\right)
+\]
+\end{espr}
+\begin{espr}{37}{Simp(Solve(\#35,k))}{}
+\[
+k = 0
+\]
+\end{espr}
+\begin{espr}{38}{User}{}
+\[
+\frac{\cos\!\left(x\right)\, \cos\!\left(y\right)\, \left(\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)\right)}{\cos\!\left(y\right)\, \cos\!\left(3\, x\right) - \cos\!\left(x\right)\, \cos\!\left(3\, y\right)}
+\]
+\end{espr}
+\begin{espr}{39}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x + k\, y\right) - \cos^{2}\!\left(x - k\, y\right)}{\cos\!\left(2\, x + 2\, k\, y\right) - \cos\!\left(2\, x - 2\, k\, y\right)} \\
+=\;& \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{40}{User}{\verificata}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x - 4.999999701\, y\right) - \cos^{2}\!\left(x + 4.999999701\, y\right)}{\cos\!\left(2\, x - 2 \cdot 4.999999701\, y\right) - \cos\!\left(2\, x + 2 \cdot 4.999999701\, y\right)} \\
+=\;& \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{41}{User}{\verificata}
+\[
+\frac{\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \cos\!\left(2\, y\right)} = \frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{42}{User}{\verificata}
+\[
+\frac{\cos^{2}\!\left(x + y\right) - \cos^{2}\!\left(x - y\right)}{\cos\!\left(2\, x + 2\, y\right) - \cos\!\left(2\, x - 2\, y\right)} = \frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{43}{Simp(Solve(User,y))}{}
+\[
+y = -4.999999701
+\]
+\end{espr}
+\begin{espr}{44}{User}{\verificata}
+\begin{align*}
+& \frac{\cos\!\left(x + y\right)\, \cos\!\left(x - y\right)\, \left(\cos^{2}\!\left(x + y\right) - \cos^{2}\!\left(x - y\right)\right)}{\cos\!\left(x - y\right)\, \cos\!\left(3\, x + 3\, y\right) - \cos\!\left(x + y\right)\, \cos\!\left(3\, x - 3\, y\right)} \\
+=\;& \frac{1}{4}
+\end{align*}
+\end{espr}
+\begin{espr}{45}{User}{}
+\[
+y = -2.499998615
+\]
+\end{espr}
+\begin{espr}{46}{User}{}
+\[
+k\, 3.141592654 = -4.999999701
+\]
+\end{espr}
+\begin{espr}{47}{Solve(\#46,k)}{}
+\[
+\operatorname{Approx}\!\left(\operatorname{Solve}\!\left(k\, 3.141592654 = -4.999999701,\; k,\; \mathrm{Real}\right)\right)
+\]
+\end{espr}
+\begin{espr}{48}{Simp(Solve(\#46,k))}{}
+\[
+k = -1.591549335
+\]
+\end{espr}
+\begin{espr}{49}{User}{\verificata}
+\[
+\frac{\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \cos\!\left(2\, y\right)} = \frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{50}{User}{}
+\[
+\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right) = 1
+\]
+\end{espr}
+\begin{espr}{51}{User}{}
+\[
+\cos\!\left(2\, x\right) - \cos\!\left(2\, y\right) = 2
+\]
+\end{espr}
+\begin{espr}{52}{Solve(User,[j,k])}{}
+\[
+\operatorname{Solve}\!\left(\left[\, \cos^{2}\!\left(k\right) - \cos^{2}\!\left(j\right) = 1,\; \cos\!\left(2\, k\right) - \cos\!\left(2\, j\right) = 2 \,\right],\; \left[\, j,\; k \,\right]\right)
+\]
+\end{espr}
+\begin{espr}{53}{User}{}
+\[
+\frac{\cos^{2}\!\left(x\right) - k\, \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - l\, \cos\!\left(2\, y\right)} = \frac{1}{2}
+\]
+\end{espr}
+\begin{espr}{54}{Simp(Solve(\#53,k))}{}
+\[
+k = \frac{l\, \cos\!\left(2\, y\right) + 1}{2\, \cos^{2}\!\left(y\right)}
+\]
+\end{espr}
+\begin{espr}{55}{Simp(Solve(\#53,l))}{}
+\[
+l = \frac{2\, k\, \cos^{2}\!\left(y\right) - 1}{\cos\!\left(2\, y\right)}
+\]
+\end{espr}
+\begin{espr}{56}{User}{}
+\[
+\operatorname{Solve}\!\left(\left[\, k = \frac{l\, \cos\!\left(2\, y\right) + 1}{2\, \cos^{2}\!\left(y\right)},\; l = \frac{2\, k\, \cos^{2}\!\left(y\right) - 1}{\cos\!\left(2\, y\right)} \,\right],\; \left[\, k,\; l \,\right]\right)
+\]
+\end{espr}
+\begin{espr}{57}{Simp(Solve(User,[k,l]))}{}
+\[
+\left[\, \frac{\left(k - l\right)\, \cos\!\left(2\, y\right) + k}{\cos\!\left(2\, y\right) + 1} = \frac{1}{\cos\!\left(2\, y\right) + 1} \,\right]
+\]
+\end{espr}
+\begin{espr}{58}{Solve(\#57,k)}{}
+\[
+\operatorname{Solve}\!\left(\left[\, \frac{\left(k - l\right)\, \cos\!\left(2\, y\right) + k}{\cos\!\left(2\, y\right) + 1} = \frac{1}{\cos\!\left(2\, y\right) + 1} \,\right],\; k\right)
+\]
+\end{espr}
+\begin{espr}{59}{Simp(Solve(\#57,k))}{}
+\[
+\left[\, k = \frac{l\, \cos\!\left(2\, y\right) + 1}{\cos\!\left(2\, y\right) + 1} \,\right]
+\]
+\end{espr}
+\begin{espr}{60}{User}{}
+\[
+\cos\!\left(2\, y\right) = \frac{1 - k}{k - l}
+\]
+\end{espr}
+\begin{espr}{61}{User}{}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x\right) - x\, \left(1 + k\right)\, \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - y\, \left(1 + k\right)\, \cos\!\left(2\, y\right)} \\
+=\;& \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{62}{Simp(Solve(\#61,k))}{}
+\[
+k = -\frac{\left(x - y\right)\, \cos\!\left(2\, y\right) + x - 1}{\left(x - y\right)\, \cos\!\left(2\, y\right) + x}
+\]
+\end{espr}
+\begin{espr}{63}{User}{}
+\begin{align*}
+& \frac{\cos^{2}\!\left(x\right) - \left(1 + k\right)\, \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \left(1 + k\right)\, \cos\!\left(2\, y\right)} \\
+=\;& \frac{k}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{64}{Solve(\#63,k)}{}
+\[
+\operatorname{Solve}\!\left(\frac{\cos^{2}\!\left(x\right) - \left(1 + k\right)\, \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \left(1 + k\right)\, \cos\!\left(2\, y\right)} = \frac{k}{2},\; k\right)
+\]
+\end{espr}
+\begin{espr}{65}{Simp(Solve(\#63,k))}{}
+\begin{align*}
+& k = -\frac{\sqrt{\cos^{2}\!\left(2\, x\right) + 2\, \cos\!\left(2\, x\right)\, \left(1 - 2\, \cos\!\left(2\, y\right)\right) + 4\, \cos^{2}\!\left(2\, y\right) + 1}}{2\, \cos\!\left(2\, y\right)} + \frac{\cos\!\left(2\, x\right)}{2\, \cos\!\left(2\, y\right)} + \frac{1}{2\, \cos\!\left(2\, y\right)} \\[3pt]
+\lor\quad & k = \frac{\sqrt{\cos^{2}\!\left(2\, x\right) + 2\, \cos\!\left(2\, x\right)\, \left(1 - 2\, \cos\!\left(2\, y\right)\right) + 4\, \cos^{2}\!\left(2\, y\right) + 1}}{2\, \cos\!\left(2\, y\right)} + \frac{\cos\!\left(2\, x\right)}{2\, \cos\!\left(2\, y\right)} + \frac{1}{2\, \cos\!\left(2\, y\right)}
+\end{align*}
+\end{espr}
+\begin{espr}{66}{User}{}
+\[
+\frac{1}{\pi}\, \left(y - x\right)\, \left(x + \frac{1}{y}\right)
+\]
+\end{espr}
+\begin{espr}{67}{User}{\verificata}
+\[
+\left(\frac{1}{2}\right)! = \frac{\sqrt{\pi}}{2}
+\]
+\end{espr}
+\begin{espr}{68}{User}{\verificata}
+\[
+4\, \left(\frac{1}{2}\right)!^{2} = \pi
+\]
+\end{espr}
+\begin{espr}{69}{User}{}
+\[
+\cos\!\left(x\right)!
+\]
+\end{espr}
+\begin{espr}{70}{User}{\verificata}
+\[
+\left(\frac{\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \cos\!\left(2\, y\right)}\right)! = \frac{\sqrt{\pi}}{2}
+\]
+\end{espr}
+\begin{espr}{71}{User}{\verificata}
+\[
+4\, \left(\frac{\cos^{2}\!\left(x\right) - \cos^{2}\!\left(y\right)}{\cos\!\left(2\, x\right) - \cos\!\left(2\, y\right)}\right)!^{2} = \pi
+\]
+\end{espr}
+\begin{espr}{72}{User}{\verificata}
+\[
+\arccos\!\left(\frac{x}{\pi}\right) + \arcsin\!\left(\frac{x}{\pi}\right) = \frac{\pi}{2}
+\]
+\end{espr}
+\begin{espr}{73}{User}{\verificata}
+\[
+\sin\!\left(\arccos\!\left(x\right)\right) = \cos\!\left(\arcsin\!\left(x\right)\right)
+\]
+\end{espr}
+\begin{espr}{74}{User}{}
+\[
+\arccos\!\left(\sin\!\left(x\right)\right)
+\]
+\end{espr}
+\begin{espr}{75}{User}{}
+\[
+\arcsin\!\left(\cos\!\left(x\right)\right)
+\]
+\end{espr}
+\begin{espr}{76}{User}{}
+\[
+\operatorname{sgn}\!\left(x\right)
+\]
+\end{espr}
+\begin{espr}{77}{User}{}
+\[
+\frac{\ln\!\left(\frac{\left|\mathrm{e}^{2\, x} - 1\right| + \left|\mathrm{e}^{2\, x} + 1\right|}{2}\right)}{x} - 1
+\]
+\end{espr}
+\begin{espr}{78}{User}{}
+\[
+\frac{2\, \ln\!\left(\frac{\left|\mathrm{e}^{x} - 1\right| + \left|\mathrm{e}^{x} + 1\right|}{2}\right)}{x} - 1
+\]
+\end{espr}
+\begin{espr}{79}{User}{}
+\[
+\operatorname{tri}\!\left(x\right)
+\]
+\end{espr}
+\begin{espr}{80}{User}{}
+\[
+\frac{1}{\pi}\, \arccos\!\left(\sin\!\left(\pi\, \left(x - \frac{1}{2}\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{81}{User}{}
+\[
+\left|\frac{2}{\pi}\, \arcsin\!\left(\cos\!\left(\frac{\pi\, x}{2}\right)\right)\right|
+\]
+\end{espr}
+\begin{espr}{82}{User}{}
+\[
+\left|\frac{2}{\pi}\, \arctan\!\left(\cot\!\left(\frac{\pi\, x}{2}\right)\right)\right|
+\]
+\end{espr}
+\begin{espr}{83}{User}{}
+\[
+\frac{4\, \arcsin^{2}\!\left(\cos\!\left(\frac{\pi\, x}{2}\right)\right)}{\pi\, \arcsin\!\left(\cos\!\left(\pi\, x\right)\right) + \frac{\pi^{2}}{2}}
+\]
+\end{espr}
+\begin{espr}{84}{User}{}
+\[
+\operatorname{mod}\!\left(x\right)
+\]
+\end{espr}
+\begin{espr}{85}{User}{}
+\[
+1 + \sum_{k=-\infty}^{+\infty} \frac{\mathrm{i}\, \mathrm{e}^{\mathrm{i}\, k\, \pi\, t}}{k\, \pi}
+\]
+\end{espr}
+\begin{espr}{86}{User}{}
+\[
+\frac{1}{\pi}\, \operatorname{arccot}\!\left(\tan\!\left(-\pi\, \left(x + \frac{1}{2}\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{87}{User}{}
+\[
+\frac{1}{\pi}\, \operatorname{arccot}\!\left(\tan\!\left(-\pi\, \left(x - \frac{1}{2}\right)\right)\right)
+\]
+\end{espr}
+\section{Il logaritmo del coseno iperbolico}
+
+Le altre due espressioni destinate a scomparire stanno qui, e vanno lette insieme.
+
+\begin{espr}{88}{User}{}
+\[
+\log\!\left(\cosh\!\left(x\right)\right)
+\]
+\end{espr}
+Il logaritmo del coseno iperbolico, introdotto da solo.
+
+\begin{espr}{89}{User}{}
+\[
+\log\!\left(\cosh\!\left(x\right)\right) = \left|x\right|
+\]
+\end{espr}
+L'affermazione che coincida con il valore assoluto. Non è un'identità: la differenza tende a $\ln2$ per $|x|\to\infty$ e vale $0$ soltanto nell'origine. È però il sostituto derivabile del valore assoluto oggi più usato in pratica.
+
+
+La riga $\#89$ afferma che $\ln\cosh x=|x|$. Non è vero: la funzione $\ln\cosh x$ è liscia ovunque, vale $0$ in $x=0$ e si avvicina a $|x|-\ln2$ per $|x|$ grande. La differenza fra le due non tende a zero, tende a $\ln 2\approx0{,}693$.
+
+È però una buona approssimazione nello spirito, e ha una proprietà che $|x|$ non ha: è derivabile nell'origine, dove la sua derivata $\tanh x$ vale zero. Non a caso $\ln\cosh$ è oggi una delle funzioni di costo standard nell'ottimizzazione, usata proprio come sostituto liscio del valore assoluto.
+
+Nella versione di agosto queste due righe spariscono, e al loro posto il quaderno sviluppa la costruzione $\ln\!\left(\left|\mathrm{e}^x-1\right|+\left|\mathrm{e}^x+1\right|\right)/2$, che invece dà $\max(x,0)$ in modo esatto. La sostituzione ha senso: un'approssimazione è stata scartata a favore di un'identità.
+
+\section{La parte finale}
+
+Le ultime espressioni coincidono di nuovo con quelle del quaderno di agosto: il dente di sega nel piano complesso, il confronto fra funzioni iperboliche e circolari, l'arcoseno di argomento complesso.
+
+\begin{espr}{90}{User}{}
+\[
+-\log\!\left(\frac{1}{\pi}\, \operatorname{arccot}\!\left(\tan\!\left(\pi\, \left(x + \frac{1}{2}\right)\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{91}{User}{}
+\[
+-\log\!\left(\frac{1}{\pi}\, \arccos\!\left(\sin\!\left(\pi\, \left(x - \frac{1}{2}\right)\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{92}{User}{}
+\[
+\arccos\!\left(\sin\!\left(-\log\!\left(\frac{1}{\pi}\, \arccos\!\left(\sin\!\left(\pi\, \left(x - \frac{1}{2}\right)\right)\right)\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{93}{User}{}
+\[
+\frac{\sin\!\left(x\right)}{x}\, \left(\frac{1}{\pi}\, \operatorname{arccot}\!\left(\tan\!\left(-\pi\, \left(x + \frac{1}{2}\right)\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{94}{User}{}
+\[
+\sin\!\left(\arccos\!\left(\arcsin\!\left(\cos\!\left(x + \frac{\pi}{2}\right)\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{95}{User}{}
+\[
+\frac{\sin\!\left(x\right)}{x}\, \left(\frac{1}{\pi}\, \operatorname{arccot}\!\left(\tan^{2}\!\left(-\pi\, \left(x + \frac{1}{2}\right)\right)\right)\right)
+\]
+\end{espr}
+\begin{espr}{96}{User}{}
+\[
+\frac{4\, \arcsin^{2}\!\left(\cos\!\left(x\right)\right)}{\pi}\, \left(\arcsin\!\left(\cos\!\left(2\, x\right)\right) + \frac{\pi}{2}\right)
+\]
+\end{espr}
+\begin{espr}{97}{User}{}
+\[
+\frac{2\, \arcsin\!\left(\cos^{2}\!\left(\frac{\pi\, x}{2}\right)\right)}{\arcsin\!\left(\cos\!\left(\pi\, x\right)\right) + \frac{\pi}{2}}
+\]
+\end{espr}
+\begin{espr}{98}{Dif(\#90,x)}{}
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\!\left[-\log\!\left(\frac{1}{\pi}\, \operatorname{arccot}\!\left(\tan\!\left(\pi\, \left(x + \frac{1}{2}\right)\right)\right)\right)\right]
+\]
+\end{espr}
+\begin{espr}{99}{Simp(Dif(\#90,x))}{}
+\[
+\frac{1}{1 - \operatorname{mod}\!\left(x\right)}
+\]
+\end{espr}
+\begin{espr}{100}{User}{\verificata}
+\begin{align*}
+& \frac{2}{\pi}\, \operatorname{arcoth}\!\left(\tan\!\left(-\pi\, \left(x + \frac{1}{2}\right)\right)\right) \\
+=\;& \frac{-2\, \mathrm{i}\, \operatorname{arccot}\!\left(-\mathrm{i}\, \cot\!\left(\pi\, x\right)\right)}{\pi}
+\end{align*}
+\end{espr}
+\begin{espr}{101}{User}{}
+\[
+\operatorname{Re}\!\left(\frac{-2\, \mathrm{i}\, \operatorname{arccot}\!\left(-\mathrm{i}\, \cot\!\left(\pi\, x\right)\right)}{\pi}\right)
+\]
+\end{espr}
+\begin{espr}{102}{User}{\verificata}
+\begin{align*}
+& -\frac{\ln\!\left(\frac{1 - 2\, \sin\!\left(\pi\, x\right)\, \cos\!\left(\pi\, x\right)}{2\, \sin\!\left(\pi\, x\right)\, \cos\!\left(\pi\, x\right) + 1}\right)}{2\, \pi} \\
+=\;& -\frac{\ln\!\left(\frac{1 - \sin\!\left(2\, \pi\, x\right)}{1 + \sin\!\left(2\, \pi\, x\right)}\right)}{2\, \pi}
+\end{align*}
+\end{espr}
+\begin{espr}{103}{User}{}
+\[
+-\operatorname{Im}\!\left(\frac{-2\, \mathrm{i}\, \operatorname{arccot}\!\left(-\mathrm{i}\, \cot\!\left(\pi\, x\right)\right)}{\pi}\right)
+\]
+\end{espr}
+\begin{espr}{104}{User}{}
+\begin{align*}
+& -\frac{\operatorname{sgn}\!\left(\sin\!\left(\pi\, x\right)\, \left(\cos\!\left(\pi\, x\right) + \sin\!\left(\pi\, x\right)\right)\right)}{2} - \frac{\operatorname{sgn}\!\left(\sin\!\left(\pi\, x\right)\, \left(\cos\!\left(\pi\, x\right) - \sin\!\left(\pi\, x\right)\right)\right)}{2} \\
+&\qquad + 1
+\end{align*}
+\end{espr}
+\begin{espr}{105}{User}{\verificata}
+\begin{align*}
+& \frac{+\sin\!\left(\pi\, x\right)\, \left(\sin\!\left(\pi\, x\right) + \cos\!\left(\pi\, x\right)\right)}{2} + \frac{\sin\!\left(\pi\, x\right)\, \left(\sin\!\left(\pi\, x\right) - \cos\!\left(\pi\, x\right)\right)}{2} \\
+&\qquad - \frac{1}{2} \\
+=\;& \sin^{2}\!\left(\pi\, x\right) - \frac{1}{2}
+\end{align*}
+\end{espr}
+\begin{espr}{106}{User}{\verificata}
+\begin{align*}
+& +\sin\!\left(\pi\, x\right)\, \left(\sin\!\left(\pi\, x\right) + \cos\!\left(\pi\, x\right)\right) + \sin\!\left(\pi\, x\right)\, \left(\sin\!\left(\pi\, x\right) - \cos\!\left(\pi\, x\right)\right) \\
+&\qquad - 1 \\
+=\;& 2\, \sin^{2}\!\left(\pi\, x\right) - 1 \\
+=\;& -\cos\!\left(2\, \pi\, x\right)
+\end{align*}
+\end{espr}
+\begin{espr}{107}{User}{}
+\[
+\sinh\!\left(x\right) = \sin\!\left(k\, x\right)
+\]
+\end{espr}
+\begin{espr}{108}{User}{}
+\[
+k = \frac{\arcsin\!\left(\frac{\mathrm{e}^{x}}{2} - \frac{\mathrm{e}^{-x}}{2}\right)}{x}
+\]
+\end{espr}
+\begin{espr}{109}{User}{}
+\[
+\cosh\!\left(x\right) = \cos\!\left(k\, x\right)
+\]
+\end{espr}
+\begin{espr}{110}{Simp(Solve(\#109,k))}{}
+\begin{align*}
+& k = \frac{2\, \pi}{x} + \mathrm{i}\, \left(1 - \frac{\ln\!\left(\frac{\left|\mathrm{e}^{2\, x} - 1\right|}{2} + \frac{\mathrm{e}^{2\, x}}{2} + \frac{1}{2}\right)}{x}\right) \\[3pt]
+\lor\quad & k = \mathrm{i}\, \left(1 - \frac{\ln\!\left(\frac{\left|\mathrm{e}^{2\, x} - 1\right|}{2} + \frac{\mathrm{e}^{2\, x}}{2} + \frac{1}{2}\right)}{x}\right) \\[3pt]
+\lor\quad & k = \mathrm{i}\, \left(\frac{\ln\!\left(\frac{\left|\mathrm{e}^{2\, x} - 1\right|}{2} + \frac{\mathrm{e}^{2\, x}}{2} + \frac{1}{2}\right)}{x} - 1\right)
+\end{align*}
+\end{espr}
+\begin{espr}{111}{User}{}
+\[
+\tanh\!\left(x\right) = \tan\!\left(k\, x\right)
+\]
+\end{espr}
+\begin{espr}{112}{Simp(Solve(\#111,k))}{}
+\begin{align*}
+& k = \frac{\arctan\!\left(\frac{\mathrm{e}^{2\, x} - 1}{\mathrm{e}^{2\, x} + 1}\right)}{x} - \frac{\pi}{x} \\[3pt]
+\lor\quad & k = \frac{\arctan\!\left(\frac{\mathrm{e}^{2\, x} - 1}{\mathrm{e}^{2\, x} + 1}\right)}{x} + \frac{\pi}{x} \\[3pt]
+\lor\quad & k = \frac{\arctan\!\left(\frac{\mathrm{e}^{2\, x} - 1}{\mathrm{e}^{2\, x} + 1}\right)}{x}
+\end{align*}
+\end{espr}
+\begin{espr}{113}{User}{}
+\[
+\frac{\arctan\!\left(\frac{\mathrm{e}^{2\, x} - 1}{\mathrm{e}^{2\, x} + 1}\right)}{x}
+\]
+\end{espr}
+\begin{espr}{114}{User}{}
+\[
+\operatorname{arcsinh}\!\left(x\right) = \arcsin\!\left(k\, x\right)
+\]
+\end{espr}
+\begin{espr}{115}{Simp(Solve(\#114,k))}{}
+\begin{align*}
+& k \\
+=\;& \begin{cases} \frac{\sin\!\left(\ln\!\left(\sqrt{x^{2} + 1} + x\right)\right)}{x} & \text{se } -\frac{\pi}{2} < \ln\!\left(\sqrt{x^{2} + 1} + x\right) < \frac{\pi}{2} \end{cases}
+\end{align*}
+\end{espr}
+\begin{espr}{116}{User}{}
+\[
+\frac{\sin\!\left(\ln\!\left(\sqrt{x^{2} + 1} + x\right)\right)}{x}
+\]
+\end{espr}
+\begin{espr}{117}{User}{}
+\[
+\operatorname{artanh}\!\left(x\right) = \arctan\!\left(k\, x\right)
+\]
+\end{espr}
+\begin{espr}{118}{Simp(Solve(\#117,k))}{}
+\begin{align*}
+& k \\
+=\;& \begin{cases} -\frac{\tan\!\left(\mathrm{i}\, \arctan\!\left(\mathrm{i}\, x\right)\right)}{x} & \text{se } -2\, \pi < \ln\!\left(\frac{\left(x - 1\right)^{2}}{\left(x + 1\right)^{2}}\right) < 2\, \pi \end{cases}
+\end{align*}
+\end{espr}
+\begin{espr}{119}{User}{}
+\[
+\ln\!\left(\frac{\left(x - 1\right)^{2}}{\left(x + 1\right)^{2}}\right)
+\]
+\end{espr}
+\begin{espr}{120}{User}{}
+\[
+\arcsin\!\left(z\right) + \mathrm{i}\, \arccos\!\left(z\right) = x + \mathrm{i}\, y
+\]
+\end{espr}
+\begin{espr}{121}{User}{}
+\[
+z + \sin\!\left(\mathrm{i}\, \arccos\!\left(z\right)\right) = \sin\!\left(x + \mathrm{i}\, y\right)
+\]
+\end{espr}
+\begin{espr}{122}{User}{}
+\[
+\cos\!\left(\arcsin\!\left(z\right)\right) + \cos\!\left(\mathrm{i}\, \arccos\!\left(z\right)\right) = \cos\!\left(x + \mathrm{i}\, y\right)
+\]
+\end{espr}
+\begin{espr}{123}{User}{\verificata}
+\[
+\cos\!\left(\mathrm{i}\, \arccos\!\left(z\right)\right) = \cosh\!\left(-\arccos\!\left(z\right)\right)
+\]
+\end{espr}
+\begin{espr}{124}{User}{\verificata}
+\[
+\sin\!\left(\mathrm{i}\, \arccos\!\left(z\right)\right) = \frac{1}{\mathrm{i}}\, \sinh\!\left(-\arccos\!\left(z\right)\right)
+\]
+\end{espr}
+\begin{espr}{125}{User}{}
+\[
+\mathrm{e}^{x} + \mathrm{i}\, \mathrm{e}^{y}
+\]
+\end{espr}
+\begin{espr}{126}{Sub(User)}{}
+\[
+\pi\, \mathrm{e}^{\mathrm{i}\, \left(x + \mathrm{i}\, y\right)} + \mathrm{i}\, \mathrm{e}^{\pi\, \left(x + \mathrm{i}\, y\right)}
+\]
+\end{espr}
+\begin{espr}{127}{User}{\verificata}
+\begin{align*}
+& \pi\, \mathrm{e}^{-y + \frac{\mathrm{i}\, \left(2\, x + \pi\right)}{2}} + \pi\, \mathrm{e}^{\pi\, x}\, \left(-1\right)^{\frac{2\, y + 1}{2}} \\
+=\;& -\mathrm{i}\, \left(-\pi\, \mathrm{e}^{-y + \mathrm{i}\, x} - \pi\, \mathrm{e}^{\pi\, x}\, \left(-1\right)^{y}\right)
+\end{align*}
+\end{espr}
+\section*{In sintesi}
+\addcontentsline{toc}{section}{In sintesi}
+
+Il confronto fra le due versioni dice qualcosa sul modo di lavorare che questi file documentano. Fra febbraio e agosto il quaderno ha perso l'identità generale a due pesi e l'approssimazione $\ln\cosh x\approx|x|$, e ha guadagnato la costruzione esatta del gradino, la versione iperbolica dell'identità di apertura e le onde quadre ottenute per composizione. Il bilancio è netto: meno generalità dichiarata, più identità verificate.
+

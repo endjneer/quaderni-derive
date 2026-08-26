@@ -1,0 +1,25 @@
+{
+  "file": "numeri primi.dfw",
+  "titolo": "Una somma sola",
+  "intro": "Agosto 2010, lo stesso giorno di \\dfw{pigreco.dfw}. Il file contiene una sola espressione, lunga 573 caratteri: la somma dei reciproci dei primi diciannove primoriali, scritta per esteso, con tutti i denominatori sviluppati come prodotti di numeri primi.\n\nÈ anche il file che, durante il recupero, per un po' è sembrato vuoto. Il formato \\dfw{.dfw} memorizza la lunghezza del testo in un byte, e un byte arriva a 254: le espressioni più lunghe usano una codifica estesa che il primo estrattore non riconosceva. Vedere \\dfw{numeri primi.dfw} passare da zero a una espressione è stato il segnale che quella codifica esisteva.",
+  "blocchi": [
+    {
+      "titolo": "La somma",
+      "testo": "",
+      "da": 1,
+      "a": 1,
+      "coda": "Il primoriale di $p$ è il prodotto di tutti i primi minori o uguali a $p$: $2$, poi $6$, poi $30$, $210$, $2310$, e così via. La somma dei loro reciproci converge molto rapidamente, perché ogni denominatore è almeno il doppio del precedente. I diciannove termini scritti nel quaderno — fino al primoriale di $67$, che ha venticinque cifre — danno\n\\[\n  \\sum_{n\\ge1}\\frac{1}{p_n\\#}=0{,}70523017179180096\\ldots\n\\]\ne le cifre riportate sono già tutte quelle che i diciannove termini determinano: il ventesimo termine è dell'ordine di $10^{-27}$.\n\nIl numero non ha una forma chiusa nota. È irrazionale — lo si dimostra con lo stesso argomento che vale per $\\mathrm{e}$, perché la coda della serie dopo il termine $n$-esimo è più piccola del termine stesso — ma non se ne conosce altro. Il quaderno non aggiunge commenti, e in questo caso è comprensibile: era il posto dove annotare il valore, non dove studiarlo.\n\nVale la pena osservare come è scritta l'espressione. I denominatori non sono $2$, $6$, $30$, $210$: sono $2$, $2\\cdot3$, $2\\cdot3\\cdot5$, $2\\cdot3\\cdot5\\cdot7$. La struttura del primoriale è lasciata visibile, e la somma si legge come un elenco di primi che si allunga di uno a ogni riga."
+    }
+  ],
+  "note": {
+    "1": "Diciannove termini, dal reciproco di $2$ al reciproco del primoriale di $67$. Ogni denominatore è il precedente moltiplicato per il primo successivo."
+  },
+  "figure": [
+    {
+      "file": "primoriale",
+      "dopo": 1,
+      "didascalia": "Distanza fra le somme parziali e il valore finale, in scala logaritmica. La convergenza è più che geometrica: ogni termine aggiunge almeno una cifra corretta, e negli ultimi passi molte di più."
+    }
+  ],
+  "chiusura": ""
+}

@@ -1,0 +1,48 @@
+{
+  "file": "fx^gx.dfw",
+  "titolo": "Una costante travestita",
+  "intro": "Novembre 2010. Dieci righe che costruiscono, per una via indiretta, una funzione che sembra dipendere da $x$ e invece non ne dipende affatto: vale $1/\\mathrm{e}$ ovunque. Il percorso passa per un integrale, ed è il percorso a essere interessante, perché il risultato finale si verifica in una riga una volta che lo si ha davanti.",
+  "blocchi": [
+    {
+      "titolo": "L'integrale che genera tutto",
+      "testo": "Le prime righe presentano una funzione e ne calcolano la primitiva. È una sostituzione classica travestita.",
+      "da": 1,
+      "a": 4,
+      "coda": "Ponendo $w=\\ln\\dfrac{1}{\\sin x}$ si ha $\\mathrm{d}w=-\\cot x\\,\\mathrm{d}x=-\\dfrac{\\mathrm{d}x}{\\tan x}$, e l'integrale diventa $-\\displaystyle\\int\\frac{\\mathrm{d}w}{w}=-\\ln w$. Il risultato della riga $\\#4$ è esattamente questo: la primitiva è il logaritmo di un logaritmo, cambiato di segno."
+    },
+    {
+      "titolo": "Dall'esponenziale alla costante",
+      "testo": "Si prende l'esponenziale della primitiva e si osserva che cosa ne viene fuori.",
+      "da": 5,
+      "a": 8,
+      "coda": "L'esponenziale della riga $\\#4$ è il reciproco del logaritmo, riga $\\#6$. Quel reciproco viene poi usato come esponente della funzione da cui era nato, ed è qui che la funzione collassa. Posto $u=\\sin x$, l'esponente vale $\\dfrac{1}{\\ln(1/u)}=-\\dfrac{1}{\\ln u}$, e quindi\n\\[\n  u^{\\,-1/\\ln u}=\\exp\\!\\left(-\\frac{\\ln u}{\\ln u}\\right)=\\mathrm{e}^{-1}.\n\\]\nIl valore non dipende da $u$, e quindi non dipende da $x$: la riga $\\#7$ è la funzione costante $1/\\mathrm{e}$ scritta in modo da non sembrarlo. La riga $\\#8$ ripete la costruzione con il coseno e ottiene lo stesso risultato, come deve essere: il calcolo non ha mai usato nulla del seno se non che è positivo."
+    },
+    {
+      "titolo": "I due logaritmi",
+      "testo": "Le ultime due righe isolano gli argomenti che compaiono negli esponenti.",
+      "da": 9,
+      "a": 10,
+      "coda": "Sono $-\\ln\\cos x$ e $-\\ln\\sin x$, cioè le due quantità che nel testo delle righe precedenti comparivano nella forma $\\ln(1/\\cos x)$ e $\\ln(1/\\sin x)$. Entrambe sono positive dove le funzioni trigonometriche valgono meno di uno, che è il dominio in cui la costruzione ha senso."
+    }
+  ],
+  "note": {
+    "1": "Una funzione annotata di passaggio: il rapporto che compare nella stima della densità dei numeri primi.",
+    "2": "L'integranda vera: il reciproco del prodotto fra tangente e logaritmo del reciproco del seno.",
+    "3": "Se ne chiede la primitiva.",
+    "4": "Il risultato: logaritmo di logaritmo. La sostituzione $w=\\ln(1/\\sin x)$ riduce tutto a $\\int\\mathrm{d}w/w$.",
+    "5": "L'esponenziale della primitiva.",
+    "6": "Che si semplifica nel reciproco del logaritmo.",
+    "7": "Il seno elevato a quel reciproco. L'espressione vale $1/\\mathrm{e}$ per ogni $x$ nel dominio.",
+    "8": "La stessa costruzione con il coseno: identico risultato, perché il calcolo non usa nulla di specifico del seno.",
+    "9": "Il logaritmo del reciproco del coseno, scritto con il segno esplicito.",
+    "10": "E quello del seno."
+  },
+  "figure": [
+    {
+      "file": "fxgx",
+      "dopo": 8,
+      "didascalia": "La funzione della riga $\\#7$ tracciata su tutto il suo dominio: è la retta orizzontale $1/\\mathrm{e}$. Ai due estremi il calcolo numerico si degrada, perché numeratore e denominatore dell'esponente tendono entrambi all'infinito."
+    }
+  ],
+  "chiusura": "Il meccanismo generale è che $u^{1/\\ln u}=\\mathrm{e}$ per ogni $u>0$ diverso da uno, e non c'è modo di accorgersene guardando la formula finale senza averla svolta. Il quaderno ci arriva partendo da un integrale, il che è il percorso più lungo possibile — ma è anche quello che spiega perché la costruzione fosse venuta in mente."
+}

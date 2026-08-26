@@ -1,0 +1,65 @@
+{
+  "file": "sin-cos.dfw",
+  "titolo": "Le funzioni iperboliche di $\\pi$ ed $\\mathrm{e}$",
+  "intro": "Gennaio 2010. Venti espressioni che costruiscono, pezzo per pezzo, un sistema completo di funzioni iperboliche e circolari a partire da due sole basi: $\\mathrm{e}^{\\pi x}$ e $\\pi^{\\mathrm{e}x}$. È il quaderno tecnicamente più compatto della raccolta, perché tutto quello che contiene discende da una sola osservazione, che però non è mai scritta esplicitamente.",
+  "blocchi": [
+    {
+      "titolo": "Il sistema iperbolico",
+      "testo": "L'osservazione da cui dipende tutto è questa: $\\dfrac{\\mathrm{e}^{\\pi x}}{\\pi^{\\mathrm{e}x}}=\\mathrm{e}^{\\pi x-\\mathrm{e}x\\ln\\pi}=\\mathrm{e}^{kx}$, dove $k=\\pi-\\mathrm{e}\\ln\\pi$. Il rapporto fra le due potenze è dunque un semplice esponenziale, e la costante $k$ ne è la pulsazione. Da qui le prime quattro espressioni si leggono a colpo d'occhio.",
+      "da": 1,
+      "a": 4,
+      "coda": "Sono, nell'ordine, $\\cosh(kx)$, $\\sinh(kx)$, $\\tanh(kx)$ e $\\coth(kx)$. Le definizioni sono quelle canoniche — semisomma, semidifferenza, loro rapporto — solo scritte con basi inconsuete."
+    },
+    {
+      "titolo": "Le derivate",
+      "testo": "Le quattro espressioni successive sono le derivate delle precedenti, e confermano che il sistema è coerente: la costante $k$ compare come fattore, esattamente come ci si aspetta derivando una funzione di $kx$.",
+      "da": 5,
+      "a": 8,
+      "coda": "In particolare $\\#7$, che sembra un'espressione complicata, è $k\\,\\mathrm{sech}^2(kx)$: dividendo numeratore e denominatore per $\\pi^{4\\mathrm{e}x}$ resta $4k\\,\\mathrm{e}^{2kx}/\\left(\\mathrm{e}^{2kx}+1\\right)^2$, che è la derivata della tangente iperbolica. L'espressione $\\#8$ è invece $-k\\,\\mathrm{csch}^2(kx)$, la derivata della cotangente iperbolica."
+    },
+    {
+      "titolo": "Il passaggio al caso circolare",
+      "testo": "Sostituendo $x$ con $\\mathrm{i}x$ le funzioni iperboliche diventano circolari. Le sei espressioni che seguono lo verificano e ne traggono la formula di addizione.",
+      "da": 9,
+      "a": 14,
+      "coda": "La riga $\\#9$ contiene la formula di sottrazione del coseno: $\\cos(\\pi x)\\cos(\\mathrm{e}x\\ln\\pi)+\\sin(\\pi x)\\sin(\\mathrm{e}x\\ln\\pi)=\\cos\\!\\big((\\pi-\\mathrm{e}\\ln\\pi)x\\big)$. Le due frequenze $\\pi$ ed $\\mathrm{e}\\ln\\pi$ sono quasi uguali, e la loro differenza è la piccolissima $k$: è il fenomeno del battimento, due oscillazioni rapide e vicine che si combinano in una lentissima. Le righe $\\#11$ e $\\#12$ ricompongono l'esponenziale complesso, e le ultime due danno le combinazioni $\\cos\\mp\\sin$."
+    },
+    {
+      "titolo": "Quanto vale $k$",
+      "testo": "L'ultima sezione mette i numeri. Sono sei righe, e insieme dicono una cosa sola con precisione notevole.",
+      "da": 15,
+      "a": 20,
+      "coda": "Ecco il conto. La costante vale $k=\\pi-\\mathrm{e}\\ln\\pi=0{,}02989420\\ldots$, un numero molto piccolo. La riga $\\#16$ calcola $\\sinh k=0{,}02989865\\ldots$ e la riga $\\#19$ calcola $\\cosh k=1{,}000446865$. Per $k$ così piccolo si ha $\\sinh k\\approx k$ e $\\cosh k\\approx 1$, e le due righe lo confermano.\n\nMa il quaderno non si accontenta e chiede di quanto esattamente $\\sinh k$ superi $k$: è la riga $\\#20$, che dà $4{,}4527\\cdot10^{-6}$. Questo numero è $k^3/6$, cioè il primo termine trascurato nello sviluppo $\\sinh k=k+\\tfrac{k^3}{3!}+\\cdots$ — e infatti $0{,}0298942^3/6=4{,}4528\\cdot10^{-6}$. Le sei righe finali sono, in sostanza, una verifica numerica dello sviluppo in serie del seno iperbolico, condotta su un argomento scelto in modo che il primo termine correttivo fosse misurabile.\n\nLa riga $\\#18$ chiude con eleganza: risolvendo $\\sinh(kx)=k$ si trova $x=\\operatorname{arcsinh}(k)/k=0{,}9998511$. Il valore $x=1$ non è soluzione proprio perché $\\sinh k\\neq k$, e lo scarto dall'unità, un centocinquantamillesimo, è la misura di quella differenza."
+    }
+  ],
+  "note": {
+    "1": "La semisomma del rapporto e del suo reciproco: è $\\cosh(kx)$ con $k=\\pi-\\mathrm{e}\\ln\\pi$.",
+    "2": "La semidifferenza: $\\sinh(kx)$.",
+    "3": "Il loro rapporto, cioè $\\tanh(kx)$. Gli esponenti raddoppiati vengono dal prodotto delle due espressioni precedenti.",
+    "4": "Il reciproco: $\\coth(kx)$.",
+    "5": "$k\\sinh(kx)$: la derivata del coseno iperbolico.",
+    "6": "$k\\cosh(kx)$: la derivata del seno iperbolico.",
+    "7": "$k\\,\\mathrm{sech}^2(kx)$: la derivata della tangente iperbolica.",
+    "8": "$-k\\,\\mathrm{csch}^2(kx)$: la derivata della cotangente iperbolica. Il fattore $(\\mathrm{e}\\ln\\pi-\\pi)$ è $-k$.",
+    "9": "Sostituendo $x\\to\\mathrm{i}x$ il coseno iperbolico diventa circolare, e la scrittura esplicita è la formula di sottrazione del coseno.",
+    "10": "Analogamente per il seno: il fattore $\\mathrm{i}$ segnala che $\\sinh(\\mathrm{i}\\theta)=\\mathrm{i}\\sin\\theta$.",
+    "11": "La somma delle due ricompone l'esponenziale complesso di pulsazione $k$.",
+    "12": "La differenza dà l'esponenziale coniugato.",
+    "13": "Una combinazione con il fattore $\\mathrm{i}$: il risultato è $\\cos-\\sin$.",
+    "14": "L'altra combinazione: $\\cos+\\sin$.",
+    "15": "Il valore numerico della costante: circa tre centesimi.",
+    "16": "Il seno iperbolico di $k$, calcolato dalla definizione. Notare che $\\pi^{-\\mathrm{e}}\\mathrm{e}^{\\pi}=\\mathrm{e}^{k}$.",
+    "17": "L'equazione $\\sinh(kx)=k$: si chiede per quale $x$ il seno iperbolico restituisca l'argomento.",
+    "18": "La soluzione è $\\operatorname{arcsinh}(k)/k$, cioè $0{,}99985$: non uno, e la distanza da uno misura la non linearità del seno iperbolico.",
+    "19": "Il coseno iperbolico di $k$: eccede l'unità di circa $k^2/2=4{,}47\\cdot10^{-4}$.",
+    "20": "Lo scarto $\\sinh k-k$, che vale $k^3/6$. È il termine di terzo grado dello sviluppo in serie, isolato numericamente."
+  },
+  "figure": [
+    {
+      "file": "sincos_pi_e",
+      "dopo": 20,
+      "didascalia": "Le funzioni $\\cosh(kx)$ e $\\sinh(kx)$ costruite nel quaderno. La pulsazione $k=\\pi-\\mathrm{e}\\ln\\pi$ è così piccola che occorre arrivare a $|x|\\approx 30$ per vederle crescere."
+    }
+  ],
+  "chiusura": "Il quaderno è costruito su una sola identità elementare — il rapporto fra $\\mathrm{e}^{\\pi x}$ e $\\pi^{\\mathrm{e}x}$ è $\\mathrm{e}^{kx}$ — e su una sola osservazione numerica: quel $k$ è molto piccolo. Da lì discendono un sistema iperbolico completo con le sue derivate, il corrispondente sistema circolare, e una misura sperimentale del terzo termine dello sviluppo del seno iperbolico. Il numero $\\sinh k=0{,}0298986\\ldots$ che compare alla riga $\\#16$ ricomparirà, sette mesi dopo, alla riga $\\#69$ di \\dfw{e.dfw} (capitolo~\\ref{cap:e}), calcolato per un'altra strada e senza che il legame venga notato."
+}

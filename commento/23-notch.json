@@ -1,0 +1,71 @@
+{
+  "file": "notch.dfw",
+  "titolo": "Un filtro elimina-banda",
+  "intro": "Gennaio 2010. È l'unico quaderno della raccolta che non fa matematica per sé stessa: qui si progetta un circuito. Il nome del file lo dice — un \\emph{notch} è un filtro elimina-banda, quello che sopprime una frequenza precisa lasciando passare tutto il resto, e che si usa per esempio per togliere il ronzio di rete da un segnale.\n\nUna nota di lettura. Le grandezze con pedice — la pulsazione di antirisonanza $\\omega_n$, quella di taglio $\\omega_0$ — nel file sono scritte \\der{w*n} e \\der{w*0}, cioè come prodotti. Derive non aveva i pedici nella riga di comando, e chi scriveva ha usato la moltiplicazione come surrogato tipografico. Le formule vanno lette tenendone conto.",
+  "blocchi": [
+    {
+      "titolo": "Il blocco risonante",
+      "testo": "Si parte dall'impedenza del parallelo fra induttore e condensatore, scritta nel dominio della variabile complessa $s$.",
+      "da": 1,
+      "a": 4,
+      "coda": "L'impedenza del parallelo $LC$ è $\\dfrac{sL\\cdot\\frac{1}{sC}}{sL+\\frac{1}{sC}}=\\dfrac{sL}{1+s^2LC}$: diverge quando $1+s^2LC=0$, cioè per $s=\\pm\\mathrm{i}/\\sqrt{LC}$. Alla pulsazione $\\omega_n=1/\\sqrt{LC}$ il blocco si comporta come un circuito aperto e non lascia passare nulla: è questo che produce il notch.\n\nLa riga $\\#4$ è la funzione di trasferimento completa del partitore, fattorizzata da Derive. Il numeratore contiene $\\left(1+s^2LC\\right)$, che si annulla esattamente alla pulsazione di antirisonanza: lo zero della trasferenza è il notch."
+    },
+    {
+      "titolo": "Le varianti del carico",
+      "testo": "Le righe seguenti calcolano la stessa trasferenza per diverse configurazioni del ramo di uscita: il solo resistore, il resistore in serie a un condensatore, il resistore in parallelo a un induttore.",
+      "da": 5,
+      "a": 10,
+      "coda": "Tutte le varianti condividono il fattore $\\left(1+s^2LC\\right)$ al numeratore — il notch non dipende dal carico — e differiscono soltanto nel denominatore, cioè nella posizione dei poli. È la separazione corretta del problema: gli zeri li mette la trappola $LC$, i poli il resto della rete."
+    },
+    {
+      "titolo": "I casi limite",
+      "testo": "Quattro righe che verificano il comportamento agli estremi, mandando all'infinito o a zero i due componenti aggiuntivi.",
+      "da": 11,
+      "a": 14,
+      "coda": "Sono i controlli che si fanno sempre su una formula di rete: se un componente sparisce, la trasferenza deve ridursi a quella della rete più semplice. Entrambi i limiti tornano, e il fattore $\\left(1+s^2LC\\right)$ sopravvive in tutti e quattro i casi."
+    },
+    {
+      "titolo": "La forma canonica",
+      "testo": "Le ultime righe riscrivono la trasferenza nella forma standard del secondo ordine, quella in cui i parametri hanno un significato immediato.",
+      "da": 15,
+      "a": 20,
+      "coda": "La forma è\n\\[\n  H(s)=a\\;\\frac{s^2+\\omega_n^2}{s^2+\\dfrac{\\omega_0}{Q}\\,s+\\omega_0^2},\n\\]\ne le ultime quattro righe ne identificano i parametri:\n\\begin{itemize}[leftmargin=1.4em,itemsep=1pt]\n  \\item il guadagno in alta frequenza $a=\\dfrac{C}{C+G}$, cioè il partitore capacitivo puro;\n  \\item la pulsazione del notch $\\omega_n=\\dfrac{1}{\\sqrt{LC}}$, dove la trasferenza si annulla;\n  \\item la pulsazione dei poli $\\omega_0=\\dfrac{1}{\\sqrt{\\frac{LF}{L+F}\\,(C+G)}}$, che coinvolge il parallelo delle due induttanze e la somma delle due capacità;\n  \\item il fattore di merito $Q=R(C+G)\\,\\omega_0$, che governa quanto stretta sia la banda soppressa.\n\\end{itemize}\nÈ la forma in cui un filtro si progetta davvero: si sceglie $\\omega_n$ in base alla frequenza da eliminare, e poi $Q$ in base a quanto stretta debba essere la tacca."
+    }
+  ],
+  "note": {
+    "1": "L'impedenza del parallelo fra induttore e condensatore: diverge all'antirisonanza.",
+    "2": "La stessa struttura con i componenti del ramo di uscita.",
+    "3": "Il partitore completo: impedenza di uscita diviso impedenza totale.",
+    "4": "Fattorizzato. Il numeratore contiene $1+s^2LC$: è lo zero che produce il notch.",
+    "5": "La variante con il solo resistore di carico.",
+    "6": "Semplificata. Denominatore di secondo grado, come atteso.",
+    "7": "La variante con il resistore in parallelo al condensatore aggiuntivo.",
+    "8": "Fattorizzata: al denominatore compare la somma $C+G$.",
+    "9": "La variante con l'induttore aggiuntivo in parallelo al resistore.",
+    "10": "Fattorizzata: qui compare la somma $F+L$.",
+    "11": "Il limite per induttanza aggiuntiva infinita, cioè circuito aperto.",
+    "12": "Il risultato coincide con la variante $\\#8$: il controllo torna.",
+    "13": "Il limite per capacità aggiuntiva nulla.",
+    "14": "Il risultato coincide con la variante $\\#10$.",
+    "15": "La forma canonica del secondo ordine, con il fattore di guadagno esplicito.",
+    "16": "Una variante della stessa scrittura, senza il fattore $R$ nel termine costante.",
+    "17": "Il guadagno: partitore fra le due capacità.",
+    "18": "La pulsazione del notch, determinata dalla sola trappola $LC$.",
+    "19": "La pulsazione dei poli: coinvolge il parallelo delle induttanze e la somma delle capacità.",
+    "20": "Il fattore di merito, che fissa la larghezza della tacca."
+  },
+  "figure": [
+    {
+      "file": "notch_circuito",
+      "tikz": true,
+      "dopo": 4,
+      "didascalia": "Lo schema studiato nel quaderno. La serie risonante $LC$ in alto presenta impedenza infinita alla pulsazione $\\omega_n$ e produce lo zero della trasferenza; il ramo di uscita determina i poli."
+    },
+    {
+      "file": "notch_bode",
+      "dopo": 20,
+      "didascalia": "Modulo della trasferenza della riga $\\#4$ per tre valori della capacità aggiuntiva $G$. La tacca è alla pulsazione $\\omega_n=1/\\sqrt{LC}$ e non si sposta al variare del carico, mentre la profondità e la larghezza dipendono dai poli."
+    }
+  ],
+  "chiusura": "Venti righe che portano un circuito dalla topologia alla forma canonica, con i controlli ai casi limite fatti per bene. È il quaderno meno speculativo della raccolta e l'unico che risponde a una domanda pratica; il fatto che stia nella stessa cartella insieme alle delta complesse e ai fattoriali semi-interi dice qualcosa su come venissero usati questi file."
+}

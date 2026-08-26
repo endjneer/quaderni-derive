@@ -1,0 +1,25 @@
+{
+  "file": "limit.dfw",
+  "titolo": "Una riga sola",
+  "intro": "Dicembre 2009. Il quaderno più breve della raccolta contiene una sola espressione, e non è un calcolo: è una maggiorazione. Merita un capitolo proprio perché mostra bene che cosa fossero questi file — non solo un blocco per appunti di calcolo, ma anche un posto dove fissare una disuguaglianza che era servita e che si voleva ritrovare.",
+  "blocchi": [
+    {
+      "titolo": "La disuguaglianza",
+      "testo": "",
+      "da": 1,
+      "a": 1,
+      "coda": "La disuguaglianza è vera per ogni $x$ reale e si dimostra in una riga con la media aritmetico-geometrica. Da $\\left(|x|-\\tfrac{1}{\\sqrt2}\\right)^2\\geq 0$ segue $x^2+\\tfrac12\\geq \\sqrt2\\,|x|$, e moltiplicando per $\\tfrac{\\sqrt2}{2}$ si ottiene esattamente il secondo membro. L'uguaglianza vale nei due punti $x=\\pm 1/\\sqrt2$, dove la parabola è tangente alle due semirette che compongono $|x|$.\n\nIl motivo per cui una maggiorazione di questo tipo è utile si legge nella costante: $\\sqrt2/2$ è il valore più piccolo possibile. Qualunque disuguaglianza della forma $|x|\\leq c\\left(\\tfrac12+x^2\\right)$ valida su tutto $\\mathbb{R}$ richiede $c\\geq\\sqrt2/2$, perché il rapporto $|x|/(\\tfrac12+x^2)$ ha massimo $\\sqrt2/2$ proprio in $x=\\pm1/\\sqrt2$. La costante non è scelta per comodità: è ottima."
+    }
+  ],
+  "note": {
+    "1": "A sinistra una funzione non derivabile nell'origine, a destra una parabola. La parabola sta sempre sopra e la tocca in due punti simmetrici."
+  },
+  "figure": [
+    {
+      "file": "limit_disug",
+      "dopo": 1,
+      "didascalia": "La parabola $\\tfrac{\\sqrt2}{2}\\left(\\tfrac12+x^2\\right)$ domina $|x|$ su tutta la retta e la tocca nei due punti $x=\\pm1/\\sqrt2$. La costante $\\sqrt2/2$ è la più piccola per cui questo accade."
+    }
+  ],
+  "chiusura": ""
+}
