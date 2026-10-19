@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I quaderni Derive, 2009–2011</title>
+<meta name="description" content="Sette temi da un taccuino di matematica sperimentale con Derive, ricondotti alla matematica nota: la tangente del semiangolo, 6!·7! = 10!, Helmholtz, Hilbert, Maslov, una successione per e, una delta complessa.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="I quaderni Derive, 2009–2011">
+<meta property="og:description" content="Osservazioni da un taccuino di calcolo simbolico: una nota per temi, con dimostrazioni e contesto, e l'edizione integrale delle 792 espressioni recuperate.">
+<meta property="og:url" content="https://endjneer.github.io/quaderni-derive/">
+<link rel="alternate" hreflang="en" href="https://endjneer.github.io/quaderni-derive/en/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e79'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-style='italic' text-anchor='middle' fill='white'%3Ee%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="stile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+</head>
+<body>
+
+<header class="testata">
+  <a class="lingua" href="en/" hreflang="en">English</a>
+  <p class="sopratitolo">Quaderni di calcolo simbolico · 2009–2011</p>
+  <h1>I quaderni Derive</h1>
+  <p class="sottotitolo">Osservazioni da un taccuino di calcolo simbolico</p>
+  <p class="autore">Francesco Messina · ottobre 2026</p>
+</header>
+
+<main>
+
+<div class="download">
+  <a class="pulsante primo" href="https://github.com/endjneer/quaderni-derive/releases/latest/download/quaderni-derive-nota.pdf">
+    <strong>Leggi la nota</strong><span>PDF, in italiano</span></a>
+  <a class="pulsante" href="https://github.com/endjneer/quaderni-derive/releases/latest/download/derive-notebooks-note.pdf">
+    <strong>Read the note</strong><span>PDF, in inglese</span></a>
+  <a class="pulsante" href="https://github.com/endjneer/quaderni-derive/releases/latest/download/quaderni-derive-edizione-integrale.pdf">
+    <strong>Edizione integrale</strong><span>PDF: ogni espressione, commentata</span></a>
+</div>
+
+<p>Fra il 2009 e il 2011 l'autore ha usato il sistema di calcolo simbolico
+Derive come taccuino per esperimenti di matematica: ventitré file, 792
+espressioni. Il programma non è più in uso, e i file sono stati recuperati
+decodificandone il formato binario.</p>
+
+<p>La nota non presenta teoremi nuovi. Raccoglie sette temi in cui gli
+esperimenti toccano matematica nota, e per ciascuno dice che cosa il quaderno
+ha visto, che cosa è vero, che cosa è già noto e che cosa resta aperto. Ogni
+valore numerico citato è verificato da uno script incluso nel
+repository.</p>
+
+<h2>Sette temi</h2>
+
+<ol class="temi">
+  <li>
+    <h3>L'esponenziale e la tangente del semiangolo</h3>
+    <p>Cinque quaderni contengono pezzi della stessa idea: scrivere
+    l'esponenziale come funzione razionale della tangente dell'angolo metà.
+    Seguita fino in fondo, porta alla frazione continua di Euler per
+    \(\mathrm{e}\), agli approssimanti di Padé e alla trasformazione bilineare
+    dei filtri numerici.</p>
+    <div class="formula">\[\begin{gathered}\mathrm{e}^{s}=\frac{1+\tanh(s/2)}{1-\tanh(s/2)}\\[4pt]
+    \frac{\mathrm{e}-1}{\mathrm{e}+1}=[0;\,2,6,10,14,\dots]\end{gathered}\]</div>
+  </li>
+  <li>
+    <h3>Una catena di fattoriali che si spezza</h3>
+    <p>\(1!\,3!\,5!\,7!=10!\), ma la catena si ferma lì: il suo ultimo passo è
+    \(6!\,7!=10!\), l'unica soluzione non banale conosciuta di
+    <span class="nb">\(a!\,b!=c!\).</span> La nota dimostra che la catena non si richiude più.</p>
+    <div class="formula">\[\begin{gathered}1!\,3!\,5!\cdots(2p+1)!=T_{p+1}!\\[2pt]
+    \iff p\le 3\qquad\bigl(T_m=\tfrac{m(m+1)}{2}\bigr)\end{gathered}\]</div>
+  </li>
+  <li>
+    <h3>La media e il punto medio</h3>
+    <p>Per ogni soluzione di \(f''=\mu^2 f\) il rapporto fra la media su un
+    intervallo e il valore nel suo centro dipende solo dall'ampiezza: è il
+    teorema della media per l'equazione di Helmholtz in una dimensione.</p>
+    <div class="formula">\[\frac{1}{2h}\int_{c-h}^{c+h}f(x)\,\mathrm{d}x
+    =f(c)\,\frac{\sinh\mu h}{\mu h}\]</div>
+  </li>
+  <li>
+    <h3>Il seno cardinale e il suo gemello</h3>
+    <p>La funzione \(((-1)^x-1)/(\pi x)\) è \(\mathrm{i}\) volte il segnale
+    analitico del seno cardinale: il suo “gemello” è la trasformata di
+    Hilbert, e a differenza del seno cardinale non è integrabile.</p>
+    <div class="formula">\[\frac{(-1)^x-1}{\pi x}
+    =\mathrm{i}\Bigl(\frac{\sin\pi x}{\pi x}+\mathrm{i}\,H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]\Bigr)\]</div>
+  </li>
+  <li>
+    <h3>Gradini fatti di logaritmi</h3>
+    <p>Il gradino di Heaviside costruito con logaritmi e valori assoluti è
+    esatto, ed è il caso limite della dequantizzazione di Maslov: la stessa
+    coppia che nelle reti neurali si chiama softplus e ReLU.</p>
+    <div class="formula">\[\ln\frac{|\mathrm{e}^x-1|+|\mathrm{e}^x+1|}{2}=\max(x,0)\]</div>
+  </li>
+  <li>
+    <h3>Due successioni per \(\mathrm{e}\)</h3>
+    <p>La successione dei quaderni non converge più in fretta di quella
+    classica: ha lo stesso errore, con il segno opposto. La loro media
+    sì.</p>
+    <div class="formula">\[\begin{aligned}&\tfrac12\Bigl[\bigl(1+\tfrac1n\bigr)^{n}+\bigl(1-\tfrac1n\bigr)^{-n}\Bigr]\\
+    &\qquad=\mathrm{e}\Bigl(1+\frac{11}{24n^2}+O(n^{-4})\Bigr)\end{aligned}\]</div>
+  </li>
+  <li>
+    <h3>Una delta di Dirac fuori dall'asse reale</h3>
+    <p>Valutata in un punto complesso, una famiglia che approssima la delta
+    dà una funzione ordinaria; ma il risultato dipende dalla famiglia
+    scelta. Una domanda aperta, non un risultato.</p>
+    <div class="formula">\[\lim_{n\to\infty}\delta_n(z)=\frac{z\,\operatorname{Im}z}{2\mathrm{i}\,|z|^3}\]</div>
+  </li>
+</ol>
+
+<h2>Il recupero</h2>
+
+<p>I file <span class="file">.dfw</span> di Derive non si aprono più con
+nessun programma attuale. Il <a href="https://github.com/endjneer/quaderni-derive">repository</a>
+contiene i file originali e il codice che ne decodifica il formato binario,
+traduce le espressioni in notazione matematica, le verifica numericamente e
+produce i PDF. Può servire a chiunque abbia ancora dei quaderni di Derive da
+aprire.</p>
+
+</main>
+
+<footer>
+  <p>Testo e figure: licenza CC BY 4.0 · Codice: licenza MIT ·
+  <a href="https://github.com/endjneer/quaderni-derive">Repository</a></p>
+  <p>Analisi e redazione con l'assistenza di Claude (Anthropic); ogni verifica numerica è riproducibile dal repository.</p>
+</footer>
+
+</body>
+</html>

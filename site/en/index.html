@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Derive Notebooks, 2009–2011</title>
+<meta name="description" content="Seven themes from a notebook of experimental mathematics with Derive, traced back to known mathematics: the half-angle tangent, 6!·7! = 10!, Helmholtz, Hilbert, Maslov, a sequence for e, a complex delta.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="The Derive Notebooks, 2009–2011">
+<meta property="og:description" content="Observations from a computer-algebra scratchpad: a thematic note with proofs and context, and the integral edition of the 792 recovered expressions.">
+<meta property="og:url" content="https://endjneer.github.io/quaderni-derive/en/">
+<link rel="alternate" hreflang="it" href="https://endjneer.github.io/quaderni-derive/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e79'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-style='italic' text-anchor='middle' fill='white'%3Ee%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../stile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters: [{left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+</head>
+<body>
+
+<header class="testata">
+  <a class="lingua" href="../" hreflang="it">Italiano</a>
+  <p class="sopratitolo">Computer-algebra notebooks · 2009–2011</p>
+  <h1>The Derive Notebooks</h1>
+  <p class="sottotitolo">Observations from a computer-algebra scratchpad</p>
+  <p class="autore">Francesco Messina · October 2026</p>
+</header>
+
+<main>
+
+<div class="download">
+  <a class="pulsante primo" href="https://github.com/endjneer/quaderni-derive/releases/latest/download/derive-notebooks-note.pdf">
+    <strong>Read the note</strong><span>PDF, in English</span></a>
+  <a class="pulsante" href="https://github.com/endjneer/quaderni-derive/releases/latest/download/quaderni-derive-nota.pdf">
+    <strong>Leggi la nota</strong><span>PDF, in Italian</span></a>
+  <a class="pulsante" href="https://github.com/endjneer/quaderni-derive/releases/latest/download/quaderni-derive-edizione-integrale.pdf">
+    <strong>Integral edition</strong><span>PDF, in Italian: every expression, with commentary</span></a>
+</div>
+
+<p>Between 2009 and 2011 the author used the computer-algebra system Derive as
+a notebook for mathematical experiments: twenty-three files, 792 expressions.
+The program is no longer in use, and the files were recovered by decoding
+their binary format.</p>
+
+<p>The note presents no new theorems. It collects seven themes in which the
+experiments touch known mathematics, and for each one it says what the
+notebook saw, what is true, what is already known and what remains open.
+Every numerical value quoted is checked by a script included in the
+repository.</p>
+
+<h2>Seven themes</h2>
+
+<ol class="temi">
+  <li>
+    <h3>The exponential and the half-angle tangent</h3>
+    <p>Five notebooks contain pieces of one idea: writing the exponential as a
+    rational function of the tangent of the half angle. Followed all the way,
+    it leads to Euler's continued fraction for \(\mathrm{e}\), to Padé
+    approximants and to the bilinear transformation of digital filters.</p>
+    <div class="formula">\[\begin{gathered}\mathrm{e}^{s}=\frac{1+\tanh(s/2)}{1-\tanh(s/2)}\\[4pt]
+    \frac{\mathrm{e}-1}{\mathrm{e}+1}=[0;\,2,6,10,14,\dots]\end{gathered}\]</div>
+  </li>
+  <li>
+    <h3>A chain of factorials that breaks</h3>
+    <p>\(1!\,3!\,5!\,7!=10!\), but the chain stops there: its last step is
+    \(6!\,7!=10!\), the only known nontrivial solution of <span class="nb">\(a!\,b!=c!\).</span> The
+    note proves that the chain never closes again.</p>
+    <div class="formula">\[\begin{gathered}1!\,3!\,5!\cdots(2p+1)!=T_{p+1}!\\[2pt]
+    \iff p\le 3\qquad\bigl(T_m=\tfrac{m(m+1)}{2}\bigr)\end{gathered}\]</div>
+  </li>
+  <li>
+    <h3>The mean and the midpoint</h3>
+    <p>For every solution of \(f''=\mu^2 f\) the ratio between the mean over an
+    interval and the value at its centre depends only on the width: this is
+    the mean value theorem for the Helmholtz equation in one dimension.</p>
+    <div class="formula">\[\frac{1}{2h}\int_{c-h}^{c+h}f(x)\,\mathrm{d}x
+    =f(c)\,\frac{\sinh\mu h}{\mu h}\]</div>
+  </li>
+  <li>
+    <h3>The cardinal sine and its twin</h3>
+    <p>The function \(((-1)^x-1)/(\pi x)\) is \(\mathrm{i}\) times the analytic
+    signal of the cardinal sine: its “twin” is the Hilbert transform, and
+    unlike the cardinal sine it is not integrable.</p>
+    <div class="formula">\[\frac{(-1)^x-1}{\pi x}
+    =\mathrm{i}\Bigl(\frac{\sin\pi x}{\pi x}+\mathrm{i}\,H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]\Bigr)\]</div>
+  </li>
+  <li>
+    <h3>Steps made of logarithms</h3>
+    <p>The Heaviside step built from logarithms and absolute values is exact,
+    and it is the limiting case of Maslov dequantization: the same pair that
+    neural networks call softplus and ReLU.</p>
+    <div class="formula">\[\ln\frac{|\mathrm{e}^x-1|+|\mathrm{e}^x+1|}{2}=\max(x,0)\]</div>
+  </li>
+  <li>
+    <h3>Two sequences for \(\mathrm{e}\)</h3>
+    <p>The notebooks' sequence does not converge faster than the classical
+    one: it has the same error, with the opposite sign. Their mean does.</p>
+    <div class="formula">\[\begin{aligned}&\tfrac12\Bigl[\bigl(1+\tfrac1n\bigr)^{n}+\bigl(1-\tfrac1n\bigr)^{-n}\Bigr]\\
+    &\qquad=\mathrm{e}\Bigl(1+\frac{11}{24n^2}+O(n^{-4})\Bigr)\end{aligned}\]</div>
+  </li>
+  <li>
+    <h3>A Dirac delta off the real axis</h3>
+    <p>Evaluated at a complex point, a family approximating the delta gives an
+    ordinary function; but the result depends on the family chosen. An open
+    question, not a result.</p>
+    <div class="formula">\[\lim_{n\to\infty}\delta_n(z)=\frac{z\,\operatorname{Im}z}{2\mathrm{i}\,|z|^3}\]</div>
+  </li>
+</ol>
+
+<h2>The recovery</h2>
+
+<p>Derive's <span class="file">.dfw</span> files can no longer be opened by any
+current program. The <a href="https://github.com/endjneer/quaderni-derive">repository</a>
+contains the original files and the code that decodes their binary format,
+translates the expressions into mathematical notation, checks them
+numerically and produces the PDFs. It may be useful to anyone who still has
+Derive notebooks to open.</p>
+
+</main>
+
+<footer>
+  <p>Text and figures: CC BY 4.0 licence · Code: MIT licence ·
+  <a href="https://github.com/endjneer/quaderni-derive">Repository</a></p>
+  <p>Analysis and writing assisted by Claude (Anthropic); every numerical check can be reproduced from the repository.</p>
+</footer>
+
+</body>
+</html>
