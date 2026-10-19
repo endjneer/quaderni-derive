@@ -47,7 +47,7 @@ La seconda forma della \eqref{eq:cayley} \`e quella che il quaderno scrive in
 \righe{gauss.dfw}{1}{4}, osservando anche che $1+u^2$ \`e la derivata di
 $2u$ rispetto a $t$: l'esponenziale immaginario come quadrato diviso per una
 derivata. La terza forma, con $t$ al posto di $t/2$, compare in
-\righe{cosinc.dfw}{1}{3} e in \righe{delta.dfw}{41}{44}.
+\righe{cosinc.dfw}{1}{3} e in \riga{delta.dfw}{41}.
 
 La \eqref{eq:tanh} \`e la \eqref{eq:cayley} letta sull'asse immaginario:
 poich\'e $\tan(\ii y)=\ii\tanh y$, ponendo $t=-\ii s$ si ha
@@ -139,10 +139,11 @@ Entrambe discendono dalla frazione continua di Lambert~\cite{lambert1768}
 ponendo $x=1/n$ e liberando i denominatori. Lambert la us\`o per dimostrare
 che $\tanh x$, e quindi $\ee^{2x}=(1+\tanh x)/(1-\tanh x)$, \`e irrazionale
 per ogni $x$ razionale non nullo; la frazione analoga per $\tan x$, con
-$\tan(\pi/4)=1$, d\`a l'irrazionalit\`a di $\pi$. La formula
-$\ee^{s}=(1+\tau)/(1-\tau)$ \`e dunque la porta da cui sono passate le prime
-dimostrazioni di irrazionalit\`a di $\ee$ e di $\pi$. I quaderni non la
-attraversano, ma \`e l\`i che la loro idea conduce.
+$\tan(\pi/4)=1$, d\`a l'irrazionalit\`a di $\pi$. Per $\ee$, dunque, la
+formula $\ee^{s}=(1+\tau)/(1-\tau)$ \`e proprio un passaggio della prima
+dimostrazione di irrazionalit\`a; per $\pi$ ne serve la versione circolare,
+con $\tan$ al posto di $\tanh$. I quaderni non arrivano fin qui, ma \`e l\`i
+che la loro idea conduce.
 
 \subsection{Troncare: gli approssimanti di Pad\'e}
 
@@ -184,8 +185,9 @@ sostituisce $\tanh(sT/2)$ con la sua prima approssimazione $sT/2$:
   \qquad\text{cio\`e}\qquad
   z=\frac{1+sT/2}{1-sT/2}=R_1(sT).
 \]
-Poich\'e $|R_1(\ii\Omega T)|=1$, l'asse immaginario va sul cerchio unitario e
-un filtro stabile resta stabile. Il prezzo si paga in frequenza: sul cerchio
+Poich\'e $|R_1(\ii\Omega T)|=1$ e $|R_1(s)|<1$ per $\Real s<0$, l'asse
+immaginario va sul cerchio unitario e il semipiano sinistro nel disco: un
+filtro stabile resta stabile. Il prezzo si paga in frequenza: sul cerchio
 $z=\ee^{\ii\omega T}$, e la \eqref{eq:cayley} d\`a
 $(z-1)/(z+1)=\ii\tan(\omega T/2)$, quindi alla frequenza numerica $\omega$
 corrisponde la frequenza analogica
@@ -203,3 +205,8 @@ semiangolo di \texttt{gauss.dfw} \`e la stessa dell'ingegnere.
 Lo stesso schema compare in relativit\`a ristretta: se $\beta=\tanh\eta$ \`e
 la velocit\`a in unit\`a di $c$ e $\eta$ la rapidit\`a, il fattore Doppler
 \`e $\ee^{\eta}=\sqrt{(1+\beta)/(1-\beta)}=(1+\tanh\frac\eta2)/(1-\tanh\frac\eta2)$.
+
+\paragraph{Che cosa resta aperto.}
+Nulla, sul piano matematico: tutto ci\`o che compare in questa sezione \`e
+classico. Quello che i quaderni aggiungono \`e l'aver percorso, senza saperlo,
+un tratto della stessa strada da cinque lati diversi.

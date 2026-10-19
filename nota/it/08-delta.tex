@@ -4,8 +4,9 @@
 \texttt{delta.dfw} (luglio 2010) \`e il quaderno pi\`u ambizioso della
 raccolta. Prende una famiglia elementare che approssima la delta di Dirac, la
 valuta in punti complessi e usa il risultato per dare un valore alla
-trasformata di Fourier di un esponenziale crescente. I conti sono corretti;
-quello che non regge \`e l'interpretazione. Questa sezione spiega perch\'e, e
+trasformata di Fourier di un esponenziale crescente. Il calcolo del limite \`e
+corretto, quello delle trasformate contiene alcune sviste, e soprattutto non
+regge l'interpretazione. Questa sezione spiega perch\'e, e
 lascia aperta la domanda che il quaderno pone.
 
 \subsection{La famiglia e il suo limite complesso}
@@ -54,12 +55,17 @@ risultati diversi: il valore della \eqref{eq:deltacomplessa} \`e una
 propriet\`a del rettangolo, non della delta.
 
 Questo tocca il risultato a cui il quaderno tiene di pi\`u. Formalmente
-$\int\ee^{kt}\ee^{-\ii\omega t}\,\dd t=2\pi\,\delta(\omega+\ii k)$, e le righe
-\righe{delta.dfw}{22}{27} calcolano questa ``trasformata dell'esponenziale
-crescente'' con la \eqref{eq:deltacomplessa}: per esempio il suo modulo vale
-$1/\bigl(2(\omega^2+1)\bigr)$ per $k=1$ (riga \#24), una lorentziana. Con la
-famiglia lorentziana la stessa trasformata varrebbe $0$, con quella gaussiana
-non esisterebbe. Le verifiche di coerenza delle righe \#48--\#51 usano solo
+$\int\ee^{kt}\ee^{-\ii\omega t}\,\dd t=2\pi\,\delta(\omega+\ii k)$; le righe
+\righe{delta.dfw}{22}{27} scrivono la trasformata di $\ee^{\pm kt}$ come
+$\delta(\omega\pm\ii k)$, senza il fattore $2\pi$, e la calcolano con la
+\eqref{eq:deltacomplessa}. Queste righe, battute a mano, contengono alcune
+sviste: la \#22 differisce da $\delta(\omega+\ii k)$ per un fattore $-\ii$, e
+le righe \#25 e \#26, che dovrebbero dare le trasformate del seno e del coseno
+iperbolico, le scambiano. Il modulo della riga \#24,
+$1/\bigl(2(\omega^2+1)\bigr)$ per $k=1$, \`e invece quello di
+$\delta(\omega+\ii)$: una lorentziana. Con la famiglia lorentziana la stessa
+trasformata varrebbe $0$; con quella gaussiana varrebbe $0$ dove
+$|\omega|>|k|$ e sarebbe infinita dove $|\omega|<|k|$. Le verifiche di coerenza delle righe \#48--\#51 usano solo
 la linearit\`a, e valgono per qualunque famiglia.
 
 \subsection{Dove la domanda ha senso}
@@ -74,7 +80,8 @@ $F(z)=-1/(2\pi\ii z)$: per la formula di Sokhotski--Plemelj
 $\frac{1}{x\mp\ii0}=\mathrm{v.p.}\frac1x\pm\ii\pi\delta(x)$ si ha
 $F(x+\ii0)-F(x-\ii0)=\delta(x)$~\cite{kaneko1988}. In nessuna delle due
 teorie la delta ha valori puntuali fuori dall'asse: nella prima \`e un
-funzionale, nella seconda \`e definita a meno di una funzione intera.
+funzionale, nella seconda la funzione olomorfa che la rappresenta \`e
+definita a meno di una funzione intera.
 
 Resta una domanda, che il quaderno pone senza saperlo. La
 \eqref{eq:deltacomplessa} \`e un oggetto naturale --- met\`a della derivata
@@ -82,6 +89,9 @@ lungo l'asse reale del segno complesso $z/|z|$ --- ed \`e l'unico dei tre
 limiti che non sia n\'e nullo n\'e infinito; ha la stessa legge di scala
 della delta. Ma non \`e olomorfa, e niente nella teoria delle distribuzioni
 la privilegia. C'\`e un senso in cui la famiglia a rettangolo sia quella
-giusta? Non lo sappiamo, e non lo affermiamo. Le righe
-\righe{delta.dfw}{41}{44}, infine, riscrivono $\ee^{2\ii x}$ con la
-tangente del semiangolo: \`e la formula della sezione~\ref{sec:semiangolo}.
+giusta? Non lo sappiamo, e non lo affermiamo. La riga
+\riga{delta.dfw}{41}, infine, riscrive $\ee^{2\ii x}$ con la tangente del
+semiangolo, che \`e la formula della sezione~\ref{sec:semiangolo}, e la \#44
+ripete la parametrizzazione con l'argomento dimezzato; la \#43, una
+riscrittura intermedia di $\ee^{\ii x}$, \`e invece sbagliata: in $x=0$ d\`a
+$0$ invece di $1$.

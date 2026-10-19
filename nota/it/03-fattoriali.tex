@@ -82,9 +82,9 @@ $T_{p+1}=T_p+p+1$ e $T_{p+1}+p+2=T_{p+2}$ segue
 dove si \`e usato $1+x\le\ee^{x}$. Si ha
 $(p+1)^2/(T_p+1)=2(p+1)^2/(p^2+p+2)\le2+2/p\le2{,}02$ per $p\ge100$, e $g$
 \`e decrescente (il numeratore della sua derivata \`e $-5p^2-18p-15$) con
-$g(100)=0{,}12810$. Quindi
+$g(100)=10506/82012<0{,}12811$. Quindi
 \[
-  \frac{a_{p+1}}{a_p}\le \ee^{2{,}02}\cdot0{,}12810<0{,}966
+  \frac{a_{p+1}}{a_p}\le \ee^{2{,}02}\cdot0{,}12811<0{,}966
   \qquad (p\ge100),
 \]
 e $a_p<a_{100}<1$ per ogni $p>100$.
@@ -95,8 +95,9 @@ eseguita dallo script \texttt{verifica\_nota.py} del repository, che
 controlla anche la maggiorazione. La soglia $100$ non ha nulla di speciale: con stime pi\`u
 fini si abbasserebbe, ma non serve. Il rapporto $a_{p+1}/a_p$ tende a
 $\ee^2/8=0{,}9236\dots$, perch\'e il prodotto tende a $\ee^2$ e $g(p)$ a
-$1/8$: da $p=4$ in poi la catena si allontana dall'uguaglianza a velocit\`a
-geometrica (figura~\ref{fig:nota_fattoriali}).
+$1/8$: da $p=4$ in poi $a_p$ decresce in modo geometrico
+(figura~\ref{fig:nota_fattoriali}), e il rapporto $P_p/T_{p+1}!$, che \`e il
+prodotto dei reciproci $1/a_q$, cresce pi\`u che esponenzialmente.
 
 \begin{figure}[t]
   \centering
@@ -109,7 +110,12 @@ geometrica (figura~\ref{fig:nota_fattoriali}).
 
 Il quaderno era arrivato alla stessa conclusione per altra via: le
 fattorizzazioni di $P_p-T_{p+1}!$ contengono, accanto ai primi piccoli dei
-fattoriali, primi grandi e apparentemente casuali --- gi\`a a $p=9$
-compaiono $3\,116\,563$ e $333\,915\,299$ --- segno che i due membri non
+fattoriali, primi grandi e apparentemente casuali --- a $p=6$ compare gi\`a
+$7103$, a $p=9$ compaiono $3\,116\,563$ e $333\,915\,299$ --- segno che i due membri non
 hanno alcuna parentela aritmetica oltre la coincidenza iniziale. La
 proposizione dice la stessa cosa in forma quantitativa.
+
+\paragraph{Che cosa resta aperto.}
+La congettura di Sur\'anyi resta aperta, e la proposizione non la tocca:
+mostra soltanto che la famiglia $a=T_p$, $b=2p+1$, $c=T_{p+1}$ non d\`a altre
+soluzioni di $a!\,b!=c!$ oltre a quelle dei primi tre passi.

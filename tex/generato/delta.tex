@@ -3,7 +3,7 @@
 \label{cap:delta}
 \quaderno{delta.dfw}{13 Jul 2010}{55}
 
-Luglio 2010, cinquantacinque espressioni. È il quaderno più ambizioso della raccolta. Si parte da una famiglia di funzioni elementari che approssima la delta di Dirac; si osserva che la formula, scritta com'è, ha senso anche per argomento complesso; e si studia la funzione che ne risulta. Il finale tenta di usare quella funzione per dare un valore alla trasformata di Fourier di un esponenziale crescente, che nel senso ordinario non esiste. I conti sono corretti; come si vedrà, però, il valore ottenuto dipende dalla famiglia approssimante scelta, e non dalla delta.
+Luglio 2010, cinquantacinque espressioni. È il quaderno più ambizioso della raccolta. Si parte da una famiglia di funzioni elementari che approssima la delta di Dirac; si osserva che la formula, scritta com'è, ha senso anche per argomento complesso; e si studia la funzione che ne risulta. Il finale tenta di usare quella funzione per dare un valore alla trasformata di Fourier di un esponenziale crescente, che nel senso ordinario non esiste. Come si vedrà, il valore ottenuto dipende dalla famiglia approssimante scelta, e non dalla delta; e le righe sulle trasformate contengono alcune sviste.
 
 \section{La famiglia approssimante}
 
@@ -273,14 +273,14 @@ Il modulo comune delle due: per $k=1$ è la lorentziana $1/\left(2(\omega^2+1)\r
 f\, \sinh\!\left(k\, t\right) = \frac{k^{2}}{2\, \left(k^{2} + \omega^{2}\right)^{\frac{3}{2}}}
 \]
 \end{espr}
-La trasformata del seno iperbolico, cioè la semidifferenza delle due precedenti.
+Scritta come trasformata del seno iperbolico, ma il secondo membro è la semisomma delle due precedenti, cioè la trasformata del coseno iperbolico: le righe $\#25$ e $\#26$ sono scambiate.
 
 \begin{espr}{26}{User}{}
 \[
 f\, \cosh\!\left(k\, t\right) = \frac{-\mathrm{i}\, k\, \omega}{2\, \left(k^{2} + \omega^{2}\right)^{\frac{3}{2}}}
 \]
 \end{espr}
-Quella del coseno iperbolico, cioè la semisomma.
+Scritta come trasformata del coseno iperbolico, ma il secondo membro è la semidifferenza, cioè la trasformata del seno iperbolico.
 
 \begin{espr}{27}{User}{}
 \[
@@ -296,7 +296,7 @@ Qui il quaderno gliene attribuisce uno, perché la funzione $\delta(z)$ della ri
 \[
   \delta(\omega+\mathrm{i}k)=\frac{(\omega+\mathrm{i}k)\,k}{2\mathrm{i}\left(k^2+\omega^2\right)^{3/2}},
 \]
-che a meno del fattore $-\mathrm{i}$ è esattamente il secondo membro della riga $\#22$. La riga $\#24$ ne calcola il modulo e trova $1/\left(2(\omega^2+1)\right)$ per $k=1$: una lorentziana. Le righe $\#25$ e $\#26$ combinano i due segni per ottenere le trasformate del seno e del coseno iperbolico.
+che a meno del fattore $-\mathrm{i}$ è esattamente il secondo membro della riga $\#22$. La riga $\#24$ ne calcola il modulo e trova $1/\left(2(\omega^2+1)\right)$ per $k=1$: una lorentziana. Le righe $\#25$ e $\#26$ combinano i due segni per ottenere le trasformate del seno e del coseno iperbolico, ma le scambiano: con la formula della riga $\#4$ la semidifferenza vale $-\mathrm{i}k\omega/\left(2(k^2+\omega^2)^{3/2}\right)$ e la semisomma $k^2/\left(2(k^2+\omega^2)^{3/2}\right)$, cioè proprio i secondi membri delle righe $\#26$ e $\#25$. Il quaderno scrive inoltre la trasformata come $\delta(\omega\pm\mathrm{i}k)$, senza il fattore $2\pi$.
 
 Qui però occorre una cautela che il quaderno non prende. Il valore di $\delta(z)$ fuori dall'asse reale non è una proprietà della delta ma della famiglia approssimante: con la famiglia lorentziana $\varepsilon/\left(\pi(z^2+\varepsilon^2)\right)$ il limite fuori dall'asse è $0$; con la gaussiana $\mathrm{e}^{-z^2/\varepsilon^2}/(\varepsilon\sqrt\pi)$ è $0$ dove $|\operatorname{Re}z|>|\operatorname{Im}z|$ e infinito dove $|\operatorname{Im}z|>|\operatorname{Re}z|$. Le trasformate di queste righe dipendono dunque dalla scelta del rettangolo. Nelle teorie in cui una delta in un punto complesso ha senso — i funzionali sulle funzioni test intere di Gel'fand e Šilov, le iperfunzioni di Sato — la delta non ha valori puntuali fuori dall'asse. La nota che accompagna questa edizione discute la questione per esteso.
 
@@ -441,7 +441,7 @@ La famiglia approssimante applicata al numero che parametrizza il cerchio.
 =\;& \frac{-\sin\!\left(x\right)\, \left|\cos\!\left(x\right)\right|\, \left(1 + \mathrm{i}\, \tan\!\left(x\right)\right)}{\cos^{2}\!\left(x\right)\, \left|1 + \tan\!\left(x\right)\right|}
 \end{align*}
 \end{espr}
-Una riscrittura dell'esponenziale immaginario che ne discende.
+Una riscrittura dell'esponenziale immaginario che non è corretta: in $x=0$ il secondo membro vale $0$, il primo $1$.
 
 \begin{espr}{44}{User}{}
 \[
@@ -537,5 +537,5 @@ Le righe $\#48$--$\#51$ chiudono invece con una verifica di coerenza che funzion
 
 Il quaderno prende una formula elementare per la delta di Dirac, la valuta in un punto complesso, e trova una funzione ordinaria: $\delta(z)=z\operatorname{Im}(z)/\left(2\mathrm{i}|z|^3\right)$, metà della derivata lungo l'asse reale del segno complesso $z/|z|$. Questa funzione si annulla sull'asse reale, obbedisce alla stessa regola di riscalamento della delta ordinaria e ha derivate con coefficienti fattoriali. Il quaderno la usa per dare un valore a $\delta(\omega+\mathrm{i}k)$, cioè alla trasformata di Fourier dell'esponenziale crescente; ma quel valore dipende dalla famiglia approssimante — con la lorentziana sarebbe nullo, con la gaussiana non esisterebbe — e nelle teorie rigorose, i funzionali analitici e le iperfunzioni, la delta non ha valori puntuali fuori dall'asse.
 
-I conti sono corretti; l'interpretazione no. Le verifiche di coerenza delle righe $\#50$ e $\#51$ usano solo la linearità, e valgono per qualunque famiglia. Resta una domanda legittima, che il quaderno pone senza saperlo: c'è un senso in cui la famiglia a rettangolo sia quella giusta?
+Il calcolo del limite è corretto, quello delle trasformate contiene alcune sviste (righe $\#22$–$\#27$) e soprattutto non regge l'interpretazione. Le verifiche di coerenza delle righe $\#50$ e $\#51$ usano solo la linearità, e valgono per qualunque famiglia. Resta una domanda legittima, che il quaderno pone senza saperlo: c'è un senso in cui la famiglia a rettangolo sia quella giusta?
 

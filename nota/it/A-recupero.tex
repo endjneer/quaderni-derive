@@ -1,9 +1,9 @@
 \section{Il recupero dei file}
 \label{app:recupero}
 
-\emph{Derive for Windows} \`e stato ritirato nel 2007; la sua ultima
-versione, la~6.10, non parte sui sistemi operativi attuali, e il formato
-\texttt{.dfw} non \`e documentato pubblicamente. Il contenuto per\`o non \`e
+\emph{Derive for Windows} \`e stato ritirato nel 2007 e non \`e pi\`u
+mantenuto (l'ultima versione \`e la~6.10), e il formato \texttt{.dfw} non \`e
+documentato pubblicamente. Il contenuto per\`o non \`e
 n\'e cifrato n\'e compresso: le espressioni sono memorizzate come testo,
 nella sintassi lineare della riga di comando. Il formato \`e stato
 ricostruito leggendo i byte.
@@ -42,6 +42,7 @@ Il verificatore interpreta l'albero sintattico di ogni espressione con
 \texttt{mpmath} a venti cifre e confronta i membri di ogni catena di
 uguaglianze in quattro punti del piano complesso: $145$ espressioni superano
 il controllo. Per le altre il controllo non \`e applicabile (equazioni da
-risolvere, integrali indefiniti, indici simbolici) oppure l'espressione non
-\`e un'identit\`a. Le affermazioni di questa nota sono verificate a parte,
+risolvere, integrali indefiniti, indici simbolici), oppure l'identit\`a vale
+solo sull'asse reale o su un ramo e il confronto nel piano complesso non la
+riconosce, oppure non c'\`e un'identit\`a da controllare. Le affermazioni di questa nota sono verificate a parte,
 come detto nell'introduzione.

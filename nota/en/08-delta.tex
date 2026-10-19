@@ -4,8 +4,9 @@
 \texttt{delta.dfw} (July 2010) is the most ambitious notebook of the
 collection. It takes an elementary family that approximates the Dirac delta,
 evaluates it at complex points, and uses the result to give a value to the
-Fourier transform of a growing exponential. The computations are correct;
-what does not hold up is the interpretation. This section explains why, and
+Fourier transform of a growing exponential. The computation of the limit is
+correct, the transform computations contain a few slips, and above all the
+interpretation does not hold up. This section explains why, and
 leaves open the question the notebook raises.
 
 \subsection{The family and its complex limit}
@@ -54,12 +55,17 @@ different results: the value in \eqref{eq:deltacomplessa} is a property of
 the rectangle, not of the delta.
 
 This affects the result the notebook cares about most. Formally
-$\int\ee^{kt}\ee^{-\ii\omega t}\,\dd t=2\pi\,\delta(\omega+\ii k)$, and lines
-\righe{delta.dfw}{22}{27} compute this ``transform of the growing
-exponential'' with \eqref{eq:deltacomplessa}: for instance its modulus is
-$1/\bigl(2(\omega^2+1)\bigr)$ for $k=1$ (line \#24), a Lorentzian. With the
-Lorentzian family the same transform would be $0$; with the Gaussian one it
-would not exist. The consistency checks of lines \#48--\#51 use only
+$\int\ee^{kt}\ee^{-\ii\omega t}\,\dd t=2\pi\,\delta(\omega+\ii k)$; lines
+\righe{delta.dfw}{22}{27} write the transform of $\ee^{\pm kt}$ as
+$\delta(\omega\pm\ii k)$, without the factor $2\pi$, and compute it with
+\eqref{eq:deltacomplessa}. These lines, typed by hand, contain a few slips:
+line \#22 differs from $\delta(\omega+\ii k)$ by a factor $-\ii$, and lines
+\#25 and \#26, which should give the transforms of the hyperbolic sine and
+cosine, interchange them. The modulus in line \#24,
+$1/\bigl(2(\omega^2+1)\bigr)$ for $k=1$, is instead that of
+$\delta(\omega+\ii)$: a Lorentzian. With the Lorentzian family the same
+transform would be $0$; with the Gaussian one it would be $0$ where
+$|\omega|>|k|$ and infinite where $|\omega|<|k|$. The consistency checks of lines \#48--\#51 use only
 linearity, and hold for any family.
 
 \subsection{Where the question makes sense}
@@ -74,7 +80,8 @@ $F(z)=-1/(2\pi\ii z)$: by the Sokhotski--Plemelj formula
 $\frac{1}{x\mp\ii0}=\mathrm{p.v.}\frac1x\pm\ii\pi\delta(x)$ one has
 $F(x+\ii0)-F(x-\ii0)=\delta(x)$~\cite{kaneko1988}. In neither theory does the
 delta have pointwise values off the axis: in the first it is a functional, in
-the second it is defined only up to an entire function.
+the second the holomorphic function representing it is defined only up to an
+entire function.
 
 A question remains, one the notebook raises without knowing it.
 \eqref{eq:deltacomplessa} is a natural object --- half the derivative along
@@ -82,6 +89,8 @@ the real axis of the complex sign $z/|z|$ --- and it is the only one of the
 three limits that is neither zero nor infinite; it has the scaling law of the
 delta. But it is not holomorphic, and nothing in the theory of distributions
 singles it out. Is there a sense in which the rectangle family is the right
-one? We do not know, and we do not claim it. Finally, lines
-\righe{delta.dfw}{41}{44} rewrite $\ee^{2\ii x}$ with the half-angle tangent:
-it is the formula of Section~\ref{sec:semiangolo}.
+one? We do not know, and we do not claim it. Finally, line
+\riga{delta.dfw}{41} rewrites $\ee^{2\ii x}$ with the half-angle tangent,
+which is the formula of Section~\ref{sec:semiangolo}, and line \#44 repeats
+the parametrization with the halved argument; line \#43, an intermediate
+rewriting of $\ee^{\ii x}$, is wrong: at $x=0$ it gives $0$ instead of $1$.

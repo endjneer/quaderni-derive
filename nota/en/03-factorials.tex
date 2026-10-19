@@ -82,9 +82,9 @@ $T_{p+1}=T_p+p+1$ and $T_{p+1}+p+2=T_{p+2}$ it follows that
 where we used $1+x\le\ee^{x}$. We have
 $(p+1)^2/(T_p+1)=2(p+1)^2/(p^2+p+2)\le2+2/p\le2.02$ for $p\ge100$, and $g$
 is decreasing (the numerator of its derivative is $-5p^2-18p-15$) with
-$g(100)=0.12810$. Hence
+$g(100)=10506/82012<0.12811$. Hence
 \[
-  \frac{a_{p+1}}{a_p}\le \ee^{2.02}\cdot0.12810<0.966
+  \frac{a_{p+1}}{a_p}\le \ee^{2.02}\cdot0.12811<0.966
   \qquad (p\ge100),
 \]
 and $a_p<a_{100}<1$ for every $p>100$.
@@ -95,9 +95,10 @@ the script \texttt{verifica\_nota.py} in the repository, which also checks
 the estimate. The
 threshold $100$ is not special: sharper estimates would lower it, but there
 is no need. The ratio $a_{p+1}/a_p$ tends to $\ee^2/8=0.9236\dots$, because
-the product tends to $\ee^2$ and $g(p)$ to $1/8$: from $p=4$ on, the chain
-moves away from equality at a geometric rate
-(Figure~\ref{fig:nota_fattoriali}).
+the product tends to $\ee^2$ and $g(p)$ to $1/8$: from $p=4$ on, $a_p$
+decreases geometrically (Figure~\ref{fig:nota_fattoriali}), and the ratio
+$P_p/T_{p+1}!$, the product of the reciprocals $1/a_q$, grows faster than
+exponentially.
 
 \begin{figure}[t]
   \centering
@@ -110,7 +111,12 @@ moves away from equality at a geometric rate
 
 The notebook had reached the same conclusion by another route: the
 factorizations of $P_p-T_{p+1}!$ contain, next to the small primes of the
-factorials, large and seemingly random primes --- already at $p=9$ one finds
-$3{,}116{,}563$ and $333{,}915{,}299$ --- a sign that the two sides have no
+factorials, large and seemingly random primes --- $7103$ already appears at $p=6$, and
+$3{,}116{,}563$ and $333{,}915{,}299$ at $p=9$ --- a sign that the two sides have no
 arithmetic kinship beyond the initial coincidence. The proposition says the
 same thing quantitatively.
+
+\paragraph{What remains open.}
+Sur\'anyi's conjecture remains open, and the proposition does not touch it: it
+only shows that the family $a=T_p$, $b=2p+1$, $c=T_{p+1}$ yields no solutions
+of $a!\,b!=c!$ beyond those of the first three steps.

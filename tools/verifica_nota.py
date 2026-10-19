@@ -203,6 +203,9 @@ def bilineare():
     for s in (mp.mpf('-1.3'), mp.mpc('-0.2', '2.1')):
         z = mp.exp(s * T)
         uguali((z - 1) / (z + 1), mp.tanh(s * T / 2))
+    # il semipiano sinistro va nel disco unitario: un filtro stabile resta stabile
+    for s in (mp.mpc('-0.1', '3'), mp.mpc('-2', '-1'), mp.mpf('-0.5')):
+        assert abs((1 + s / 2) / (1 - s / 2)) < 1, s
 
 
 # ===========================================================================
@@ -273,15 +276,15 @@ def maggiorazione():
         assert ((2 * p + 5) * (2 * p * p + 5 * p + 3) - (p * p + 5 * p + 6) * (4 * p + 5)
                 == -5 * p * p - 18 * p - 15)
     assert _g(100) == Fraction(10506, 82012)
-    assert round(float(_g(100)), 5) == 0.1281
-    assert mp.exp(mp.mpf('2.02')) * mp.mpf(_g(100).numerator) / _g(100).denominator < mp.mpf('0.966')
+    assert _g(100) < Fraction(12811, 100000)        # maggiorante, non arrotondamento
+    assert mp.exp(mp.mpf('2.02')) * mp.mpf('0.12811') < mp.mpf('0.966')
     assert _B(100) < mp.mpf('0.966')
     for p in range(100, 301):
         r = _a(p + 1) / _a(p)
         assert mp.mpf(r.numerator) / r.denominator <= _B(p), p
 
 
-cita('g100', '0{,}12810', '0.12810')
+cita('g100', '0{,}12811', '0.12811')
 cita('soglia', '0{,}966', '0.966')
 
 
@@ -304,6 +307,15 @@ def limite_del_rapporto():
 
 
 cita('e2_8', '0{,}9236', '0.9236')
+
+
+@controllo('§3')
+def crescita_del_rapporto():
+    """P_p/T_{p+1}! = prod 1/a_q cresce più che esponenzialmente: il suo logaritmo è quadratico in p"""
+    L = lambda p: sum(-mp.log(mp.mpf(_a(q).numerator) / _a(q).denominator) for q in range(4, p + 1))
+    l20, l40, l80 = L(20), L(40), L(80)
+    assert l40 / l20 > 3 and l80 / l40 > 3, (l20, l40, l80)     # lineare darebbe circa 2
+    uguali(mp.exp(L(12)), mp.mpf(_P(12)) / factorial(_T(13)), rel=mp.mpf('1e-40'))
 
 
 # ===========================================================================
@@ -650,6 +662,30 @@ def trasformata_esponenziale():
         uguali(abs(_d(w + 1j)), 1 / (2 * (w ** 2 + 1)))
 
 
+
+@controllo('§8')
+def righe_25_27_e_43():
+    """delta #25-#26 scambiano seno e coseno iperbolico; #43 è falsa; #41 e #44 sono corrette"""
+    for w in map(mp.mpf, ('0.4', '-1.7')):
+        for k in (1, 3):
+            R3 = mp.sqrt(k ** 2 + w ** 2) ** 3
+            sinh_vero = (_d(w + 1j * k) - _d(w - 1j * k)) / 2
+            cosh_vero = (_d(w + 1j * k) + _d(w - 1j * k)) / 2
+            riga25 = k ** 2 / (2 * R3)              # scritta come trasformata di sinh
+            riga26 = -1j * k * w / (2 * R3)         # scritta come trasformata di cosh
+            uguali(riga25, cosh_vero)
+            uguali(riga26, sinh_vero)
+            assert not vicini(riga25, sinh_vero, rel=mp.mpf('1e-6'))
+    for x in map(mp.mpf, ('0.3', '1.1')):
+        u = mp.tan(x)
+        uguali(mp.exp(2j * x), (1 + 1j * u) ** 2 / (1 + u ** 2))                       # #41
+        riga43 = -mp.sin(x) * abs(mp.cos(x)) * (1 + 1j * u) / (mp.cos(x) ** 2 * abs(1 + u))
+        assert not vicini(riga43, mp.exp(1j * x), rel=mp.mpf('1e-3')), x               # #43
+        v = mp.tan(x / 2)
+        uguali(mp.exp(1j * x), (1 + 1j * v) ** 2 / (1 + v ** 2))                       # #44
+    assert mp.exp(0) == 1     # in x = 0 la #43 dà 0
+
+
 # ===========================================================================
 # §9  In breve
 # ===========================================================================
@@ -761,6 +797,18 @@ def primoriali():
 
 
 cita('primoriali', '0{,}7052301717', '0.7052301717')
+
+
+@controllo('§9')
+def primoriali_irrazionale():
+    """se s = a/b, b·sum_{k>n} P_n/P_k sarebbe un intero in (0, b/(p_{n+1}-1)): basta p_{n+1} > b+1"""
+    primi = [p for p in range(2, 400) if all(p % q for q in range(2, int(p ** 0.5) + 1))]
+    for n in (3, 10, 40):
+        coda, prodotto = mp.mpf(0), mp.mpf(1)
+        for p in primi[n:n + 25]:
+            prodotto *= p
+            coda += 1 / prodotto
+        assert 0 < coda < mp.mpf(1) / (primi[n] - 1), n
 
 
 @controllo('§9')

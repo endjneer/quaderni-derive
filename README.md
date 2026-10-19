@@ -133,10 +133,13 @@ nella nota:
 - una delta di Dirac valutata fuori dall'asse reale: i conti sono corretti,
   ma il risultato dipende dalla famiglia approssimante.
 
-La rilettura ha isolato anche due refusi in righe battute a mano
-(`teoria.dfw #13`, `factor.dfw #5`), una svista corretta dall'autore stesso
-(`notch.dfw #15`) e due errori di Derive: un limite sbagliato in `e.dfw` e una
-"soluzione" numerica di un'identità in `mate.dfw`.
+La rilettura ha isolato anche alcuni errori, senza pretesa di completezza: due
+refusi in righe battute a mano (`teoria.dfw #13`, `factor.dfw #5`), alcune
+sviste nelle trasformate di `delta.dfw` (#22–#27, #43), una svista corretta
+dall'autore stesso (`notch.dfw #15`) e diverse risposte sbagliate di Derive: un
+limite in `e.dfw`, un integrale divergente in `cosinc.dfw`, una "soluzione" che
+non risolve in `teoria.dfw` e una "soluzione" numerica di un'identità in
+`mate.dfw`.
 
 ## Verifica numerica
 
@@ -144,12 +147,13 @@ La rilettura ha isolato anche due refusi in righe battute a mano
 confronta i membri di ogni catena di uguaglianze in quattro punti del piano
 complesso. 145 espressioni superano il controllo e nell'edizione integrale
 portano un segno di spunta. L'assenza del segno **non** significa che la
-formula sia sbagliata: nella maggior parte dei casi il controllo non era
-applicabile (integrale indefinito, `SOLVE` da risolvere, indice di somma
-simbolico) oppure l'espressione non era un'identità.
+formula sia sbagliata: il controllo può non essere applicabile (integrale
+indefinito, `SOLVE` da risolvere, indice di somma simbolico), l'identità può
+valere solo sull'asse reale o su un ramo, oppure non c'è un'identità da
+controllare.
 
 Le affermazioni della nota sono verificate a parte da
-`tools/verifica_nota.py`: 61 controlli, uno o più per ogni valore citato.
+`tools/verifica_nota.py`: un controllo o più per ogni valore citato.
 
 ## Licenze
 

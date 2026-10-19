@@ -1,9 +1,9 @@
 \section{Recovering the files}
 \label{app:recupero}
 
-\emph{Derive for Windows} was withdrawn in 2007; its last version, 6.10, does
-not start on current operating systems, and the \texttt{.dfw} format is not
-publicly documented. The content, however, is neither encrypted nor
+\emph{Derive for Windows} was withdrawn in 2007 and is no longer maintained
+(its last version is 6.10), and the \texttt{.dfw} format is not publicly
+documented. The content, however, is neither encrypted nor
 compressed: the expressions are stored as text, in the linear syntax of the
 command line. The format was reconstructed by reading the bytes.
 
@@ -38,6 +38,7 @@ The verifier interprets the syntax tree of every expression with
 \texttt{mpmath} at twenty digits and compares the members of every chain of
 equalities at four points of the complex plane: $145$ expressions pass the
 check. For the others the check does not apply (equations to be solved,
-indefinite integrals, symbolic indices) or the expression is not an
-identity. The statements of this note are verified separately, as explained
+indefinite integrals, symbolic indices), or the identity holds only on the
+real axis or on one branch and the comparison in the complex plane does not
+recognize it, or there is no identity to check. The statements of this note are verified separately, as explained
 in the introduction.

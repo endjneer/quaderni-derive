@@ -11,6 +11,9 @@ Per ciascuna pagina:
   - i metadati Open Graph og:title, og:description, og:url;
   - la riga di trasparenza nella lingua della pagina.
 
+Inoltre, se esiste dist/ (dopo make dist), deve contenere esattamente i tre PDF
+a cui puntano i link di download.
+
 Uso:  python controlla_sito.py
 """
 import os, re, sys
@@ -107,8 +110,19 @@ def controlla(nome, atteso):
     return problemi
 
 
+def controlla_dist():
+    """Se dist/ esiste (dopo make dist), contiene esattamente i PDF linkati."""
+    dist = os.path.join(RADICE, 'dist')
+    if not os.path.isdir(dist):
+        return []
+    trovati = sorted(os.listdir(dist))
+    if trovati != sorted(PDF):
+        return ['dist/ contiene %s invece di %s' % (trovati, sorted(PDF))]
+    return []
+
+
 def main():
-    problemi = []
+    problemi = controlla_dist()
     for nome, atteso in PAGINE.items():
         problemi += controlla(nome, atteso)
     for p in problemi:

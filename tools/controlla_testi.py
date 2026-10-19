@@ -13,6 +13,7 @@ Controlla la coerenza dei sorgenti della nota (cartella nota/).
   6. ogni citazione ha la sua voce in bibliografia; una voce mai citata
      viene segnalata come avviso.
   7. le correzioni all'edizione integrale sono presenti (CORREZIONI).
+  8. le correzioni alla nota dopo la revisione sono presenti (REVISIONE_NOTA).
 
 Uso:  python controlla_testi.py
 """
@@ -73,13 +74,61 @@ def riferimenti(testo):
     return {'etichette': etichette, 'citazioni': citazioni, 'righe': righe}
 
 
+# Correzioni alla nota dopo la revisione indipendente del branch: per ogni
+# file (testo senza commenti, spazi normalizzati) frasi vietate e richieste.
+REVISIONE_NOTA = {
+    'it/02-semiangolo.tex': (["la porta da cui sono passate le prime"],
+                             ['semipiano sinistro', 'Che cosa resta aperto']),
+    'en/02-half-angle.tex': (['the door through which the first proofs'],
+                             ['left half-plane', 'What remains open']),
+    'it/03-fattoriali.tex': (["a velocit\\`a geometrica"], ['Che cosa resta aperto']),
+    'en/03-factorials.tex': (['at a geometric rate'], ['What remains open']),
+    'it/04-media.tex': ([], ['Che cosa resta aperto']),
+    'en/04-mean.tex': ([], ['What remains open']),
+    'it/05-cosinc.tex': ([], ['Che cosa resta aperto']),
+    'en/05-cosinc.tex': ([], ['What remains open']),
+    'it/06-gradini.tex': (['Le forme chiuse si ricostruiscono'],
+                          ['contengono le forme chiuse', 'Che cosa resta aperto']),
+    'en/06-steps.tex': (['The closed forms can be reconstructed'],
+                        ['contain the closed forms', 'What remains open']),
+    'it/07-e.tex': ([], ['Che cosa resta aperto']),
+    'en/07-e.tex': ([], ['What remains open']),
+    'it/08-delta.tex': (['I conti sono corretti;'], ['scambiano', 'senza il fattore $2\\pi$']),
+    'en/08-delta.tex': (['The computations are correct;'], ['interchange', 'without the factor $2\\pi$']),
+    'it/09-in-breve.tex': (['vale $1/\\ee$ ovunque'], ['p_{n+1}>b+1']),
+    'en/09-in-brief.tex': (['equals $1/\\ee$ everywhere'], ['p_{n+1}>b+1']),
+    'it/10-refusi.tex': (['I refusi rimasti nei quaderni sono due'], ['censimento completo']),
+    'en/10-typos.tex': (['Two typos remain in the notebooks'], ['complete census']),
+    'it/01-introduzione.tex': (['non gira sui sistemi attuali'], []),
+    'en/01-introduction.tex': (['does not run on current systems'], []),
+    'it/A-recupero.tex': (['non parte sui sistemi operativi attuali',
+                           "oppure l'espressione non \\`e un'identit\\`a."], ['su un ramo']),
+    'en/A-recovery.tex': (['does not start on current operating systems',
+                           'or the expression is not an identity.'], ['on one branch']),
+}
+
+
+def controlla_revisione_nota():
+    problemi = []
+    for nome, (vietate, richieste) in REVISIONE_NOTA.items():
+        testo = re.sub(r'\s+', ' ', leggi(os.path.join(NOTA, nome)))
+        for frase in vietate:
+            if frase in testo:
+                problemi.append('nota/%s contiene ancora "%s"' % (nome, frase))
+        for frase in richieste:
+            if frase not in testo:
+                problemi.append('nota/%s non contiene "%s"' % (nome, frase))
+    return problemi
+
+
 # Correzioni all'edizione integrale dopo la revisione matematica: per ogni
 # file, frasi che non devono piu' comparire e frasi che devono comparire.
 CORREZIONI = {
     'commento/04-e.json': (['converge molto più in fretta', 'di gran lunga più rapida'],
                            [r'\frac{11\mathrm{e}}{24n^2}']),
-    'commento/15-delta.json': (["l'idea più originale", 'valore numerico concreto'],
-                               ['lorentziana', 'gaussiana', 'iperfunzioni']),
+    'commento/15-delta.json': (["l'idea più originale", 'valore numerico concreto',
+                                'I conti sono corretti'],
+                               ['lorentziana', 'gaussiana', 'iperfunzioni', 'scambiano']),
     'commento/18-factor.json': ([], ['Surányi', r'360\,360']),
     'commento/10-mate.json': ([], ['gudermanniana', 'vale solo per $n=2$ e $n=3$']),
     'commento/14-gauss.json': (['vale da solo il capitolo'], ['semiangolo']),
@@ -159,12 +208,12 @@ def main():
     # 4. ogni decimale lungo e' un valore controllato
     registrati = {l: set() for l in testi}
     for v_it, v_en in V.VALORI_CITATI.values():
-        registrati['it'].add(v_it)
-        registrati['en'].add(v_en)
+        registrati['it'].add(v_it.lstrip('+-'))
+        registrati['en'].add(v_en.lstrip('+-'))
     for lingua in testi:
         for nome, testo in sorted(testi[lingua].items()):
             for numero in DECIMALE[lingua].findall(testo):
-                if not any(numero in v for v in registrati[lingua]):
+                if numero not in registrati[lingua]:
                     problemi.append('%s/%s: %s non e\' registrato con cita()'
                                     % (lingua, nome, numero))
 
@@ -190,6 +239,9 @@ def main():
 
     # 7. correzioni all'edizione integrale
     problemi += controlla_edizione_integrale()
+
+    # 8. correzioni alla nota dopo la revisione del branch
+    problemi += controlla_revisione_nota()
 
     for a in avvisi:
         print('  avviso   ' + a)

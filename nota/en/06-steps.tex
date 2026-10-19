@@ -73,12 +73,17 @@ at $x=0$ it equals $\frac12(1+\tanh1)=0.8808$ for every $h$.
 
 The notebook \texttt{u(0)-sign(0).dfw} (January 2011) takes up exactly this
 question, with four numbers and their differences
-(\righe{u(0)-sign(0).dfw}{1}{12}). The closed forms can be reconstructed from
-the values: one candidate for the step, $u_1=\ln(\ee-1)=0.5413$, and one for
-the sign, $s_2=\ln\sinh1=0.1614$; lines \#5 and \#7 carry each into the
+(\righe{u(0)-sign(0).dfw}{1}{12}). Lines \#1, \#3, \#5 and \#7 contain the
+closed forms: one candidate for the step, $u_1=\ln(\ee-1)=0.5413$, and one for
+the sign, $s_2=\ln\sinh1=0.1614$, which line \#3 writes as
+$\ln\bigl((\ee^2-1)/(2\ee)\bigr)$; lines \#5 and \#7 carry each into the
 other scale through $\sgn=2H-1$, and lines \#9 to \#12 compare the results.
 That the second difference is exactly twice the first follows from the
 conversion itself. The notebook does not say which family the two
 candidates come from, and this cannot be reconstructed with certainty;
 neither agrees with the symmetric convention $H(0)=\tfrac12$, $\sgn0=0$.
 This is not a mistake: without a family the question has no single answer.
+
+\paragraph{What remains open.}
+Nothing mathematical: Maslov dequantization is known theory, and the question
+of \texttt{u(0)-sign(0).dfw} has no single answer.
