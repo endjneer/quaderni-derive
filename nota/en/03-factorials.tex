@@ -1,2 +1,116 @@
 \section{A chain of factorials that breaks}
 \label{sec:fattoriali}
+
+The notebook \texttt{factor.dfw} (August 2010) tests an equality between the
+product of the factorials of the odd numbers and the factorial of a
+triangular number. With $T_m=m(m+1)/2$ and
+\[
+  P_p=\prod_{k=0}^{p}(2k+1)!=1!\,3!\,5!\cdots(2p+1)!,
+\]
+the question is whether $P_p=T_{p+1}!$. For $p=0,1,2,3$ the answer is yes:
+\[
+  1!=1!,\qquad 1!\,3!=3!,\qquad 1!\,3!\,5!=6!,\qquad 1!\,3!\,5!\,7!=10!.
+\]
+At the fifth case the equality fails, and instead of dropping it the notebook
+measures how badly it fails: lines \righe{factor.dfw}{5}{15} factor the
+difference $P_p-T_{p+1}!$ up to $p=14$ (line \#5 contains a typo, see
+Section~\ref{sec:refusi}). This section explains why the chain holds four
+times and proves that it never closes again.
+
+\subsection{One step at a time}
+
+Since $P_p=P_{p-1}\,(2p+1)!$ and $T_{p+1}=T_p+p+1$, if the chain holds at
+step $p-1$ it holds at step $p$ if and only if
+\begin{equation}\label{eq:passo}
+  T_p!\,(2p+1)!=T_{p+1}!,
+  \qquad\text{that is}\qquad
+  \prod_{j=1}^{p+1}(T_p+j)=(2p+1)!.
+\end{equation}
+Each step is therefore an instance of the equation $a!\,b!=c!$. This has two
+families of trivial solutions: the one with $a=1$, and the one with $c=b!$
+and $a=c-1$, since $(b!-1)!\,b!=(b!)!$. The first steps of the chain fall
+exactly there:
+\[
+  p=1:\ 1!\,3!=3!,\qquad
+  p=2:\ 3!\,5!=6!\ \ (\text{with }3!=6).
+\]
+The third step, however, is
+\[
+  p=3:\qquad 6!\,7!=10!,
+\]
+which is \emph{the only known nontrivial solution} of $a!\,b!=c!$. That it is
+the only one at all is a conjecture attributed to
+Sur\'anyi~\cite{erdos373}, and it is problem B23 in Guy's
+collection~\cite{guy2004}; there are no other solutions with
+$c\le10^{3000}$~\cite{erdos373}, and partial results in this direction can be
+found in~\cite{hajdu2018}. The regularity that the notebook saw last for four
+steps hides no law, then: it is made of two trivial coincidences and of the
+most famous nontrivial coincidence among factorials.
+
+At the next step, \eqref{eq:passo} asks for
+$11\cdot12\cdot13\cdot14\cdot15=9!$, but the left-hand side is $360{,}360$
+and the right-hand side $362{,}880$: a near miss, with ratio $0.99306$.
+
+\subsection{The chain never closes again}
+
+\begin{prop}\label{prop:fattoriali}
+For every $p\ge4$ we have $P_p>T_{p+1}!$, and the ratio $P_p/T_{p+1}!$
+increases with $p$. In particular, the equality $P_p=T_{p+1}!$ holds exactly
+for $p=0,1,2,3$.
+\end{prop}
+
+\begin{proof}
+Let
+\[
+  a_p=\frac{T_{p+1}!}{T_p!\,(2p+1)!}=\frac{1}{(2p+1)!}\prod_{j=1}^{p+1}(T_p+j),
+\]
+so that $P_p/T_{p+1}!=(P_{p-1}/T_p!)/a_p$. Since $P_3=T_4!$, it suffices to
+show that $a_p<1$ for every $p\ge4$.
+
+For $4\le p\le100$ this is checked by exact integer arithmetic: the largest
+value is $a_4=0.99306$.
+
+For $p\ge100$ we estimate the ratio of consecutive terms. From
+$T_{p+1}=T_p+p+1$ and $T_{p+1}+p+2=T_{p+2}$ it follows that
+\[
+  \frac{a_{p+1}}{a_p}
+  =\frac{T_{p+2}}{(2p+2)(2p+3)}\prod_{j=1}^{p+1}\Bigl(1+\frac{p+1}{T_p+j}\Bigr)
+  \le g(p)\,\exp\frac{(p+1)^2}{T_p+1},
+  \qquad
+  g(p)=\frac{(p+2)(p+3)}{4(p+1)(2p+3)},
+\]
+where we used $1+x\le\ee^{x}$. We have
+$(p+1)^2/(T_p+1)=2(p+1)^2/(p^2+p+2)\le2+2/p\le2.02$ for $p\ge100$, and $g$
+is decreasing (the numerator of its derivative is $-5p^2-18p-15$) with
+$g(100)=0.12810$. Hence
+\[
+  \frac{a_{p+1}}{a_p}\le \ee^{2.02}\cdot0.12810<0.966
+  \qquad (p\ge100),
+\]
+and $a_p<a_{100}<1$ for every $p>100$.
+\end{proof}
+
+The finite part of the proof, the $97$ exact comparisons, is carried out by
+the script \texttt{verifica\_nota.py} in the repository, which also checks
+the estimate. The
+threshold $100$ is not special: sharper estimates would lower it, but there
+is no need. The ratio $a_{p+1}/a_p$ tends to $\ee^2/8=0.9236\dots$, because
+the product tends to $\ee^2$ and $g(p)$ to $1/8$: from $p=4$ on, the chain
+moves away from equality at a geometric rate
+(Figure~\ref{fig:nota_fattoriali}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.78\linewidth]{nota_fattoriali}
+  \caption{The ratio $a_p$ for $1\le p\le60$, on a logarithmic scale. It is
+  exactly $1$ for $p=1,2,3$ (in red); from $p=4$ on it is less than $1$, and
+  it decreases with a ratio that tends to $\ee^2/8$.}
+  \label{fig:nota_fattoriali}
+\end{figure}
+
+The notebook had reached the same conclusion by another route: the
+factorizations of $P_p-T_{p+1}!$ contain, next to the small primes of the
+factorials, large and seemingly random primes --- already at $p=9$ one finds
+$3{,}116{,}563$ and $333{,}915{,}299$ --- a sign that the two sides have no
+arithmetic kinship beyond the initial coincidence. The proposition says the
+same thing quantitatively.

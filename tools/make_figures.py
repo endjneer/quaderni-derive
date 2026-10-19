@@ -829,6 +829,22 @@ def fig_nota_semiangolo():
     salva(fig, 'nota_semiangolo')
 
 
+
+def fig_nota_fattoriali():
+    from fractions import Fraction
+    T = lambda m: m * (m + 1) // 2
+    ps = np.arange(1, 61)
+    ap = [float(Fraction(math.prod(range(T(p) + 1, T(p + 1) + 1)),
+                         math.factorial(2 * p + 1))) for p in ps]
+    fig, ax = nuova(5.2, 2.9)
+    ax.axhline(1, color=GRIGIO, lw=0.9)
+    ax.semilogy(ps[:3], ap[:3], 'o', color=ROSSO, ms=4)
+    ax.semilogy(ps[3:], ap[3:], 'o', color=BLU, ms=3)
+    ax.set_xlabel('$p$')
+    ax.set_ylabel(r'$a_p=\dfrac{T_{p+1}!}{T_p!\,(2p+1)!}$')
+    ax.set_xlim(0, 61)
+    salva(fig, 'nota_fattoriali')
+
 # --------------------------------------------------------------------------
 
 FIGURE = [
@@ -841,7 +857,7 @@ FIGURE = [
     fig_mate_onde, fig_mate_logcosh,
     fig_factor, fig_fattorazionale, fig_primoriale, fig_u0,
     fig_j_tan, fig_equazioni_reim, fig_notch_bode,
-    fig_nota_semiangolo,
+    fig_nota_semiangolo, fig_nota_fattoriali,
 ]
 
 

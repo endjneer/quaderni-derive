@@ -1,2 +1,115 @@
 \section{Una catena di fattoriali che si spezza}
 \label{sec:fattoriali}
+
+Il quaderno \texttt{factor.dfw} (agosto 2010) mette alla prova
+un'uguaglianza fra il prodotto dei fattoriali dei numeri dispari e il
+fattoriale di un numero triangolare. Con $T_m=m(m+1)/2$ e
+\[
+  P_p=\prod_{k=0}^{p}(2k+1)!=1!\,3!\,5!\cdots(2p+1)!,
+\]
+la domanda \`e se $P_p=T_{p+1}!$. Per $p=0,1,2,3$ la risposta \`e s\`i:
+\[
+  1!=1!,\qquad 1!\,3!=3!,\qquad 1!\,3!\,5!=6!,\qquad 1!\,3!\,5!\,7!=10!.
+\]
+Al quinto caso l'uguaglianza cede, e il quaderno, invece di abbandonarla,
+misura di quanto si rompe: le righe \righe{factor.dfw}{5}{15} fattorizzano
+la differenza $P_p-T_{p+1}!$ fino a $p=14$ (la riga \#5 contiene un refuso,
+si veda la sezione~\ref{sec:refusi}). Questa sezione spiega perch\'e la
+catena regge quattro volte e dimostra che non si richiude pi\`u.
+
+\subsection{Un passo alla volta}
+
+Poich\'e $P_p=P_{p-1}\,(2p+1)!$ e $T_{p+1}=T_p+p+1$, se la catena vale al
+passo $p-1$ vale anche al passo $p$ se e solo se
+\begin{equation}\label{eq:passo}
+  T_p!\,(2p+1)!=T_{p+1}!,
+  \qquad\text{cio\`e}\qquad
+  \prod_{j=1}^{p+1}(T_p+j)=(2p+1)!.
+\end{equation}
+Ogni passo \`e dunque un caso dell'equazione $a!\,b!=c!$. Questa ha due
+famiglie di soluzioni banali: quella con $a=1$, e quella in cui $c=b!$ e
+$a=c-1$, perch\'e $(b!-1)!\,b!=(b!)!$. I primi passi della catena cadono
+proprio l\`i:
+\[
+  p=1:\ 1!\,3!=3!,\qquad
+  p=2:\ 3!\,5!=6!\ \ (\text{con }3!=6).
+\]
+Il terzo passo invece \`e
+\[
+  p=3:\qquad 6!\,7!=10!,
+\]
+che \`e \emph{l'unica soluzione non banale conosciuta} di $a!\,b!=c!$.
+Che sia l'unica in assoluto \`e una congettura attribuita a
+Sur\'anyi~\cite{erdos373}, ed \`e il problema B23 della raccolta di
+Guy~\cite{guy2004}; non ci sono altre soluzioni con $c\le10^{3000}$
+\cite{erdos373}, e risultati parziali in questa direzione si trovano
+in~\cite{hajdu2018}. La regolarit\`a che il quaderno ha visto durare quattro
+passi non nasconde quindi una legge: \`e fatta di due coincidenze banali e
+della pi\`u famosa coincidenza non banale fra fattoriali.
+
+Al passo successivo la \eqref{eq:passo} chiede
+$11\cdot12\cdot13\cdot14\cdot15=9!$, ma il primo membro vale $360\,360$ e il
+secondo $362\,880$: un quasi-successo, con rapporto $0{,}99306$.
+
+\subsection{La catena non si richiude pi\`u}
+
+\begin{prop}\label{prop:fattoriali}
+Per ogni $p\ge4$ vale $P_p>T_{p+1}!$, e il rapporto $P_p/T_{p+1}!$ cresce
+con $p$. In particolare l'uguaglianza $P_p=T_{p+1}!$ vale esattamente per
+$p=0,1,2,3$.
+\end{prop}
+
+\begin{proof}
+Sia
+\[
+  a_p=\frac{T_{p+1}!}{T_p!\,(2p+1)!}=\frac{1}{(2p+1)!}\prod_{j=1}^{p+1}(T_p+j),
+\]
+cos\`i che $P_p/T_{p+1}!=(P_{p-1}/T_p!)/a_p$. Poich\'e $P_3=T_4!$, basta
+dimostrare che $a_p<1$ per ogni $p\ge4$.
+
+Per $4\le p\le100$ lo si verifica con un calcolo esatto in aritmetica
+intera: il valore pi\`u grande \`e $a_4=0{,}99306$.
+
+Per $p\ge100$ si stima il rapporto fra due termini consecutivi. Da
+$T_{p+1}=T_p+p+1$ e $T_{p+1}+p+2=T_{p+2}$ segue
+\[
+  \frac{a_{p+1}}{a_p}
+  =\frac{T_{p+2}}{(2p+2)(2p+3)}\prod_{j=1}^{p+1}\Bigl(1+\frac{p+1}{T_p+j}\Bigr)
+  \le g(p)\,\exp\frac{(p+1)^2}{T_p+1},
+  \qquad
+  g(p)=\frac{(p+2)(p+3)}{4(p+1)(2p+3)},
+\]
+dove si \`e usato $1+x\le\ee^{x}$. Si ha
+$(p+1)^2/(T_p+1)=2(p+1)^2/(p^2+p+2)\le2+2/p\le2{,}02$ per $p\ge100$, e $g$
+\`e decrescente (il numeratore della sua derivata \`e $-5p^2-18p-15$) con
+$g(100)=0{,}12810$. Quindi
+\[
+  \frac{a_{p+1}}{a_p}\le \ee^{2{,}02}\cdot0{,}12810<0{,}966
+  \qquad (p\ge100),
+\]
+e $a_p<a_{100}<1$ per ogni $p>100$.
+\end{proof}
+
+La parte finita della dimostrazione, cio\`e i $97$ confronti esatti, \`e
+eseguita dallo script \texttt{verifica\_nota.py} del repository, che
+controlla anche la maggiorazione. La soglia $100$ non ha nulla di speciale: con stime pi\`u
+fini si abbasserebbe, ma non serve. Il rapporto $a_{p+1}/a_p$ tende a
+$\ee^2/8=0{,}9236\dots$, perch\'e il prodotto tende a $\ee^2$ e $g(p)$ a
+$1/8$: da $p=4$ in poi la catena si allontana dall'uguaglianza a velocit\`a
+geometrica (figura~\ref{fig:nota_fattoriali}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.78\linewidth]{nota_fattoriali}
+  \caption{Il rapporto $a_p$ per $1\le p\le60$, in scala logaritmica. Vale
+  esattamente $1$ per $p=1,2,3$ (in rosso); da $p=4$ in poi \`e minore di
+  $1$, e decresce con ragione che tende a $\ee^2/8$.}
+  \label{fig:nota_fattoriali}
+\end{figure}
+
+Il quaderno era arrivato alla stessa conclusione per altra via: le
+fattorizzazioni di $P_p-T_{p+1}!$ contengono, accanto ai primi piccoli dei
+fattoriali, primi grandi e apparentemente casuali --- gi\`a a $p=9$
+compaiono $3\,116\,563$ e $333\,915\,299$ --- segno che i due membri non
+hanno alcuna parentela aritmetica oltre la coincidenza iniziale. La
+proposizione dice la stessa cosa in forma quantitativa.

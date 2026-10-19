@@ -206,6 +206,107 @@ def bilineare():
 
 
 # ===========================================================================
+# §3  Una catena di fattoriali che si spezza
+# ===========================================================================
+
+def _T(m):
+    return m * (m + 1) // 2
+
+
+def _P(p):
+    """Prodotto dei fattoriali dei dispari fino a 2p+1."""
+    return prod(factorial(2 * k + 1) for k in range(p + 1))
+
+
+def _a(p):
+    """a_p = T_{p+1}! / (T_p! (2p+1)!) = prod_{j=1}^{p+1} (T_p + j) / (2p+1)!"""
+    return Fraction(prod(range(_T(p) + 1, _T(p + 1) + 1)), factorial(2 * p + 1))
+
+
+def _g(p):
+    return Fraction((p + 2) * (p + 3), 4 * (p + 1) * (2 * p + 3))
+
+
+def _B(p):
+    """Maggiorazione di a_{p+1}/a_p."""
+    return mp.exp(mp.mpf((p + 1) ** 2) / (_T(p) + 1)) * mp.mpf(_g(p).numerator) / _g(p).denominator
+
+
+@controllo('§3')
+def catena_fino_a_3():
+    """P_p = T_{p+1}! per p = 0..3 e non per p = 4; i passi 1!3! = 3!, 3!5! = 6!, 6!7! = 10!"""
+    for p in range(4):
+        assert _P(p) == factorial(_T(p + 1)), p
+    assert _P(4) != factorial(_T(5))
+    assert factorial(1) * factorial(3) == factorial(3)
+    assert factorial(3) * factorial(5) == factorial(6)
+    assert factorial(6) * factorial(7) == factorial(10)
+
+
+@controllo('§3')
+def quasi_successo():
+    """passo 4: 11·12·13·14·15 = 360360 contro 9! = 362880, a_4 = 0.99306"""
+    assert 11 * 12 * 13 * 14 * 15 == 360360 and factorial(9) == 362880
+    assert _a(4) == Fraction(360360, 362880)
+    assert round(float(_a(4)), 5) == 0.99306
+
+
+cita('a4', '0{,}99306', '0.99306')
+cita('passo4', '360\\,360', '360{,}360')
+cita('nove_fatt', '362\\,880', '362{,}880')
+
+
+@controllo('§3')
+def a_minore_di_uno():
+    """a_p < 1 per 4 <= p <= 100, con massimo a_4"""
+    valori = [_a(p) for p in range(4, 101)]
+    assert all(v < 1 for v in valori)
+    assert max(valori) == _a(4)
+
+
+@controllo('§3')
+def maggiorazione():
+    """(p+1)^2/(T_p+1) <= 2+2/p; g decrescente; e^2.02·g(100) < 0.966; a_{p+1}/a_p <= B(p)"""
+    for p in range(1, 100001):
+        assert (p + 1) ** 2 * p <= (2 * p + 2) * (_T(p) + 1), p
+    for p in range(0, 60):     # identità polinomiale di grado 3: bastano 4 punti
+        assert ((2 * p + 5) * (2 * p * p + 5 * p + 3) - (p * p + 5 * p + 6) * (4 * p + 5)
+                == -5 * p * p - 18 * p - 15)
+    assert _g(100) == Fraction(10506, 82012)
+    assert round(float(_g(100)), 5) == 0.1281
+    assert mp.exp(mp.mpf('2.02')) * mp.mpf(_g(100).numerator) / _g(100).denominator < mp.mpf('0.966')
+    assert _B(100) < mp.mpf('0.966')
+    for p in range(100, 301):
+        r = _a(p + 1) / _a(p)
+        assert mp.mpf(r.numerator) / r.denominator <= _B(p), p
+
+
+cita('g100', '0{,}12810', '0.12810')
+cita('soglia', '0{,}966', '0.966')
+
+
+@controllo('§3')
+def differenze_positive():
+    """P_p - T_{p+1}! > 0 per 4 <= p <= 30: il prodotto dei dispari supera il fattoriale"""
+    for p in range(4, 31):
+        assert _P(p) > factorial(_T(p + 1)), p
+
+
+@controllo('§3')
+def limite_del_rapporto():
+    """a_{p+1}/a_p tende a e^2/8 = 0.9236...; a p = 3000 dista meno di 1e-3"""
+    p = 3000
+    r = mp.mpf(_T(p + 2)) / ((2 * p + 2) * (2 * p + 3))
+    for j in range(1, p + 2):
+        r *= 1 + mp.mpf(p + 1) / (_T(p) + j)
+    assert abs(r - mp.e ** 2 / 8) < mp.mpf('1e-3'), r
+    assert mp.nstr(mp.e ** 2 / 8, 4) == '0.9236'
+
+
+cita('e2_8', '0{,}9236', '0.9236')
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 
