@@ -1,2 +1,71 @@
 \section{Due successioni per \texorpdfstring{$\ee$}{e}}
 \label{sec:e}
+
+Il quaderno \texttt{e.dfw} (agosto 2010, novantatr\'e righe) prende la
+definizione $(1+1/n)^n$ e la modifica in molti modi per vedere che cosa
+resiste. Una delle modifiche sostituisce $1+1/n$ con la serie geometrica
+troncata:
+\[
+  \lim_{n\to\infty}\Bigl(\sum_{k=0}^{n}n^{-k}\Bigr)^{n}=\ee
+\]
+(\righe{e.dfw}{19}{32} e \righe{e.dfw}{70}{87}). Derive restituisce $1$ come
+limite (righe \#30 e \#71), e sbaglia. Il quaderno se ne accorge calcolando
+la successione a $n=9\,999\,999$, dove trova una distanza da $\ee$ di
+$1{,}359141174\cdot10^{-7}$ (righe \#72--\#75): il valore \`e corretto in
+tutte le cifre mostrate.
+
+Poich\'e $\sum_{k=0}^{n}n^{-k}=(1-n^{-n-1})/(1-1/n)$, la successione differisce
+da $(1-1/n)^{-n}$ per il fattore $(1-n^{-n-1})^n$, che dista da $1$ meno di
+qualunque potenza di $1/n$. In pratica la successione dei quaderni \`e
+$(1-1/n)^{-n}=\bigl(n/(n-1)\bigr)^n$, cio\`e quella classica con $-n$ al posto
+di $n$ (\righe{e.dfw}{77}{80}).
+
+\begin{prop}\label{prop:e}
+Per $n\to\infty$,
+\begin{align*}
+  \Bigl(1+\frac1n\Bigr)^{n}&=\ee\Bigl(1-\frac{1}{2n}+\frac{11}{24n^2}+O(n^{-3})\Bigr),\\
+  \Bigl(1-\frac1n\Bigr)^{-n}&=\ee\Bigl(1+\frac{1}{2n}+\frac{11}{24n^2}+O(n^{-3})\Bigr),
+\end{align*}
+e la media delle due vale $\ee\bigl(1+\frac{11}{24n^2}+O(n^{-4})\bigr)$.
+\end{prop}
+
+\begin{proof}
+Si ha $n\ln(1+1/n)=1-\frac{1}{2n}+\frac{1}{3n^2}+O(n^{-3})$, e
+esponenziando $\ee\exp\bigl(-\frac1{2n}+\frac1{3n^2}+O(n^{-3})\bigr)
+=\ee\bigl(1-\frac1{2n}+(\frac13+\frac18)\frac1{n^2}+O(n^{-3})\bigr)$. La
+seconda successione \`e la prima calcolata in $-n$, perch\'e
+$(1+\frac{1}{-n})^{-n}=(1-\frac1n)^{-n}$: il suo sviluppo in potenze di $1/n$
+\`e lo stesso con il segno cambiato nei termini dispari, che nella media si
+cancellano.
+\end{proof}
+
+A $n=10^7$ gli errori valgono $-1{,}35914\cdot10^{-7}$ per la successione
+classica e $+1{,}35914\cdot10^{-7}$ per quella dei quaderni: stessa grandezza,
+segno opposto. La successione dei quaderni non converge pi\`u in fretta di
+quella classica; converge alla stessa velocit\`a, dall'altro lato. Il
+guadagno vero sta nella media, il cui errore \`e $1{,}2459\cdot10^{-14}$,
+pari a $11\ee/(24n^2)$ in tutte le cifre mostrate
+(figura~\ref{fig:nota_e_errori}). \`E lo stesso meccanismo per cui la
+differenza centrale approssima una derivata meglio della differenza in
+avanti: combinare un valore con il suo simmetrico elimina i termini dispari
+dell'errore.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{nota_e_errori}
+  \caption{Errore assoluto della successione classica $(1+1/n)^n$, di quella
+  dei quaderni $(\sum_{k=0}^n n^{-k})^n$ e della loro media, per
+  $10\le n\le10^8$, in scala bilogaritmica. Le prime due hanno la stessa
+  grandezza (pendenza $-1$) e segno opposto; la media ha pendenza $-2$.}
+  \label{fig:nota_e_errori}
+\end{figure}
+
+Il quaderno si chiude (\righe{e.dfw}{88}{93}) sostituendo $1/x$ con
+$\ii\pi/x$:
+\[
+  \Bigl(1+\frac{\ii\pi}{x}\Bigr)^{x}\to-1,\qquad
+  \Bigl(1+\frac{2\pi\ii}{x}\Bigr)^{x}\to1,\qquad
+  \Bigl(1+\frac{\ii\pi}{2x}\Bigr)^{x}\to\ii,
+\]
+e in generale $(1+\ii x/k)^k\to\ee^{\ii x}=\cos x+\ii\sin x$: la formula di
+Eulero ottenuta come limite, che \`e la strada classica.

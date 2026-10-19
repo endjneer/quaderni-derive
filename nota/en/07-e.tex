@@ -1,2 +1,69 @@
 \section{Two sequences for \texorpdfstring{$\ee$}{e}}
 \label{sec:e}
+
+The notebook \texttt{e.dfw} (August 2010, ninety-three lines) takes the
+definition $(1+1/n)^n$ and modifies it in many ways to see what survives. One
+of the modifications replaces $1+1/n$ with the truncated geometric series:
+\[
+  \lim_{n\to\infty}\Bigl(\sum_{k=0}^{n}n^{-k}\Bigr)^{n}=\ee
+\]
+(\righe{e.dfw}{19}{32} and \righe{e.dfw}{70}{87}). Derive returns $1$ as the
+limit (lines \#30 and \#71), which is wrong. The notebook notices by
+evaluating the sequence at $n=9{,}999{,}999$, where it finds a distance from
+$\ee$ of $1.359141174\cdot10^{-7}$ (lines \#72--\#75): the value is correct
+in all the digits shown.
+
+Since $\sum_{k=0}^{n}n^{-k}=(1-n^{-n-1})/(1-1/n)$, the sequence differs from
+$(1-1/n)^{-n}$ by the factor $(1-n^{-n-1})^n$, which is closer to $1$ than
+any power of $1/n$. In practice the notebooks' sequence is
+$(1-1/n)^{-n}=\bigl(n/(n-1)\bigr)^n$, that is, the classical one with $-n$ in
+place of $n$ (\righe{e.dfw}{77}{80}).
+
+\begin{prop}\label{prop:e}
+As $n\to\infty$,
+\begin{align*}
+  \Bigl(1+\frac1n\Bigr)^{n}&=\ee\Bigl(1-\frac{1}{2n}+\frac{11}{24n^2}+O(n^{-3})\Bigr),\\
+  \Bigl(1-\frac1n\Bigr)^{-n}&=\ee\Bigl(1+\frac{1}{2n}+\frac{11}{24n^2}+O(n^{-3})\Bigr),
+\end{align*}
+and the mean of the two is $\ee\bigl(1+\frac{11}{24n^2}+O(n^{-4})\bigr)$.
+\end{prop}
+
+\begin{proof}
+We have $n\ln(1+1/n)=1-\frac{1}{2n}+\frac{1}{3n^2}+O(n^{-3})$, and
+exponentiating, $\ee\exp\bigl(-\frac1{2n}+\frac1{3n^2}+O(n^{-3})\bigr)
+=\ee\bigl(1-\frac1{2n}+(\frac13+\frac18)\frac1{n^2}+O(n^{-3})\bigr)$. The
+second sequence is the first evaluated at $-n$, since
+$(1+\frac{1}{-n})^{-n}=(1-\frac1n)^{-n}$: its expansion in powers of $1/n$ is
+the same with the sign of the odd terms changed, and these cancel in the
+mean.
+\end{proof}
+
+At $n=10^7$ the errors are $-1.35914\cdot10^{-7}$ for the classical sequence
+and $+1.35914\cdot10^{-7}$ for the notebooks' one: same size, opposite sign.
+The notebooks' sequence does not converge faster than the classical one; it
+converges at the same rate, from the other side. The real gain lies in the
+mean, whose error is $1.2459\cdot10^{-14}$, equal to $11\ee/(24n^2)$ in all
+the digits shown (Figure~\ref{fig:nota_e_errori}). It is the same mechanism
+by which the central difference approximates a derivative better than the
+forward difference: combining a value with its mirror image removes the odd
+terms of the error.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{nota_e_errori}
+  \caption{Absolute error of the classical sequence $(1+1/n)^n$, of the
+  notebooks' sequence $(\sum_{k=0}^n n^{-k})^n$ and of their mean, for
+  $10\le n\le10^8$, on a log-log scale. The first two have the same size
+  (slope $-1$) and opposite sign; the mean has slope $-2$.}
+  \label{fig:nota_e_errori}
+\end{figure}
+
+The notebook closes (\righe{e.dfw}{88}{93}) by replacing $1/x$ with
+$\ii\pi/x$:
+\[
+  \Bigl(1+\frac{\ii\pi}{x}\Bigr)^{x}\to-1,\qquad
+  \Bigl(1+\frac{2\pi\ii}{x}\Bigr)^{x}\to1,\qquad
+  \Bigl(1+\frac{\ii\pi}{2x}\Bigr)^{x}\to\ii,
+\]
+and in general $(1+\ii x/k)^k\to\ee^{\ii x}=\cos x+\ii\sin x$: Euler's
+formula obtained as a limit, which is the classical route.

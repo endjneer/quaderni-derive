@@ -501,6 +501,84 @@ cita('s2', '0{,}1614', '0.1614')
 
 
 # ===========================================================================
+# §7  Due successioni per e
+# ===========================================================================
+
+def _classica(n):
+    return (1 + 1 / n) ** n
+
+
+def _geometrica(n):
+    """La successione dei quaderni: (sum_{k=0}^{n} n^{-k})^n, in forma chiusa."""
+    return ((1 - n ** (-n - 1)) / (1 - 1 / n)) ** n
+
+
+@controllo('§7')
+def errori_a_dieci_milioni():
+    """a n = 10^7: errori -1.35914e-7 e +1.35914e-7; media 1.2459e-14 = 11e/(24n^2)"""
+    n = mp.mpf(10) ** 7
+    a, b = _classica(n) - mp.e, _geometrica(n) - mp.e
+    assert mp.nstr(a, 6) == '-1.35914e-7', a
+    assert mp.nstr(b, 6) == '1.35914e-7', b
+    m = (a + b) / 2
+    assert mp.nstr(m, 5) == '1.2459e-14', m
+    uguali(m, 11 * mp.e / (24 * n ** 2), rel=mp.mpf('1e-6'))
+
+
+cita('err_e', '1{,}35914', '1.35914')
+cita('media_e', '1{,}2459', '1.2459')
+
+
+@controllo('§7')
+def riga_75():
+    """e #72-#75: a n = 9999999 la successione dei quaderni dista 1.359141174e-7 da e"""
+    n = mp.mpf(9999999)
+    b = _geometrica(n) - mp.e
+    assert abs(b - mp.mpf('1.359141174e-7')) < mp.mpf('1e-16'), b
+    assert mp.nstr(_geometrica(n), 10) == '2.718281964'
+
+
+cita('riga75', '1{,}359141174', '1.359141174')
+
+
+@controllo('§7')
+def sviluppi_asintotici():
+    """(1+1/n)^n = e(1 - 1/(2n) + 11/(24n^2) + ...), (1-1/n)^{-n} = e(1 + 1/(2n) + 11/(24n^2) + ...)"""
+    n = mp.mpf(10) ** 9
+    c1 = n ** 2 * (_classica(n) / mp.e - 1 + 1 / (2 * n))
+    c2 = n ** 2 * ((1 - 1 / n) ** (-n) / mp.e - 1 - 1 / (2 * n))
+    assert abs(c1 - mp.mpf(11) / 24) < mp.mpf('1e-8'), c1
+    assert abs(c2 - mp.mpf(11) / 24) < mp.mpf('1e-8'), c2
+
+
+@controllo('§7')
+def media_senza_potenze_dispari():
+    """nella media le potenze dispari di 1/n si cancellano: il resto è O(n^-4)"""
+    resto = []
+    for n in (mp.mpf(10) ** 6, mp.mpf(10) ** 7):
+        m = (_classica(n) + (1 - 1 / n) ** (-n)) / 2
+        resto.append(n ** 4 * (m / mp.e - 1 - mp.mpf(11) / (24 * n ** 2)))
+    assert vicini(resto[0], resto[1], rel=mp.mpf('1e-2')), resto
+
+
+@controllo('§7')
+def troncamento_e_limite():
+    """(1 - n^{-n-1})^n ~ 1; il limite di (sum_{k=0}^n n^{-k})^n è e, non 1 come dice Derive (#30, #71)"""
+    with mp.workdps(120):
+        n = mp.mpf(100)
+        assert abs((1 - n ** (-n - 1)) ** n - 1) < mp.mpf('1e-50')
+    assert abs(_geometrica(mp.mpf(10) ** 6) - mp.e) < mp.mpf('1e-5')
+
+
+@controllo('§7')
+def eulero_come_limite():
+    """e #88-#93: (1+iπ/x)^x -> -1, (1+2iπ/x)^x -> 1, (1+iπ/(2x))^x -> i"""
+    x = mp.mpf(10) ** 10      # lo scarto è circa c^2/(2x)
+    for c, atteso in ((mp.pi, -1), (2 * mp.pi, 1), (mp.pi / 2, 1j)):
+        assert abs((1 + 1j * c / x) ** x - atteso) < mp.mpf('1e-7'), c
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 

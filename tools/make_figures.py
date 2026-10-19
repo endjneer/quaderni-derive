@@ -860,6 +860,31 @@ def fig_nota_cosinc():
     ax.legend(frameon=False, loc='upper right', fontsize=9)
     salva(fig, 'nota_cosinc')
 
+
+def fig_nota_e_errori():
+    import mpmath as mp
+    mp.mp.dps = 60
+    ns = np.logspace(1, 8, 36)
+    e1, e2, em = [], [], []
+    for n in ns:
+        n = mp.mpf(int(round(n)))
+        a = (1 + 1 / n) ** n - mp.e
+        b = ((1 - n ** (-n - 1)) / (1 - 1 / n)) ** n - mp.e
+        e1.append(float(abs(a)))
+        e2.append(float(abs(b)))
+        em.append(float(abs((a + b) / 2)))
+    fig, ax = nuova(5.4, 3.0)
+    ax.loglog(ns, e1, 'o-', color=BLU, ms=3, lw=1.0,
+              label=r'$|(1+\frac{1}{n})^n-\mathrm{e}|$')
+    ax.loglog(ns, e2, 's--', color=ROSSO, ms=3, lw=1.0, mfc='none',
+              label=r'$|(\sum_{k=0}^{n} n^{-k})^n-\mathrm{e}|$')
+    ax.loglog(ns, em, '^-', color=VERDE, ms=3, lw=1.0,
+              label=r'$|\frac{1}{2}(\ldots+\ldots)-\mathrm{e}|$')
+    ax.set_xlabel('$n$')
+    ax.legend(frameon=False, loc='lower left')
+    ax.grid(True, which='both', alpha=0.35)
+    salva(fig, 'nota_e_errori')
+
 # --------------------------------------------------------------------------
 
 FIGURE = [
@@ -873,6 +898,7 @@ FIGURE = [
     fig_factor, fig_fattorazionale, fig_primoriale, fig_u0,
     fig_j_tan, fig_equazioni_reim, fig_notch_bode,
     fig_nota_semiangolo, fig_nota_fattoriali, fig_nota_cosinc,
+    fig_nota_e_errori,
 ]
 
 
