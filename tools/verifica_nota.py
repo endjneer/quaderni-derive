@@ -368,6 +368,62 @@ def media_sferica():
 
 
 # ===========================================================================
+# §5  Il seno cardinale e il suo gemello
+# ===========================================================================
+
+def _sinc(x):
+    return mp.mpf(1) if x == 0 else mp.sin(mp.pi * x) / (mp.pi * x)
+
+
+@controllo('§5')
+def cosinc_forma_integrale():
+    """((-1)^x - 1)/(πx) = i ∫_0^1 e^{iπxs} ds; Im = sinc, Re = (cos πx - 1)/(πx)"""
+    for x in map(mp.mpf, ('0.3', '1.7', '-2.2')):
+        F = (mp.power(-1, x) - 1) / (mp.pi * x)
+        uguali(F, 1j * mp.quad(lambda s: mp.exp(1j * mp.pi * x * s), [0, 1]),
+               rel=mp.mpf('1e-30'))
+        uguali(mp.im(F), _sinc(x))
+        uguali(mp.re(F), (mp.cos(mp.pi * x) - 1) / (mp.pi * x))
+
+
+@controllo('§5')
+def cosinc_serie_e_limite():
+    """cosinc #14-#16 e #28: la serie sum i^{n+1}(πx)^n/(n+1)! e il limite in 0 che vale i"""
+    for x in map(mp.mpf, ('0.4', '2.5')):
+        serie = mp.nsum(lambda n: 1j ** (n + 1) * (mp.pi * x) ** n / mp.factorial(n + 1), [0, mp.inf])
+        uguali(serie, (mp.power(-1, x) - 1) / (mp.pi * x), rel=mp.mpf('1e-30'))
+    h = mp.mpf('1e-30')
+    assert abs((mp.power(-1, h) - 1) / (mp.pi * h) - 1j) < mp.mpf('1e-25')
+    uguali(mp.diff(lambda x: mp.power(-1, x), mp.mpf('0.37')) / (mp.pi * mp.power(-1, mp.mpf('0.37'))),
+           1j, rel=mp.mpf('1e-30'))
+
+
+@controllo('§5')
+def hilbert_del_sinc():
+    """con Hf(x) = (1/π) vp ∫ f(t)/(x-t) dt vale H[sinc](x) = (1 - cos πx)/(πx)"""
+    for x in map(mp.mpf, ('0.3', '1.7')):
+        with mp.workdps(30):
+            g = lambda t: (_sinc(x - t) - _sinc(x + t)) / t
+            H = mp.quadosc(g, [0, mp.inf], period=2) / mp.pi
+            atteso = (1 - mp.cos(mp.pi * x)) / (mp.pi * x)
+            assert abs(H - atteso) < mp.mpf('1e-10'), (x, H, atteso)
+
+
+@controllo('§5')
+def gemello_non_integrabile():
+    """∫_0^X (1 - cos πx)/(πx) dx cresce come ln(X)/π: nessun valore finito"""
+    with mp.workdps(30):
+        I = lambda X: mp.quad(lambda x: (1 - mp.cos(mp.pi * x)) / (mp.pi * x), mp.linspace(0, X, int(X) + 1))
+        d1 = I(1000) - mp.log(1000) / mp.pi
+        d2 = I(2000) - mp.log(2000) / mp.pi
+        assert abs(d1 - d2) < mp.mpf('1e-3'), (d1, d2)
+        assert I(10000) > mp.mpf('2.5')
+
+
+cita('cosinc20', '11{,}534', '11.534')
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 

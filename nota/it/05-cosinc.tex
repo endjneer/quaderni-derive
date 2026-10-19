@@ -1,2 +1,81 @@
 \section{Il seno cardinale e il suo gemello}
 \label{sec:cosinc}
+
+Il quaderno \texttt{cosinc.dfw} (novembre 2010) studia una sola funzione,
+\[
+  F(x)=\frac{(-1)^x-1}{\pi x}.
+\]
+Con la determinazione principale dichiarata nell'intestazione del file si ha
+$(-1)^x=\ee^{\ii\pi x}$, e quindi
+\begin{equation}\label{eq:cosinc}
+  F(x)=\frac{\ee^{\ii\pi x}-1}{\pi x}=\ii\int_0^1\ee^{\ii\pi xs}\,\dd s .
+\end{equation}
+Le righe \righe{cosinc.dfw}{6}{11} e \riga{cosinc.dfw}{28} osservano che il
+rapporto fra la derivata di $(-1)^x$ e $\pi(-1)^x$ vale $\ii$, e che
+$F(0)=\lim_{h\to0}F(h)=\ii$: l'unit\`a immaginaria come rapporto di
+derivate. \`E la risposta corretta alla domanda che \texttt{j.dfw} si era
+posto sedici mesi prima (sezione~\ref{sec:breve}).
+
+Le righe \righe{cosinc.dfw}{14}{16} sviluppano $F$ in serie,
+$F(x)=\sum_{n\ge0}\ii^{n+1}(\pi x)^n/(n+1)!$, e ne separano le due parti:
+\[
+  \Imag F(x)=\frac{\sin\pi x}{\pi x},\qquad
+  \Real F(x)=\frac{\cos\pi x-1}{\pi x}.
+\]
+La prima \`e il seno cardinale. La seconda, cambiata di segno, \`e il
+``gemello'' del titolo: oscilla con lo stesso periodo e decresce con la
+stessa velocit\`a (figura~\ref{fig:nota_cosinc}), ma \`e dispari invece che
+pari, e sotto integrazione si comporta in modo opposto.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{nota_cosinc}
+  \caption{Il seno cardinale $\sin(\pi x)/(\pi x)$ e il suo gemello
+  $(1-\cos\pi x)/(\pi x)$, che ne \`e la trasformata di Hilbert.}
+  \label{fig:nota_cosinc}
+\end{figure}
+
+\subsection{Il gemello \`e la trasformata di Hilbert}
+
+Con la convenzione
+\[
+  Hf(x)=\frac1\pi\,\mathrm{v.p.}\!\int_{-\infty}^{\infty}\frac{f(t)}{x-t}\,\dd t ,
+\]
+la trasformata di Hilbert moltiplica ogni componente $\ee^{\ii\omega x}$ per
+$-\ii\sgn\omega$~\cite{king2009}. Poich\'e
+$\sin(\pi x)/(\pi x)=\frac12\int_{-1}^{1}\ee^{\ii\pi xs}\,\dd s$, si ottiene
+\[
+  H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]
+  =-\frac\ii2\Bigl(\int_0^1-\int_{-1}^0\Bigr)\ee^{\ii\pi xs}\,\dd s
+  =\frac{1-\cos\pi x}{\pi x},
+\]
+e quindi, per la \eqref{eq:cosinc},
+\[
+  \frac{\sin\pi x}{\pi x}+\ii\,H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]
+  =\int_0^1\ee^{\ii\pi xs}\,\dd s,
+  \qquad
+  F(x)=\ii\Bigl(\frac{\sin\pi x}{\pi x}+\ii\,H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]\Bigr).
+\]
+Il gemello \`e dunque la trasformata di Hilbert del seno cardinale; insieme
+formano il \emph{segnale analitico} del seno cardinale, che \`e la
+trasformata di Fourier del rettangolo unilatero $[0,1]$ invece che di quello
+simmetrico $[-1,1]$. La funzione del quaderno \`e questo segnale analitico
+moltiplicato per $\ii$.
+
+\subsection{Due integrali opposti}
+
+Il seno cardinale ha integrale $1$ su tutta la retta (\riga{cosinc.dfw}{19}).
+Il gemello invece non \`e integrabile: per $x>0$ \`e non negativo, e su ogni
+periodo la sua media vale $1/(\pi x)$ a meno di termini di ordine superiore,
+quindi $\int_0^X(1-\cos\pi x)/(\pi x)\,\dd x$ cresce come $(\ln X)/\pi$. Il
+valore $11{,}534$ che Derive restituisce alla riga \#20, e la sua met\`a
+calcolata alle righe \#21 e \#22, sono artefatti numerici: l'integrale
+diverge logaritmicamente.
+
+Il fenomeno \`e tipico della trasformata di Hilbert. Per una funzione $f$ che
+decresce abbastanza in fretta, $Hf(x)$ si comporta come
+$\frac{1}{\pi x}\int f$ per $|x|$ grande~\cite{king2009}, e non pu\`o essere
+integrabile se $\int f\neq0$. Il seno cardinale decresce troppo lentamente
+perch\'e il risultato si applichi alla lettera, ma la conclusione \`e la
+stessa: in media il gemello decresce come $1/(\pi x)$, cio\`e proprio come
+$\frac{1}{\pi x}\int\frac{\sin\pi t}{\pi t}\,\dd t$.

@@ -1,2 +1,80 @@
 \section{The cardinal sine and its twin}
 \label{sec:cosinc}
+
+The notebook \texttt{cosinc.dfw} (November 2010) studies a single function,
+\[
+  F(x)=\frac{(-1)^x-1}{\pi x}.
+\]
+With the principal determination declared in the file header,
+$(-1)^x=\ee^{\ii\pi x}$, and therefore
+\begin{equation}\label{eq:cosinc}
+  F(x)=\frac{\ee^{\ii\pi x}-1}{\pi x}=\ii\int_0^1\ee^{\ii\pi xs}\,\dd s .
+\end{equation}
+Lines \righe{cosinc.dfw}{6}{11} and \riga{cosinc.dfw}{28} observe that the
+ratio between the derivative of $(-1)^x$ and $\pi(-1)^x$ equals $\ii$, and
+that $F(0)=\lim_{h\to0}F(h)=\ii$: the imaginary unit as a ratio of
+derivatives. This is the correct answer to the question that \texttt{j.dfw}
+had asked sixteen months earlier (Section~\ref{sec:breve}).
+
+Lines \righe{cosinc.dfw}{14}{16} expand $F$ as a series,
+$F(x)=\sum_{n\ge0}\ii^{n+1}(\pi x)^n/(n+1)!$, and separate its two parts:
+\[
+  \Imag F(x)=\frac{\sin\pi x}{\pi x},\qquad
+  \Real F(x)=\frac{\cos\pi x-1}{\pi x}.
+\]
+The first is the cardinal sine. The second, with its sign changed, is the
+``twin'' of the title: it oscillates with the same period and decays at the
+same rate (Figure~\ref{fig:nota_cosinc}), but it is odd rather than even, and
+under integration it behaves in the opposite way.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{nota_cosinc}
+  \caption{The cardinal sine $\sin(\pi x)/(\pi x)$ and its twin
+  $(1-\cos\pi x)/(\pi x)$, which is its Hilbert transform.}
+  \label{fig:nota_cosinc}
+\end{figure}
+
+\subsection{The twin is the Hilbert transform}
+
+With the convention
+\[
+  Hf(x)=\frac1\pi\,\mathrm{p.v.}\!\int_{-\infty}^{\infty}\frac{f(t)}{x-t}\,\dd t ,
+\]
+the Hilbert transform multiplies every component $\ee^{\ii\omega x}$ by
+$-\ii\sgn\omega$~\cite{king2009}. Since
+$\sin(\pi x)/(\pi x)=\frac12\int_{-1}^{1}\ee^{\ii\pi xs}\,\dd s$, we get
+\[
+  H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]
+  =-\frac\ii2\Bigl(\int_0^1-\int_{-1}^0\Bigr)\ee^{\ii\pi xs}\,\dd s
+  =\frac{1-\cos\pi x}{\pi x},
+\]
+and hence, by \eqref{eq:cosinc},
+\[
+  \frac{\sin\pi x}{\pi x}+\ii\,H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]
+  =\int_0^1\ee^{\ii\pi xs}\,\dd s,
+  \qquad
+  F(x)=\ii\Bigl(\frac{\sin\pi x}{\pi x}+\ii\,H\Bigl[\frac{\sin\pi x}{\pi x}\Bigr]\Bigr).
+\]
+The twin is therefore the Hilbert transform of the cardinal sine; together
+they form the \emph{analytic signal} of the cardinal sine, which is the
+Fourier transform of the one-sided rectangle $[0,1]$ instead of the symmetric
+one $[-1,1]$. The notebook's function is this analytic signal multiplied by
+$\ii$.
+
+\subsection{Two opposite integrals}
+
+The cardinal sine has integral $1$ over the whole line
+(\riga{cosinc.dfw}{19}). The twin, instead, is not integrable: for $x>0$ it
+is nonnegative, and over each period its mean is $1/(\pi x)$ up to
+higher-order terms, so $\int_0^X(1-\cos\pi x)/(\pi x)\,\dd x$ grows like
+$(\ln X)/\pi$. The value $11.534$ that Derive returns at line \#20, and its
+half computed at lines \#21 and \#22, are numerical artifacts: the integral
+diverges logarithmically.
+
+The phenomenon is typical of the Hilbert transform. For a function $f$ that
+decays fast enough, $Hf(x)$ behaves like $\frac{1}{\pi x}\int f$ for large
+$|x|$~\cite{king2009}, and cannot be integrable if $\int f\neq0$. The
+cardinal sine decays too slowly for the result to apply literally, but the
+conclusion is the same: on average the twin decays like $1/(\pi x)$, that is,
+exactly like $\frac{1}{\pi x}\int\frac{\sin\pi t}{\pi t}\,\dd t$.

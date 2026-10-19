@@ -845,6 +845,21 @@ def fig_nota_fattoriali():
     ax.set_xlim(0, 61)
     salva(fig, 'nota_fattoriali')
 
+
+def fig_nota_cosinc():
+    x = np.linspace(-6, 6, 2001)
+    x = x[np.abs(x) > 1e-9]
+    fig, ax = nuova(5.4, 2.7)
+    ax.axhline(0, color='#444444', lw=0.6)
+    ax.plot(x, np.sin(np.pi * x) / (np.pi * x), color=BLU, lw=1.3,
+            label=r'$\dfrac{\sin \pi x}{\pi x}$')
+    ax.plot(x, (1 - np.cos(np.pi * x)) / (np.pi * x), color=ROSSO, lw=1.3,
+            label=r'$\dfrac{1-\cos \pi x}{\pi x}$')
+    ax.set_xlabel('$x$')
+    ax.set_xlim(-6, 6)
+    ax.legend(frameon=False, loc='upper right', fontsize=9)
+    salva(fig, 'nota_cosinc')
+
 # --------------------------------------------------------------------------
 
 FIGURE = [
@@ -857,7 +872,7 @@ FIGURE = [
     fig_mate_onde, fig_mate_logcosh,
     fig_factor, fig_fattorazionale, fig_primoriale, fig_u0,
     fig_j_tan, fig_equazioni_reim, fig_notch_bode,
-    fig_nota_semiangolo, fig_nota_fattoriali,
+    fig_nota_semiangolo, fig_nota_fattoriali, fig_nota_cosinc,
 ]
 
 
