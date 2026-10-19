@@ -1,30 +1,41 @@
-# I quaderni Derive
+# I quaderni Derive, 2009–2011
 
 Recupero, traduzione e commento di ventitré sessioni di lavoro prodotte fra il
 2009 e il 2011 con **Derive for Windows 6**, il sistema di calcolo simbolico
-della Texas Instruments.
+della Texas Instruments, e una nota che ne raccoglie i risultati per temi.
 
-Derive è stato dismesso nel 2007 e non gira più sui sistemi operativi attuali:
-i file `.dfw` erano diventati illeggibili. Il contenuto matematico, però, non è
-cifrato — le espressioni sono memorizzate come testo, nella stessa sintassi
-lineare della riga di comando. Questo repository contiene il codice che le
-riporta alla luce e il documento che ne esce.
+**Pagina:** <https://endjneer.github.io/quaderni-derive/> ·
+**PDF:** [ultima release](https://github.com/endjneer/quaderni-derive/releases/latest)
 
-**Risultato:** `tex/derive2010.pdf` — 232 pagine, 792 espressioni tradotte in
-notazione matematica, commentate una per una, con 27 figure e la verifica
-numerica di ogni identità verificabile.
+> *English:* recovery, translation and commentary of twenty-three Derive for
+> Windows notebooks (2009–2011). The thematic note is available in English as
+> `derive-notebooks-note.pdf` in the latest release; the integral edition is in
+> Italian.
+
+## I documenti
+
+| PDF nella release | Che cos'è |
+|---|---|
+| `quaderni-derive-nota.pdf` | **La nota**, in italiano: sette temi in cui gli esperimenti dei quaderni toccano matematica nota, con enunciati, dimostrazioni, contesto e domande aperte |
+| `derive-notebooks-note.pdf` | La stessa nota in inglese |
+| `quaderni-derive-edizione-integrale.pdf` | **L'edizione integrale**, in italiano: tutte le 792 espressioni, nell'ordine dei file, ciascuna tradotta in notazione matematica e commentata |
+
+I PDF non sono versionati: li produce la CI a ogni tag `v*` e li allega alla
+release.
 
 ## Che cosa contiene il repository
 
 | Cartella | Contenuto |
 |---|---|
 | `source/` | I ventitré file `.dfw` originali, non modificati |
-| `tools/` | La pipeline di recupero, in Python |
-| `commento/` | Il commento redazionale, un file JSON per quaderno |
-| `tex/` | Preambolo, capitoli scritti a mano, disegni TikZ, documento finale |
+| `tools/` | La pipeline di recupero e gli script di verifica, in Python |
+| `commento/` | Il commento dell'edizione integrale, un file JSON per quaderno |
+| `tex/` | L'edizione integrale: preambolo, capitoli scritti a mano, disegni TikZ |
 | `tex/generato/` | I capitoli prodotti dal generatore (non modificare a mano) |
-| `figures/` | I 27 grafici, in PDF vettoriale |
+| `nota/` | La nota per temi: un file per sezione e per lingua (`it/`, `en/`) |
+| `figures/` | I grafici, in PDF vettoriale; quelli della nota si chiamano `nota_*` |
 | `extracted/` | L'estrazione in JSON e l'esito della verifica numerica |
+| `site/` | La pagina di presentazione, in italiano e in inglese |
 
 ## La pipeline
 
@@ -40,10 +51,17 @@ source/*.dfw
      ├─ tools/make_figures.py  ──►  figures/*.pdf
      │      ridisegna i grafici a partire dalle formule
      │
-     └─ tools/build_tex.py     ──►  tex/generato/*.tex
-            unisce espressioni, verifica e commento in capitoli LaTeX
-                                │
-                          pdflatex ──►  tex/derive2010.pdf
+     ├─ tools/build_tex.py     ──►  tex/generato/*.tex
+     │      unisce espressioni, verifica e commento in capitoli LaTeX
+     │
+     ├─ tools/verifica_nota.py
+     │      ricalcola ogni valore numerico citato nella nota (mpmath, 60 cifre)
+     ├─ tools/controlla_testi.py
+     │      italiano e inglese coincidono; ogni decimale del testo è verificato
+     │
+     └─ pdflatex ──►  edizione integrale e nota (it, en)
+                       │
+                 tools/controlla_pdf.py   font, metadati, log senza errori
 ```
 
 `tools/derive2tex.py` è il traduttore vero e proprio: un parser a discesa
@@ -52,23 +70,37 @@ alla struttura dell'albero e spezzatura automatica delle formule lunghe.
 
 ## Compilare
 
-Servono Python 3 con `numpy`, `matplotlib`, `mpmath`, e una distribuzione
-LaTeX (testato con MiKTeX su Windows).
+Servono Python 3.12 con i pacchetti di `requirements.txt` e una distribuzione
+LaTeX con i pacchetti elencati in `tex/pacchetti-texlive.txt` (oltre a
+`scheme-basic`). La stessa lista la usa la CI.
+
+Su sistemi POSIX:
+
+```sh
+make            # i tre PDF in dist/, dopo tutti i controlli
+make nota       # solo la nota, con le verifiche
+make pdf        # solo l'edizione integrale
+```
+
+Su Windows:
 
 ```powershell
 .\build.ps1              # tutto: estrazione, verifica, figure, PDF
 .\build.ps1 -SoloPdf     # solo la ricompilazione LaTeX
 ```
 
-Su sistemi POSIX:
+## Pubblicazione
 
-```sh
-make
-```
+Il workflow `.github/workflows/pubblica.yml` compila i tre PDF a ogni push e
+pull request; dal ramo `main` pubblica `site/` su GitHub Pages; su un tag `v*`
+crea la release e vi allega i PDF. La pagina punta a
+`releases/latest/download/<nome>.pdf`, quindi i link non cambiano fra una
+release e l'altra.
 
 ## Il formato `.dfw`, in breve
 
-Ricostruito leggendo i byte; il capitolo 2 del PDF lo documenta per esteso.
+Ricostruito leggendo i byte; il capitolo 2 dell'edizione integrale e
+l'appendice A della nota lo documentano.
 
 - Riga di intestazione ASCII con versione e data di salvataggio.
 - Byte `0x1A` come separatore, poi le impostazioni di sessione in chiaro
@@ -86,48 +118,46 @@ Ricostruito leggendo i byte; il capitolo 2 del PDF lo documenta per esteso.
 
 ## Che cosa è saltato fuori
 
-Oltre alla matematica dei quaderni — una delta di Dirac estesa al piano
-complesso, la gaussiana ricavata dalla parametrizzazione razionale del cerchio,
-la formula di Eulero ottenuta come limite, il gradino di Heaviside costruito
-con soli logaritmi e valori assoluti — la rilettura ha isolato anche due
-refusi, entrambi in righe battute a mano:
+Nessun teorema nuovo, ma sette temi che toccano matematica nota, discussi
+nella nota:
 
-- `teoria.dfw` **#13**: un coefficiente `10` al posto di `5`, che rompe la
-  simmetria binomiale delle cinque righe precedenti; lo scarto dalla formula
-  corretta vale esattamente `35ε/n³`.
-- `factor.dfw` **#5**: `7³` al posto di `7²`, cioè un fattore sette di troppo.
-  Tutte le fattorizzazioni prodotte da Derive, nello stesso file, sono esatte.
+- l'esponenziale scritto con la tangente del semiangolo, che attraversa cinque
+  quaderni e porta alla frazione continua di Euler per *e*, agli approssimanti
+  di Padé e alla trasformazione bilineare dei filtri numerici;
+- una catena di fattoriali, `1!·3!·5!·7! = 10!`, il cui ultimo passo è
+  `6!·7! = 10!`, l'unica soluzione non banale conosciuta di `a!·b! = c!`; la
+  nota dimostra che la catena non si richiude più;
+- il teorema della media per l'equazione di Helmholtz, la trasformata di
+  Hilbert del seno cardinale, la dequantizzazione di Maslov, una successione
+  per *e* il cui errore si cancella nella media con quella classica;
+- una delta di Dirac valutata fuori dall'asse reale: i conti sono corretti,
+  ma il risultato dipende dalla famiglia approssimante.
 
-Una terza cosa, emersa rileggendo `teoria.dfw`: il simbolo `ε` vi ha **due
-significati diversi**. Nelle prime sette righe è un errore relativo comune a
-tutti gli operandi, e sotto quella lettura tutte e sette sono esatte — compresa
-la #4, che dice che il quoziente lo cancella, il che è vero solo per errori di
-modo comune ed è il principio delle misure ratiometriche. Nelle righe #8–#13
-ε è invece il fattore di scala di una quantità algebrica: quello che vi si
-calcola non è l'errore su `x^m` ma lo scarto di `(1+x)^m` da `x^m + 1`. Le due
-letture coincidono solo per `m = 2`, che è probabilmente ciò che ha tenuto
-insieme le due metà del quaderno.
-
-E una trappola che vale la pena conoscere: in `mate.dfw` una trentina di
-espressioni inseguono la soluzione di un'equazione che è un'identità, e quindi
-soddisfatta da qualunque valore. Il numero `−4.999999701` che Derive
-restituisce non è una soluzione, è il punto in cui l'iterazione numerica si è
-fermata.
+La rilettura ha isolato anche due refusi in righe battute a mano
+(`teoria.dfw #13`, `factor.dfw #5`), una svista corretta dall'autore stesso
+(`notch.dfw #15`) e due errori di Derive: un limite sbagliato in `e.dfw` e una
+"soluzione" numerica di un'identità in `mate.dfw`.
 
 ## Verifica numerica
 
 `tools/verify.py` interpreta l'albero sintattico con `mpmath` a 20 cifre e
 confronta i membri di ogni catena di uguaglianze in quattro punti del piano
-complesso. 145 espressioni superano il controllo e nel PDF portano un segno di
-spunta.
+complesso. 145 espressioni superano il controllo e nell'edizione integrale
+portano un segno di spunta. L'assenza del segno **non** significa che la
+formula sia sbagliata: nella maggior parte dei casi il controllo non era
+applicabile (integrale indefinito, `SOLVE` da risolvere, indice di somma
+simbolico) oppure l'espressione non era un'identità.
 
-L'assenza del segno **non** significa che la formula sia sbagliata: nella
-maggior parte dei casi significa che il controllo non era applicabile —
-integrale indefinito, `SOLVE` da risolvere, indice di somma simbolico, oppure
-un'espressione che non era affatto un'identità. Dove una formula merita un
-commento, il commento sta nel testo.
+Le affermazioni della nota sono verificate a parte da
+`tools/verifica_nota.py`: 61 controlli, uno o più per ogni valore citato.
 
-## Licenza
+## Licenze
 
-Il contenuto matematico e i file `.dfw` sono dell'autore. Il codice della
-pipeline è a disposizione per chiunque debba aprire altri file Derive.
+- **Codice** (`tools/`, `Makefile`, `build.ps1`, workflow): licenza MIT, file
+  [`LICENSE`](LICENSE).
+- **Testi, figure e file `.dfw`** (`nota/`, `tex/`, `commento/`, `figures/`,
+  `site/`, `source/`): Creative Commons Attribuzione 4.0 Internazionale,
+  file [`LICENSE-CC-BY-4.0`](LICENSE-CC-BY-4.0).
+
+Analisi e redazione con l'assistenza di Claude (Anthropic); ogni verifica
+numerica è riproducibile dal repository.

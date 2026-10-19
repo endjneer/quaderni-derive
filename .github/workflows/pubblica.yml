@@ -1,0 +1,91 @@
+# Compila i tre PDF a ogni push (su qualunque branch) e pull request; pubblica
+# la pagina solo da main; allega i PDF alla release solo sui tag v*.
+name: Pubblica
+
+on:
+  push:
+    branches: ['**']
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pubblica-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Dipendenze Python
+        run: pip install -r requirements.txt
+
+      - name: TeX Live
+        uses: TeX-Live/setup-texlive-action@v4
+        with:
+          packages: scheme-basic
+          package-file: tex/pacchetti-texlive.txt
+
+      # estrazione, verifica, figure, capitoli, i tre PDF e i controlli
+      - name: Compilazione e controlli
+        run: make dist
+
+      - name: Controllo della pagina
+        run: python tools/controlla_sito.py
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pdf
+          path: dist/*.pdf
+          if-no-files-found: error
+
+      - if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  pages:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v5
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: pdf
+          path: dist
+
+      - uses: softprops/action-gh-release@v3
+        with:
+          files: dist/*.pdf
+          body: |
+            **I quaderni Derive, 2009–2011** · Pagina: https://endjneer.github.io/quaderni-derive/
+
+            - `quaderni-derive-nota.pdf` — la nota per temi, in italiano
+            - `derive-notebooks-note.pdf` — the thematic note, in English
+            - `quaderni-derive-edizione-integrale.pdf` — l'edizione integrale, in italiano: ogni espressione dei quaderni, commentata

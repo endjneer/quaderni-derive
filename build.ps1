@@ -1,6 +1,7 @@
 <#
 .SYNOPSIS
-  Ricostruisce l'intero documento a partire dai file .dfw.
+  Ricostruisce i documenti a partire dai file .dfw: l'edizione integrale
+  e la nota nelle due lingue.
 
 .DESCRIPTION
   Esegue in ordine: estrazione dal formato binario, verifica numerica,
@@ -56,6 +57,12 @@ if (-not $SoloPdf) {
 
   Passo "Composizione dei capitoli"
   & $python tools\build_tex.py .
+
+  Passo "Verifica delle affermazioni della nota"
+  & $python tools\verifica_nota.py | Select-Object -Last 1
+  if ($LASTEXITCODE -ne 0) { throw "verifica_nota.py: un controllo e' fallito" }
+  & $python tools\controlla_testi.py | Select-Object -Last 1
+  if ($LASTEXITCODE -ne 0) { throw "controlla_testi.py: le due lingue non coincidono" }
 }
 
 Passo "Compilazione LaTeX (tre passate)"
@@ -75,6 +82,27 @@ try {
 } finally {
   Pop-Location
 }
+
+Passo "Compilazione della nota (italiano e inglese)"
+Push-Location nota
+try {
+  foreach ($f in 'nota-it', 'note-en') {
+    foreach ($n in 1..3) {
+      & $pdflatex -interaction=nonstopmode -file-line-error "$f.tex" | Out-Null
+    }
+    $errori = Select-String -Path "$f.log" -Pattern '^!' -ErrorAction SilentlyContinue
+    if ($errori) { $errori | ForEach-Object { Write-Host "    $($_.Line)" -ForegroundColor Red } }
+  }
+} finally {
+  Pop-Location
+}
+
+Passo "I tre PDF con i nomi della release"
+$dist = Join-Path $radice 'dist'
+New-Item -ItemType Directory -Force -Path $dist | Out-Null
+Copy-Item nota\nota-it.pdf (Join-Path $dist 'quaderni-derive-nota.pdf')
+Copy-Item nota\note-en.pdf (Join-Path $dist 'derive-notebooks-note.pdf')
+Copy-Item tex\derive2010.pdf (Join-Path $dist 'quaderni-derive-edizione-integrale.pdf')
 
 $pdf = Join-Path $radice 'tex\derive2010.pdf'
 if (Test-Path $pdf) {
