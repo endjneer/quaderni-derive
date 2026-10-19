@@ -579,6 +579,78 @@ def eulero_come_limite():
 
 
 # ===========================================================================
+# §8  Una delta di Dirac fuori dall'asse reale
+# ===========================================================================
+
+def _dn(z, n):
+    """La famiglia di delta.dfw #1."""
+    a = 1 / (2 * mp.mpf(n))
+    return ((1 + 2 * n * z) / abs(z + a) + (1 - 2 * n * z) / abs(z - a)) / 4
+
+
+def _d(z):
+    """Il suo limite fuori dall'origine: z Im z / (2i |z|^3)."""
+    return z * mp.im(z) / (2j * abs(z) ** 3)
+
+
+_PUNTI = (mp.mpc('0.3', '0.4'), mp.mpc(-1, 2), mp.mpc(2, '-0.5'))
+
+
+@controllo('§8')
+def rettangoli():
+    """delta #1-#3: per x reale la famiglia vale n per |x| < 1/(2n) e 0 fuori"""
+    for n in (10, 1000):
+        a = mp.mpf(1) / (2 * n)
+        for x in (-a / 2, a / 3, mp.mpf(0)):
+            uguali(_dn(x, n), n)
+        for x in (-3 * a, 2 * a, mp.mpf(5)):
+            assert abs(_dn(x, n)) < mp.mpf('1e-50'), (n, x)
+
+
+@controllo('§8')
+def limite_complesso():
+    """delta #4: per z non reale la famiglia tende a z Im z/(2i|z|^3) = ½ ∂x(z/|z|)"""
+    for z in _PUNTI:
+        uguali(_dn(z, 10 ** 12), _d(z), rel=mp.mpf('1e-9'))
+        y = mp.im(z)
+        dx = mp.diff(lambda x: (x + 1j * y) / abs(x + 1j * y), mp.re(z)) / 2
+        uguali(dx, _d(z), rel=mp.mpf('1e-30'))
+
+
+@controllo('§8')
+def proprieta_del_limite():
+    """δ(az) = δ(z)/|a| per a reale; delta #6-#7: δ(z) + δ(iz) = 1/(2|z|), δ(iz) - δ(z) = z^2/(2|z|^3)"""
+    for z in _PUNTI:
+        for a in (2, -3, mp.mpf('0.5')):
+            uguali(_d(a * z), _d(z) / abs(a))
+        uguali(_d(z) + _d(1j * z), 1 / (2 * abs(z)))
+        uguali(_d(1j * z) - _d(z), z ** 2 / (2 * abs(z) ** 3))
+
+
+@controllo('§8')
+def famiglie_diverse():
+    """la lorentziana tende a 0 fuori dall'asse; la gaussiana diverge dove |Im z| > |Re z|"""
+    eps = mp.mpf('1e-8')
+    for z in _PUNTI:
+        assert abs(eps / (mp.pi * (z ** 2 + eps ** 2))) < mp.mpf('1e-6'), z
+    eps = mp.mpf('0.05')      # esponente -Re(z^2)/eps^2 = ±64 nei due punti
+    g = lambda z: mp.exp(-z ** 2 / eps ** 2) / (eps * mp.sqrt(mp.pi))
+    assert abs(g(mp.mpc('0.3', '0.5'))) > mp.mpf('1e10')
+    assert abs(g(mp.mpc('0.5', '0.3'))) < mp.mpf('1e-10')
+
+
+@controllo('§8')
+def trasformata_esponenziale():
+    """delta #22 = -i δ(ω+ik); delta #24: |δ(ω+i)| = 1/(2(ω^2+1))"""
+    for w in map(mp.mpf, ('0', '0.7', '-2')):
+        for k in (1, 2):
+            R = mp.sqrt(k ** 2 + w ** 2)
+            riga22 = (k ** 2 - 1j * k * w) / (2j * R ** 3)
+            uguali(riga22, -1j * _d(w + 1j * k))
+        uguali(abs(_d(w + 1j)), 1 / (2 * (w ** 2 + 1)))
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 

@@ -1,2 +1,87 @@
 \section{A Dirac delta off the real axis}
 \label{sec:delta}
+
+\texttt{delta.dfw} (July 2010) is the most ambitious notebook of the
+collection. It takes an elementary family that approximates the Dirac delta,
+evaluates it at complex points, and uses the result to give a value to the
+Fourier transform of a growing exponential. The computations are correct;
+what does not hold up is the interpretation. This section explains why, and
+leaves open the question the notebook raises.
+
+\subsection{The family and its complex limit}
+
+Lines \righe{delta.dfw}{1}{3} use, with $a=1/(2n)$,
+\[
+  \delta_n(x)=\frac14\left[\frac{1+2nx}{|x+a|}+\frac{1-2nx}{|x-a|}\right]
+  =\frac n2\bigl[\sgn(x+a)-\sgn(x-a)\bigr],
+\]
+since $1\pm2nx=\pm2n(x\pm a)$. For real $x$ this is a rectangle of height $n$
+and base $1/n$, that is of area $1$, written with two sign functions and no
+piecewise definition. The formula also makes sense for complex $z$, with
+$\sgn z=z/|z|$, and it is a difference quotient with step $1/n$:
+\[
+  \delta_n(z)=\frac12\,\frac{\sgn(z+a)-\sgn(z-a)}{2a}.
+\]
+Hence, for $z\neq0$,
+\begin{equation}\label{eq:deltacomplessa}
+  \lim_{n\to\infty}\delta_n(z)=\frac12\,\frac{\partial}{\partial x}\,\frac{z}{|z|}
+  =\frac{z\,\Imag z}{2\ii\,|z|^3},
+\end{equation}
+where we used $\partial_x(z/|z|)=(z\bar z-zx)/|z|^3=-\ii yz/|z|^3$ with
+$z=x+\ii y$. This is the formula of \riga{delta.dfw}{4}. The limit function,
+which we denote by $\delta(z)$, vanishes on the real axis away from the
+origin, satisfies $\delta(az)=\delta(z)/|a|$ for every nonzero real $a$, like
+the true delta (\righe{delta.dfw}{8}{10}), and obeys
+$\delta(z)+\delta(\ii z)=1/(2|z|)$ (line \#6). So far everything is correct.
+
+\subsection{The limit depends on the family}
+
+On the real line, the limit of an approximating family does not depend on the
+family: they all define the same distribution. Off the line this is no longer
+true. With the Lorentzian family
+\[
+  L_\varepsilon(z)=\frac{\varepsilon}{\pi(z^2+\varepsilon^2)}
+\]
+the limit as $\varepsilon\to0$ is $0$ at every $z\neq0$. With the Gaussian
+family
+\[
+  G_\varepsilon(z)=\frac{\ee^{-z^2/\varepsilon^2}}{\varepsilon\sqrt\pi},
+  \qquad |G_\varepsilon(z)|=\frac{\ee^{-(x^2-y^2)/\varepsilon^2}}{\varepsilon\sqrt\pi},
+\]
+the limit is $0$ where $|x|>|y|$ and infinite where $|y|>|x|$. Three families
+that converge to the same delta on the line give, off the line, three
+different results: the value in \eqref{eq:deltacomplessa} is a property of
+the rectangle, not of the delta.
+
+This affects the result the notebook cares about most. Formally
+$\int\ee^{kt}\ee^{-\ii\omega t}\,\dd t=2\pi\,\delta(\omega+\ii k)$, and lines
+\righe{delta.dfw}{22}{27} compute this ``transform of the growing
+exponential'' with \eqref{eq:deltacomplessa}: for instance its modulus is
+$1/\bigl(2(\omega^2+1)\bigr)$ for $k=1$ (line \#24), a Lorentzian. With the
+Lorentzian family the same transform would be $0$; with the Gaussian one it
+would not exist. The consistency checks of lines \#48--\#51 use only
+linearity, and hold for any family.
+
+\subsection{Where the question makes sense}
+
+There are theories in which a delta ``at a complex point'' has a precise
+meaning. The Fourier transforms of compactly supported test functions are
+entire functions, and on this space the transform of $\ee^{kt}$ is a
+well-defined functional: evaluation of the test functions at a point of the
+imaginary axis~\cite{gelfand1964}. In Sato's theory of hyperfunctions the
+delta is the jump across the real axis of the holomorphic function
+$F(z)=-1/(2\pi\ii z)$: by the Sokhotski--Plemelj formula
+$\frac{1}{x\mp\ii0}=\mathrm{p.v.}\frac1x\pm\ii\pi\delta(x)$ one has
+$F(x+\ii0)-F(x-\ii0)=\delta(x)$~\cite{kaneko1988}. In neither theory does the
+delta have pointwise values off the axis: in the first it is a functional, in
+the second it is defined only up to an entire function.
+
+A question remains, one the notebook raises without knowing it.
+\eqref{eq:deltacomplessa} is a natural object --- half the derivative along
+the real axis of the complex sign $z/|z|$ --- and it is the only one of the
+three limits that is neither zero nor infinite; it has the scaling law of the
+delta. But it is not holomorphic, and nothing in the theory of distributions
+singles it out. Is there a sense in which the rectangle family is the right
+one? We do not know, and we do not claim it. Finally, lines
+\righe{delta.dfw}{41}{44} rewrite $\ee^{2\ii x}$ with the half-angle tangent:
+it is the formula of Section~\ref{sec:semiangolo}.
