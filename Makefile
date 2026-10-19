@@ -31,8 +31,10 @@ capitoli: extracted/all.json extracted/verify.json $(wildcard commento/*.json) t
 pdf: capitoli figure
 	cd tex && f=derive2010 && $(COMPILA)
 
+# ogni affermazione numerica della nota, e la coerenza fra le due lingue
 verifica-nota:
-	@echo "verifica della nota: nessun controllo ancora"
+	$(PYTHON) tools/verifica_nota.py
+	$(PYTHON) tools/controlla_testi.py
 
 # nota, nelle due lingue
 nota: figure verifica-nota

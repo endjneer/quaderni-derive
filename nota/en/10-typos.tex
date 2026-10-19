@@ -1,2 +1,51 @@
 \section{Two typos and a trap}
 \label{sec:refusi}
+
+Reading the expressions one by one also brings the mistakes to light. There
+are two, both in lines typed by hand; none of the lines produced by Derive
+contains one.
+
+\paragraph{\riga{teoria.dfw}{13}.}
+Lines \righe{teoria.dfw}{8}{13} record, for $x=1/n$ and $m=2,\dots,7$, the
+quantity
+\[
+  \varepsilon\left[(1+x)^m-1-x^m\right]
+  =\varepsilon\sum_{k=1}^{m-1}\binom{m}{k}x^k ,
+\]
+that is, the binomial expansion of $(1+x)^m$ without its first and last
+terms. This is not the propagation of an error on $x^m$, which would give
+$m\,x^{m-1}\varepsilon$; the two agree only for $m=2$. Lines \#8 to \#12
+follow the law exactly. Line \#13 instead reads
+\[
+  7\varepsilon\,\frac{n^5+3n^4+10n^3+5n^2+3n+1}{n^6},
+\]
+whereas the law, and with it the symmetry of the coefficients
+$\binom{7}{k}=7,21,35,35,21,7$, requires $5n^3$ in place of $10n^3$. The
+discrepancy from the law is exactly $35\varepsilon/n^3$.
+
+\paragraph{\riga{factor.dfw}{5}.}
+The line reads
+\[
+  1!\,3!\,5!\,7!\,9!-15!=2^{11}\cdot 3^{6}\cdot 5^{3}\cdot 7^{3},
+\]
+but the difference is $9{,}144{,}576{,}000=2^{11}\cdot3^{6}\cdot5^{3}\cdot7^{2}$:
+there is one factor of $7$ too many. The other ten factorizations in the same
+notebook are exact, both those typed by hand (\righe{factor.dfw}{6}{10}) and
+those produced by Derive (\righe{factor.dfw}{11}{15}). What these differences
+measure is the subject of Section~\ref{sec:fattoriali}.
+
+\paragraph{The trap: \righe{mate.dfw}{21}{48}.}
+The notebook \texttt{mate.dfw} contains some thirty lines that look for a
+value of a parameter $k$ such that
+\[
+  \frac{\cos^2(x+ky)-\cos^2(x-ky)}{\cos(2x+2ky)-\cos(2x-2ky)}=\frac12 .
+\]
+But the left-hand side equals $\tfrac12$ for \emph{every} $k$ (wherever the
+denominator does not vanish), because $\cos^2 A-\cos^2 B=\tfrac12(\cos 2A-\cos
+2B)$: the equation is an identity. Derive's numerical solver returns a number
+all the same, $k=-4.999999701$, and returns the very same number for
+different equations (lines \#23, \#27, \#30, \#33 and \#43): it is not a
+solution but the point where the iteration stops. The following lines take it
+seriously, divide it by $\pi$ and look for its meaning. They are worth
+keeping as a reminder: a numerical solver always answers, even when the
+question has no single answer.

@@ -1,2 +1,51 @@
 \section{Due refusi e una trappola}
 \label{sec:refusi}
+
+Rileggere le espressioni una per una porta alla luce anche gli errori. Ce ne
+sono due, entrambi in righe battute a mano; nessuna delle righe prodotte da
+Derive ne contiene.
+
+\paragraph{\riga{teoria.dfw}{13}.}
+Le righe \righe{teoria.dfw}{8}{13} annotano, per $x=1/n$ e per
+$m=2,\dots,7$, la quantit\`a
+\[
+  \varepsilon\left[(1+x)^m-1-x^m\right]
+  =\varepsilon\sum_{k=1}^{m-1}\binom{m}{k}x^k ,
+\]
+cio\`e lo sviluppo binomiale di $(1+x)^m$ privato del primo e dell'ultimo
+termine. Non \`e la propagazione di un errore su $x^m$, che darebbe
+$m\,x^{m-1}\varepsilon$: le due cose coincidono solo per $m=2$. Le righe da
+\#8 a \#12 seguono la legge esattamente. La \#13 scrive invece
+\[
+  7\varepsilon\,\frac{n^5+3n^4+10n^3+5n^2+3n+1}{n^6},
+\]
+mentre la legge, e con essa la simmetria dei coefficienti
+$\binom{7}{k}=7,21,35,35,21,7$, richiede $5n^3$ al posto di $10n^3$. Lo
+scarto rispetto alla legge vale esattamente $35\varepsilon/n^3$.
+
+\paragraph{\riga{factor.dfw}{5}.}
+La riga scrive
+\[
+  1!\,3!\,5!\,7!\,9!-15!=2^{11}\cdot 3^{6}\cdot 5^{3}\cdot 7^{3},
+\]
+ma la differenza vale $9\,144\,576\,000=2^{11}\cdot3^{6}\cdot5^{3}\cdot7^{2}$:
+c'\`e un fattore $7$ di troppo. Le altre dieci fattorizzazioni dello stesso
+quaderno sono esatte, sia quelle battute a mano (\righe{factor.dfw}{6}{10})
+sia quelle prodotte da Derive (\righe{factor.dfw}{11}{15}). Che cosa misurino
+queste differenze \`e il tema della sezione~\ref{sec:fattoriali}.
+
+\paragraph{La trappola: \righe{mate.dfw}{21}{48}.}
+Il quaderno \texttt{mate.dfw} contiene una trentina di righe che cercano il
+valore di un parametro $k$ per cui
+\[
+  \frac{\cos^2(x+ky)-\cos^2(x-ky)}{\cos(2x+2ky)-\cos(2x-2ky)}=\frac12 .
+\]
+Ma il primo membro vale $\tfrac12$ per \emph{ogni} $k$ (dove il denominatore
+non si annulla), perch\'e $\cos^2 A-\cos^2 B=\tfrac12(\cos 2A-\cos 2B)$:
+l'equazione \`e un'identit\`a. Il risolutore numerico di Derive restituisce
+comunque un numero, $k=-4{,}999999701$, e lo restituisce identico per
+equazioni diverse (righe \#23, \#27, \#30, \#33 e \#43): non \`e una
+soluzione, \`e il punto in cui l'iterazione si ferma. Le righe successive lo
+prendono sul serio, lo dividono per $\pi$ e ne cercano il significato. Vale
+la pena conservarle come promemoria: un risolutore numerico risponde sempre,
+anche quando la domanda non ha una risposta sola.

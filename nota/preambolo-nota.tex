@@ -58,8 +58,9 @@
 \newtheorem*{oss}{\nomeoss}
 
 % --- riferimenti alle righe dei quaderni --------------------------------------
-\newcommand{\riga}[2]{\texttt{#1}\,\#{}#2}
-\newcommand{\righe}[3]{\texttt{#1}\,\#{}#2--#3}
+% \mbox: un riferimento non va mai spezzato a fine riga
+\newcommand{\riga}[2]{\mbox{\texttt{#1}\,\#{}#2}}
+\newcommand{\righe}[3]{\mbox{\texttt{#1}\,\#{}#2--#3}}
 
 % --- notazione ----------------------------------------------------------------
 \newcommand{\dd}{\mathrm{d}}
