@@ -651,6 +651,195 @@ def trasformata_esponenziale():
 
 
 # ===========================================================================
+# §9  In breve
+# ===========================================================================
+
+@controllo('§9')
+def teoria_modo_comune():
+    """teoria #1-#7, lettura ricostruita: con x -> x(1+ε), y -> y(1+ε) il quoziente cancella ε"""
+    x, y, eps = mp.mpf('1.7'), mp.mpf('0.6'), mp.mpf('1e-3')
+    X, Y = x * (1 + eps), y * (1 + eps)
+    uguali((X + Y) / (x + y), 1 + eps)
+    uguali((X * Y) / (x * y), (1 + eps) ** 2)
+    uguali((X / Y) / (x / y), 1)
+    uguali(X ** (mp.mpf(1) / 3) / x ** (mp.mpf(1) / 3), (1 + eps) ** (mp.mpf(1) / 3))
+
+
+@controllo('§9')
+def teoria_radice_doppia():
+    """teoria #14-#19: le radici di (x+1)^2 = 2ε distano 2 sqrt(2ε)"""
+    for eps in (mp.mpf('1e-2'), mp.mpf('1e-6')):
+        r = mp.polyroots([1, 2, 1 - 2 * eps])
+        uguali(abs(r[0] - r[1]), 2 * mp.sqrt(2 * eps), rel=mp.mpf('1e-30'))
+
+
+@controllo('§9')
+def teoria_decimale():
+    """teoria #22-#27: 10^{-x(x+1)/2} = 1/(10^{x+1}-1) ha una radice in 1.99971; x = 10 non lo è"""
+    f = lambda x: x * (x + 1) / 2 * mp.log(10) - mp.log(10 ** (x + 1) - 1)
+    r = mp.findroot(f, 2)
+    # Derive (#25) mostra 1.999710103: le cifre sono troncate, non arrotondate
+    assert abs(r - mp.mpf('1.999710103')) < mp.mpf('2e-9'), r
+    assert abs(f(mp.mpf(10))) > 10
+
+
+cita('teoria_radice', '1{,}99971', '1.99971')
+
+
+@controllo('§9')
+def teoria2_aurea():
+    """teoria2: y = (2/k)x^2 e y = -x + k/2 si incontrano in x = k(sqrt5-1)/4; a = 2^{(n-1)^2} k^{1-n}"""
+    for k in (mp.mpf(1), mp.mpf(3)):
+        x = k * (mp.sqrt(5) - 1) / 4
+        uguali(2 / k * x ** 2, -x + k / 2)
+        for n in range(2, 7):
+            p = k / 2 ** (n - 1)
+            uguali(2 ** ((n - 1) ** 2) / k ** (n - 1) * p ** n, p)
+
+
+@controllo('§9')
+def pi_ed_e():
+    """sin-cos e e #56-#69: e^{πx}/π^{ex} = e^{kx}, k = π - e ln π = 0.029894..., sinh k = 0.029898..."""
+    k = mp.pi - mp.e * mp.log(mp.pi)
+    x = mp.mpf('1.3')
+    uguali(mp.exp(mp.pi * x) / mp.pi ** (mp.e * x), mp.exp(k * x))
+    assert str(k).startswith('0.029894'), k
+    assert str(mp.sinh(k)).startswith('0.029898'), mp.sinh(k)
+    uguali(mp.exp(mp.pi) / mp.pi ** mp.e, mp.exp(k))
+    assert abs(mp.sinh(k) - mp.mpf('0.02989865915')) < mp.mpf('1e-11')
+
+
+cita('k_pie', '0{,}029894', '0.029894')
+cita('sinh_k', '0{,}029898', '0.029898')
+
+
+@controllo('§9')
+def e_parabola():
+    """e #37-#45: la parabola con radici e e π racchiude un'area (π-e)^3/6"""
+    a = mp.quad(lambda x: -(x - mp.e) * (x - mp.pi), [mp.e, mp.pi])
+    uguali(a, (mp.pi - mp.e) ** 3 / 6, rel=mp.mpf('1e-30'))
+
+
+@controllo('§9')
+def pigreco():
+    """pigreco: (π^x+e^x)^{1/x} -> π, e; 4((1/2)!)^2 = π; #22 vale sgn(x) π; #14-#15"""
+    # lo scarto è circa (e/π)^x / x: a x = 400 vale ~1e-28
+    assert abs((mp.pi ** 400 + mp.e ** 400) ** (mp.mpf(1) / 400) - mp.pi) < mp.mpf('1e-25')
+    assert abs((mp.pi ** -400 + mp.e ** -400) ** (mp.mpf(-1) / 400) - mp.e) < mp.mpf('1e-25')
+    uguali(4 * mp.gamma(mp.mpf(3) / 2) ** 2, mp.pi)
+    for x in map(mp.mpf, ('0.7', '-1.9', '3.3')):
+        v = ((mp.cos(2 * x) - mp.cos(2 / x)) * (mp.atan(x) + mp.atan(1 / x))
+             / (mp.cos(x) ** 2 - mp.cos(1 / x) ** 2))
+        uguali(v, mp.sign(x) * mp.pi)
+    for x in range(1, 9):
+        assert prod(x + n for n in range(x + 1)) == factorial(2 * x) // factorial(x - 1)
+
+
+@controllo('§9')
+def fattorazionale():
+    """fattorazionale #1-#12: prod_{n=1}^{k-1}(1/n - 1/k) = k^{1-k}"""
+    valori = [2, 9, 64, 625, 7776, 117649, 2097152, 43046721, 1000000000, 25937424601, 743008370688]
+    for k, v in zip(range(2, 13), valori):
+        p = prod(Fraction(1, n) - Fraction(1, k) for n in range(1, k))
+        assert p == Fraction(1, k ** (k - 1)) == Fraction(1, v), k
+
+
+@controllo('§9')
+def primoriali():
+    """numeri primi: la somma dei reciproci dei primoriali vale 0.70523017179..."""
+    primi = [p for p in range(2, 200) if all(p % q for q in range(2, int(p ** 0.5) + 1))]
+    s, pr = Fraction(0), 1
+    for p in primi[:19]:
+        pr *= p
+        s += Fraction(1, pr)
+    tot, pr = mp.mpf(0), 1
+    for p in primi:
+        pr *= p
+        tot += mp.mpf(1) / pr
+    assert str(tot).startswith('0.70523017179180096514'), tot
+    assert abs(mp.mpf(s.numerator) / s.denominator - tot) < mp.mpf('1e-26')
+
+
+cita('primoriali', '0{,}7052301717', '0.7052301717')
+
+
+@controllo('§9')
+def fresnel():
+    """cost^2 #19-#20: ∫ (cos ωt^2 + sin ωt^2)/2 dt su R = sqrt(π/(2ω))"""
+    with mp.workdps(30):
+        for w in (mp.mpf(1), mp.mpf('2.5')):
+            f = lambda t: (mp.cos(w * t ** 2) + mp.sin(w * t ** 2)) / 2
+            v = 2 * mp.quadosc(f, [0, mp.inf], zeros=lambda n: mp.sqrt(n * mp.pi / w))
+            assert abs(v - mp.sqrt(mp.pi / (2 * w))) < mp.mpf('1e-12'), (w, v)
+
+
+@controllo('§9')
+def limit_disuguaglianza():
+    """limit #1: |x| <= (sqrt2/2)(1/2 + x^2), con uguaglianza in |x| = 1/sqrt2"""
+    for i in range(-400, 401):
+        x = mp.mpf(i) / 100
+        assert mp.sqrt(2) / 2 * (mp.mpf(1) / 2 + x ** 2) - abs(x) >= 0
+    x = 1 / mp.sqrt(2)
+    assert abs(mp.sqrt(2) / 2 * (mp.mpf(1) / 2 + x ** 2) - x) < mp.mpf('1e-50')
+
+
+@controllo('§9')
+def fx_gx():
+    """fx^gx: sin(x)^{1/ln(1/sin x)} = 1/e"""
+    for x in map(mp.mpf, ('0.3', '1', '2')):
+        uguali(mp.sin(x) ** (1 / mp.log(1 / mp.sin(x))), 1 / mp.e)
+
+
+@controllo('§9')
+def equazioni():
+    """equazioni: Im p(x+iy)/y tende a p'(x) per y -> 0 (gradi 2, 3, 4)"""
+    rnd = random.Random(9)
+    for grado in (2, 3, 4):
+        c = [mp.mpf(rnd.uniform(-3, 3)) for _ in range(grado + 1)]
+        p = lambda z: mp.polyval(c, z)
+        x, y = mp.mpf('0.37'), mp.mpf('1e-20')
+        uguali(mp.im(p(x + 1j * y)) / y, mp.diff(p, x), rel=mp.mpf('1e-30'))
+
+
+@controllo('§9')
+def notch_15_16():
+    """notch: la riga #16 coincide con la funzione di trasferimento #4; la #15 ha una r di troppo"""
+    rnd = random.Random(15)
+    for _ in range(4):
+        c, l, f, g, r = (mp.mpf(rnd.uniform(0.5, 3)) for _ in range(5))
+        s = mp.mpc(rnd.uniform(-1, 1), rnd.uniform(0.5, 3))
+        h4 = f * r * (c * l * s ** 2 + 1) / (f * l * r * s ** 2 * (c + g) + f * l * s + r * (f + l))
+        h16 = c / (g + c) * (s ** 2 + 1 / (l * c)) / (s ** 2 + s / (r * (c + g)) + (l + f) / (l * f) / (c + g))
+        h15 = c / (g + c) * (s ** 2 + 1 / (l * c)) / (s ** 2 + s / (r * (c + g)) + r * (l + f) / (l * f) / (c + g))
+        uguali(h16, h4)
+        assert not vicini(h15, h4, rel=mp.mpf('1e-6'))
+
+
+@controllo('§9')
+def sudoku():
+    """Sudoku #1-#2: la griglia è un sudoku valido e il suo determinante vale -2975130"""
+    g = [[9, 1, 3, 7, 8, 6, 5, 4, 2], [4, 8, 7, 5, 2, 3, 1, 9, 6], [2, 6, 5, 4, 1, 9, 3, 8, 7],
+         [8, 5, 6, 3, 7, 4, 2, 1, 9], [7, 9, 2, 1, 6, 5, 4, 3, 8], [3, 4, 1, 2, 9, 8, 7, 6, 5],
+         [6, 3, 4, 9, 5, 7, 8, 2, 1], [5, 2, 9, 8, 4, 1, 6, 7, 3], [1, 7, 8, 6, 3, 2, 9, 5, 4]]
+    cifre = set(range(1, 10))
+    assert all(set(r) == cifre for r in g)
+    assert all(set(r[j] for r in g) == cifre for j in range(9))
+    assert all(set(g[3 * a + i][3 * b + j] for i in range(3) for j in range(3)) == cifre
+               for a in range(3) for b in range(3))
+    with mp.workdps(40):
+        assert mp.nint(mp.det(mp.matrix(g))) == -2975130
+
+
+cita('sudoku_det', '2\\,975\\,130', '2{,}975{,}130')
+
+
+@controllo('§9')
+def j_limite():
+    """j #3: (1 - cos x)/sin x tende a 0 per x -> 0, non a i"""
+    assert abs((1 - mp.cos(mp.mpf('1e-20'))) / mp.sin(mp.mpf('1e-20'))) < mp.mpf('1e-19')
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 

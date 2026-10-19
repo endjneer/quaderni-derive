@@ -1,2 +1,96 @@
 \section{In breve}
 \label{sec:breve}
+
+I quaderni non discussi nelle sezioni precedenti, in ordine cronologico. Ogni
+valore riportato \`e verificato come gli altri.
+
+{\small
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.235\linewidth}>{\raggedright\arraybackslash}p{0.725\linewidth}@{}}
+\toprule
+\textbf{Quaderno} & \textbf{Contenuto} \\
+\midrule
+\endhead
+\texttt{Sudoku.dfw} \newline aprile 2009 &
+Una griglia di sudoku valida trattata come matrice: il determinante vale
+$-2\,975\,130$ (\riga{Sudoku.dfw}{2}). I determinanti dei nove blocchi e delle
+righe ripiegate in matrici $3\times3$ non mostrano alcuna relazione con
+esso. \\
+\texttt{teoria.dfw} \newline maggio 2009 &
+\righe{teoria.dfw}{1}{7}: una tavola che associa a ogni operazione un
+``difetto'' $\varepsilon$. Il quaderno non dice che cosa sia $\varepsilon$;
+con una lettura ricostruita, un errore relativo comune a tutti gli operandi
+($x\mapsto x(1+\varepsilon)$), somma e differenza lo conservano, prodotto e
+quadrato lo raddoppiano, la radice $n$-esima lo divide per $n$ e il quoziente
+lo cancella esattamente: \`e il principio delle misure ratiometriche.
+\righe{teoria.dfw}{14}{19}: perturbando $(x+1)^2=0$ in $(x+1)^2=2\varepsilon$
+le radici si separano di $2\sqrt{2\varepsilon}$, perch\'e una radice doppia
+\`e sensibile come $\sqrt\varepsilon$. \righe{teoria.dfw}{20}{27}: l'equazione
+$10^{-x(x+1)/2}=1/(10^{x+1}-1)$ ha una radice vicina a $2$,
+$x=1{,}99971\dots$ (riga \#25), perch\'e $10^3=1000\approx999$; il valore
+$x=10$ del risolutore numerico (\#27) non \`e una soluzione. Le righe
+\#8--\#13 sono discusse nella sezione~\ref{sec:refusi}. \\
+\texttt{j.dfw} \newline luglio 2009 &
+\righe{j.dfw}{3}{4} scrivono $\ii=\lim_{x\to0}(1-\cos x)/\sin x$, ma il
+limite vale $0$: nessun limite di quantit\`a reali d\`a $\ii$. La risposta
+corretta, $\ii$ come rapporto fra la derivata di $(-1)^x$ e $\pi(-1)^x$,
+arriva in \texttt{cosinc.dfw} (sezione~\ref{sec:cosinc}). \\
+\texttt{teoria2.dfw} \newline novembre 2009 &
+Curve $y=ax^n$ per i punti $(k/2^{n-1},k/2^{n-1})$ della bisettrice, con
+$a=2^{(n-1)^2}k^{1-n}$ (\righe{teoria2.dfw}{29}{31}). La parabola
+$y=2x^2/k$ incontra la retta $y=-x+k/2$ in $x=k(\sqrt5-1)/4$, un punto
+legato alla sezione aurea (\riga{teoria2.dfw}{10}). \\
+\texttt{limit.dfw} \newline dicembre 2009 &
+Una sola riga: $|x|\le\frac{\sqrt2}{2}\bigl(\frac12+x^2\bigr)$, che segue
+dalla disuguaglianza fra media aritmetica e geometrica, con uguaglianza per
+$|x|=1/\sqrt2$. \\
+\texttt{sin-cos.dfw} \newline gennaio 2010 &
+Funzioni iperboliche costruite su $\ee^{\pi x}$ e $\pi^{\ee x}$. Poich\'e
+$\ee^{\pi x}/\pi^{\ee x}=\ee^{kx}$ con $k=\pi-\ee\ln\pi=0{,}029894\dots$,
+tutto il quaderno \`e fatto di $\cosh kx$ e $\sinh kx$. Lo stesso numero
+ricompare in \righe{e.dfw}{56}{69} come $\ee^{\pi}/\pi^{\ee}=\ee^{k}$, con
+$\sinh k=0{,}029898\dots$ \\
+\texttt{notch.dfw} \newline gennaio 2010 &
+Il progetto di un filtro elimina-banda: funzione di trasferimento, casi
+limite e forma canonica del secondo ordine, con la pulsazione di
+antirisonanza $\omega_n=1/\sqrt{lc}$ e il fattore di qualit\`a
+(\righe{notch.dfw}{15}{20}). La riga \#15 ha un fattore $r$ di troppo nel
+termine costante; l'autore lo toglie alla riga \#16. \\
+\texttt{equazioni.dfw} \newline gennaio 2010 &
+Equazioni di grado da uno a quattro risolte ponendo $z=x+\ii y$ e separando
+parte reale e parte immaginaria. La parte immaginaria di $p(x+\ii y)$ \`e $y$
+per un fattore che per $y=0$ si riduce a $p'(x)$: per questo, nel caso di
+secondo grado, le radici complesse stanno sulla retta $x=-b/(2a)$. \\
+\texttt{cost\^{}2.dfw} \newline giugno 2010 &
+Le funzioni $\cos t^2$ e $\sin t^2$, i cui integrali sono quelli di Fresnel;
+l'integrale su tutta la retta di $\frac12(\cos\omega t^2+\sin\omega t^2)$ vale
+$\sqrt{\pi/(2\omega)}$ (\righe{cost\^{}2.dfw}{19}{20}). \\
+\texttt{e.dfw} \newline agosto 2010 &
+Oltre a quanto discusso nella sezione~\ref{sec:e}: la parabola con radici
+$\ee$ e $\pi$ racchiude un'area $(\pi-\ee)^3/6$ (\righe{e.dfw}{43}{44}), e il
+confronto fra $\ee^\pi$ e $\pi^\ee$ passa per lo stesso $k$ di
+\texttt{sin-cos.dfw}. \\
+\texttt{pigreco.dfw} \newline agosto 2010 &
+Cinque strade verso $\pi$. Fra queste: $4\,\bigl((1/2)!\bigr)^2=\pi$
+(\righe{pigreco.dfw}{20}{21}); il rapporto di \riga{pigreco.dfw}{22} vale
+$\sgn(x)\,\pi$ per ogni $x$, perch\'e $\cos2a-\cos2b=2(\cos^2a-\cos^2b)$ e
+$\arctan x+\arctan(1/x)=\sgn(x)\,\pi/2$; $(\pi^x+\ee^x)^{1/x}$ tende a $\pi$
+per $x\to+\infty$ e a $\ee$ per $x\to-\infty$
+(\righe{pigreco.dfw}{25}{26}). \\
+\texttt{numeri primi.dfw} \newline agosto 2010 &
+La somma dei reciproci dei primi diciannove primoriali,
+$\frac12+\frac16+\frac1{30}+\dotsb$. La serie completa vale
+$0{,}7052301717\dots$ ed \`e irrazionale: \`e uno sviluppo di Engel infinito,
+e i numeri razionali hanno sviluppo di Engel finito. \\
+\texttt{fx\^{}gx.dfw} \newline novembre 2010 &
+Una funzione che sembra dipendere da $x$ e vale $1/\ee$ ovunque:
+$(\sin x)^{1/\ln(1/\sin x)}$, perch\'e $u^{1/\ln(1/u)}=\ee^{-1}$ per ogni $u$
+in $(0,1)$. \\
+\texttt{fattorazionale.dfw} \newline gennaio 2011 &
+$\prod_{n=1}^{k-1}\bigl(\frac1n-\frac1k\bigr)=k^{1-k}$: ogni fattore vale
+$(k-n)/(nk)$, e il prodotto dei numeratori semplifica quello dei denominatori
+$n$. I valori per $k=2,\dots,12$ sono alle righe
+\righe{fattorazionale.dfw}{2}{12}. \\
+\bottomrule
+\end{longtable}
+}

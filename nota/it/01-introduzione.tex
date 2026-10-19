@@ -1,2 +1,58 @@
 \section{Introduzione}
 \label{sec:intro}
+
+Fra l'aprile del 2009 e il gennaio del 2011 l'autore ha usato \emph{Derive
+for Windows}, il sistema di calcolo simbolico della Texas Instruments, come
+un taccuino: si scrive un'espressione, si chiede al programma di
+semplificarla, risolverla, derivarla o farne il limite, si cambia un
+parametro e si guarda che cosa succede. Ne sono rimasti ventitr\'e file
+\texttt{.dfw} con $792$ espressioni. \`E matematica sperimentale nel senso
+di~\cite{borwein2008}: raramente una dimostrazione, spesso una regolarit\`a
+intravista, a volte un errore.
+
+Derive \`e stato ritirato dal commercio nel 2007 e non gira sui sistemi
+attuali, ma i file conservano le espressioni come testo. Il recupero, che
+consiste nel decodificare il formato, tradurre le espressioni in notazione
+matematica e verificarle numericamente, \`e descritto
+nell'appendice~\ref{app:recupero}. Il risultato completo \`e un'edizione
+integrale di oltre duecento pagine, in cui ogni espressione \`e riprodotta e
+commentata.
+
+Questa nota \`e un'altra cosa: una scelta per temi, pensata per un lettore
+matematico. Ogni sezione dice che cosa fa il quaderno, enuncia in forma
+pulita quello che c'\`e di vero, lo dimostra o ne abbozza la dimostrazione,
+lo colloca nella letteratura e dice che cosa resta aperto. Nessun risultato
+\`e presentato come nuovo. L'unica dimostrazione che non abbiamo trovato in
+letteratura, quella della sezione~\ref{sec:fattoriali}, \`e elementare.
+
+In sintesi:
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt]
+  \item la sezione~\ref{sec:semiangolo} ricostruisce l'idea che attraversa
+        cinque quaderni, scrivere l'esponenziale con la tangente del
+        semiangolo, e la segue fino a Euler, Lambert, Pad\'e e alla
+        trasformazione bilineare dei filtri numerici;
+  \item la sezione~\ref{sec:fattoriali} spiega una regolarit\`a fra
+        fattoriali che dura quattro passi e dimostra che non si ripete;
+  \item le sezioni~\ref{sec:media}, \ref{sec:cosinc}, \ref{sec:gradini}
+        e~\ref{sec:e} riconducono altri quattro quaderni a fatti noti: il
+        teorema della media per l'equazione di Helmholtz, la trasformata di
+        Hilbert, la dequantizzazione di Maslov, l'eliminazione dei termini
+        dispari dell'errore;
+  \item la sezione~\ref{sec:delta} discute un calcolo corretto con
+        un'interpretazione che non regge, e lascia aperta la domanda;
+  \item la sezione~\ref{sec:breve} riassume gli altri quaderni, la
+        sezione~\ref{sec:refusi} gli errori.
+\end{itemize}
+
+\paragraph{Come si leggono i riferimenti.}
+La scrittura \riga{factor.dfw}{4} indica l'espressione numero~4 del file
+\texttt{factor.dfw}, con la numerazione di Derive; \righe{gauss.dfw}{1}{5}
+indica un intervallo di espressioni. L'edizione integrale le riproduce tutte
+con la stessa numerazione.
+
+\paragraph{Verifica.}
+Ogni valore numerico citato nella nota \`e ricalcolato da uno script incluso
+nel repository, \texttt{verifica\_nota.py}, con \texttt{mpmath} a sessanta
+cifre; un secondo script controlla che ogni decimale presente nel testo sia
+fra quelli verificati, e che la versione italiana e quella inglese riportino
+gli stessi numeri, gli stessi riferimenti e le stesse citazioni.

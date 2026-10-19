@@ -41,7 +41,8 @@ COPPIE = [
 
 DECIMALE = {
     'it': re.compile(r'\d+\{,\}\d{3,}'),
-    'en': re.compile(r'(?<![\d.])\d+\.\d{3,}'),
+    # le misure di LaTeX (0.235\linewidth, 2.5pt) non sono valori citati
+    'en': re.compile(r'(?<![\d.])\d+\.\d{3,}(?!\s*(?:\\[a-z]*width|pt|cm|mm|em|ex)\b)'),
 }
 
 SCONSIGLIATE = {

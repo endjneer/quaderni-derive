@@ -1,2 +1,56 @@
 \section{Introduction}
 \label{sec:intro}
+
+Between April 2009 and January 2011 the author used \emph{Derive for
+Windows}, the computer-algebra system by Texas Instruments, as a notebook: one
+writes an expression, asks the program to simplify it, solve it,
+differentiate it or take its limit, changes a parameter and looks at what
+happens. Twenty-three \texttt{.dfw} files with $792$ expressions survive. It
+is experimental mathematics in the sense of~\cite{borwein2008}: rarely a
+proof, often a glimpsed regularity, sometimes a mistake.
+
+Derive was withdrawn from the market in 2007 and does not run on current
+systems, but the files store the expressions as text. The recovery, which
+consists of decoding the format, translating the expressions into
+mathematical notation and checking them numerically, is described in
+Appendix~\ref{app:recupero}. The complete result is an integral edition of
+more than two hundred pages, in Italian, in which every expression is
+reproduced and commented on.
+
+This note is something else: a selection by theme, written for a
+mathematical reader. Each section says what the notebook does, states cleanly
+what is true in it, proves it or sketches the proof, places it in the
+literature and says what remains open. No result is presented as new. The
+only proof we have not found in the literature, the one in
+Section~\ref{sec:fattoriali}, is elementary.
+
+In summary:
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt]
+  \item Section~\ref{sec:semiangolo} reconstructs the idea that runs through
+        five notebooks, writing the exponential with the half-angle tangent,
+        and follows it to Euler, Lambert, Pad\'e and the bilinear
+        transformation of digital filters;
+  \item Section~\ref{sec:fattoriali} explains a regularity between
+        factorials that lasts four steps and proves that it does not recur;
+  \item Sections~\ref{sec:media}, \ref{sec:cosinc}, \ref{sec:gradini}
+        and~\ref{sec:e} trace four more notebooks back to known facts: the
+        mean value theorem for the Helmholtz equation, the Hilbert transform,
+        Maslov dequantization, the removal of the odd terms of an error;
+  \item Section~\ref{sec:delta} discusses a correct computation with an
+        interpretation that does not hold up, and leaves the question open;
+  \item Section~\ref{sec:breve} summarizes the other notebooks,
+        Section~\ref{sec:refusi} the mistakes.
+\end{itemize}
+
+\paragraph{How to read the references.}
+The notation \riga{factor.dfw}{4} denotes expression number~4 of the file
+\texttt{factor.dfw}, in Derive's numbering; \righe{gauss.dfw}{1}{5} denotes a
+range of expressions. The integral edition reproduces all of them with the
+same numbering.
+
+\paragraph{Verification.}
+Every numerical value quoted in the note is recomputed by a script included in
+the repository, \texttt{verifica\_nota.py}, with \texttt{mpmath} at sixty
+digits; a second script checks that every decimal in the text is among those
+verified, and that the Italian and English versions report the same numbers,
+the same references and the same citations.

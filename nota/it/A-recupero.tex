@@ -1,2 +1,46 @@
 \section{Il recupero dei file}
 \label{app:recupero}
+
+\emph{Derive for Windows} \`e stato ritirato nel 2007; la sua ultima
+versione, la~6.10, non parte sui sistemi operativi attuali, e il formato
+\texttt{.dfw} non \`e documentato pubblicamente. Il contenuto per\`o non \`e
+n\'e cifrato n\'e compresso: le espressioni sono memorizzate come testo,
+nella sintassi lineare della riga di comando. Il formato \`e stato
+ricostruito leggendo i byte.
+
+\paragraph{Il formato.}
+Un file comincia con una riga ASCII che riporta versione e data di
+salvataggio, seguita dal byte \texttt{0x1A} e dalle impostazioni della
+sessione in chiaro (\texttt{Precision:=Exact}, \texttt{Branch:=Principal},
+\dots). Seguono i record, uno per espressione, ciascuno composto da:
+l'\emph{origine} dell'espressione in UTF-16LE --- \texttt{User} se battuta
+a mano, altrimenti la chiamata che l'ha prodotta, per esempio
+\texttt{Simp(Solve(\#11,z))}; l'indice dell'espressione, un intero a
+32~bit little-endian; la costante \texttt{01 00 00 00}; il testo
+dell'espressione come stringa con lunghezza in testa. La lunghezza occupa
+un byte, ma se quel byte vale \texttt{0xFF} i due byte successivi contengono
+la lunghezza vera a 16~bit: senza questa regola le espressioni lunghe
+spariscono senza errori, ed \`e cos\`i che \texttt{numeri primi.dfw} sembrava
+vuoto. I caratteri non ASCII sono scritti come \texttt{0x7F} seguito da
+quattro cifre esadecimali del codice Unicode: \texttt{7F 30 33 62 35} \`e
+$\varepsilon$.
+
+\paragraph{La pipeline.}
+Quattro programmi in Python ricostruiscono tutto a partire dai file originali,
+che non vengono modificati: l'estrattore del formato binario; un traduttore
+dalla sintassi di Derive a \LaTeX, scritto come parser a discesa ricorsiva che
+reinserisce le parentesi a partire dall'albero sintattico; un verificatore
+numerico; il generatore delle figure. L'estrazione restituisce
+$792$ espressioni da $23$ file, ciascuna con il suo indice e la sua origine.
+Le finestre grafiche dei quaderni non sono state recuperate: le figure di
+questa nota e dell'edizione integrale sono ridisegnate a partire dalle
+formule.
+
+\paragraph{La verifica.}
+Il verificatore interpreta l'albero sintattico di ogni espressione con
+\texttt{mpmath} a venti cifre e confronta i membri di ogni catena di
+uguaglianze in quattro punti del piano complesso: $145$ espressioni superano
+il controllo. Per le altre il controllo non \`e applicabile (equazioni da
+risolvere, integrali indefiniti, indici simbolici) oppure l'espressione non
+\`e un'identit\`a. Le affermazioni di questa nota sono verificate a parte,
+come detto nell'introduzione.

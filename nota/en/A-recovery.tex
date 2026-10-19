@@ -1,2 +1,43 @@
 \section{Recovering the files}
 \label{app:recupero}
+
+\emph{Derive for Windows} was withdrawn in 2007; its last version, 6.10, does
+not start on current operating systems, and the \texttt{.dfw} format is not
+publicly documented. The content, however, is neither encrypted nor
+compressed: the expressions are stored as text, in the linear syntax of the
+command line. The format was reconstructed by reading the bytes.
+
+\paragraph{The format.}
+A file begins with an ASCII line giving the version and the date it was
+saved, followed by the byte \texttt{0x1A} and by the session settings in
+plain text (\texttt{Precision:=Exact}, \texttt{Branch:=Principal}, \dots).
+Then come the records, one per expression, each made of: the \emph{origin} of
+the expression in UTF-16LE --- \texttt{User} if typed by hand, otherwise the
+call that produced it, for instance \texttt{Simp(Solve(\#11,z))}; the index
+of the expression, a 32-bit little-endian integer; the constant
+\texttt{01 00 00 00}; the text of the expression as a length-prefixed string.
+The length takes one byte, but if that byte is \texttt{0xFF} the next two
+bytes hold the actual 16-bit length: without this rule long expressions
+vanish without any error, which is why \texttt{numeri primi.dfw} first looked
+empty. Non-ASCII characters are written as \texttt{0x7F} followed by four
+hexadecimal digits of the Unicode code point: \texttt{7F 30 33 62 35} is
+$\varepsilon$.
+
+\paragraph{The pipeline.}
+Four Python programs rebuild everything from the original files, which are
+left untouched: the extractor of the binary format; a translator from
+Derive's syntax to \LaTeX, written as a recursive-descent parser that
+reinserts parentheses from the syntax tree; a numerical verifier; the figure
+generator. The extraction yields $792$ expressions from $23$ files, each with
+its index and its origin. The notebooks' graphics windows were not recovered:
+the figures in this note and in the integral edition are redrawn from the
+formulas.
+
+\paragraph{Verification.}
+The verifier interprets the syntax tree of every expression with
+\texttt{mpmath} at twenty digits and compares the members of every chain of
+equalities at four points of the complex plane: $145$ expressions pass the
+check. For the others the check does not apply (equations to be solved,
+indefinite integrals, symbolic indices) or the expression is not an
+identity. The statements of this note are verified separately, as explained
+in the introduction.
