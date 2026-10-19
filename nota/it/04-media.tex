@@ -1,2 +1,74 @@
 \section{La media e il punto medio}
 \label{sec:media}
+
+L'ultimo quaderno della raccolta, \texttt{Trasformata T.dfw} (gennaio 2011),
+applica a quattordici funzioni lo stesso operatore,
+\[
+  T[f](t)=\frac{\dfrac1t\displaystyle\int_0^t f(x)\,\dd x}{f(t/2)},
+\]
+cio\`e il rapporto fra la media di $f$ sull'intervallo $[0,t]$ e il valore
+di $f$ nel punto medio. Per una funzione affine il rapporto vale $1$. Le
+righe \righe{Trasformata T.dfw}{3}{8} trovano
+\begin{gather*}
+  T[\sin]=T[\cos]=T[\ee^{\ii x}]=\frac{\sin(t/2)}{t/2},\qquad
+  T[\ee^{2\pi\ii x}]=\frac{\sin(\pi t)}{\pi t},\\
+  T[\ee^{x}]=\frac{\sinh(t/2)}{t/2},\qquad
+  T[x^n]=\frac{2^n}{n+1}.
+\end{gather*}
+Tre funzioni diverse danno lo stesso seno cardinale, e il quaderno lo
+registra senza commento. La ragione \`e questa.
+
+\begin{prop}\label{prop:media}
+Sia $f$ di classe $C^2$ con $f''=\mu^2 f$ per una costante complessa $\mu$.
+Allora, per ogni intervallo $[c-h,c+h]$ del dominio,
+\[
+  \frac1{2h}\int_{c-h}^{c+h}f(x)\,\dd x=f(c)\,\frac{\sinh(\mu h)}{\mu h},
+\]
+dove il fattore vale $1$ per $\mu=0$. In particolare, dove $f(t/2)\neq0$,
+$T[f](t)=\sinh(\mu t/2)/(\mu t/2)$: il seno cardinale $\sin(t/2)/(t/2)$ per
+ogni soluzione di $f''=-f$, il suo analogo iperbolico per ogni soluzione di
+$f''=f$.
+\end{prop}
+
+\begin{proof}
+Se $\mu\neq0$, $f=A\ee^{\mu x}+B\ee^{-\mu x}$. La media di $\ee^{\mu x}$ su
+$[c-h,c+h]$ vale $\ee^{\mu c}(\ee^{\mu h}-\ee^{-\mu h})/(2\mu h)
+=\ee^{\mu c}\sinh(\mu h)/(\mu h)$; il fattore \`e pari in $\mu$, quindi vale
+lo stesso per $\ee^{-\mu x}$, e si conclude per linearit\`a. Se $\mu=0$, $f$
+\`e affine e la media coincide con il valore nel punto medio.
+\end{proof}
+
+\begin{oss}
+Vale anche il viceversa, nella forma seguente: se $f\in C^2$ e la media di
+$f$ su $[c-h,c+h]$ vale $\varphi(h)\,f(c)$ per ogni $c$, con $\varphi$
+indipendente da $c$, allora $f''=\lambda f$ per una costante $\lambda$.
+Infatti la media vale $f(c)+f''(c)h^2/6+o(h^2)$; scelto $c_0$ con
+$f(c_0)\neq0$, ne segue che $(\varphi(h)-1)/h^2$ ha un limite $L$, e allora
+$f''(c)=6L\,f(c)$ per ogni $c$. Le funzioni per cui il rapporto fra media e
+valore centrale dipende solo dall'ampiezza dell'intervallo sono dunque
+esattamente le soluzioni di $f''=\lambda f$: \`e questa la struttura che le
+righe da \#3 a \#7 mettono in luce.
+\end{oss}
+
+Le potenze sono un caso diverso: $T[x^n]$ \`e costante per omogeneit\`a, e lo
+stesso conto d\`a $2^\alpha/(\alpha+1)$ per ogni $f(x)=x^\alpha$ con
+$\alpha>-1$. Per le altre funzioni del quaderno --- logaritmi, arcotangente,
+arcoseno, gaussiana, seno integrale --- $T[f]$ dipende da $t$ senza una
+struttura altrettanto semplice.
+
+\paragraph{Il contesto.}
+La proposizione \`e il caso unidimensionale del teorema della media per
+l'equazione di Helmholtz. Se $\Delta u+k^2u=0$ in un intorno della palla
+chiusa di centro $x$ e raggio $r$ in $\mathbb{R}^n$, la media $M(r)$ di $u$
+sulla sfera di raggio $r$ soddisfa
+$M''+\frac{n-1}{r}M'+k^2M=0$, con $M(0)=u(x)$ e $M'(0)=0$ (l'equazione di
+Darboux per le medie sferiche~\cite{john1955}), e quindi
+\[
+  M(r)=u(x)\,\Gamma\Bigl(\frac n2\Bigr)\Bigl(\frac{2}{kr}\Bigr)^{n/2-1}
+  J_{n/2-1}(kr).
+\]
+Per $n=1$ la ``sfera'' \`e la coppia di punti $c\pm r$ e $M(r)=u(c)\cos(kr)$;
+mediando sul raggio si ottiene la media sull'intervallo,
+$u(c)\sin(kr)/(kr)$, che \`e la proposizione con $\mu=\ii k$. Per $n=3$ si
+ottiene $M(r)=u(x)\sin(kr)/(kr)$: la media su un segmento in dimensione uno
+ha lo stesso nucleo della media su una sfera in dimensione tre.

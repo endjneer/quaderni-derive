@@ -1,2 +1,74 @@
 \section{The mean and the midpoint}
 \label{sec:media}
+
+The last notebook of the collection, \texttt{Trasformata T.dfw} (January
+2011), applies the same operator to fourteen functions,
+\[
+  T[f](t)=\frac{\dfrac1t\displaystyle\int_0^t f(x)\,\dd x}{f(t/2)},
+\]
+that is, the ratio between the mean of $f$ over $[0,t]$ and the value of $f$
+at the midpoint. For an affine function the ratio is $1$. Lines
+\righe{Trasformata T.dfw}{3}{8} find
+\begin{gather*}
+  T[\sin]=T[\cos]=T[\ee^{\ii x}]=\frac{\sin(t/2)}{t/2},\qquad
+  T[\ee^{2\pi\ii x}]=\frac{\sin(\pi t)}{\pi t},\\
+  T[\ee^{x}]=\frac{\sinh(t/2)}{t/2},\qquad
+  T[x^n]=\frac{2^n}{n+1}.
+\end{gather*}
+Three different functions give the same cardinal sine, and the notebook
+records it without comment. The reason is the following.
+
+\begin{prop}\label{prop:media}
+Let $f$ be of class $C^2$ with $f''=\mu^2 f$ for a complex constant $\mu$.
+Then, for every interval $[c-h,c+h]$ in the domain,
+\[
+  \frac1{2h}\int_{c-h}^{c+h}f(x)\,\dd x=f(c)\,\frac{\sinh(\mu h)}{\mu h},
+\]
+where the factor equals $1$ for $\mu=0$. In particular, wherever
+$f(t/2)\neq0$, $T[f](t)=\sinh(\mu t/2)/(\mu t/2)$: the cardinal sine
+$\sin(t/2)/(t/2)$ for every solution of $f''=-f$, its hyperbolic analogue for
+every solution of $f''=f$.
+\end{prop}
+
+\begin{proof}
+If $\mu\neq0$, $f=A\ee^{\mu x}+B\ee^{-\mu x}$. The mean of $\ee^{\mu x}$ over
+$[c-h,c+h]$ is $\ee^{\mu c}(\ee^{\mu h}-\ee^{-\mu h})/(2\mu h)
+=\ee^{\mu c}\sinh(\mu h)/(\mu h)$; the factor is even in $\mu$, so the same
+holds for $\ee^{-\mu x}$, and linearity concludes. If $\mu=0$, $f$ is affine
+and its mean equals its value at the midpoint.
+\end{proof}
+
+\begin{oss}
+The converse also holds, in the following form: if $f\in C^2$ and the mean of
+$f$ over $[c-h,c+h]$ equals $\varphi(h)\,f(c)$ for every $c$, with $\varphi$
+independent of $c$, then $f''=\lambda f$ for some constant $\lambda$. Indeed
+the mean is $f(c)+f''(c)h^2/6+o(h^2)$; choosing $c_0$ with $f(c_0)\neq0$, it
+follows that $(\varphi(h)-1)/h^2$ has a limit $L$, and then $f''(c)=6L\,f(c)$
+for every $c$. The functions for which the ratio between mean and central
+value depends only on the width of the interval are thus exactly the
+solutions of $f''=\lambda f$: this is the structure that lines \#3 to \#7
+bring to light.
+\end{oss}
+
+Powers are a different case: $T[x^n]$ is constant by homogeneity, and the same
+computation gives $2^\alpha/(\alpha+1)$ for every $f(x)=x^\alpha$ with
+$\alpha>-1$. For the other functions in the notebook --- logarithms,
+arctangent, arcsine, the Gaussian, the sine integral --- $T[f]$ depends on $t$
+without an equally simple structure.
+
+\paragraph{Context.}
+The proposition is the one-dimensional case of the mean value theorem for the
+Helmholtz equation. If $\Delta u+k^2u=0$ in a neighbourhood of the closed ball
+with centre $x$ and radius $r$ in $\mathbb{R}^n$, the mean $M(r)$ of $u$ over
+the sphere of radius $r$ satisfies $M''+\frac{n-1}{r}M'+k^2M=0$, with
+$M(0)=u(x)$ and $M'(0)=0$ (Darboux's equation for spherical
+means~\cite{john1955}), and therefore
+\[
+  M(r)=u(x)\,\Gamma\Bigl(\frac n2\Bigr)\Bigl(\frac{2}{kr}\Bigr)^{n/2-1}
+  J_{n/2-1}(kr).
+\]
+For $n=1$ the ``sphere'' is the pair of points $c\pm r$ and
+$M(r)=u(c)\cos(kr)$; averaging over the radius gives the mean over the
+interval, $u(c)\sin(kr)/(kr)$, which is the proposition with $\mu=\ii k$. For
+$n=3$ one gets $M(r)=u(x)\sin(kr)/(kr)$: the mean over a segment in dimension
+one has the same kernel as the mean over a sphere in dimension three.

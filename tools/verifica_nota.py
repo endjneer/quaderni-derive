@@ -307,6 +307,67 @@ cita('e2_8', '0{,}9236', '0.9236')
 
 
 # ===========================================================================
+# §4  La media e il punto medio
+# ===========================================================================
+
+def _media(f, c, h):
+    """Media di f su [c-h, c+h]."""
+    return mp.quad(f, [c - h, c + h]) / (2 * h)
+
+
+def _S(z):
+    """sinh(z)/z, con valore 1 in 0."""
+    return mp.mpf(1) if z == 0 else mp.sinh(z) / z
+
+
+def _T_op(f, t):
+    """Operatore dei quaderni: media su [0, t] divisa per il valore in t/2."""
+    return mp.quad(f, [0, t]) / t / f(t / 2)
+
+
+@controllo('§4')
+def media_soluzioni():
+    """se f'' = μ² f, la media su [c-h, c+h] vale f(c)·sinh(μh)/(μh)"""
+    casi = [
+        (mp.sin, 1j), (mp.cos, 1j), (lambda x: mp.cos(x) + 2 * mp.sin(x), 1j),
+        (lambda x: mp.exp(1j * x), 1j), (mp.exp, 1), (mp.cosh, 1),
+        (lambda x: mp.exp(2 * x), 2), (lambda x: 3 - 5 * x, 0),
+    ]
+    for f, mu in casi:
+        for c, h in ((mp.mpf('0.7'), mp.mpf('0.4')), (mp.mpf('-1.3'), mp.mpf('2.1'))):
+            uguali(_media(f, c, h), f(c) * _S(mu * h), rel=mp.mpf('1e-30'),
+                   cosa='mu=%s c=%s h=%s' % (mu, c, h))
+
+
+@controllo('§4')
+def trasformata_t_righe():
+    """Trasformata T #3-#8: e^x, sin, cos, e^{ix}, e^{2πix}, x^n"""
+    t = mp.mpf('1.7')
+    uguali(_T_op(mp.exp, t), mp.sinh(t / 2) / (t / 2), rel=mp.mpf('1e-30'))
+    for f in (mp.sin, mp.cos, lambda x: mp.exp(1j * x)):
+        uguali(_T_op(f, t), mp.sin(t / 2) / (t / 2), rel=mp.mpf('1e-30'))
+    uguali(_T_op(lambda x: mp.exp(2j * mp.pi * x), t),
+           mp.sin(mp.pi * t) / (mp.pi * t), rel=mp.mpf('1e-30'))
+    for n in range(7):
+        uguali(_T_op(lambda x: x ** n, t), mp.mpf(2) ** n / (n + 1), rel=mp.mpf('1e-30'))
+
+
+@controllo('§4')
+def media_sferica():
+    """media sferica di Helmholtz: n = 1 dà cos(kr), n = 3 dà sin(kr)/(kr)"""
+    nucleo = lambda n, z: mp.gamma(mp.mpf(n) / 2) * (2 / z) ** (mp.mpf(n) / 2 - 1) \
+        * mp.besselj(mp.mpf(n) / 2 - 1, z)
+    for z in map(mp.mpf, ('0.5', '2', '7.3')):
+        uguali(nucleo(3, z), mp.sin(z) / z)
+        uguali(nucleo(1, z), mp.cos(z))
+        # media di e^{i k·x} sulla sfera di raggio r in R^3, con kr = z
+        m = mp.quad(lambda th: mp.exp(1j * z * mp.cos(th)) * mp.sin(th) / 2, [0, mp.pi])
+        uguali(m, mp.sin(z) / z, rel=mp.mpf('1e-30'))
+        # media sull'intervallo in R^1: stesso nucleo
+        uguali(_media(lambda x: mp.cos(x), 0, z), mp.sin(z) / z, rel=mp.mpf('1e-30'))
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 
