@@ -1,0 +1,76 @@
+% ---------------------------------------------------------------------------
+%  Preambolo comune alle due versioni della nota.
+%  Il file principale carica babel con la lingua e definisce \nomeprop,
+%  \nomelemma e \nomeoss prima di includere questo file.
+% ---------------------------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{microtype}
+
+\usepackage[a4paper,top=2.7cm,bottom=2.9cm,left=2.9cm,right=2.9cm]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+
+% --- tavolozza, la stessa dell'edizione integrale ----------------------------
+\definecolor{inchiostro}{HTML}{1B1F23}
+\definecolor{blunotte}{HTML}{1F4E79}
+\definecolor{rossoterra}{HTML}{B3352B}
+\definecolor{verdesalvia}{HTML}{2A7F62}
+\definecolor{grigiocarta}{HTML}{F4F5F7}
+\definecolor{grigiotratto}{HTML}{C8CCD2}
+\definecolor{grigiotesto}{HTML}{6B7280}
+
+\color{inchiostro}
+
+% --- titolazione ------------------------------------------------------------
+\titleformat{\section}
+  {\normalfont\sffamily\Large\bfseries\color{blunotte}}{\thesection}{0.7em}{}
+\titleformat{\subsection}
+  {\normalfont\sffamily\large\bfseries\color{inchiostro}}
+  {\thesubsection}{0.6em}{}
+\titleformat{\paragraph}[runin]
+  {\normalfont\sffamily\bfseries\color{inchiostro}}{}{0pt}{}
+
+\captionsetup{font=small,labelfont={sf,bf,color=blunotte},
+              labelsep=period,width=0.92\linewidth}
+
+\graphicspath{{../figures/}}
+
+% --- enunciati ----------------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{prop}{\nomeprop}[section]
+\newtheorem{lemma}[prop]{\nomelemma}
+\theoremstyle{remark}
+\newtheorem*{oss}{\nomeoss}
+
+% --- riferimenti alle righe dei quaderni --------------------------------------
+\newcommand{\riga}[2]{\texttt{#1}\,\#{}#2}
+\newcommand{\righe}[3]{\texttt{#1}\,\#{}#2--#3}
+
+% --- notazione ----------------------------------------------------------------
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\gd}{gd}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+
+\setlength{\emergencystretch}{2em}

@@ -15,3 +15,15 @@ __pycache__/
 
 # file di lavoro
 extracted/dump.txt
+
+# PDF prodotti dalla compilazione (stanno nella release)
+tex/derive2010.pdf
+nota/*.pdf
+nota/*.aux
+nota/*.log
+nota/*.out
+nota/*.toc
+dist/
+
+# ambiente Python locale
+.venv/

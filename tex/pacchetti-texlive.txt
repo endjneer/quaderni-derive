@@ -1,0 +1,22 @@
+# Pacchetti TeX Live richiesti oltre scheme-basic, uno per riga.
+# Li usano sia l'installazione locale (TinyTeX) sia la CI.
+babel-italian
+hyphen-italian
+babel-english
+lm
+microtype
+mathtools
+amsfonts
+booktabs
+enumitem
+titlesec
+caption
+listings
+pgf
+xcolor
+fancyhdr
+geometry
+tools
+hyperref
+amsmath
+amscls

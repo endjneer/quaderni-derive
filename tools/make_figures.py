@@ -63,7 +63,8 @@ def nuova(w=5.6, h=3.2, n=1, **kw):
 
 def salva(fig, nome):
     path = os.path.join(OUT, nome + '.pdf')
-    fig.savefig(path)
+    # senza data di creazione: la stessa figura produce lo stesso file
+    fig.savefig(path, metadata={'CreationDate': None})
     plt.close(fig)
     print('  ', path)
 
