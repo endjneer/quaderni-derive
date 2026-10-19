@@ -30,10 +30,16 @@ e la media delle due vale $\ee\bigl(1+\frac{11}{24n^2}+O(n^{-4})\bigr)$.
 \end{prop}
 
 \begin{proof}
-Si ha $n\ln(1+1/n)=1-\frac{1}{2n}+\frac{1}{3n^2}+O(n^{-3})$, e
-esponenziando $\ee\exp\bigl(-\frac1{2n}+\frac1{3n^2}+O(n^{-3})\bigr)
-=\ee\bigl(1-\frac1{2n}+(\frac13+\frac18)\frac1{n^2}+O(n^{-3})\bigr)$. La
-seconda successione \`e la prima calcolata in $-n$, perch\'e
+Si ha
+\[
+  n\ln\Bigl(1+\frac1n\Bigr)=1-\frac{1}{2n}+\frac{1}{3n^2}+O(n^{-3}),
+\]
+e quindi, poich\'e $\frac13+\frac18=\frac{11}{24}$,
+\[
+  \Bigl(1+\frac1n\Bigr)^{n}=\ee\exp\Bigl(-\frac1{2n}+\frac1{3n^2}+O(n^{-3})\Bigr)
+  =\ee\Bigl(1-\frac1{2n}+\frac{11}{24n^2}+O(n^{-3})\Bigr).
+\]
+La seconda successione \`e la prima calcolata in $-n$, perch\'e
 $(1+\frac{1}{-n})^{-n}=(1-\frac1n)^{-n}$: il suo sviluppo in potenze di $1/n$
 \`e lo stesso con il segno cambiato nei termini dispari, che nella media si
 cancellano.

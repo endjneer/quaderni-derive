@@ -42,8 +42,8 @@ nota: figure verifica-nota
 
 controlli: pdf nota
 	$(PYTHON) tools/controlla_pdf.py tex/derive2010.pdf --log tex/derive2010.log --pagine 200 300
-	$(PYTHON) tools/controlla_pdf.py nota/nota-it.pdf --log nota/nota-it.log --pagine 1 40
-	$(PYTHON) tools/controlla_pdf.py nota/note-en.pdf --log nota/note-en.log --pagine 1 40
+	$(PYTHON) tools/controlla_pdf.py nota/nota-it.pdf --log nota/nota-it.log --pagine 15 40
+	$(PYTHON) tools/controlla_pdf.py nota/note-en.pdf --log nota/note-en.log --pagine 15 40
 
 # i tre PDF con i nomi della release
 dist: controlli

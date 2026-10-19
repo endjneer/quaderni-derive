@@ -29,10 +29,16 @@ and the mean of the two is $\ee\bigl(1+\frac{11}{24n^2}+O(n^{-4})\bigr)$.
 \end{prop}
 
 \begin{proof}
-We have $n\ln(1+1/n)=1-\frac{1}{2n}+\frac{1}{3n^2}+O(n^{-3})$, and
-exponentiating, $\ee\exp\bigl(-\frac1{2n}+\frac1{3n^2}+O(n^{-3})\bigr)
-=\ee\bigl(1-\frac1{2n}+(\frac13+\frac18)\frac1{n^2}+O(n^{-3})\bigr)$. The
-second sequence is the first evaluated at $-n$, since
+We have
+\[
+  n\ln\Bigl(1+\frac1n\Bigr)=1-\frac{1}{2n}+\frac{1}{3n^2}+O(n^{-3}),
+\]
+and hence, since $\frac13+\frac18=\frac{11}{24}$,
+\[
+  \Bigl(1+\frac1n\Bigr)^{n}=\ee\exp\Bigl(-\frac1{2n}+\frac1{3n^2}+O(n^{-3})\Bigr)
+  =\ee\Bigl(1-\frac1{2n}+\frac{11}{24n^2}+O(n^{-3})\Bigr).
+\]
+The second sequence is the first evaluated at $-n$, since
 $(1+\frac{1}{-n})^{-n}=(1-\frac1n)^{-n}$: its expansion in powers of $1/n$ is
 the same with the sign of the odd terms changed, and these cancel in the
 mean.
