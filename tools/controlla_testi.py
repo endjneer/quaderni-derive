@@ -12,10 +12,11 @@ Controlla la coerenza dei sorgenti della nota (cartella nota/).
   5. le parole sconsigliate vengono segnalate, senza far fallire il controllo.
   6. ogni citazione ha la sua voce in bibliografia; una voce mai citata
      viene segnalata come avviso.
+  7. le correzioni all'edizione integrale sono presenti (CORREZIONI).
 
 Uso:  python controlla_testi.py
 """
-import os, re, sys
+import os, re, sys, json
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import verifica_nota as V
@@ -70,6 +71,58 @@ def riferimenti(testo):
     righe |= set('%s#%s-%s' % m for m in
                  re.findall(r'\\righe\{([^}]*)\}\{([^}]*)\}\{([^}]*)\}', testo))
     return {'etichette': etichette, 'citazioni': citazioni, 'righe': righe}
+
+
+# Correzioni all'edizione integrale dopo la revisione matematica: per ogni
+# file, frasi che non devono piu' comparire e frasi che devono comparire.
+CORREZIONI = {
+    'commento/04-e.json': (['converge molto più in fretta', 'di gran lunga più rapida'],
+                           [r'\frac{11\mathrm{e}}{24n^2}']),
+    'commento/15-delta.json': (["l'idea più originale", 'valore numerico concreto'],
+                               ['lorentziana', 'gaussiana', 'iperfunzioni']),
+    'commento/18-factor.json': ([], ['Surányi', r'360\,360']),
+    'commento/10-mate.json': ([], ['gudermanniana', 'vale solo per $n=2$ e $n=3$']),
+    'commento/14-gauss.json': (['vale da solo il capitolo'], ['semiangolo']),
+    'commento/08-atan.json': ([], ['semiangolo']),
+    'commento/12-cosinc.json': ([], ['Hilbert']),
+    'commento/16-trasformata-t.json': ([], ['Helmholtz']),
+    'commento/05-pigreco.json': (['molto elegante'], []),
+    'commento/23-notch.json': (['Una variante della stessa scrittura'], ['di troppo']),
+    'tex/derive2010.tex': ([], ['edizione integrale']),
+}
+
+
+def testo_decodificato(percorso):
+    """Il testo di un sorgente; per i JSON, tutte le stringhe concatenate."""
+    with open(percorso, encoding='utf-8') as f:
+        if not percorso.endswith('.json'):
+            return f.read()
+        stringhe = []
+
+        def raccogli(x):
+            if isinstance(x, str):
+                stringhe.append(x)
+            elif isinstance(x, dict):
+                for v in x.values():
+                    raccogli(v)
+            elif isinstance(x, list):
+                for v in x:
+                    raccogli(v)
+        raccogli(json.load(f))
+        return '\n'.join(stringhe)
+
+
+def controlla_edizione_integrale():
+    problemi = []
+    for nome, (vietate, richieste) in CORREZIONI.items():
+        testo = testo_decodificato(os.path.join(RADICE, nome))
+        for frase in vietate:
+            if frase in testo:
+                problemi.append('%s contiene ancora "%s"' % (nome, frase))
+        for frase in richieste:
+            if frase not in testo:
+                problemi.append('%s non contiene "%s"' % (nome, frase))
+    return problemi
 
 
 def main():
@@ -134,6 +187,9 @@ def main():
             for parola in SCONSIGLIATE[lingua]:
                 if re.search(r'\b%s' % parola, testo, re.IGNORECASE):
                     avvisi.append('%s/%s: "%s"' % (lingua, nome, parola))
+
+    # 7. correzioni all'edizione integrale
+    problemi += controlla_edizione_integrale()
 
     for a in avvisi:
         print('  avviso   ' + a)

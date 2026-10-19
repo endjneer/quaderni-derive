@@ -104,7 +104,7 @@ Lo stesso in un passaggio solo. Le due righe verificano la coerenza dello svilup
 
 La dimostrazione sta nella formula di duplicazione. Da $\cos2\theta=2\cos^2\theta-1$ segue $\cos2x-\cos2y=2\left(\cos^2x-\cos^2y\right)$: il rapporto vale $1/2$ per ogni $x$ e ogni $y$ per cui il denominatore non si annulla, e il fatto che sia costante non dipende da nulla. La riga $\#3$ osserva che la stessa cosa vale per il coseno iperbolico, perché $\cosh2\theta=2\cosh^2\theta-1$ ha la stessa forma. La riga $\#4$ fa il conto con i seni e trova $-1/2$, perché $\sin^2\theta=(1-\cos2\theta)/2$ inverte il segno.
 
-La riga $\#5$ è il salto interessante: la stessa costruzione al terzo grado. Da $\cos3\theta=4\cos^3\theta-3\cos\theta$ segue che $\cos^3x\cos y-\cos^3y\cos x$ vale esattamente un quarto di $\cos3x\cos y-\cos3y\cos x$, perché i termini in $-3\cos$ si cancellano fra loro. Duplicazione dà $1/2$, triplicazione dà $1/4$: la costante è $2^{1-n}$ e viene dal coefficiente direttivo del polinomio di Chebyshev.
+La riga $\#5$ è il salto interessante: la stessa costruzione al terzo grado. Da $\cos3\theta=4\cos^3\theta-3\cos\theta$ segue che $\cos^3x\cos y-\cos^3y\cos x$ vale esattamente un quarto di $\cos3x\cos y-\cos3y\cos x$, perché i termini in $-3\cos$ si cancellano fra loro. Duplicazione dà $1/2$, triplicazione dà $1/4$: in entrambi i casi la costante è il reciproco del coefficiente direttivo del polinomio di Chebyshev, $2^{1-n}$. La regola vale solo per $n=2$ e $n=3$, però: dal quarto grado in poi il polinomio di Chebyshev ha due termini di grado inferiore, e una combinazione di due soli coseni non basta più a eliminarli.
 
 \section{Due unità immaginarie e un seno cardinale}
 
@@ -992,6 +992,8 @@ L'argomento del logaritmo che vi compare.
 
 Le risposte sono tutte della forma $k=k(x)$, cioè il fattore di scala esiste ma non è costante. Il caso più pulito è $\#118$: da $\operatorname{arcsinh}x=\arcsin(kx)$ segue $kx=\sin\!\left(\operatorname{arcsinh}x\right)$ e quindi, essendo $\operatorname{arcsinh}x=\ln\!\left(x+\sqrt{x^2+1}\right)$, si ha $k=\sin\!\left(\ln\!\left(x+\sqrt{x^2+1}\right)\right)/x$: esattamente la risposta $\#119$, con la condizione che garantisce di restare nel dominio dell'arcoseno. Il caso $\#113$ mostra invece che per il coseno il fattore è necessariamente immaginario: $\cosh x\geq1$ e $\cos$ non può superare $1$ con argomento reale.
 
+La risposta sistematica a queste domande è la funzione gudermanniana $\operatorname{gd}x=2\arctan\left(\tanh\tfrac x2\right)$, che lega funzioni circolari e iperboliche senza passare per i numeri complessi: $\tan(\operatorname{gd}x)=\sinh x$, $\sin(\operatorname{gd}x)=\tanh x$, $\cos(\operatorname{gd}x)=1/\cosh x$. Per esempio la soluzione principale della riga $\#116$, $kx=\arctan(\tanh x)$, vale $\tfrac12\operatorname{gd}(2x)$.
+
 \section{Arcoseno e arcocoseno di argomento complesso}
 
 Le ultime dieci righe tornano al piano complesso con due identità di conversione e alcune espressioni miste che il quaderno lascia aperte.
@@ -1073,7 +1075,7 @@ Le righe $\#127$--$\#129$ sono le regole di conversione: $\cos(\mathrm{i}w)=\cos
 \section*{In sintesi}
 \addcontentsline{toc}{section}{In sintesi}
 
-Il quaderno vale soprattutto per due cose. La prima è l'identità di apertura, che è vera, elementare e ripresa una quarantina di volte: il rapporto fra differenze di quadrati di coseni e differenze di coseni duplicati è la costante $2^{1-n}$, con $n$ il grado della formula di moltiplicazione usata. La seconda è la costruzione del gradino e della funzione segno con soli logaritmi e valori assoluti, che è esatta e non ovvia.
+Il quaderno vale soprattutto per due cose. La prima è l'identità di apertura, che è vera, elementare e ripresa una quarantina di volte: il rapporto fra differenze di quadrati di coseni e differenze di coseni duplicati è la costante $1/2$, e la versione con la triplicazione dà $1/4$; la regola $2^{1-n}$ vale solo per $n=2$ e $n=3$. La seconda è la costruzione del gradino e della funzione segno con soli logaritmi e valori assoluti, che è esatta: il gradino vale $\max(x,0)/x$, perché $\left(|\mathrm{e}^x-1|+|\mathrm{e}^x+1|\right)/2=\max(\mathrm{e}^x,1)$.
 
 In mezzo c'è una lunga sezione dedicata a interrogare un'equazione indeterminata, con la sua risposta priva di significato inseguita per trenta espressioni. Averla conservata non toglie niente al resto: mostra come questi quaderni venissero usati davvero, cioè come strumenti per provare, non per esporre.
 

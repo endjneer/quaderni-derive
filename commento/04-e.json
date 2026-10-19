@@ -46,11 +46,11 @@
       "coda": "Le espressioni $\\#66$ e $\\#68$ costruiscono la semisomma e la semidifferenza di $\\pi^{-\\mathrm{e}}\\mathrm{e}^{\\pi}$ e del suo reciproco. Qui conviene dare un nome alla quantità $k=\\pi-\\mathrm{e}\\ln\\pi$, perché $\\pi^{-\\mathrm{e}}\\mathrm{e}^{\\pi}=\\mathrm{e}^{\\pi-\\mathrm{e}\\ln\\pi}=\\mathrm{e}^{k}$: le due espressioni sono allora, esattamente, $\\cosh k$ e $\\sinh k$.\n\nQuesto spiega il valore $0{,}029898659\\ldots$ della riga $\\#69$, e spiega perché somigli tanto a $k=0{,}029894206\\ldots$ senza coincidervi: $\\sinh k-k=k^3/6\\approx 4{,}45\\cdot10^{-6}$, che è esattamente lo scarto osservato. Non è una coincidenza numerica ma un'identità, e il quaderno \\dfw{sin-cos.dfw} del gennaio precedente (capitolo~\\ref{cap:sin-cos}) la sviluppa per intero: là si scopre che $k$ è la pulsazione di un intero sistema di funzioni iperboliche costruito su $\\pi$ ed $\\mathrm{e}$."
     },
     {
-      "titolo": "Una successione che converge molto più in fretta",
+      "titolo": "Una successione che converge alla stessa velocità, dall'altro lato",
       "testo": "Ritorno al tema centrale, con un'idea nuova: sommare $n^{-k}$ per $k$ da $0$ a $n$, ed elevare alla $n$.",
       "da": 70,
       "a": 82,
-      "coda": "Il confronto numerico è impietoso per la definizione classica. La successione $\\left(1+\\tfrac1n\\right)^n$ converge come $1/n$: con $n=10^7$ dà appena sette cifre corrette. La successione $\\left(\\sum_k n^{-k}\\right)^n$ commette invece un errore di $1{,}36\\cdot10^{-7}$ allo stesso $n$ — e la differenza si vede meglio nel grafico che nei numeri."
+      "coda": "Il confronto numerico va letto con attenzione. A $n=10^7$ la successione classica $\\left(1+\\tfrac1n\\right)^n$ sbaglia di $-1{,}35914\\cdot10^{-7}$, quella dei quaderni $\\left(\\sum_k n^{-k}\\right)^n$ di $+1{,}35914\\cdot10^{-7}$: stessa grandezza, segno opposto. Le due convergono alla stessa velocità, come $\\mathrm{e}/(2n)$, da lati opposti. La ragione è che $\\sum_{k=0}^{n}n^{-k}$ differisce da $n/(n-1)$ per meno di qualunque potenza di $1/n$, e $\\left(1-\\tfrac1n\\right)^{-n}$ è la successione classica calcolata in $-n$.\n\nIl guadagno vero sta nella loro media, il cui errore vale $\\frac{11\\mathrm{e}}{24n^2}$, circa $1{,}2\\cdot10^{-14}$ allo stesso $n$: nello sviluppo in potenze di $1/n$ i termini dispari cambiano segno e nella media si cancellano. La figura mostra le tre curve. Il valore della riga $\\#75$, calcolato da Derive a $n=9\\,999\\,999$, è corretto in tutte le cifre mostrate; il limite delle righe $\\#30$ e $\\#71$, invece, è sbagliato: vale $\\mathrm{e}$, non $1$."
     },
     {
       "titolo": "Dal reale al complesso",
@@ -162,7 +162,7 @@
     {
       "file": "e_convergenza",
       "dopo": 75,
-      "didascalia": "Errore assoluto delle due successioni al variare di $x$, in scala doppiamente logaritmica. La successione classica scende con pendenza $-1$; quella costruita sulla serie geometrica è di gran lunga più rapida."
+      "didascalia": "Errore assoluto delle due successioni e della loro media al variare di $x$, in scala doppiamente logaritmica. Le due successioni hanno lo stesso errore in valore assoluto, con segno opposto, e le curve si sovrappongono (pendenza $-1$); la media scende con pendenza $-2$."
     }
   ],
   "chiusura": "Il filo che tiene insieme novantatré espressioni è una domanda sola: che cosa, nella definizione $\\left(1+\\tfrac1x\\right)^x$, è essenziale e che cosa è accessorio? La risposta che il quaderno costruisce per prove successive è che conta solo il termine di ordine $1/x$ nella base: tutto ciò che decresce più in fretta è irrilevante, tutto ciò che decresce più lentamente è fatale. Una volta capito questo, sostituire $1$ con $\\mathrm{i}x$ è un passo naturale — e la formula di Eulero arriva come corollario."

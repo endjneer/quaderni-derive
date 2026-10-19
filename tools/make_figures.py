@@ -190,20 +190,28 @@ def fig_cosinc_serie():
 # --------------------------------------------------------------------------
 
 def fig_e_convergenza():
-    fig, ax = nuova(5.6, 3.0)
+    # in precisione arbitraria: l'errore della media scende sotto 1e-14
+    import mpmath as mp
+    mp.mp.dps = 60
     xs = np.logspace(0.5, 7, 60)
-    cl = np.abs((1 + 1 / xs) ** xs - math.e)
-    geo = []
+    cl, geo, med = [], [], []
     for x in xs:
-        s = x / (x - 1.0)          # somma della serie geometrica 1/x^n
-        geo.append(abs(s ** x - math.e))
+        x = mp.mpf(x)
+        a = (1 + 1 / x) ** x - mp.e
+        b = (x / (x - 1)) ** x - mp.e     # somma della serie geometrica 1/x^n
+        cl.append(float(abs(a)))
+        geo.append(float(abs(b)))
+        med.append(float(abs((a + b) / 2)))
+    fig, ax = nuova(5.6, 3.0)
     ax.loglog(xs, cl, 'o-', color=BLU, ms=3, lw=1.0,
               label=r'$|(1+1/x)^x-\mathrm{e}|$')
-    ax.loglog(xs, geo, 's-', color=ROSSO, ms=3, lw=1.0,
+    ax.loglog(xs, geo, 's--', color=ROSSO, ms=3, lw=1.0, mfc='none',
               label=r'$|(\sum_n x^{-n})^x-\mathrm{e}|$')
+    ax.loglog(xs, med, '^-', color=VERDE, ms=3, lw=1.0,
+              label=u'media delle due')
     ax.set_xlabel('$x$')
     ax.set_ylabel(u'errore assoluto')
-    ax.set_title(u'Due successioni che tendono a $\\mathrm{e}$')
+    ax.set_title(u'Due successioni che tendono a $\\mathrm{e}$, e la loro media')
     ax.legend(frameon=False)
     ax.grid(True, which='both', alpha=0.4)
     salva(fig, 'e_convergenza')

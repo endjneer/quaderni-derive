@@ -1,7 +1,7 @@
 {
   "file": "pigreco.dfw",
   "titolo": "Cinque modi di fabbricare $\\pi$",
-  "intro": "Agosto 2010, lo stesso giorno di \\dfw{numeri primi.dfw}. Ventisei espressioni divise in cinque episodi indipendenti, accomunati da un obiettivo: costruire $\\pi$ a partire da oggetti in cui $\\pi$ non sembra esserci. Il quarto episodio contiene un'identità esatta e molto elegante, e vale da solo il capitolo.",
+  "intro": "Agosto 2010, lo stesso giorno di \\dfw{numeri primi.dfw}. Ventisei espressioni divise in cinque episodi indipendenti, accomunati da un obiettivo: costruire $\\pi$ a partire da oggetti in cui $\\pi$ non sembra esserci. Il quarto episodio contiene un'identità esatta, che si riduce a due formule da manuale.",
   "blocchi": [
     {
       "titolo": "Un operatore differenziale applicato due volte",
@@ -33,7 +33,7 @@
     },
     {
       "titolo": "$\\pi$ ed $\\mathrm{e}$ come estremi di una stessa funzione",
-      "testo": "L'ultimo episodio è il più breve e forse il più elegante.",
+      "testo": "L'ultimo episodio è il più breve.",
       "da": 24,
       "a": 26,
       "coda": "La funzione $\\left(\\pi^x+\\mathrm{e}^x\\right)^{1/x}$ è la media di potenza di ordine $x$ dei due numeri. Per $x\\to+\\infty$ il termine con la base maggiore domina e la media tende al massimo, cioè $\\pi$; per $x\\to-\\infty$ domina il termine con la base minore e si ottiene $\\mathrm{e}$. Una sola espressione contiene entrambe le costanti, ciascuna come limite da una parte. È lo stesso meccanismo per cui la norma $\\ell^p$ di un vettore tende al massimo delle componenti quando $p$ diverge."
