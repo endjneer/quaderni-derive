@@ -10,6 +10,8 @@ Controlla la coerenza dei sorgenti della nota (cartella nota/).
   4. ogni decimale con almeno tre cifre dopo la virgola e' un valore
      registrato con cita(), cioe' controllato;
   5. le parole sconsigliate vengono segnalate, senza far fallire il controllo.
+  6. ogni citazione ha la sua voce in bibliografia; una voce mai citata
+     viene segnalata come avviso.
 
 Uso:  python controlla_testi.py
 """
@@ -111,6 +113,19 @@ def main():
                 if not any(numero in v for v in registrati[lingua]):
                     problemi.append('%s/%s: %s non e\' registrato con cita()'
                                     % (lingua, nome, numero))
+
+    # 6. bibliografia: ogni citazione ha una voce; una voce mai citata e'
+    #    un avviso (thebibliography la stamperebbe comunque)
+    voci = set(re.findall(r'\\bibitem\{([^}]*)\}',
+                          leggi(os.path.join(NOTA, 'bibliografia.tex'))))
+    for lingua in testi:
+        citate = set()
+        for testo in testi[lingua].values():
+            citate |= riferimenti(testo)['citazioni']
+        for k in sorted(citate - voci):
+            problemi.append('citazione %s senza voce in bibliografia (%s)' % (k, lingua))
+        for k in sorted(voci - citate):
+            avvisi.append('voce %s mai citata nel testo %s' % (k, lingua))
 
     # 5. parole sconsigliate
     for lingua in testi:
