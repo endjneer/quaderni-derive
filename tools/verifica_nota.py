@@ -424,6 +424,83 @@ cita('cosinc20', '11{,}534', '11.534')
 
 
 # ===========================================================================
+# §6  Gradini fatti di logaritmi
+# ===========================================================================
+
+@controllo('§6')
+def lemma_massimo():
+    """(|a-b| + |a+b|)/2 = max(|a|, |b|) per a, b reali"""
+    rnd = random.Random(6)
+    for _ in range(10):
+        a, b = (mp.mpf(rnd.uniform(-5, 5)) for _ in range(2))
+        uguali((abs(a - b) + abs(a + b)) / 2, max(abs(a), abs(b)))
+
+
+@controllo('§6')
+def gradino_e_segno():
+    """mate #77, #80, #81: ln((|e^x-1|+|e^x+1|)/2) = max(x,0), da cui gradino e segno"""
+    for x in map(mp.mpf, ('-3', '-0.2', '0.1', '4')):
+        L = mp.log((abs(mp.exp(x) - 1) + abs(mp.exp(x) + 1)) / 2)
+        assert abs(L - max(x, 0)) < mp.mpf('1e-50'), x
+        H = L / x
+        assert H == (1 if x > 0 else 0) or abs(H - (1 if x > 0 else 0)) < mp.mpf('1e-50')
+        L2 = mp.log((abs(mp.exp(2 * x) - 1) + abs(mp.exp(2 * x) + 1)) / 2)
+        assert abs(L2 / x - 1 - mp.sign(x)) < mp.mpf('1e-50')
+        assert abs(2 * L / x - 1 - mp.sign(x)) < mp.mpf('1e-50')
+
+
+@controllo('§6')
+def log_cosh():
+    """mate copia #88-#89: ln cosh x = |x| - ln 2 + ln(1 + e^{-2|x|})"""
+    for x in map(mp.mpf, ('-5', '-0.3', '0.7', '6')):
+        uguali(mp.log(mp.cosh(x)), abs(x) - mp.log(2) + mp.log(1 + mp.exp(-2 * abs(x))))
+
+
+@controllo('§6')
+def dequantizzazione():
+    """max(a,b) <= h ln(e^{a/h} + e^{b/h}) <= max(a,b) + h ln 2"""
+    h = mp.mpf('1e-3')
+    for a, b in ((1, 2), (-3, 0.5), (0.25, 0.25)):
+        a, b = mp.mpf(a), mp.mpf(b)
+        v = h * mp.log(mp.exp(a / h) + mp.exp(b / h))
+        assert max(a, b) <= v <= max(a, b) + h * mp.log(2), (a, b, v)
+
+
+@controllo('§6')
+def valore_nel_salto():
+    """h ln((1+e^{x/h})/2)/x tende a 1/2 in x = 0; (1+tanh(x/h+1))/2 vale (1+tanh 1)/2 = 0.8808 in 0"""
+    for h in map(mp.mpf, ('1', '0.1', '0.01')):
+        x = mp.mpf('1e-25')
+        v = h * mp.log((1 + mp.exp(x / h)) / 2) / x
+        assert abs(v - mp.mpf(1) / 2) < mp.mpf('1e-20'), (h, v)
+        for y in (mp.mpf('0.5'), mp.mpf('-0.5')):     # e converge al gradino fuori da 0
+            g = h * mp.log((1 + mp.exp(y / h)) / 2) / y
+            if h == mp.mpf('0.01'):
+                assert abs(g - (1 if y > 0 else 0)) < mp.mpf('0.03'), (y, g)
+    assert mp.nstr((1 + mp.tanh(1)) / 2, 4) == '0.8808'
+
+
+cita('tanh1', '0{,}8808', '0.8808')
+
+
+@controllo('§6')
+def u0_sign0():
+    """u(0)-sign(0) #2-#12: ln(e-1), ln sinh 1, (ln sinh 1 + 1)/2, 2 ln(e-1) - 1 e le differenze"""
+    u1, s2 = mp.log(mp.e - 1), mp.log(mp.sinh(1))
+    uguali(mp.log((mp.e ** 2 - 1) / (2 * mp.e)), s2)
+    for valore, atteso in ((u1, '0.5413248546'), (s2, '0.1614393615'),
+                           ((s2 + 1) / 2, '0.5807196807'), (2 * u1 - 1, '0.08264970922'),
+                           ((s2 + 1) / 2 - u1, '0.03939482617'),
+                           (s2 - (2 * u1 - 1), '0.07878965234')):
+        assert abs(valore - mp.mpf(atteso)) < mp.mpf('1e-10'), (valore, atteso)
+    uguali(s2 - (2 * u1 - 1), 2 * ((s2 + 1) / 2 - u1))
+
+
+cita('u1', '0{,}5413', '0.5413')
+cita('s2', '0{,}1614', '0.1614')
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 

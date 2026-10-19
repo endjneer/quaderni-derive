@@ -1,2 +1,88 @@
 \section{Gradini fatti di logaritmi}
 \label{sec:gradini}
+
+Le righe \righe{mate.dfw}{77}{84} costruiscono il gradino di Heaviside $H$,
+la funzione segno e alcune onde quadre usando soltanto esponenziali,
+logaritmi e valori assoluti. La costruzione \`e esatta, e il motivo \`e un
+lemma elementare.
+
+\begin{lemma}\label{lemma:massimo}
+Per $a,b$ reali,
+$\dfrac{|a-b|+|a+b|}{2}=\max\bigl(|a|,|b|\bigr)$.
+\end{lemma}
+
+\begin{proof}
+Se $|a|\ge|b|$, i numeri $a-b$ e $a+b$ hanno entrambi il segno di $a$ (o sono
+nulli), quindi $|a-b|+|a+b|=|2a|$. Il caso $|b|\ge|a|$ \`e simmetrico.
+\end{proof}
+
+Con $a=\ee^{x}$ e $b=1$ il lemma d\`a
+$\ln\bigl((|\ee^x-1|+|\ee^x+1|)/2\bigr)=\ln\max(\ee^x,1)=\max(x,0)$, e quindi,
+per $x\neq0$,
+\[
+  \frac{1}{x}\ln\frac{|\ee^x-1|+|\ee^x+1|}{2}=\frac{\max(x,0)}{x}=H(x),
+  \qquad
+  \frac{2}{x}\ln\frac{|\ee^x-1|+|\ee^x+1|}{2}-1=\sgn x ,
+\]
+che sono le righe \#77 e \#81 (la \#80 ottiene il segno con $\ee^{2x}$ al
+posto di $\ee^{x}$). Componendo con $\sin\pi x$ si ottengono le onde quadre
+delle righe \#82--\#84. Logaritmo ed esponenziale sono a rigore una
+deviazione, perch\'e $H(x)=\max(x,0)/x=(x+|x|)/(2x)$; quello che la
+costruzione mette davvero in luce \`e che il logaritmo trasforma il massimo
+di due esponenziali nel massimo degli esponenti,
+$\ln\max(\ee^{a},\ee^{b})=\max(a,b)$.
+
+\paragraph{Il logaritmo del coseno iperbolico.}
+La versione di febbraio dello stesso quaderno annota
+$\ln\cosh x=|x|$ (\righe{mate copia.dfw}{88}{89}). L'uguaglianza \`e solo
+asintotica:
+\[
+  \ln\cosh x=|x|-\ln2+\ln\bigl(1+\ee^{-2|x|}\bigr),
+\]
+quindi $\ln\cosh x-|x|\to-\ln2$ per $|x|\to\infty$, mentre vicino a zero
+$\ln\cosh x\approx x^2/2$. Le due righe stanno in un rapporto preciso con la
+costruzione esatta: $\cosh x=(\ee^{x}+\ee^{-x})/2$ \`e la \emph{media} di due
+esponenziali, mentre $\ee^{|x|}=\max(\ee^{x},\ee^{-x})$ ne \`e il
+\emph{massimo}.
+
+\paragraph{Il contesto.}
+Il passaggio dalla media (o dalla somma) al massimo ha un nome. Per ogni
+$h>0$
+\[
+  \max(a,b)\le h\ln\bigl(\ee^{a/h}+\ee^{b/h}\bigr)\le\max(a,b)+h\ln2 ,
+\]
+quindi per $h\to0$ la somma diventa il massimo e, di conseguenza, il prodotto
+diventa la somma. \`E la \emph{dequantizzazione di Maslov}, e l'aritmetica
+$(\max,+)$ che ne risulta \`e quella della matematica
+tropicale~\cite{litvinov2007}. I valori assoluti di \texttt{mate.dfw}
+calcolano il massimo esatto, cio\`e il caso limite $h=0$; il $\ln\cosh$ di
+\texttt{mate copia.dfw} \`e il caso $h=1$, con la media al posto della somma.
+La stessa coppia ricorre nelle reti neurali come
+$\mathrm{softplus}(x)=\ln(1+\ee^{x})$ e $\mathrm{ReLU}(x)=\max(x,0)$: il
+gradino dei quaderni \`e $\mathrm{ReLU}(x)/x$.
+
+\paragraph{Quanto vale un gradino nel salto.}
+La formula $\max(x,0)/x$ non d\`a alcun valore in $x=0$. Un valore si ottiene
+solo scegliendo una famiglia regolare che converga al gradino, e dipende
+dalla scelta. La famiglia
+\[
+  H_h(x)=\frac{h}{x}\ln\frac{1+\ee^{x/h}}{2},
+\]
+che \`e la costruzione dei quaderni con la media al posto del massimo,
+converge a $H$ per $x\neq0$ quando $h\to0$ e ha limite $\tfrac12$ in $x=0$
+per ogni $h$: \`e la convenzione usuale $H(0)=\tfrac12$. Ma anche
+$\frac12\bigl(1+\tanh(x/h+1)\bigr)$ converge a $H$ per $x\neq0$, e in $x=0$
+vale $\frac12(1+\tanh1)=0{,}8808$ per ogni $h$.
+
+Il quaderno \texttt{u(0)-sign(0).dfw} (gennaio 2011) affronta proprio questa
+domanda, con quattro numeri e le loro differenze
+(\righe{u(0)-sign(0).dfw}{1}{12}). Le forme chiuse si ricostruiscono dai
+valori: un candidato per il gradino, $u_1=\ln(\ee-1)=0{,}5413$, e uno per il
+segno, $s_2=\ln\sinh1=0{,}1614$; le righe \#5 e \#7 portano ciascuno
+nell'altra scala con $\sgn=2H-1$, e le righe da \#9 a \#12 confrontano i
+risultati. Che la seconda differenza sia esattamente il doppio della prima
+discende dalla conversione stessa. Il quaderno non dice da quale famiglia
+vengano i due candidati, e non \`e possibile ricostruirlo con certezza;
+nessuno dei due coincide con la convenzione simmetrica $H(0)=\tfrac12$,
+$\sgn0=0$. Non \`e un errore: senza una famiglia la domanda non ha una
+risposta sola.

@@ -1,2 +1,84 @@
 \section{Steps made of logarithms}
 \label{sec:gradini}
+
+Lines \righe{mate.dfw}{77}{84} build the Heaviside step $H$, the sign
+function and some square waves using only exponentials, logarithms and
+absolute values. The construction is exact, and the reason is an elementary
+lemma.
+
+\begin{lemma}\label{lemma:massimo}
+For real $a,b$,
+$\dfrac{|a-b|+|a+b|}{2}=\max\bigl(|a|,|b|\bigr)$.
+\end{lemma}
+
+\begin{proof}
+If $|a|\ge|b|$, the numbers $a-b$ and $a+b$ both have the sign of $a$ (or
+vanish), so $|a-b|+|a+b|=|2a|$. The case $|b|\ge|a|$ is symmetric.
+\end{proof}
+
+With $a=\ee^{x}$ and $b=1$ the lemma gives
+$\ln\bigl((|\ee^x-1|+|\ee^x+1|)/2\bigr)=\ln\max(\ee^x,1)=\max(x,0)$, and
+therefore, for $x\neq0$,
+\[
+  \frac{1}{x}\ln\frac{|\ee^x-1|+|\ee^x+1|}{2}=\frac{\max(x,0)}{x}=H(x),
+  \qquad
+  \frac{2}{x}\ln\frac{|\ee^x-1|+|\ee^x+1|}{2}-1=\sgn x ,
+\]
+which are lines \#77 and \#81 (line \#80 obtains the sign with $\ee^{2x}$ in
+place of $\ee^{x}$). Composing with $\sin\pi x$ gives the square waves of
+lines \#82--\#84. Strictly speaking, logarithm and exponential are a detour,
+since $H(x)=\max(x,0)/x=(x+|x|)/(2x)$; what the construction really brings
+out is that the logarithm turns the maximum of two exponentials into the
+maximum of the exponents, $\ln\max(\ee^{a},\ee^{b})=\max(a,b)$.
+
+\paragraph{The logarithm of the hyperbolic cosine.}
+The February version of the same notebook records $\ln\cosh x=|x|$
+(\righe{mate copia.dfw}{88}{89}). The equality is only asymptotic:
+\[
+  \ln\cosh x=|x|-\ln2+\ln\bigl(1+\ee^{-2|x|}\bigr),
+\]
+so $\ln\cosh x-|x|\to-\ln2$ as $|x|\to\infty$, while near zero
+$\ln\cosh x\approx x^2/2$. These two lines stand in a precise relation to the
+exact construction: $\cosh x=(\ee^{x}+\ee^{-x})/2$ is the \emph{mean} of two
+exponentials, whereas $\ee^{|x|}=\max(\ee^{x},\ee^{-x})$ is their
+\emph{maximum}.
+
+\paragraph{Context.}
+The passage from the mean (or the sum) to the maximum has a name. For every
+$h>0$
+\[
+  \max(a,b)\le h\ln\bigl(\ee^{a/h}+\ee^{b/h}\bigr)\le\max(a,b)+h\ln2 ,
+\]
+so as $h\to0$ the sum becomes the maximum and, accordingly, the product
+becomes the sum. This is \emph{Maslov dequantization}, and the resulting
+$(\max,+)$ arithmetic is that of tropical mathematics~\cite{litvinov2007}.
+The absolute values of \texttt{mate.dfw} compute the exact maximum, that is
+the limiting case $h=0$; the $\ln\cosh$ of \texttt{mate copia.dfw} is the case
+$h=1$, with the mean in place of the sum. The same pair appears in neural
+networks as $\mathrm{softplus}(x)=\ln(1+\ee^{x})$ and
+$\mathrm{ReLU}(x)=\max(x,0)$: the notebooks' step is $\mathrm{ReLU}(x)/x$.
+
+\paragraph{The value of a step at its jump.}
+The formula $\max(x,0)/x$ gives no value at $x=0$. A value is obtained only
+by choosing a smooth family that converges to the step, and it depends on
+the choice. The family
+\[
+  H_h(x)=\frac{h}{x}\ln\frac{1+\ee^{x/h}}{2},
+\]
+which is the notebooks' construction with the mean in place of the maximum,
+converges to $H$ for $x\neq0$ as $h\to0$ and has limit $\tfrac12$ at $x=0$
+for every $h$: this is the usual convention $H(0)=\tfrac12$. But
+$\frac12\bigl(1+\tanh(x/h+1)\bigr)$ also converges to $H$ for $x\neq0$, and
+at $x=0$ it equals $\frac12(1+\tanh1)=0.8808$ for every $h$.
+
+The notebook \texttt{u(0)-sign(0).dfw} (January 2011) takes up exactly this
+question, with four numbers and their differences
+(\righe{u(0)-sign(0).dfw}{1}{12}). The closed forms can be reconstructed from
+the values: one candidate for the step, $u_1=\ln(\ee-1)=0.5413$, and one for
+the sign, $s_2=\ln\sinh1=0.1614$; lines \#5 and \#7 carry each into the
+other scale through $\sgn=2H-1$, and lines \#9 to \#12 compare the results.
+That the second difference is exactly twice the first follows from the
+conversion itself. The notebook does not say which family the two
+candidates come from, and this cannot be reconstructed with certainty;
+neither agrees with the symmetric convention $H(0)=\tfrac12$, $\sgn0=0$.
+This is not a mistake: without a family the question has no single answer.
