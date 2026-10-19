@@ -1,2 +1,204 @@
 \section{The exponential and the half-angle tangent}
 \label{sec:semiangolo}
+
+Five notebooks --- \texttt{gauss}, \texttt{atan}, \texttt{cosinc},
+\texttt{delta} and \texttt{mate} --- contain pieces of one idea: writing the
+exponential as a rational function of the tangent of the half angle. None of
+them states it in full. Put together, it leads to a sequence of classical
+results: the rational parametrization of the circle, the Gudermannian
+function, Euler's continued fraction for $\ee$, Pad\'e approximants and the
+bilinear transformation of digital filters. None of this is new; it is worth
+telling because it is the thread that holds together the most interesting
+material in the collection.
+
+\subsection{The circle and the imaginary axis}
+
+\begin{prop}\label{prop:semiangolo}
+For $|t|<\pi$, with $u=\tan(t/2)$,
+\begin{equation}\label{eq:cayley}
+  \ee^{\ii t}=\frac{1+\ii u}{1-\ii u}=\frac{(1+\ii u)^2}{1+u^2}
+  =\sgn(1+\ii u)^2 ,
+\end{equation}
+where $\sgn z=z/|z|$. For every real $s$, with $\tau=\tanh(s/2)$,
+\begin{equation}\label{eq:tanh}
+  \ee^{s}=\frac{1+\tau}{1-\tau},
+  \qquad\text{that is}\qquad
+  s=\ln\frac{1+\tau}{1-\tau}=2\artanh\tau .
+\end{equation}
+\end{prop}
+
+\begin{proof}
+Since $\cos(t/2)>0$, we have $1\pm\ii u=\ee^{\pm\ii t/2}/\cos(t/2)$: the
+ratio is $\ee^{\ii t}$, and $1+\ii u=|1+\ii u|\,\ee^{\ii t/2}$ gives the last
+form. For the second part,
+$(1+\tau)/(1-\tau)=(\cosh\frac s2+\sinh\frac s2)/(\cosh\frac s2-\sinh\frac s2)
+=\ee^{s/2}/\ee^{-s/2}$.
+\end{proof}
+
+Separating real and imaginary parts in \eqref{eq:cayley} gives
+$\cos t=(1-u^2)/(1+u^2)$ and $\sin t=2u/(1+u^2)$: the rational
+parametrization of the circle, which for rational $u=q/p$ yields the
+Pythagorean triples $(p^2-q^2,\,2pq,\,p^2+q^2)$. Geometrically, $\ee^{\ii t}$
+is the second point where the line through $-1$ and $\ii u$ meets the circle:
+a stereographic projection from $-1$ (Figure~\ref{fig:nota_semiangolo},
+left).
+
+The second form of \eqref{eq:cayley} is the one written in
+\righe{gauss.dfw}{1}{4}, where the notebook also observes that $1+u^2$ is the
+derivative of $2u$ with respect to $t$: the imaginary exponential as a square
+divided by a derivative. The third form, with $t$ in place of $t/2$, appears
+in \righe{cosinc.dfw}{1}{3} and in \righe{delta.dfw}{41}{44}.
+
+Formula \eqref{eq:tanh} is \eqref{eq:cayley} read on the imaginary axis:
+since $\tan(\ii y)=\ii\tanh y$, setting $t=-\ii s$ gives
+$1\pm\ii u=1\pm\tanh(s/2)$. The circle opens up into the positive half-line:
+$\tau$ runs over $(-1,1)$ and $\ee^{s}$ over $(0,\infty)$. The notebooks reach
+this formula from two sides.
+
+\paragraph{The Gaussian.}
+\riga{gauss.dfw}{5} puts $t=\ii x^2$ into \eqref{eq:cayley} and finds the
+Gaussian:
+\[
+  \ee^{-x^2}=\frac{1-\tanh(x^2/2)}{1+\tanh(x^2/2)} ,
+\]
+that is, \eqref{eq:tanh} with $s=-x^2$. The notebook then hopes to reach the
+error function by integrating $\sgn(1+\ii u)$ (\righe{gauss.dfw}{6}{14}),
+and the proposition explains why that road does not go far: on the real axis
+the information lies in the \emph{phase} of $1+\ii u$, whose modulus is
+$1/\cos(t/2)$; on the imaginary axis $1+\ii u=1-\tanh(x^2/2)$ is real and
+positive, its sign is identically $1$, and the Gaussian lies entirely in the
+\emph{modulus}.
+
+\paragraph{The arctangent of an imaginary argument.}
+\righe{atan.dfw}{1}{14} starts from
+$\ee^{\ii\arctan x}=(1+\ii x)/\sqrt{1+x^2}$, which is \eqref{eq:cayley} in the
+form $\sgn(1+\ii u)=\ee^{\ii t/2}$, and replaces $x$ by $\ii x$. For $|x|<1$
+one has $\arctan(\ii x)=\ii\artanh x$, and line \#2 finds
+\[
+  \ee^{\ii\arctan(\ii x)}=\sqrt{\frac{1-x}{1+x}}=\ee^{-\artanh x},
+\]
+which is \eqref{eq:tanh} with $\tau=x$. Lines \#3 and \#4 reach the branch
+point $x=1$ ($\arctan\ii=\ii\infty$), and lines \#5 to \#14 rebuild the
+logarithmic form $\ii\arctan(\ii x)=\ln(1-x)-\tfrac12\ln(1-x^2)=-\artanh x$,
+keeping correct track of the branches of the logarithm.
+
+\paragraph{The Gudermannian.}
+If the same number $\tau$ serves as the half-angle tangent both of a circular
+angle $\theta$ and of a hyperbolic argument $s$, that is if
+$\tan(\theta/2)=\tanh(s/2)$, the proposition gives, without going through
+complex numbers,
+\[
+  \cos\theta=\frac{1-\tau^2}{1+\tau^2}=\sech s,\qquad
+  \sin\theta=\frac{2\tau}{1+\tau^2}=\tanh s,\qquad
+  \tan\theta=\frac{2\tau}{1-\tau^2}=\sinh s .
+\]
+The map $s\mapsto\theta=\gd s=2\arctan\bigl(\tanh(s/2)\bigr)$ is the
+Gudermannian function. Lines \righe{mate.dfw}{111}{122} look, for each
+hyperbolic function, for a circular function with the same value:
+$\tanh x=\tan(kx)$, $\sinh x=\sin(kx)$ and so on. Derive's answers are
+correct case by case --- for instance $kx=\arctan(\tanh x)$, which equals
+$\tfrac12\gd(2x)$ --- but the systematic answer is the Gudermannian:
+$\tan(\gd x)=\sinh x$, $\sin(\gd x)=\tanh x$, $\cos(\gd x)=\sech x$.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{nota_semiangolo}
+  \caption{Left: the stereographic projection from $-1$; the line through
+  $-1$ and $\ii u$ meets the circle at $(1+\ii u)/(1-\ii u)=\ee^{\ii t}$, for
+  $u=-3,-2.5,\dots,3$. Right: the relative error of the diagonal Pad\'e
+  approximants $R_1$, $R_2$, $R_3$ of $\ee^{t}$, obtained by truncating
+  Lambert's continued fraction.}
+  \label{fig:nota_semiangolo}
+\end{figure}
+
+\subsection{The number \texorpdfstring{$\ee$}{e} and continued fractions}
+
+With $s=1$, \eqref{eq:tanh} gives
+\[
+  \ee=\frac{1+\tanh\frac12}{1-\tanh\frac12},
+  \qquad
+  \tanh\tfrac12=\frac{\ee-1}{\ee+1}=0.46211715\dots
+\]
+This number has a famous continued fraction, found by Euler in
+1737~\cite{eulero1744}:
+\[
+  \frac{\ee-1}{\ee+1}
+  =\cfrac{1}{2+\cfrac{1}{6+\cfrac{1}{10+\cfrac{1}{14+\dotsb}}}}
+  =[0;\,2,6,10,14,\dots],
+\]
+with partial quotients in arithmetic progression. More generally, for every
+positive integer $n$,
+\[
+  \tanh\frac1n=[0;\,n,3n,5n,\dots].
+\]
+Both follow from Lambert's continued fraction~\cite{lambert1768}
+\[
+  \tanh x=\cfrac{x}{1+\cfrac{x^2}{3+\cfrac{x^2}{5+\dotsb}}} ,
+\]
+by setting $x=1/n$ and clearing denominators. Lambert used it to prove that
+$\tanh x$, and hence $\ee^{2x}=(1+\tanh x)/(1-\tanh x)$, is irrational for
+every nonzero rational $x$; the analogous fraction for $\tan x$, with
+$\tan(\pi/4)=1$, gives the irrationality of $\pi$. The formula
+$\ee^{s}=(1+\tau)/(1-\tau)$ is thus the door through which the first proofs
+of the irrationality of $\ee$ and $\pi$ passed. The notebooks do not go
+through it, but that is where their idea leads.
+
+\subsection{Truncating: Pad\'e approximants}
+
+Truncating Lambert's fraction for $\tanh(t/2)$ and substituting into
+\eqref{eq:tanh} gives, at the first, second and third level,
+\[
+  R_1(t)=\frac{2+t}{2-t},\qquad
+  R_2(t)=\frac{12+6t+t^2}{12-6t+t^2},\qquad
+  R_3(t)=\frac{120+60t+12t^2+t^3}{120-60t+12t^2-t^3}.
+\]
+These are the diagonal Pad\'e approximants $[n/n]$ of $\ee^{t}$: the
+rational functions with numerator and denominator of degree $n$ that agree
+with $\ee^{t}$ up to order $t^{2n}$; for instance
+$R_1(t)-\ee^{t}=t^3/12+O(t^4)$. That the convergents of Lambert's fraction
+give exactly the diagonal of the Pad\'e table of the exponential is a general
+fact~\cite{baker1996}; here we have checked it for $n\le3$. The approximants
+inherit two properties from the exact formula: $R_n(-t)=1/R_n(t)$, like
+$\ee^{t}$, and $|R_n(\ii\omega)|=1$ for every real $\omega$, because
+numerator and denominator are complex conjugates on the imaginary axis. They
+therefore map the imaginary axis onto the unit circle, exactly as
+$\ee^{\ii\omega}$ does; indeed $R_1(\ii\omega)$ is \eqref{eq:cayley} with
+$u=\omega/2$. The relative error of the first three approximants is shown in
+Figure~\ref{fig:nota_semiangolo}, right.
+
+\subsection{An application: digital filters}
+
+An analog filter with transfer function $H(s)$ becomes a digital filter, with
+sampling period $T$, once $s$ is expressed through $z=\ee^{sT}$. By
+\eqref{eq:tanh} the exact relation is
+\[
+  \frac{z-1}{z+1}=\tanh\frac{sT}{2},
+  \qquad\text{that is}\qquad
+  s=\frac2T\artanh\frac{z-1}{z+1},
+\]
+which is not rational in $z$. The bilinear (Tustin) transformation replaces
+$\tanh(sT/2)$ by its first approximation $sT/2$:
+\[
+  s\;\mapsto\;\frac2T\,\frac{z-1}{z+1},
+  \qquad\text{that is}\qquad
+  z=\frac{1+sT/2}{1-sT/2}=R_1(sT).
+\]
+Since $|R_1(\ii\Omega T)|=1$, the imaginary axis goes to the unit circle and
+a stable filter stays stable. The price is paid in frequency: on the circle
+$z=\ee^{\ii\omega T}$, and \eqref{eq:cayley} gives
+$(z-1)/(z+1)=\ii\tan(\omega T/2)$, so the digital frequency $\omega$
+corresponds to the analog frequency
+\[
+  \Omega=\frac2T\tan\frac{\omega T}{2}.
+\]
+This is the frequency warping of the bilinear transformation; the usual
+remedy, \emph{prewarping} the critical frequencies with this very formula,
+can be found in signal-processing textbooks~\cite{oppenheim2010}. If the
+notch filter designed in \texttt{notch.dfw} were implemented digitally, its
+antiresonance frequency would have to be prewarped exactly this way: the
+half-angle tangent of \texttt{gauss.dfw} is the engineer's half-angle
+tangent.
+
+The same pattern appears in special relativity: if $\beta=\tanh\eta$ is the
+velocity in units of $c$ and $\eta$ the rapidity, the Doppler factor is
+$\ee^{\eta}=\sqrt{(1+\beta)/(1-\beta)}=(1+\tanh\frac\eta2)/(1-\tanh\frac\eta2)$.

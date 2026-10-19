@@ -775,6 +775,61 @@ def fig_notch_bode():
 
 
 # --------------------------------------------------------------------------
+# Figure della nota (nota/): nessun titolo e nessun testo che non sia
+# matematica, perche' servono sia alla versione italiana sia a quella inglese
+# --------------------------------------------------------------------------
+
+def pade_diagonale(n, t):
+    """[n/n] di Padé di e^t, come rapporto P_n(t)/P_n(-t)."""
+    c = [math.factorial(2 * n - k) * math.factorial(n) /
+         (math.factorial(2 * n) * math.factorial(k) * math.factorial(n - k))
+         for k in range(n + 1)]
+    p = lambda x: sum(ck * x ** k for k, ck in enumerate(c))
+    return p(t) / p(-t)
+
+
+def fig_nota_semiangolo():
+    fig, (a1, a2) = nuova(6.4, 3.0, n=2,
+                          gridspec_kw={'width_ratios': [1, 1.25]})
+    # (a) la proiezione da -1: la retta per -1 e iu taglia il cerchio in w(u)
+    th = np.linspace(0, 2 * np.pi, 400)
+    a1.plot(np.cos(th), np.sin(th), color=GRIGIO, lw=1.0)
+    a1.axvline(0, color='#444444', lw=0.6)
+    a1.axhline(0, color='#444444', lw=0.6)
+    for u in np.arange(-3, 3.01, 0.5):
+        w = (1 + 1j * u) / (1 - 1j * u)
+        x1 = max(0.0, w.real)       # per |u| < 1 il punto sta oltre l'asse
+        a1.plot([-1, x1], [0, (x1 + 1) * u], color=BLU, lw=0.5, alpha=0.45)
+        a1.plot(w.real, w.imag, 'o', color=ROSSO, ms=3.2)
+        a1.plot(0, u, 'o', color=BLU, ms=2.4)
+    a1.plot(-1, 0, 'o', color='#444444', ms=3.5)
+    a1.annotate(r'$-1$', (-1, 0), textcoords='offset points',
+                xytext=(-6, -13), fontsize=8)
+    a1.annotate(r'$\mathrm{i}u$', (0, 2), textcoords='offset points',
+                xytext=(5, 0), fontsize=8, color=BLU)
+    w = (1 + 0.5j) / (1 - 0.5j)
+    a1.annotate(r'$\frac{1+\mathrm{i}u}{1-\mathrm{i}u}$', (w.real, w.imag),
+                textcoords='offset points', xytext=(4, 5), fontsize=9,
+                color=ROSSO)
+    a1.set_xlim(-1.6, 1.6)
+    a1.set_ylim(-3.2, 3.2)
+    a1.set_aspect('equal')
+    a1.grid(False)
+    # (b) errore relativo degli approssimanti di Padé diagonali
+    # |t| <= 1.5: [1/1] ha un polo in t = 2
+    t = np.linspace(-1.5, 1.5, 1201)
+    t = t[np.abs(t) > 1e-3]
+    for n, col in ((1, BLU), (2, ROSSO), (3, VERDE)):
+        err = np.abs(pade_diagonale(n, t) * np.exp(-t) - 1)
+        a2.semilogy(t, err, color=col, lw=1.2, label=r'$[%d/%d]$' % (n, n))
+    a2.set_xlabel('$t$')
+    a2.set_ylabel(r'$|R_n(t)\,\mathrm{e}^{-t}-1|$')
+    a2.set_ylim(1e-12, 1e1)
+    a2.legend(frameon=False, loc='lower left')
+    salva(fig, 'nota_semiangolo')
+
+
+# --------------------------------------------------------------------------
 
 FIGURE = [
     fig_delta_famiglia, fig_delta_area, fig_delta_complesso,
@@ -786,6 +841,7 @@ FIGURE = [
     fig_mate_onde, fig_mate_logcosh,
     fig_factor, fig_fattorazionale, fig_primoriale, fig_u0,
     fig_j_tan, fig_equazioni_reim, fig_notch_bode,
+    fig_nota_semiangolo,
 ]
 
 

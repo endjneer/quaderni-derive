@@ -52,6 +52,160 @@ def uguali(a, b, rel=mp.mpf('1e-40'), cosa=''):
 
 
 # ===========================================================================
+# §2  L'esponenziale e la tangente del semiangolo
+# ===========================================================================
+
+def _gd(x):
+    """Funzione gudermanniana."""
+    return 2 * mp.atan(mp.tanh(x / 2))
+
+
+def _frazione_continua(x, termini):
+    """I primi quozienti parziali della frazione continua di x > 0."""
+    q = []
+    for _ in range(termini):
+        a = int(mp.floor(x))
+        q.append(a)
+        x = 1 / (x - a)
+    return q
+
+
+def _pade_diagonale(n, t):
+    """[n/n] di Padé di e^t: P_n(t)/P_n(-t), P_n(t) = sum (2n-k)! n! / ((2n)! k! (n-k)!) t^k."""
+    p = lambda t: sum(Fraction(factorial(2 * n - k) * factorial(n),
+                               factorial(2 * n) * factorial(k) * factorial(n - k)) * t ** k
+                      for k in range(n + 1))
+    return p(t) / p(-t)
+
+
+def _lambert(x, livelli):
+    """Convergente della frazione continua di Lambert: tanh x = x/(1+x^2/(3+x^2/(5+...)))."""
+    coda = Fraction(2 * livelli - 1)
+    for k in range(livelli - 1, 0, -1):
+        coda = (2 * k - 1) + x * x / coda
+    return x / coda
+
+
+@controllo('§2')
+def cayley():
+    """e^{it} = (1+iu)/(1-iu) = (1+iu)^2/(1+u^2) = sgn(1+iu)^2, u = tan(t/2)"""
+    for t in map(mp.mpf, ('0.3', '1', '2.5', '-2.9')):
+        u = mp.tan(t / 2)
+        w = mp.exp(1j * t)
+        uguali(w, (1 + 1j * u) / (1 - 1j * u), cosa='t=%s' % t)
+        uguali(w, (1 + 1j * u) ** 2 / (1 + u ** 2), cosa='t=%s' % t)
+        uguali(w, ((1 + 1j * u) / abs(1 + 1j * u)) ** 2, cosa='t=%s' % t)
+        uguali(mp.cos(t), (1 - u ** 2) / (1 + u ** 2))
+        uguali(mp.sin(t), 2 * u / (1 + u ** 2))
+
+
+@controllo('§2')
+def gauss_3_4():
+    """gauss #2-#4: 1 + tan^2(t/2) = 2/(1+cos t) = d/dt 2 tan(t/2)"""
+    for t in map(mp.mpf, ('0.4', '1.9', '-2.2')):
+        v = 1 + mp.tan(t / 2) ** 2
+        uguali(v, 2 / (1 + mp.cos(t)))
+        uguali(v, mp.diff(lambda s: 2 * mp.tan(s / 2), t), rel=mp.mpf('1e-30'))
+
+
+@controllo('§2')
+def tangente_iperbolica():
+    """e^s = (1+τ)/(1-τ) e s = ln((1+τ)/(1-τ)), τ = tanh(s/2), per ogni s reale"""
+    for s in map(mp.mpf, ('0.5', '1', '3', '-2', '10')):
+        tau = mp.tanh(s / 2)
+        uguali(mp.exp(s), (1 + tau) / (1 - tau), cosa='s=%s' % s)
+        uguali(s, mp.log((1 + tau) / (1 - tau)), cosa='s=%s' % s)
+    tau = mp.tanh(mp.mpf(1) / 2)
+    uguali(mp.e, (1 + tau) / (1 - tau))
+    uguali(tau, (mp.e - 1) / (mp.e + 1))
+    assert mp.nstr(tau, 8) == '0.46211716' and str(tau).startswith('0.46211715')
+
+
+cita('tanh_mezzo', '0{,}46211715', '0.46211715')
+
+
+@controllo('§2')
+def atan_immaginario():
+    """atan #2 e #14: e^{i atan(ix)} = sqrt((1-x)/(1+x)), i atan(ix) = ln(1-x) - ln(1-x^2)/2"""
+    for x in map(mp.mpf, ('0.2', '0.7', '-0.5')):
+        uguali(mp.exp(1j * mp.atan(1j * x)), mp.sqrt((1 - x) / (1 + x)), cosa='x=%s' % x)
+        uguali(1j * mp.atan(1j * x), mp.log(1 - x) - mp.log(1 - x ** 2) / 2, cosa='x=%s' % x)
+        uguali(1j * mp.atan(1j * x), -mp.atanh(x), cosa='x=%s' % x)
+
+
+@controllo('§2')
+def gaussiana():
+    """gauss #5 e #14: e^{-x^2} = (1-tanh(x^2/2))/(1+tanh(x^2/2)); 1+i tan(i x^2/2) è reale positivo"""
+    for x in map(mp.mpf, ('0.3', '1', '2.4')):
+        th = mp.tanh(x ** 2 / 2)
+        uguali(mp.exp(-x ** 2), (1 - th) / (1 + th), cosa='x=%s' % x)
+        z = 1 + 1j * mp.tan(1j * x ** 2 / 2)
+        uguali(z, 1 - th)
+        assert mp.re(z) > 0 and abs(mp.im(z)) < mp.mpf('1e-50')
+
+
+@controllo('§2')
+def gudermanniana():
+    """tan gd = sinh, sin gd = tanh, cos gd = sech; atan(tanh x) = gd(2x)/2 (mate #115-#116)"""
+    for x in map(mp.mpf, ('0.3', '1.2', '-2')):
+        g = _gd(x)
+        uguali(mp.tan(g), mp.sinh(x))
+        uguali(mp.sin(g), mp.tanh(x))
+        uguali(mp.cos(g), mp.sech(x))
+        uguali(mp.atan(mp.tanh(x)), _gd(2 * x) / 2)
+
+
+@controllo('§2')
+def eulero_frazione_continua():
+    """(e-1)/(e+1) = [0; 2, 6, 10, 14, ...] (20 termini); tanh(1/3) = [0; 3, 9, 15, ...]"""
+    with mp.workdps(300):
+        q = _frazione_continua((mp.e - 1) / (mp.e + 1), 20)
+        assert q == [0] + [4 * k - 2 for k in range(1, 20)], q
+        q = _frazione_continua(mp.tanh(mp.mpf(1) / 3), 10)
+        assert q == [0] + [3 * (2 * k - 1) for k in range(1, 10)], q
+
+
+@controllo('§2')
+def pade_da_lambert():
+    """i convergenti di Lambert per tanh(t/2) danno [1/1], [2/2], [3/3] di Padé di e^t"""
+    for t in (Fraction(1, 3), Fraction(-2, 5), Fraction(3), Fraction(7, 4), Fraction(-5)):
+        for n in (1, 2, 3):
+            tau = _lambert(t / 2, n)
+            assert (1 + tau) / (1 - tau) == _pade_diagonale(n, t), (n, t)
+    assert _pade_diagonale(2, Fraction(1)) == Fraction(12 + 6 + 1, 12 - 6 + 1)
+    assert _pade_diagonale(3, Fraction(1)) == Fraction(120 + 60 + 12 + 1, 120 - 60 + 12 - 1)
+
+
+@controllo('§2')
+def pade_errori():
+    """R_1(t) - e^t ~ t^3/12; l'errore di [n/n] è O(t^(2n+1)); |R_n(it)| = 1"""
+    for n in (1, 2, 3):
+        rapporti = []
+        for t in (mp.mpf('1e-4'), mp.mpf('1e-5')):
+            r = mp.mpf(_pade_diagonale(n, Fraction(str(t))).numerator) / \
+                _pade_diagonale(n, Fraction(str(t))).denominator
+            rapporti.append((r - mp.exp(t)) / t ** (2 * n + 1))
+        assert vicini(rapporti[0], rapporti[1], rel=mp.mpf('1e-3')), (n, rapporti)
+        if n == 1:
+            uguali(rapporti[1], mp.mpf(1) / 12, rel=mp.mpf('1e-4'))
+    for t in map(mp.mpf, ('0.5', '2', '7')):
+        r1 = (1 + 1j * t / 2) / (1 - 1j * t / 2)
+        uguali(abs(r1), 1)
+
+
+@controllo('§2')
+def bilineare():
+    """con z = e^{iωT}: (z-1)/(z+1) = i tan(ωT/2); con z = e^{sT}: (z-1)/(z+1) = tanh(sT/2)"""
+    T = mp.mpf('0.7')
+    for w in map(mp.mpf, ('0.4', '1.5', '3')):
+        z = mp.exp(1j * w * T)
+        uguali((z - 1) / (z + 1), 1j * mp.tan(w * T / 2))
+    for s in (mp.mpf('-1.3'), mp.mpc('-0.2', '2.1')):
+        z = mp.exp(s * T)
+        uguali((z - 1) / (z + 1), mp.tanh(s * T / 2))
+
+
+# ===========================================================================
 # §10  Due refusi e una trappola
 # ===========================================================================
 
