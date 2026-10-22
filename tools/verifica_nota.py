@@ -984,7 +984,7 @@ cita('mate_k', '-4{,}999999701', '-4.999999701')
 
 
 # ===========================================================================
-# Sintesi (README e pagina): l'identità del mezzo di mate.dfw e le sue varianti
+# La formula preferita dei quaderni (sezione sec:mezzo, README e pagina)
 # ===========================================================================
 
 def _angoli(n, seme):
@@ -992,7 +992,7 @@ def _angoli(n, seme):
     return [mp.mpf(rnd.uniform(0.1, 3)) for _ in range(n)]
 
 
-@controllo('sintesi')
+@controllo('§mezzo')
 def identita_del_mezzo():
     """mate #2-#4, #19-#31: cos² dà 1/2, sin² dà -1/2, cosh² dà 1/2, anche con angoli complessi"""
     for a, b in (_angoli(2, 1), _angoli(2, 2), (mp.mpc('0.4', '0.9'), mp.mpc('1.1', '-0.3'))):
@@ -1002,7 +1002,7 @@ def identita_del_mezzo():
         uguali((mp.cosh(a) ** 2 - mp.cosh(b) ** 2) / (mp.cosh(2 * a) - mp.cosh(2 * b)), mp.mpf(1) / 2)
 
 
-@controllo('sintesi')
+@controllo('§mezzo')
 def identita_esponenziale():
     """mate #6: la versione con gli esponenziali complessi vale ancora 1/2"""
     for x, y in (_angoli(2, 3), _angoli(2, 4)):
@@ -1013,7 +1013,7 @@ def identita_esponenziale():
         uguali(num / den, mp.mpf(1) / 2)
 
 
-@controllo('sintesi')
+@controllo('§mezzo')
 def triplicazione():
     """mate #5: con la triplicazione la costante diventa 1/4"""
     for x, y in (_angoli(2, 5), _angoli(2, 6)):
@@ -1022,7 +1022,7 @@ def triplicazione():
         uguali(num / den, mp.mpf(1) / 4)
 
 
-@controllo('sintesi')
+@controllo('§mezzo')
 def due_pesi():
     """mate #53-#60: (cos²x - k cos²y)/(cos 2x - l cos 2y) = 1/2 per ogni x se cos 2y = (1-k)/(k-l)"""
     y, l = mp.mpf('0.8'), mp.mpf('2.5')
@@ -1033,7 +1033,7 @@ def due_pesi():
                mp.mpf(1) / 2)
 
 
-@controllo('sintesi')
+@controllo('§mezzo')
 def macchina_per_pi():
     """mate #67-#71: (1/2)! = sqrt(π)/2, quindi 4·(rapporto)!² = π per ogni x, y"""
     for x, y in (_angoli(2, 8), _angoli(2, 9)):
@@ -1041,7 +1041,7 @@ def macchina_per_pi():
         uguali(4 * mp.factorial(r) ** 2, mp.pi, rel=mp.mpf('1e-35'))
 
 
-@controllo('sintesi')
+@controllo('§mezzo')
 def determinanti_di_chebyshev():
     """per ogni n, con floor(n/2)+1 angoli: det[cos n x_i, c_i^(n-2), ...] = 2^(n-1) det[c_i^n, c_i^(n-2), ...]"""
     for n in range(2, 12):

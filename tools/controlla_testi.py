@@ -35,6 +35,7 @@ COPPIE = [
     ('06-gradini', '06-steps'),
     ('07-e', '07-e'),
     ('08-delta', '08-delta'),
+    ('08b-mezzo', '08b-favourite'),
     ('09-in-breve', '09-in-brief'),
     ('10-refusi', '10-typos'),
     ('A-recupero', 'A-recovery'),

@@ -1,0 +1,97 @@
+\section{The notebooks' favourite formula}
+\label{sec:mezzo}
+
+The notebook \texttt{mate.dfw} comes back some forty times to the same
+identity,
+\begin{equation}\label{eq:mezzo}
+  \frac{\cos^2x-\cos^2y}{\cos2x-\cos2y}=\frac12 ,
+\end{equation}
+true for every $x$ and $y$ with $\cos2x\neq\cos2y$, because
+$\cos2\theta=2\cos^2\theta-1$ and hence $\cos2x-\cos2y=2(\cos^2x-\cos^2y)$
+(\riga{mate.dfw}{2}). The interesting part is the way the notebook puts it to
+the test.
+
+\subsection{The variants}
+
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt]
+  \item With sines the ratio is $-\tfrac12$, because
+        $\sin^2\theta=(1-\cos2\theta)/2$ changes the sign (\riga{mate.dfw}{4});
+        with hyperbolic cosines it is $\tfrac12$ again, because
+        $\cosh2\theta=2\cosh^2\theta-1$ has the same form (\riga{mate.dfw}{3}).
+  \item The identity holds for arbitrary complex arguments: lines
+        \righe{mate.dfw}{19}{31} test it with $x\pm\ii y$, with $x\pm ky$, with
+        $3x+ky$ and $x$, and line \#6 rewrites it with complex exponentials.
+  \item With the triple-angle formula $\cos3\theta=4\cos^3\theta-3\cos\theta$
+        the constant halves again (\riga{mate.dfw}{5}):
+        \begin{equation}\label{eq:quarto}
+          \frac{\cos^3x\,\cos y-\cos^3y\,\cos x}{\cos3x\,\cos y-\cos3y\,\cos x}=\frac14 .
+        \end{equation}
+        Multiplying by the other cosine removes the term $-3\cos\theta$.
+  \item With two weights, the ratio
+        $(\cos^2x-k\cos^2y)/(\cos2x-l\cos2y)$ equals $\tfrac12$ for every $x$ if
+        and only if $2k\cos^2y=1+l\cos2y$, that is $\cos2y=(1-k)/(k-l)$: this is
+        the relation Derive finds in \righe{mate.dfw}{53}{60}.
+  \item Finally, \eqref{eq:mezzo} becomes a ``machine for $\pi$''
+        (\righe{mate.dfw}{67}{71}): since $(1/2)!=\Gamma(3/2)=\sqrt\pi/2$,
+        \[
+          4\left[\left(\frac{\cos^2x-\cos^2y}{\cos2x-\cos2y}\right)!\,\right]^2=\pi
+        \]
+        for every pair of angles.
+\end{itemize}
+
+\subsection{The general form}
+
+The constants $\tfrac12$ and $\tfrac14$ are the reciprocals of the leading
+coefficients of the Chebyshev polynomials $T_2(c)=2c^2-1$ and $T_3(c)=4c^3-3c$,
+with $\cos n\theta=T_n(\cos\theta)$. With only two angles the trick stops at
+degree three: $T_4(c)=8c^4-8c^2+1$ has two lower-degree terms to remove, and a
+combination of two cosines is not enough. With more angles, however, the rule
+holds in every degree.
+
+\begin{prop}\label{prop:chebyshev}
+Let $n\ge2$, $m=\lfloor n/2\rfloor+1$, let $x_1,\dots,x_m$ be angles and
+$c_i=\cos x_i$. Then
+\[
+  \det\bigl[\cos nx_i,\ c_i^{\,n-2},\ c_i^{\,n-4},\ \dots,\ c_i^{\,n-2m+2}\bigr]
+  =2^{n-1}\det\bigl[c_i^{\,n},\ c_i^{\,n-2},\ c_i^{\,n-4},\ \dots,\ c_i^{\,n-2m+2}\bigr],
+\]
+where each expression denotes the $m\times m$ matrix whose rows are indexed by
+$i$. The determinant on the right is nonzero if the $c_i^2$ are distinct and,
+for odd $n$, nonzero.
+\end{prop}
+
+\begin{proof}
+The polynomial $T_n$ has the parity of $n$:
+$T_n(c)=2^{n-1}c^n+\sum_{j\ge1}a_jc^{n-2j}$, and the powers $c^{n-2j}$ with
+$j\ge1$ and $n-2j\ge0$ are exactly the other $m-1$ columns. Subtracting them
+from the first column with coefficients $a_j$ leaves the determinant unchanged,
+and what remains is $2^{n-1}c_i^n$. On the right, for even $n$ the columns are
+the powers $c_i^{2k}$ with $0\le k<m$, and the determinant is a Vandermonde in
+the $c_i^2$; for odd $n$ one factors $c_i$ out of each row and finds the same
+Vandermonde.
+\end{proof}
+
+For $n=2$ and $n=3$ there are two angles, and the proposition gives back
+exactly \eqref{eq:mezzo} and \eqref{eq:quarto}. For $n=4$ three angles are
+needed:
+\[
+  \det\begin{bmatrix}
+    \cos4x_1 & c_1^2 & 1\\
+    \cos4x_2 & c_2^2 & 1\\
+    \cos4x_3 & c_3^2 & 1
+  \end{bmatrix}
+  =8\det\begin{bmatrix}
+    c_1^4 & c_1^2 & 1\\
+    c_2^4 & c_2^2 & 1\\
+    c_3^4 & c_3^2 & 1
+  \end{bmatrix}.
+\]
+
+Identity \eqref{eq:mezzo} is also the source of the trap described in
+Section~\ref{sec:refusi}: since it holds for every value of a parameter, the
+numerical solver asked to find that value still answers with a number.
+
+\paragraph{What remains open.}
+Nothing: the proposition is an elementary observation about Chebyshev
+polynomials. It is, however, the general form of the rule that the notebook
+glimpses in degrees two and three.

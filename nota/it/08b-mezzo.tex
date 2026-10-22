@@ -1,0 +1,97 @@
+\section{La formula preferita dei quaderni}
+\label{sec:mezzo}
+
+Il quaderno \texttt{mate.dfw} torna una quarantina di volte sulla stessa
+identit\`a,
+\begin{equation}\label{eq:mezzo}
+  \frac{\cos^2x-\cos^2y}{\cos2x-\cos2y}=\frac12 ,
+\end{equation}
+vera per ogni $x$ e $y$ con $\cos2x\neq\cos2y$, perch\'e $\cos2\theta=2\cos^2\theta-1$
+e quindi $\cos2x-\cos2y=2(\cos^2x-\cos^2y)$ (\riga{mate.dfw}{2}). La parte
+interessante \`e il modo in cui il quaderno la mette alla prova.
+
+\subsection{Le varianti}
+
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt]
+  \item Con i seni il rapporto vale $-\tfrac12$, perch\'e
+        $\sin^2\theta=(1-\cos2\theta)/2$ cambia il segno (\riga{mate.dfw}{4});
+        con i coseni iperbolici vale di nuovo $\tfrac12$, perch\'e
+        $\cosh2\theta=2\cosh^2\theta-1$ ha la stessa forma (\riga{mate.dfw}{3}).
+  \item L'identit\`a vale per argomenti complessi qualsiasi: le righe
+        \righe{mate.dfw}{19}{31} la provano con $x\pm\ii y$, con $x\pm ky$, con
+        $3x+ky$ e $x$, e la riga \#6 la riscrive con gli esponenziali complessi.
+  \item Con la formula di triplicazione $\cos3\theta=4\cos^3\theta-3\cos\theta$
+        la costante si dimezza ancora (\riga{mate.dfw}{5}):
+        \begin{equation}\label{eq:quarto}
+          \frac{\cos^3x\,\cos y-\cos^3y\,\cos x}{\cos3x\,\cos y-\cos3y\,\cos x}=\frac14 .
+        \end{equation}
+        Moltiplicare per l'altro coseno serve a eliminare il termine
+        $-3\cos\theta$.
+  \item Con due pesi, il rapporto
+        $(\cos^2x-k\cos^2y)/(\cos2x-l\cos2y)$ vale $\tfrac12$ per ogni $x$ se e
+        solo se $2k\cos^2y=1+l\cos2y$, cio\`e $\cos2y=(1-k)/(k-l)$: \`e la
+        relazione che Derive trova in \righe{mate.dfw}{53}{60}.
+  \item Infine la \eqref{eq:mezzo} diventa una ``macchina per $\pi$''
+        (\righe{mate.dfw}{67}{71}): poich\'e $(1/2)!=\Gamma(3/2)=\sqrt\pi/2$,
+        \[
+          4\left[\left(\frac{\cos^2x-\cos^2y}{\cos2x-\cos2y}\right)!\,\right]^2=\pi
+        \]
+        per ogni coppia di angoli.
+\end{itemize}
+
+\subsection{La forma generale}
+
+Le costanti $\tfrac12$ e $\tfrac14$ sono i reciproci dei coefficienti
+direttivi dei polinomi di Chebyshev $T_2(c)=2c^2-1$ e $T_3(c)=4c^3-3c$, con
+$\cos n\theta=T_n(\cos\theta)$. Con due soli angoli il trucco si ferma al terzo
+grado: $T_4(c)=8c^4-8c^2+1$ ha due termini di grado inferiore da eliminare, e
+una combinazione di due coseni non basta. Con pi\`u angoli, invece, la regola
+vale per ogni grado.
+
+\begin{prop}\label{prop:chebyshev}
+Siano $n\ge2$, $m=\lfloor n/2\rfloor+1$, $x_1,\dots,x_m$ angoli e
+$c_i=\cos x_i$. Allora
+\[
+  \det\bigl[\cos nx_i,\ c_i^{\,n-2},\ c_i^{\,n-4},\ \dots,\ c_i^{\,n-2m+2}\bigr]
+  =2^{n-1}\det\bigl[c_i^{\,n},\ c_i^{\,n-2},\ c_i^{\,n-4},\ \dots,\ c_i^{\,n-2m+2}\bigr],
+\]
+dove ogni scrittura indica la matrice $m\times m$ le cui righe sono indicizzate
+da $i$. Il determinante a destra \`e diverso da zero se i $c_i^2$ sono distinti
+e, per $n$ dispari, non nulli.
+\end{prop}
+
+\begin{proof}
+Il polinomio $T_n$ ha la parit\`a di $n$: $T_n(c)=2^{n-1}c^n+\sum_{j\ge1}a_jc^{n-2j}$,
+e le potenze $c^{n-2j}$ con $j\ge1$ e $n-2j\ge0$ sono esattamente le altre
+$m-1$ colonne. Sottraendole dalla prima colonna con i coefficienti $a_j$ il
+determinante non cambia, e resta $2^{n-1}c_i^n$. A destra, per $n$ pari le
+colonne sono le potenze $c_i^{2k}$ con $0\le k<m$, e il determinante \`e un
+Vandermonde nei $c_i^2$; per $n$ dispari si raccoglie $c_i$ da ogni riga e si
+ritrova lo stesso Vandermonde.
+\end{proof}
+
+Per $n=2$ e $n=3$ si hanno due angoli e la proposizione restituisce
+esattamente la \eqref{eq:mezzo} e la \eqref{eq:quarto}. Per $n=4$ servono tre
+angoli:
+\[
+  \det\begin{bmatrix}
+    \cos4x_1 & c_1^2 & 1\\
+    \cos4x_2 & c_2^2 & 1\\
+    \cos4x_3 & c_3^2 & 1
+  \end{bmatrix}
+  =8\det\begin{bmatrix}
+    c_1^4 & c_1^2 & 1\\
+    c_2^4 & c_2^2 & 1\\
+    c_3^4 & c_3^2 & 1
+  \end{bmatrix}.
+\]
+
+La \eqref{eq:mezzo} \`e anche l'origine della trappola descritta nella
+sezione~\ref{sec:refusi}: siccome vale per ogni valore di un parametro, il
+risolutore numerico a cui si chiede di trovarlo risponde comunque con un
+numero.
+
+\paragraph{Che cosa resta aperto.}
+Nulla: la proposizione \`e un'osservazione elementare sui polinomi di
+Chebyshev. \`E per\`o la forma generale della regola che il quaderno intravede
+al secondo e al terzo grado.

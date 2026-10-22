@@ -28,7 +28,7 @@ per byte sono riemerse **792 espressioni**. Le abbiamo tradotte in notazione
 matematica, verificate numericamente e rilette una per una, chiedendoci ogni
 volta: che cosa c'è di vero, che cosa è già noto, che cosa no?
 
-Il risultato sono due documenti: una **nota per temi** di 18 pagine, in
+Il risultato sono due documenti: una **nota per temi** di 19 pagine, in
 italiano e in inglese, scritta per un lettore matematico, e un'**edizione
 integrale** di oltre duecento pagine con tutte le espressioni commentate.
 
@@ -162,7 +162,8 @@ $$\det\bigl[\cos n x_i,\; c_i^{\,n-2},\; c_i^{\,n-4},\;\dots\bigr]=2^{\,n-1}\,\d
 
 perché i termini di grado più basso del polinomio di Chebyshev sono
 combinazioni delle altre colonne. Le due identità del quaderno sono i casi
-$n=2$ e $n=3$, con due angoli.
+$n=2$ e $n=3$, con due angoli. La sezione 9 della nota ne dà la
+dimostrazione completa.
 
 L'identità è anche all'origine della **trappola** più istruttiva della
 raccolta: siccome vale per ogni valore del parametro, quando il quaderno chiede
@@ -231,7 +232,7 @@ Rileggere tutto fa emergere anche gli errori, dell'autore e del programma:
 
 | PDF nella [release](https://github.com/endjneer/quaderni-derive/releases/latest) | Che cos'è |
 |---|---|
-| `quaderni-derive-nota.pdf` | **La nota**, in italiano: i sette temi, con enunciati, dimostrazioni, contesto e domande aperte |
+| `quaderni-derive-nota.pdf` | **La nota**, in italiano: i sette temi e la formula preferita dei quaderni, con enunciati, dimostrazioni, contesto e domande aperte |
 | `derive-notebooks-note.pdf` | La stessa nota in inglese |
 | `quaderni-derive-edizione-integrale.pdf` | **L'edizione integrale**, in italiano: tutte le 792 espressioni, nell'ordine dei file, tradotte e commentate |
 
