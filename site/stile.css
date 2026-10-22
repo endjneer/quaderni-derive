@@ -123,6 +123,9 @@ h2 {
 }
 .formula .katex-display { margin: 0.2rem 0; }
 
+.varianti { margin: 0.4rem 0 0.4rem; padding-left: 1.3rem; }
+.varianti li { margin: 0.2rem 0; }
+
 .nota-sezione { font-family: var(--sans); font-size: 0.8rem; color: var(--grigio); }
 
 /* --- piede --------------------------------------------------------------- */

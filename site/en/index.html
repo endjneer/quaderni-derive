@@ -108,6 +108,32 @@ repository.</p>
   </li>
 </ol>
 
+<h2>The notebooks' favourite formula</h2>
+
+<p>The notebook <span class="file">mate.dfw</span> comes back some forty times
+to the same identity, true for every pair of angles:</p>
+<div class="formula">\[\frac{\cos^2 x-\cos^2 y}{\cos 2x-\cos 2y}=\frac12\]</div>
+
+<p>And it tests it in every possible way:</p>
+<ul class="varianti">
+  <li>with sines it gives \(-\tfrac12\), with hyperbolic cosines \(\tfrac12\) again;</li>
+  <li>it holds with complex arguments \(x\pm\mathrm{i}y\) and with any angles;</li>
+  <li>with the triple-angle formula the constant halves again:</li>
+</ul>
+<div class="formula">\[\frac{\cos^3x\,\cos y-\cos^3y\,\cos x}{\cos 3x\,\cos y-\cos 3y\,\cos x}=\frac14\]</div>
+<ul class="varianti">
+  <li>with two weights \(k\), \(l\) it stays \(\tfrac12\) for every <span class="nb">\(x\),</span> provided
+  \(\cos 2y=(1-k)/(k-l)\);</li>
+  <li>and it even becomes a machine for \(\pi\), because \((1/2)!=\sqrt\pi/2\):</li>
+</ul>
+<div class="formula">\[4\left[\left(\frac{\cos^2 x-\cos^2 y}{\cos 2x-\cos 2y}\right)!\,\right]^2=\pi\]</div>
+
+<p>The constants \(\tfrac12\) and \(\tfrac14\) come from Chebyshev polynomials,
+and with more angles the rule goes on for every degree, as an identity between
+determinants. It is also the source of the most instructive trap: since the
+identity holds for every value of a parameter, Derive's solver, asked to find
+it, still answers with a number, \(-4.999999701\), which means nothing.</p>
+
 <h2>The recovery</h2>
 
 <p>Derive's <span class="file">.dfw</span> files can no longer be opened by any

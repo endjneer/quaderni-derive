@@ -984,6 +984,77 @@ cita('mate_k', '-4{,}999999701', '-4.999999701')
 
 
 # ===========================================================================
+# Sintesi (README e pagina): l'identità del mezzo di mate.dfw e le sue varianti
+# ===========================================================================
+
+def _angoli(n, seme):
+    rnd = random.Random(seme)
+    return [mp.mpf(rnd.uniform(0.1, 3)) for _ in range(n)]
+
+
+@controllo('sintesi')
+def identita_del_mezzo():
+    """mate #2-#4, #19-#31: cos² dà 1/2, sin² dà -1/2, cosh² dà 1/2, anche con angoli complessi"""
+    for a, b in (_angoli(2, 1), _angoli(2, 2), (mp.mpc('0.4', '0.9'), mp.mpc('1.1', '-0.3'))):
+        D = mp.cos(2 * a) - mp.cos(2 * b)
+        uguali((mp.cos(a) ** 2 - mp.cos(b) ** 2) / D, mp.mpf(1) / 2)
+        uguali((mp.sin(a) ** 2 - mp.sin(b) ** 2) / D, -mp.mpf(1) / 2)
+        uguali((mp.cosh(a) ** 2 - mp.cosh(b) ** 2) / (mp.cosh(2 * a) - mp.cosh(2 * b)), mp.mpf(1) / 2)
+
+
+@controllo('sintesi')
+def identita_esponenziale():
+    """mate #6: la versione con gli esponenziali complessi vale ancora 1/2"""
+    for x, y in (_angoli(2, 3), _angoli(2, 4)):
+        e = lambda t: mp.exp(1j * t)
+        num = (e(2 * x) - e(2 * y) + mp.sin(y) ** 2 - mp.sin(x) ** 2
+               + 2j * (e(y) * mp.sin(y) - e(x) * mp.sin(x)))
+        den = e(2 * x) - e(2 * y) + 1j * (mp.sin(2 * y) - mp.sin(2 * x))
+        uguali(num / den, mp.mpf(1) / 2)
+
+
+@controllo('sintesi')
+def triplicazione():
+    """mate #5: con la triplicazione la costante diventa 1/4"""
+    for x, y in (_angoli(2, 5), _angoli(2, 6)):
+        num = mp.cos(x) ** 3 * mp.cos(y) - mp.cos(y) ** 3 * mp.cos(x)
+        den = mp.cos(3 * x) * mp.cos(y) - mp.cos(3 * y) * mp.cos(x)
+        uguali(num / den, mp.mpf(1) / 4)
+
+
+@controllo('sintesi')
+def due_pesi():
+    """mate #53-#60: (cos²x - k cos²y)/(cos 2x - l cos 2y) = 1/2 per ogni x se cos 2y = (1-k)/(k-l)"""
+    y, l = mp.mpf('0.8'), mp.mpf('2.5')
+    k = (l * mp.cos(2 * y) + 1) / (2 * mp.cos(y) ** 2)          # riga #54
+    uguali(mp.cos(2 * y), (1 - k) / (k - l))                    # riga #60
+    for x in _angoli(4, 7):
+        uguali((mp.cos(x) ** 2 - k * mp.cos(y) ** 2) / (mp.cos(2 * x) - l * mp.cos(2 * y)),
+               mp.mpf(1) / 2)
+
+
+@controllo('sintesi')
+def macchina_per_pi():
+    """mate #67-#71: (1/2)! = sqrt(π)/2, quindi 4·(rapporto)!² = π per ogni x, y"""
+    for x, y in (_angoli(2, 8), _angoli(2, 9)):
+        r = (mp.cos(x) ** 2 - mp.cos(y) ** 2) / (mp.cos(2 * x) - mp.cos(2 * y))
+        uguali(4 * mp.factorial(r) ** 2, mp.pi, rel=mp.mpf('1e-35'))
+
+
+@controllo('sintesi')
+def determinanti_di_chebyshev():
+    """per ogni n, con floor(n/2)+1 angoli: det[cos n x_i, c_i^(n-2), ...] = 2^(n-1) det[c_i^n, c_i^(n-2), ...]"""
+    for n in range(2, 12):
+        m = n // 2 + 1
+        xs = _angoli(m, 100 + n)
+        cs = [mp.cos(x) for x in xs]
+        gradi = [n - 2 * j for j in range(1, m)]
+        A = mp.matrix([[mp.cos(n * x)] + [c ** g for g in gradi] for x, c in zip(xs, cs)])
+        B = mp.matrix([[c ** n] + [c ** g for g in gradi] for c in cs])
+        uguali(mp.det(A), 2 ** (n - 1) * mp.det(B), rel=mp.mpf('1e-30'), cosa='n=%d' % n)
+
+
+# ===========================================================================
 
 def main(argv):
     if '--valori' in argv:

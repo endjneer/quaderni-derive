@@ -110,6 +110,33 @@ repository.</p>
   </li>
 </ol>
 
+<h2>La formula preferita dei quaderni</h2>
+
+<p>Il quaderno <span class="file">mate.dfw</span> torna una quarantina di volte
+sulla stessa identità, vera per ogni coppia di angoli:</p>
+<div class="formula">\[\frac{\cos^2 x-\cos^2 y}{\cos 2x-\cos 2y}=\frac12\]</div>
+
+<p>E la mette alla prova in tutti i modi:</p>
+<ul class="varianti">
+  <li>con i seni vale \(-\tfrac12\), con i coseni iperbolici di nuovo \(\tfrac12\);</li>
+  <li>regge con argomenti complessi \(x\pm\mathrm{i}y\) e con angoli qualsiasi;</li>
+  <li>con la triplicazione la costante si dimezza ancora:</li>
+</ul>
+<div class="formula">\[\frac{\cos^3x\,\cos y-\cos^3y\,\cos x}{\cos 3x\,\cos y-\cos 3y\,\cos x}=\frac14\]</div>
+<ul class="varianti">
+  <li>con due pesi \(k\), \(l\) resta \(\tfrac12\) per ogni <span class="nb">\(x\),</span> purché
+  \(\cos 2y=(1-k)/(k-l)\);</li>
+  <li>e diventa perfino una macchina per \(\pi\), perché \((1/2)!=\sqrt\pi/2\):</li>
+</ul>
+<div class="formula">\[4\left[\left(\frac{\cos^2 x-\cos^2 y}{\cos 2x-\cos 2y}\right)!\,\right]^2=\pi\]</div>
+
+<p>Le costanti \(\tfrac12\) e \(\tfrac14\) vengono dai polinomi di Chebyshev, e
+con più angoli la regola continua per ogni grado, come identità fra
+determinanti. È anche l'origine della trappola più istruttiva: siccome
+l'identità vale per ogni valore di un parametro, il risolutore di Derive a cui
+si chiede di trovarlo risponde comunque con un numero, \(-4{,}999999701\), che
+non significa nulla.</p>
+
 <h2>Il recupero</h2>
 
 <p>I file <span class="file">.dfw</span> di Derive non si aprono più con

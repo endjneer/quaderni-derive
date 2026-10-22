@@ -124,6 +124,51 @@ giusto, ma il risultato **dipende dalla famiglia scelta**: con altre famiglie
 si ottiene zero o infinito. Resta una domanda aperta, ed è presentata come
 tale.
 
+### 8. La formula preferita dei quaderni, e le sue varianti
+
+Il quaderno `mate.dfw` torna una quarantina di volte sulla stessa identità:
+
+$$\frac{\cos^2 x-\cos^2 y}{\cos 2x-\cos 2y}=\frac12 \qquad\text{per ogni } x,\,y.$$
+
+E la mette alla prova in tutti i modi possibili:
+
+- **con i seni** il rapporto vale $-\tfrac12$, **con i coseni iperbolici** di
+  nuovo $\tfrac12$ (righe #3–#4);
+- **con argomenti complessi**, $x\pm iy$, e con coppie di angoli qualsiasi come
+  $x\pm ky$, oppure $3x+ky$ e $x$, il risultato non cambia (righe #19–#31); né
+  cambia riscrivendo tutto con esponenziali complessi (riga #6);
+- **con la triplicazione** la costante si dimezza ancora:
+
+  $$\frac{\cos^3x\,\cos y-\cos^3y\,\cos x}{\cos 3x\,\cos y-\cos 3y\,\cos x}=\frac14;$$
+
+- **con due pesi**, $(\cos^2x-k\cos^2y)/(\cos 2x-l\cos 2y)$ vale ancora
+  $\tfrac12$ per ogni $x$, purché $\cos 2y=(1-k)/(k-l)$ (righe #53–#60);
+- e diventa perfino una **macchina per π**: poiché il rapporto vale $\tfrac12$
+  e $(1/2)!=\sqrt\pi/2$, da due angoli qualsiasi si ottiene
+
+  $$4\left[\left(\frac{\cos^2 x-\cos^2 y}{\cos 2x-\cos 2y}\right)!\,\right]^2=\pi$$
+
+  (righe #67–#71).
+
+**Perché funziona.** $\cos 2\theta=2\cos^2\theta-1$ e
+$\cos 3\theta=4\cos^3\theta-3\cos\theta$ sono i polinomi di Chebyshev, e
+$\tfrac12$, $\tfrac14$ sono i reciproci dei loro coefficienti direttivi. Nella
+versione cubica moltiplicare per l'altro coseno serve a eliminare il termine
+$-3\cos\theta$. Dal quarto grado i termini da eliminare sono più di uno e due
+angoli non bastano più; ma con più angoli la regola continua per **ogni** $n$.
+Posto $c_i=\cos x_i$, con $\lfloor n/2\rfloor+1$ angoli,
+
+$$\det\bigl[\cos n x_i,\; c_i^{\,n-2},\; c_i^{\,n-4},\;\dots\bigr]=2^{\,n-1}\,\det\bigl[c_i^{\,n},\; c_i^{\,n-2},\; c_i^{\,n-4},\;\dots\bigr],$$
+
+perché i termini di grado più basso del polinomio di Chebyshev sono
+combinazioni delle altre colonne. Le due identità del quaderno sono i casi
+$n=2$ e $n=3$, con due angoli.
+
+L'identità è anche all'origine della **trappola** più istruttiva della
+raccolta: siccome vale per ogni valore del parametro, quando il quaderno chiede
+a Derive di trovarlo il risolutore numerico risponde comunque con un numero,
+$-4{,}999999701$, che non significa nulla.
+
 ## Le idee originali
 
 Conviene distinguere due cose.
@@ -139,7 +184,10 @@ conoscere la letteratura:
 - estendere una famiglia approssimante della delta ad argomenti complessi;
 - confrontare la media di una funzione con il suo valore nel punto medio;
 - cercare regolarità fra prodotti di fattoriali, e misurare di quanto si
-  rompono quando si rompono.
+  rompono quando si rompono;
+- mettere alla prova una stessa identità in tutti i modi possibili: seni,
+  coseni iperbolici, argomenti complessi, pesi, perfino il fattoriale (la
+  formula preferita, al punto 8).
 
 Sono idee buone: quasi tutte portano a risultati classici, alcuni profondi.
 Nessuna è nuova per la matematica, e la nota lo dice esplicitamente.
@@ -151,6 +199,9 @@ Nessuna è nuova per la matematica, e la nota lo dice esplicitamente.
   l'abbiamo trovata in letteratura;
 - il **collegamento** di ciascun quaderno con la matematica nota: Surányi,
   Euler e Lambert, Helmholtz, Hilbert, Maslov, Gel'fand–Šilov e Sato;
+- l'osservazione che la formula preferita dei quaderni e la sua versione
+  cubica sono i primi due casi di un'identità fra determinanti valida per ogni
+  $n$: elementare, ma è la forma giusta della regola che il quaderno intravede;
 - la riformulazione precisa della domanda sulla delta complessa: il limite
   della famiglia a rettangolo è $\tfrac12\,\partial_x(z/|z|)$, e non è
   intrinseco;
@@ -168,8 +219,8 @@ Rileggere tutto fa emergere anche gli errori, dell'autore e del programma:
   risponde $1$ invece di $e$. Il quaderno se ne accorge calcolando la
   successione a $n = 9\,999\,999$.
 - **Un risolutore numerico risponde sempre.** In `mate.dfw` una trentina di
-  righe cercano un parametro $k$ in un'equazione che è un'identità, quindi vale
-  per ogni $k$. Derive restituisce comunque $k = -4{,}999999701$, identico per
+  righe cercano un parametro $k$ nella formula preferita, che vale per ogni
+  $k$. Derive restituisce comunque $k = -4{,}999999701$, identico per
   equazioni diverse: è solo il punto in cui l'iterazione si ferma.
 - **Refusi e sviste** in righe battute a mano: in `teoria.dfw #13` un 10 al
   posto di un 5 rompe la simmetria dei coefficienti binomiali; in
