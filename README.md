@@ -97,6 +97,11 @@ crea la release e vi allega i PDF. La pagina punta a
 `releases/latest/download/<nome>.pdf`, quindi i link non cambiano fra una
 release e l'altra.
 
+La pagina si pubblica solo quando la variabile del repository `PAGINA_ATTIVA`
+vale `true` (Settings → Secrets and variables → Actions → Variables): va
+impostata dopo aver reso pubblico il repository e scelto "GitHub Actions" come
+sorgente in Settings → Pages.
+
 ## Il formato `.dfw`, in breve
 
 Ricostruito leggendo i byte; il capitolo 2 dell'edizione integrale e

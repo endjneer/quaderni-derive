@@ -2,6 +2,8 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python)
 LATEX  ?= pdflatex
 LATEXFLAGS = -interaction=nonstopmode -halt-on-error -file-line-error
+# l'autore che deve comparire nei metadati dei PDF
+AUTORE = Francesco Messina
 
 # tre passate: servono per indice e riferimenti incrociati
 COMPILA = for i in 1 2 3; do \
@@ -41,9 +43,9 @@ nota: figure verifica-nota
 	cd nota && for f in nota-it note-en; do $(COMPILA); done
 
 controlli: pdf nota
-	$(PYTHON) tools/controlla_pdf.py tex/derive2010.pdf --log tex/derive2010.log --pagine 200 300
-	$(PYTHON) tools/controlla_pdf.py nota/nota-it.pdf --log nota/nota-it.log --pagine 15 40
-	$(PYTHON) tools/controlla_pdf.py nota/note-en.pdf --log nota/note-en.log --pagine 15 40
+	$(PYTHON) tools/controlla_pdf.py tex/derive2010.pdf --log tex/derive2010.log --autore "$(AUTORE)" --pagine 200 300
+	$(PYTHON) tools/controlla_pdf.py nota/nota-it.pdf --log nota/nota-it.log --autore "$(AUTORE)" --pagine 15 40
+	$(PYTHON) tools/controlla_pdf.py nota/note-en.pdf --log nota/note-en.log --autore "$(AUTORE)" --pagine 15 40
 
 # i tre PDF con i nomi della release
 dist: controlli

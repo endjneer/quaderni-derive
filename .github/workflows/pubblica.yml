@@ -1,5 +1,6 @@
-# Compila i tre PDF a ogni push (su qualunque branch) e pull request; pubblica
-# la pagina solo da main; allega i PDF alla release solo sui tag v*.
+# Compila i tre PDF a ogni push (su qualunque branch) e pull request; allega i
+# PDF alla release sui tag v*; pubblica la pagina da main solo se la variabile
+# del repository PAGINA_ATTIVA vale 'true' (Pages richiede un repo pubblico).
 name: Pubblica
 
 on:
@@ -49,13 +50,13 @@ jobs:
           path: dist/*.pdf
           if-no-files-found: error
 
-      - if: github.ref == 'refs/heads/main'
+      - if: github.ref == 'refs/heads/main' && vars.PAGINA_ATTIVA == 'true'
         uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
   pages:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && vars.PAGINA_ATTIVA == 'true'
     needs: build
     runs-on: ubuntu-latest
     permissions:
